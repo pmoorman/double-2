@@ -1,0 +1,42 @@
+.animatedLogo {
+  position: relative;
+  .fore,
+  .back {
+    width: 100%;
+    transition: 1s;
+  }
+
+  .fore {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .activeFore {
+    -webkit-animation: animatedLogoFore 0.5s ease-in both;
+    animation: animatedLogoFore 0.5s ease-in both;
+  }
+
+  .activeBack {
+    -webkit-animation: animatedLogoBack 0.5s ease-in both;
+    animation: animatedLogoBack 0.5s ease-in both;
+  }
+}
+
+@keyframes animatedLogoFore {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes animatedLogoBack {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(4%);
+  }
+}

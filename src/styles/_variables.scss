@@ -1,0 +1,25 @@
+// General
+$enable-smooth-scroll: false;
+
+// Font
+$font-family-sans-serif: "Manrope";
+$font-size-base: 0.875rem;
+$line-height-base: 1.375;
+$headings-font-weight: 700;
+$font-weight-bolder: 700;
+$lead-font-size: 1.25rem;
+$small-font-size: 1rem;
+$font-weight-bolder: 900;
+$h1-font-size: 4.5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+
+// Colors
+$primary: #387cd3;
+$secondary: #2a2f45;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);

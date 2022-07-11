@@ -1,0 +1,146 @@
+.navbar {
+  padding-top: 50px !important;
+  z-index: 9;
+  @include media-breakpoint-down(md) {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .navbarCollapse {
+    @include media-breakpoint-down(md) {
+      background: #51abff;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      transition: 1.5s;
+      text-align: center;
+      &.collapsing,
+      &.show {
+        opacity: 1;
+      }
+      a {
+        color: #fff !important;
+        font-size: 18px;
+        opacity: 1;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.navbarNav {
+  margin-left: auto;
+  @include media-breakpoint-down(md) {
+    padding-top: 48px;
+    padding-bottom: 30px;
+  }
+}
+
+.navLink {
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292f47 !important;
+  opacity: 0.6;
+  margin-left: 30px;
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+}
+.navbar .navLinkActive {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.navbarTogglerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: none !important;
+  z-index: 1;
+}
+.navbarTogglerIcon > div {
+  background: #fff;
+  height: 2px;
+  width: 100%;
+}
+.navbarTogglerIcon > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+.navbarTogglerText {
+  position: absolute;
+  left: -55px;
+  top: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #292f47;
+}
+
+.navbarToggle {
+  z-index: 9999;
+}
+
+.navbarToggler {
+  border: none;
+  position: relative;
+  background-color: var(--bs-primary) !important;
+  width: 48px;
+  height: 48px;
+  border-radius: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarToggler:active,
+.navbarToggler:focus {
+  outline: 0;
+}
+
+.navbarToggler .iconBar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 4px 0 4px 0;
+  transition: all 0.2s;
+}
+
+.navbarToggler {
+  background-color: var(--bs-primary);
+}
+.navbarToggler .iconBar {
+  background: #ffffff;
+}
+
+.navbarToggler .iconBar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbarToggler .iconBar:nth-of-type(2) {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbarToggler .iconBar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbarTogglerCollapsed .iconBar:nth-of-type(1) {
+  transform: rotate(0);
+}
+
+.navbarTogglerCollapsed .iconBar:nth-of-type(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbarTogglerCollapsed .iconBar:nth-of-type(3) {
+  transform: rotate(0);
+}
