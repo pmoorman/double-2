@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
         additionalData: `
         @import '~bootstrap/scss/functions';
         @import '~bootstrap/scss/mixins';
-        @import './src/styles/variables';
+        @import './src/styles/current/variables';
         @import '~bootstrap/scss/variables';
       `,
       },

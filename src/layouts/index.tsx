@@ -1,5 +1,6 @@
 import React from "react";
 import { PageProps } from "gatsby";
+import "@app/styles/current/style.scss";
 
 import { Footer, Header, SEO } from "@app/components";
 
