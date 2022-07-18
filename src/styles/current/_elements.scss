@@ -1,0 +1,36 @@
+body {
+  overflow-x: hidden;
+}
+
+.cutted_image {
+  --g: #000, #0000 1deg 179deg,#000 180deg;
+  --mask: conic-gradient(from -135deg at top    20px left  20px,var(--g)) 0    0   /100% 100% no-repeat;	
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.tiktokImage {
+  padding: 8.43rem 0;
+  background-color: #000;
+  display: inline-block;
+}
+
+.numberStat {
+  text-align: center;
+  
+  & > div > div {
+    font-size: 4.55rem;
+    font-weight: 800;
+    line-height: 1;
+    display: inline-block;
+
+    & + span {
+        display: block;
+        font-family: $font-family-monospace;
+        
+        font-weight: 500;
+
+    }
+  }
+}
+

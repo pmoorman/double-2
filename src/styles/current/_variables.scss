@@ -3,23 +3,52 @@ $enable-smooth-scroll: false;
 
 // Font
 $font-family-sans-serif: "Manrope";
-$font-size-base: 0.875rem;
+$font-family-monospace: "Poppins";
+$font-size-base: 1rem;
 $line-height-base: 1.375;
 $headings-font-weight: 700;
-$font-weight-bolder: 700;
 $lead-font-size: 1.25rem;
-$small-font-size: 1rem;
-$font-weight-bolder: 900;
-$h1-font-size: 4.5rem;
+$small-font-size: 0.875rem;
+$font-weight-bolder: 800;
+$h1-font-size: 4.8rem;
 $h2-font-size: 3rem;
 $h3-font-size: 2rem;
 $h4-font-size: 1.5rem;
+$paragraph-margin-bottom: 1.25rem !default;
+
+$border-radius: 0;
+
+// Buttons
+$btn-padding-y: 0.875rem;
+$btn-padding-x: 1rem;
+$btn-font-size: 1.125rem;
+$btn-line-height: 1;
+$btn-font-weight: $font-weight-bolder;
+
 
 // Colors
 $primary: #387cd3;
 $secondary: #2a2f45;
+$grey: #F4F4F4;
+$light: #fff;
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "light": $light,
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 1,
+  4: $spacer * 1.875,
+  5: $spacer * 2.5,
+  6: $spacer * 5.5,
+  7: $spacer * 6,
+  8: $spacer * 8.125,
+  9: $spacer * 9.5,
 );

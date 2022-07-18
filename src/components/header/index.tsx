@@ -26,7 +26,7 @@ export const Header = () => {
   return (
     <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
-        <Navbar.Brand as={Link} to="/" style={{ width: "120px" }}>
+        <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>
           <DoubleLogo />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -34,12 +34,7 @@ export const Header = () => {
           className={togglerClass}
           aria-controls={ID}
         >
-          <div className={styles.navbarTogglerText}>Menu</div>
-          <span className={styles.navbarToggle}>
-            <span className={styles.iconBar}></span>
-            <span className={styles.iconBar}></span>
-            <span className={styles.iconBar}></span>
-          </span>
+          <span className={styles.menuIcon}></span>
         </Navbar.Toggle>
 
         <Navbar.Collapse in={isOpen} className={styles.navbarCollapse} id={ID}>

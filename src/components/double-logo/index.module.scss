@@ -23,6 +23,16 @@
   }
 }
 
+.headerLogo {
+  height: 32px;
+  width: 130px;
+
+  @include media-breakpoint-down(lg) {
+    height: 28px;
+    width: 114px;
+  }
+}
+
 @keyframes animatedLogoFore {
   from {
     transform: translateX(0);

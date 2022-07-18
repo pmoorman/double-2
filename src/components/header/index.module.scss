@@ -1,19 +1,27 @@
 .navbar {
-  padding-top: 50px !important;
+  padding: 14px 0;
   z-index: 9;
-  @include media-breakpoint-down(md) {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+  height: 60px;
+  box-shadow: 0px 4px 15px 0px #0000001A;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    padding: 0 25px;
+    box-shadow: none;
+  }
+
+  .navbarLogo {
+    padding: 0;
   }
 
   .navbarCollapse {
-    @include media-breakpoint-down(md) {
-      background: #51abff;
+    @include media-breakpoint-down(lg) {
+      background: $secondary;
       position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
+      top: 60px;
+      left: 0px;
+      right: 0px;
       transition: 1.5s;
       text-align: center;
       &.collapsing,
@@ -24,7 +32,7 @@
         color: #fff !important;
         font-size: 18px;
         opacity: 1;
-        margin-bottom: 15px;
+        margin: 15px 0;
       }
     }
   }
@@ -33,19 +41,17 @@
 .navbarNav {
   margin-left: auto;
   @include media-breakpoint-down(md) {
-    padding-top: 48px;
-    padding-bottom: 30px;
+    
   }
 }
 
 .navLink {
-  opacity: 0.6;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #292f47 !important;
-  opacity: 0.6;
-  margin-left: 30px;
+  color: $secondary !important;
+  margin-left: 16px;
+  font-family: $font-family-monospace;
   @include media-breakpoint-down(md) {
     margin-left: 0;
   }
@@ -87,34 +93,32 @@
 .navbarToggler {
   border: none;
   position: relative;
-  background-color: var(--bs-primary) !important;
-  width: 48px;
-  height: 48px;
+  padding: 0;
   border-radius: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  
+  &:active,
+  &:focus {
+    color: transparent;
+    outline: 0;
+    background: transparent;
+  }
 }
 
-.navbarToggler:active,
-.navbarToggler:focus {
-  outline: 0;
-}
 
-.navbarToggler .iconBar {
+.navbarToggler .menuIcon {
+  background: transparent;
+  background-image:  url(./icon_bar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
   display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  margin: 4px 0 4px 0;
-  transition: all 0.2s;
-}
-
-.navbarToggler {
-  background-color: var(--bs-primary);
-}
-.navbarToggler .iconBar {
-  background: #ffffff;
+  padding: 0;
+  margin: 0;
 }
 
 .navbarToggler .iconBar:nth-of-type(1) {

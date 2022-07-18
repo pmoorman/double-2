@@ -1,0 +1,7 @@
+.sectionChild {
+    width: 513px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+}

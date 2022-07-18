@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["Manrope:400,600,700"],
+        fonts: ["Manrope:400,600,700", "Poppins:400,500,600"],
         display: "swap",
       },
     },
