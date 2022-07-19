@@ -1,11 +1,15 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, ImageRow } from "@app/components";
+import { Link, ImageRow, TeamMember } from "@app/components";
+import { useTeam } from "@app/hooks";
+import { Rerousel } from 'rerousel';
 
 import * as styles from "./index-assets/index.module.scss";
 
 const HomePage = () => {
+  const team = useTeam();
+
   return (
     <div className={styles.hero}>
       <Container className="pt-6 pb-8 ">
@@ -156,7 +160,7 @@ const HomePage = () => {
         <div className={styles.growforge}></div>
           <Row className="pb-8 pt-6">
             <div className={styles.rightLine}></div>
-            <div className="text-white position-relative">
+            <div className={`text-white position-relative + ${styles.growforgeRight}`}>
               <Col lg={{ span: 10, offset: 1 }} md={12}>
                 <Row>
                   <Col lg={6}>
@@ -183,18 +187,109 @@ const HomePage = () => {
       <Container>
         <Row>
           <Col lg={{ span: 6, offset: 6 }}>
-            <div className={styles.quote}>
-              <blockquote className="blockquote">
-                  <div className={styles.quoteLine}></div>
-                  <p>“Double made me feel confident that all our needs would be met above and beyond’</p>
-                  <footer>
-                    <div>John Doe</div>
-                    <div>CTO , Glowforge</div>
-                  </footer>
-              </blockquote>
-            </div>
+            <blockquote className="blockquote">
+                <div className={styles.quoteLine}></div>
+                <p>“Double made me feel confident that all our needs would be met above and beyond’</p>
+                <footer>
+                  <div>John Doe</div>
+                  <div>CTO , Glowforge</div>
+                </footer>
+            </blockquote>
           </Col>
         </Row>
+        <Row className={`mt-7 + ${styles.teamSection}`}>
+          <Col lg="9">
+            <h2 className="mb-3">Our people</h2>
+            <p>At Double everyone growth marketing expert regardless of their specialist skills. Meet the people on the ground who will be handling all your marketing needs</p>
+          </Col>
+          <Col lg="3">
+            <Button
+              as={Link}
+              to="/about"
+              variant="outline-secondary btn-lg">
+                More about us
+            </Button>
+          </Col>
+        </Row>
+        <div  className={`mt-4 mb-7 + ${styles.TeamMember}`} >
+            <div className={styles.logo}>
+              <StaticImage
+                src="./index-assets/stairs.svg"
+                alt="stairs"
+              />
+            </div>
+            
+            {team.map((member) => (
+            <div key={member.name}  className="mx-3">
+              <TeamMember member={member} />
+            </div>
+            ))}
+        </div>
+        
+        <div className="pt-6">
+          <Row>
+            <Col lg="10">
+              <h2 className="mb-3">Our featured articles</h2>
+            </Col>
+            <Col lg="2" className="d-none d-lg-block d-xl-block ">
+              <Button
+                as={Link}
+                to="/blog"
+                variant="outline-secondary">
+                  All articles
+              </Button>
+            </Col>
+          </Row>
+          <div className={styles.blogArtical}>
+            <Row className="py-4">
+                <Col lg="3" md="6" sm="6" xs="4">
+                  <StaticImage
+                    src="./index-assets/blog-1.jpeg"
+                    alt="Hire talent remote"
+                  />
+                </Col>
+                <Col lg="7" md="6" sm="6" xs="8">
+                  <div className={styles.date}>6 Aug 2021 | Author</div>
+                  <h3 className="mb-3">Want to hire the best talent? Hire remote</h3>
+                  <p className="d-none d-sm-block">Remote work has made hidden gems more accessible. When will you take advantage?</p>
+                </Col>
+            </Row>
+            <Row className="py-4">
+                <Col lg="3" md="6" sm="6" xs="4">
+                  <StaticImage
+                    src="./index-assets/blog-2.jpeg"
+                    alt="Hire talent remote"
+                  />
+                </Col>
+                <Col lg="7" md="6" sm="6" xs="8">
+                  <div className={styles.date}>6 Aug 2021 | Author</div>
+                  <h3 className="mb-3">We’re donating 1% of our revenue to charity</h3>
+                  <p className="d-none d-sm-block">Donating money is much easier when we know and agree with where it’s going. Understandable, of course.</p>
+                </Col>
+            </Row>
+            <Row className="py-4">
+                <Col lg="3" md="6" sm="6" xs="4">
+                  <StaticImage
+                    src="./index-assets/blog-3.jpeg"
+                    alt="Hire talent remote"
+                  />
+                </Col>
+                <Col lg="7" md="6" sm="6" xs="8">
+                  <div className={styles.date}>6 Aug 2021 | Author</div>
+                  <h3 className="mb-3">Great marketers are effective first, efficient second</h3>
+                  <p className="d-none d-sm-block">The words 'effective' and 'efficient' are often used interchangeably. But when it comes to marketers, the two mean very different things.</p>
+                </Col>
+            </Row>
+            <div className="d-block  d-xl-none  d-lg-none mb-5 mt-3">
+              <Button
+                as={Link}
+                to="/blog"
+                variant="outline-secondary">
+                  All articles
+              </Button>
+            </div>
+          </div>
+        </div>
       </Container>
     </div>
   );

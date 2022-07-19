@@ -101,11 +101,14 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
 
   return (
     <div>
-      {image}
-      <p className="mb-0">
-        <strong>{member.name}</strong>
-      </p>
-      <p>{member.location}</p>
+      <div className="mb-3">
+        {image}
+      </div>
+      <h4 className="mb-2">
+        {member.name}
+      </h4>
+      <div className="mb-2 lead">{member.position}</div>
+      <p className="mb-2 d-flex"><i className="mapIcon"></i>{member.location}</p>
     </div>
   );
 };

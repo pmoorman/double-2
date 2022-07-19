@@ -1,0 +1,27 @@
+.footer {
+    h4 {
+        font-weight: 600;
+    }
+
+}
+.footerLogo {
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+
+    & > * {
+        font-family: $font-family-monospace;
+        color: #000;
+        opacity: 0.5;
+        font-weight: 400;
+        font-size: 0.85;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .mobileImage {
+        --g: #000, #0000 1deg 179deg,#000 180deg;
+        --mask: conic-gradient(from -135deg at top    20px left  20px,var(--g)) 0    0   /100% 100% no-repeat;	
+        -webkit-mask: var(--mask);
+                mask: var(--mask);
+    }
+}

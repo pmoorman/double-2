@@ -17,7 +17,7 @@ body {
 
 .numberStat {
   text-align: center;
-  
+
   & > div > div {
     font-size: 4.55rem;
     font-weight: 800;
@@ -32,5 +32,14 @@ body {
 
     }
   }
+}
+
+.mapIcon {
+  background: url(../../components/team-member/map_logo.svg) no-repeat;
+  width: 15px;
+  height: 22px;
+  margin-right: 0.85rem;
+  display: inline-block;
+  background-size: contain;
 }
 
