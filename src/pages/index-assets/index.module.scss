@@ -3,6 +3,10 @@
 
     h1 {
         font-size: 5rem;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 2.875rem;
+        }
     }
 
     .vectorLine {
@@ -12,10 +16,32 @@
         right: 20px;
         left: 0;
     }
+
+    .heroImage {
+        height: 318px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 12px;
+            height: 200px;
+        }
+    }
 }
 
 small {
     font-weight: 600;
+}
+.polygonIconMobile {
+    background: url(./mobile_arrows.svg) no-repeat;
+    width: 100%;
+    height: 98px;
+    margin-bottom: 1.25rem;
+    background-size: cover;
+
+    & + h2 {
+        @include media-breakpoint-down(lg) {
+            text-align: right;
+        }
+    }
 }
 
 .polygonIcon {
@@ -23,12 +49,28 @@ small {
     width: 128px;
     height: 108px;
 }
+
 .polygonRightIcon {
     background: url(./polygon_right.svg) no-repeat;
     width: 120px;
     height: 98px;
     position: absolute;
     top: -49px;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.aboutUs {
+    h2 {
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+    }
 }
 
 h2 {
@@ -50,35 +92,36 @@ h2 {
 }
 
 .rombik {
-    background: #387CD3;
     text-align: center;
     display: inline-block;
-    transform: rotate(45deg);
-    height: 400px;
-    width: 400px;
     position: absolute;
-    margin-left: 138px;
+    
+    .parent {
+        width: 570px;
+        display: flex;
 
-    & > div {
-        transform: rotate(-45deg);
-        overflow: hidden;
-    }   
-}
+        & + div {
+            top: 50%;  
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
 
-.tiktokStatics {
-    & > div {
-        margin-right: 5.5rem;
-        margin-left: 1.75rem;
-
-        &:last-child {
-            margin-right: 0;
+        svg {
+            width: 100%;
         }
     }
+      
+      
 }
 
 .line {
     border-top: 2px solid $secondary;
     margin-left: -2000px;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
 }
 
 .rightLine {
@@ -89,6 +132,10 @@ h2 {
     right: 0;
     top: -5.5rem;
     left: -12px;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
 }
 
 .growforge {
@@ -97,6 +144,30 @@ h2 {
     position: absolute;
     width: calc(50vw + 50%);
     height: 100%;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+    
+}
+
+.growforge_logo {
+
+    @include media-breakpoint-down(md) {
+        width: 123px;
+    }
+}
+.mobileBackground {
+
+    @include media-breakpoint-down(lg) {
+        background: url(./growforge_bg.jpeg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+    }
 }
 
 .growforgeRight {
@@ -113,10 +184,22 @@ blockquote {
     position: relative;
     z-index: 2;
 
+    @include media-breakpoint-down(lg) {
+        background-color: $primary;
+        padding: 16px;
+        color: white;
+        margin-top: -50px;
+    }
+
     .quoteLine {
         border-left: 2px solid $primary;
         height: 214px;
         position: absolute;
+
+        @include media-breakpoint-down(lg) {
+            border-left-color: white;
+            height: 87px;
+        }
     }
 
     p {
@@ -124,44 +207,60 @@ blockquote {
         margin-bottom: 1rem;
         margin-left: 2.5rem;
         line-height: 1.3;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+        }
     }
     footer div {
         font-family: $font-family-monospace;
         margin-left: 2.5rem;
         margin-bottom: 1rem;
         font-size: 1rem;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+    }
+    footer:last-child div {
+        @include media-breakpoint-down(md) {
+            font-size: 0.75rem;
+        }
     }
 }
 
 .teamSection {
     h2 {
         font-size: 2.5rem;
+        @include media-breakpoint-down(lg) {
+            font-size: 1.75rem;
+        }
     }
 
     a {
         float: right;
+        @include media-breakpoint-down(lg) {
+            float: left;
+        }
     }
 }
 
 .TeamMember {
-    overflow-x: auto;
-    white-space: no-wrap;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-    width: calc(100vh + 100%);
-    
-    &::-webkit-scrollbar {
-        display: none;
+    & > div {
+        width: calc(50vw + 50%);
+        z-index: 1;
     }
 
     .logo {
         margin-right: 140px;
     }
 
-    & > div {
-        display: inline-table;
-        vertical-align: middle;
+    .teamCard {
+        padding-right: 24px;
     }
 }
 

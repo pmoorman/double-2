@@ -1,35 +1,72 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, ImageRow, TeamMember } from "@app/components";
+import { Link, ImageRow, TeamMember, Stats } from "@app/components";
 import { useTeam } from "@app/hooks";
-import { Rerousel } from 'rerousel';
+import { useMediaQuery } from "react-responsive";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import * as styles from "./index-assets/index.module.scss";
 
+
 const HomePage = () => {
   const team = useTeam();
+  const isMdDevice = useMediaQuery({ query: '(min-width: 992px)' })
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 3.5,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    className: styles.TeamMember,
+    responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2.5,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2.5,
+      }
+    },
+    {
+      breakpoint: 430,
+      settings: {
+        slidesToShow: 1.5,
+      }
+    },
+    ]
+  };
+  
 
   return (
     <div className={styles.hero}>
-      <Container className="pt-6 pb-8 ">
+      <Container className="pt-lg-6 pb-lg-8 pt-4">
           <ImageRow
             imageSide="right"
+            imageOrder="last"
             image={
               <StaticImage
                 src="./index-assets/hero_image.jpeg"
                 alt="Growth"
-                className="cutted_image"
-                style={{ height: "318px", width: "100%"}}
+                className={`cutted_image + ${styles.heroImage}`}
               />
             }
           >
-            <h1 className="mb-3">Your allies in exponential growth.</h1>
+            <h1 className="mb-lg-3 mb-4">Your allies in exponential growth.</h1>
             <p>We’re Growth Marketers from Amsterdam guiding VC-funded scale-ups to their revenue targets Series A startups.</p>
             <Button
               as={Link}
               to="/case-studies"
-              variant="secondary">
+              variant="secondary"
+              className="mb-lg-0 mb-4">
                 View all case studies
             </Button>
           </ImageRow>
@@ -39,20 +76,21 @@ const HomePage = () => {
       </div>
       <Container className="pt-8 pb-6">
         <Row>
-          <Col lg={{ span: 10, offset: 1 }} md={12}>
+          <Col lg={{ span: 10, offset: 1 }} md={12} className={styles.aboutUs}>
             <Row>
               <Col lg={{ span: 11, offset: 1 }}>
-                <h2 className="mb-3">We’re sales funnel experts</h2>
+                <div className={`d-lg-none d-xl-none d-block + ${styles.polygonIconMobile}`}></div>
+                <h2>We’re sales funnel experts</h2>
               </Col>
             </Row>
             <Row>
                 <Col lg={5}>
-                  <h2>Who understand<div className="mt-3">systems thinking</div></h2>
+                  <h2>Who understand<div className="mt-lg-3 mt-2">systems thinking</div></h2>
                 </Col>
-                <Col lg={2}>
+                <Col lg={2} className="d-lg-block d-none">
                   <div className={`mt-4 + ${styles.polygonIcon}`}></div>
                 </Col>
-                <Col  lg={5} className="mt-5 pt-3">
+                <Col lg={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
                   <p>We unlock sustainable, long-term growth by building copy, videos, and articles into the context of loops, flywheels, and funnels, We make sure every asset plays its part in a wider acquisition and retention system.</p>
                   <Button
                   as={Link}
@@ -89,7 +127,14 @@ const HomePage = () => {
                 </Col>
                 <Col lg={6} className="mt-9 flex relative ">
                   <div className={styles.rombik}>
-                    <div className="numberStat">
+                    <div className={styles.parent}>
+                      <svg viewBox="0 0 300 300">
+                        <g transform="translate(0,300) scale(0.1,-0.1)" fill="#387CD3">
+                          <path d="M745 2250 l-750 -750 753 -753 752 -752 752 752 753 753 -750 750 c-412 412 -752 750 -755 750 -3 0 -343 -338 -755 -750z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div className="numberStat" >
                       <div className="mb-5">
                         <div>7k</div>
                         <span>Leads</span>
@@ -112,14 +157,16 @@ const HomePage = () => {
       </Container>
       <Container>
         <Row className="align-items-end">
-          <Col lg="6">
+          <Col lg={{ span: 6, order: "first"}}
+              sm={{ span: 12, order: "last" }}
+              xs={{ span: 12, order: "last" }}>
             <div className="tiktokImage">
               <StaticImage
                 src="./index-assets/tiktok.jpg"
                 alt="TikTok website" />
             </div>
           </Col>
-          <Col lg="6">
+          <Col lg={6}>
             <StaticImage
                 src="./index-assets/tiktok_logo.svg"
                 alt="TikTok logo"
@@ -128,79 +175,73 @@ const HomePage = () => {
             <h2>Turbo charged partnerships</h2>
             <h3>Social media giants</h3>
             <p>Something wasn't adding up. Based on TikTok's unreal success, businesses should have been flooding in to partner up as advertisers...</p>
+            {!isMdDevice && <Stats></Stats>}
             <Button
               as={Link}
               to="/case-studies"
-              variant="secondary">
+              variant="secondary"
+              className="mb-lg-0 mb-5">
                 Full case study
             </Button>
           </Col>
         </Row>
-        <div className={`numberStat d-flex mt-5 mb-6 + ${styles.tiktokStatics}`}>
-          <div>
-            <div>5k</div>
-            <span>Leads</span>
-          </div>
-          <div>
-            <div>1</div>
-            <span>Website</span>
-          </div>
-          <div>
-            <div>6</div>
-            <span>Weeks</span>
-          </div>
-        </div>
+        {isMdDevice && <Stats></Stats>}
 
         <div className={styles.line}></div>
         <div className="position-relative">
           <div className={styles.polygonRightIcon}></div>
         </div>
       </Container>
-      <Container className="mt-6 position-relative">
-        <div className={styles.growforge}></div>
-          <Row className="pb-8 pt-6">
-            <div className={styles.rightLine}></div>
-            <div className={`text-white position-relative + ${styles.growforgeRight}`}>
-              <Col lg={{ span: 10, offset: 1 }} md={12}>
-                <Row>
-                  <Col lg={6}>
-                    <StaticImage
-                        src="./index-assets/growforge_logo.svg"
-                        alt="Growforge logo"
-                      />
-                      <small className="mb-2 mt-4">Performance</small>
-                      <h2 className="mb-2">Crossing the Atlantic</h2>
-                      <h3 className="mb-3">The iconic 3D printer</h3>
-                      <p>We helped Glowforge build a new lead-nurturing system designed to speed up the sales cycle, as well as creating new performance advertisements- both tuned for the UK market.</p>
-                      <Button
-                        as={Link}
-                        to="/case-studies"
-                        variant="light">
-                          Full case study
-                      </Button>
-                  </Col>
-                </Row>
-              </Col>
-            </div>
-          </Row>
-      </Container>
+
+      <div className="position-relative">
+        <div className={styles.mobileBackground}></div>
+        <Container className="mt-lg-6 mt-0 position-relative">
+          <div className={styles.growforge}></div>
+            <Row className="pb-lg-8 pt-lg-6 pt-2 pb-6">
+              <div className={styles.rightLine}></div>
+              <div className={`text-white position-relative + ${styles.growforgeRight}`}>
+                <Col lg={{ span: 10, offset: 1 }} md={12}>
+                  <Row>
+                    <Col lg={6}>
+                      <StaticImage
+                          src="./index-assets/growforge_logo.svg"
+                          alt="Growforge logo"
+                          className={styles.growforge_logo}
+                        />
+                        <small className="mb-2 mt-lg-4 mt-2">Performance</small>
+                        <h2 className="mb-2">Crossing the Atlantic</h2>
+                        <h3 className="mb-3">The iconic 3D printer</h3>
+                        <p>We helped Glowforge build a new lead-nurturing system designed to speed up the sales cycle, as well as creating new performance advertisements- both tuned for the UK market.</p>
+                        <Button
+                          as={Link}
+                          to="/case-studies"
+                          variant="light">
+                            Full case study
+                        </Button>
+                    </Col>
+                  </Row>
+                </Col>
+              </div>
+            </Row>
+        </Container>
+      </div>
       <Container>
         <Row>
-          <Col lg={{ span: 6, offset: 6 }}>
+          <Col lg={{ span: 6, offset: 6 }} md={12}>
             <blockquote className="blockquote">
-                <div className={styles.quoteLine}></div>
-                <p>“Double made me feel confident that all our needs would be met above and beyond’</p>
-                <footer>
-                  <div>John Doe</div>
-                  <div>CTO , Glowforge</div>
-                </footer>
+              <div className={styles.quoteLine}></div>
+              <p>“Double made me feel confident that all our needs would be met above and beyond’</p>
+              <footer>
+                <div>John Doe</div>
+                <div>CTO , Glowforge</div>
+              </footer>
             </blockquote>
           </Col>
         </Row>
-        <Row className={`mt-7 + ${styles.teamSection}`}>
+        <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>
           <Col lg="9">
-            <h2 className="mb-3">Our people</h2>
-            <p>At Double everyone growth marketing expert regardless of their specialist skills. Meet the people on the ground who will be handling all your marketing needs</p>
+            <h2 className="mb-2">Our people</h2>
+            <p className="text-grey">At Double everyone growth marketing expert regardless of their specialist skills. Meet the people on the ground who will be handling all your marketing needs</p>
           </Col>
           <Col lg="3">
             <Button
@@ -211,22 +252,27 @@ const HomePage = () => {
             </Button>
           </Col>
         </Row>
-        <div  className={`mt-4 mb-7 + ${styles.TeamMember}`} >
+        <Row className="align-items-center mt-lg-4 mt-5 mb-lg-7 mb-5">
+          <Col lg={3} className="d-none d-lg-block d-xl-block">
             <div className={styles.logo}>
               <StaticImage
                 src="./index-assets/stairs.svg"
                 alt="stairs"
               />
             </div>
-            
-            {team.map((member) => (
-            <div key={member.name}  className="mx-3">
-              <TeamMember member={member} />
-            </div>
-            ))}
-        </div>
+          </Col>
+          <Col lg="9">
+            <Slider {...settings} >
+              {team.map((member) => (
+              <div key={member.name}  className={styles.teamCard}>
+                <TeamMember member={member} />
+              </div>
+              ))}
+            </Slider>
+          </Col>
+        </Row>
         
-        <div className="pt-6">
+        <div className="pt-lg-6 pt-0">
           <Row>
             <Col lg="10">
               <h2 className="mb-3">Our featured articles</h2>
@@ -267,7 +313,7 @@ const HomePage = () => {
                   <p className="d-none d-sm-block">Donating money is much easier when we know and agree with where it’s going. Understandable, of course.</p>
                 </Col>
             </Row>
-            <Row className="py-4">
+            <Row className="py-4 align-items-center">
                 <Col lg="3" md="6" sm="6" xs="4">
                   <StaticImage
                     src="./index-assets/blog-3.jpeg"

@@ -1,0 +1,15 @@
+.tiktokStatics {
+    & > div {
+        margin-right: 5.5rem;
+        margin-left: 1.75rem;
+
+        @include media-breakpoint-down(md) {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

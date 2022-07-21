@@ -21,8 +21,10 @@ export const ImageRow: FC<ImageRowProps> = ({
   return (
     <Row {...rest}>
       <Col
-        sm={{ span: 12, order: "last" }}
-        md={{ span: 6, order: imageOrder }}
+        sm={{ span: 12, order: imageOrder }}
+        md={{ span: 12, order: imageOrder }}
+        xs={{ span: 12, order: imageOrder }}
+        lg={6}
         style={{ display: "flex" }}
         className=""
       >

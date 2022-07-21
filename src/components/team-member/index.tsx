@@ -17,6 +17,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="carine engbers"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -28,6 +29,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="caspar lusink"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -39,6 +41,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="dominik kondziela"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -50,6 +53,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="erik_brendon"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -61,6 +65,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="james wilkinson"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -72,6 +77,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="louise de sadeleer"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -83,6 +89,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="naveed tariq"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -94,6 +101,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
           alt="pieter moorman"
           height={368}
           width={298}
+          className="team-image"
         />
       );
       break;
@@ -108,7 +116,7 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         {member.name}
       </h4>
       <div className="mb-2 lead">{member.position}</div>
-      <p className="mb-2 d-flex"><i className="mapIcon"></i>{member.location}</p>
+      <p className="mb-2 d-flex align-items-center"><i className="mapIcon"></i>{member.location}</p>
     </div>
   );
 };
