@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link, ImageRow, TeamMember, Stats } from "@app/components";
 import { useTeam } from "@app/hooks";
 import { useMediaQuery } from "react-responsive";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,13 +16,14 @@ const HomePage = () => {
   const team = useTeam();
   const isMdDevice = useMediaQuery({ query: '(min-width: 992px)' })
 
-  const settings = {
+  const settings: Settings = {
+    arrows: false,
     dots: false,
     infinite: false,
     slidesToShow: 3.5,
     slidesToScroll: 1,
     swipeToSlide: true,
-    className: styles.TeamMember,
+    className: styles.teamMember,
     responsive: [
     {
       breakpoint: 991,
@@ -50,7 +51,6 @@ const HomePage = () => {
     <div className={styles.hero}>
       <Container className="pt-lg-6 pb-lg-8 pt-4">
           <ImageRow
-            imageSide="right"
             imageOrder="last"
             image={
               <StaticImage
@@ -159,6 +159,7 @@ const HomePage = () => {
           </Row>
         </div>
       </Container>
+      
       <Container>
         <Row className="align-items-end pt-lg-9 pt-6 ">
           <Col lg={{ span: 6, order: "first"}}

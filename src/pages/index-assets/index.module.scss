@@ -308,11 +308,8 @@ blockquote {
     }
 }
 
-.TeamMember {
-    & > div {
-        width: calc(50vw + 50%);
-        z-index: 1;
-    }
+.teamMember {
+    width: calc(50vw + 50%);
 
     .logo {
         margin-right: 140px;

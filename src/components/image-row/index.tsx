@@ -5,19 +5,17 @@ import * as styles from "./index.module.scss";
 
 export interface ImageRowProps extends React.HTMLAttributes<HTMLElement> {
   image: ReactNode;
-  imageSide?: "left" | "right";
+  imageOrder?: "last" | "first";
   alignItemsCenter?: boolean;
 }
 
 export const ImageRow: FC<ImageRowProps> = ({
   children,
   image,
-  imageSide = "left",
+  imageOrder = "last",
   alignItemsCenter = true,
   ...rest
 }) => {
-  const imageOrder = imageSide === "left" ? "first" : "last";
-
   return (
     <Row {...rest}>
       <Col
