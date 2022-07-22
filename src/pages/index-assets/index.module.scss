@@ -11,18 +11,30 @@
 
     .vectorLine {
         background: url(./arrow-vector.svg) no-repeat;
-        width: 100%;
         position: absolute;
-        right: 20px;
-        left: 0;
+        background-size: contain;
+        right: 12px;
+        bottom: -245px;
+        height: 500px;
+        display: block;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 
     .heroImage {
         height: 318px;
-
+        
         @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
             padding: 12px;
             height: 200px;
+            width: 100%;
         }
     }
 }
@@ -30,17 +42,29 @@
 small {
     font-weight: 600;
 }
-.polygonIconMobile {
-    background: url(./mobile_arrows.svg) no-repeat;
-    width: 100%;
-    height: 98px;
-    margin-bottom: 1.25rem;
-    background-size: cover;
 
-    & + h2 {
-        @include media-breakpoint-down(lg) {
-            text-align: right;
-        }
+.mobileLines {
+    background: none;
+
+    @include media-breakpoint-down(md) {
+        background: url(./mobile_arrows.svg) no-repeat;
+        background-size: cover;
+        padding-top: 200px;
+        padding-bottom: 30px;
+        border-bottom: 3px solid $primary;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 180px;
+        border-bottom-width: 2px;
+        margin: 0 12px;
+    }
+
+}
+
+.headingStyle {
+    @include media-breakpoint-down(md) {
+        margin-left: 40px;
     }
 }
 
@@ -48,6 +72,12 @@ small {
     background: url(./polygon.svg) no-repeat;
     width: 128px;
     height: 108px;
+    
+    @include media-breakpoint-down(lg) {
+        background-size: contain;
+        width: 94px;
+        height: 98px;
+    }
 }
 
 .polygonRightIcon {
@@ -67,8 +97,12 @@ small {
         margin-bottom: 1rem;
 
         @include media-breakpoint-down(lg) {
+            font-size: 2rem;
+        }
+        @include media-breakpoint-down(md) {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
+
         }
     }
 }
@@ -89,16 +123,41 @@ h2 {
     small {
         font-weight: 500;
     }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
 }
 
 .rombik {
     text-align: center;
     display: inline-block;
     position: absolute;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 40px;
+    }
+    @include media-breakpoint-down(md) {
+        margin-top: 0;
+        width: 100%;
+    }
     
     .parent {
         width: 570px;
         display: flex;
+
+        @include media-breakpoint-down(lg) {
+            width: 330px;
+
+            & + div > div > div {
+                font-size: 2rem;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            transform: translateY(-50%);
+            width: 100%;
+        }
 
         & + div {
             top: 50%;  

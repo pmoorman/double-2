@@ -71,45 +71,49 @@ const HomePage = () => {
             </Button>
           </ImageRow>
       </Container>
+
       <div className="position-relative">
         <div className={styles.vectorLine}></div>
       </div>
-      <Container className="pt-8 pb-6">
+
+      <Container className="pt-lg-8 py-4 pb-lg-6">
         <Row>
-          <Col lg={{ span: 10, offset: 1 }} md={12} className={styles.aboutUs}>
-            <Row>
-              <Col lg={{ span: 11, offset: 1 }}>
-                <div className={`d-lg-none d-xl-none d-block + ${styles.polygonIconMobile}`}></div>
-                <h2>We’re sales funnel experts</h2>
-              </Col>
-            </Row>
-            <Row>
-                <Col lg={5}>
-                  <h2>Who understand<div className="mt-lg-3 mt-2">systems thinking</div></h2>
+          <div className={styles.mobileLines}>
+            <Col lg={{ span: 10, offset: 1 }} md={12} className={styles.aboutUs}>
+              <Row>
+                <Col lg={{ span: 11, offset: 1 }} md={{ span: 11, offset: 1}}>
+                  <h2 className={styles.headingStyle}>We’re sales funnel experts</h2>
                 </Col>
-                <Col lg={2} className="d-lg-block d-none">
-                  <div className={`mt-4 + ${styles.polygonIcon}`}></div>
-                </Col>
-                <Col lg={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
-                  <p>We unlock sustainable, long-term growth by building copy, videos, and articles into the context of loops, flywheels, and funnels, We make sure every asset plays its part in a wider acquisition and retention system.</p>
-                  <Button
-                  as={Link}
-                  to="/case-studies"
-                  variant="outline-secondary">
-                    View all case studies
-                </Button>
-                </Col>
-            </Row>
-          </Col>
+              </Row>
+              <Row>
+                  <Col lg={5} md={5}>
+                    <h2>Who understand<div className="mt-lg-3 mt-2">systems thinking</div></h2>
+                  </Col>
+                  <Col lg={2} md={2} className="d-lg-block d-md-block d-none">
+                    <div className={`mt-4 + ${styles.polygonIcon}`}></div>
+                  </Col>
+                  <Col lg={5} md={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
+                    <p>We unlock sustainable, long-term growth by building copy, videos, and articles into the context of loops, flywheels, and funnels, We make sure every asset plays its part in a wider acquisition and retention system.</p>
+                    <Button
+                    as={Link}
+                    to="/case-studies"
+                    variant="outline-secondary">
+                      View all case studies
+                  </Button>
+                  </Col>
+              </Row>
+            </Col>
+          </div>
         </Row>
       </Container>
-      <Container className="mt-7 mb-8 p-0 position-relative">
+
+      <Container className="mt-lg-7 mt-3 mb-lg-8 mb-5 position-relative">
         <div className={styles.alpian}></div>
-        <div className="text-white position-relative">
-          <Row className="py-6">
-            <Col lg={{ span: 10, offset: 1 }} md={12}>
+        <div className="text-white position-relative p-0 p-md-3">
+          <Row className="py-lg-6 py-0">
+            <Col lg={{ span: 10, offset: 1 }}>
               <Row>
-                <Col lg={6}>
+                <Col lg={6} md={6}>
                   <StaticImage
                       src="./index-assets/alpian_logo.svg"
                       alt="Alpian logo"
@@ -125,7 +129,7 @@ const HomePage = () => {
                         Full case study
                     </Button>
                 </Col>
-                <Col lg={6} className="mt-9 flex relative ">
+                <Col lg={6} md={6} className="mt-9 flex relative">
                   <div className={styles.rombik}>
                     <div className={styles.parent}>
                       <svg viewBox="0 0 300 300">
@@ -156,7 +160,7 @@ const HomePage = () => {
         </div>
       </Container>
       <Container>
-        <Row className="align-items-end">
+        <Row className="align-items-end pt-lg-9 pt-6 ">
           <Col lg={{ span: 6, order: "first"}}
               sm={{ span: 12, order: "last" }}
               xs={{ span: 12, order: "last" }}>
