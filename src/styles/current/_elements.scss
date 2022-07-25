@@ -17,7 +17,7 @@ body {
   @include media-breakpoint-down(lg) {
     padding: 2rem 0;
   }
-  
+
   @include media-breakpoint-down(sm) {
     padding: 0;
     margin: 0 -12px;
@@ -64,4 +64,42 @@ body {
   @include media-breakpoint-down(md) {
     width: 160px;
   }
+}
+
+
+//Header styles
+
+.bm-burger-button {
+  position: relative;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  background: url(../../components/header/icon_bar.svg) no-repeat;
+}
+
+.bm-cross-button  {
+  background: url(../../components/header/cross.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+}
+
+.bm-menu {
+  background: $secondary;
+  padding: 2.5em 1.5em 0;
+  color: white;
+  overflow: hidden !important;
+}
+
+.bm-overlay {
+  background-color: transparent;
+  top: 0;
+}
+
+.bm-menu-wrap {
+  top: 0;
+}
+
+.bm-menu-wrap {
+  left: 0;
 }

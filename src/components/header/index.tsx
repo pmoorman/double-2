@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import cn from "classnames";
 
-import { Link, DoubleLogo } from "@app/components";
-
+import { Link, DoubleLogo, MobileMenu } from "@app/components";
 import * as styles from "./index.module.scss";
+import { useMediaQuery } from "react-responsive";
 
 const ID = "main-nav";
 const LINKS = [
@@ -23,21 +23,16 @@ export const Header = () => {
     [styles.navbarTogglerCollapsed]: !isOpen,
   });
 
+  const isMdDevice = useMediaQuery({ query: '(min-width: 992px)' })
+
   return (
     <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
+        {!isMdDevice && <MobileMenu></MobileMenu>}
         <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>
           <DoubleLogo />
         </Navbar.Brand>
-        <Navbar.Toggle
-          onClick={() => setIsOpen((v) => !v)}
-          className={togglerClass}
-          aria-controls={ID}
-        >
-          <span className={styles.menuIcon}></span>
-        </Navbar.Toggle>
 
-        <Navbar.Collapse in={isOpen} className={styles.navbarCollapse} id={ID}>
           <Nav className={styles.navbarNav}>
             {LINKS.map((link) => (
               <Nav.Link
@@ -52,7 +47,6 @@ export const Header = () => {
               </Nav.Link>
             ))}
           </Nav>
-        </Navbar.Collapse>
       </div>
     </Navbar>
   );
