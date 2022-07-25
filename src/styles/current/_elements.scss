@@ -14,6 +14,10 @@ body {
   background-color: #000;
   display: inline-block;
 
+  @include media-breakpoint-down(lg) {
+    padding: 2rem 0;
+  }
+  
   @include media-breakpoint-down(sm) {
     padding: 0;
     margin: 0 -12px;
@@ -59,73 +63,5 @@ body {
 .team-image {
   @include media-breakpoint-down(md) {
     width: 160px;
-  }
-}
-
-// Header sidebar styles
-
-.headerSidebar {
-
-  .bm-burger-button {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
-  }
-  
-  .react-burger-menu {
-    color: white;
-  }
-  .bm-overlay {
-    left: 0;
-    background-color: transparent;
-  }
-  
-  .bm-menu {
-    background: $secondary;
-  }
-  
-  .bm-menu-wrap {
-    left: 0;
-    top: 0;
-  }
-  
-  .bm-item-list a {
-    color: #fff !important;
-    padding: 1rem;
-  }
-  
-  .bm-item:focus {
-    outline: none;
-  }
-}
-
-//
-// Mixins
-//
-.menu-1 {
-  .bm-cross {
-    background: #bdc3c7;
-  }
-
-  .bm-menu {
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-
-  // Outline for cross button focus state
-  .bm-cross-button button:focus {
-    outline: 2px solid #c94e50;
-    outline-offset: 2px;
-  }
-
-  // Background color for cross focus state
-  .bm-cross-button {
-    button:focus + span {
-      span.bm-cross {
-        background-color: #c94e50;
-      }
-    }
   }
 }

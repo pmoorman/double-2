@@ -14,7 +14,7 @@ import * as styles from "./index-assets/index.module.scss";
 
 const HomePage = () => {
   const team = useTeam();
-  const isMdDevice = useMediaQuery({ query: '(min-width: 992px)' })
+  const isMdDevice = useMediaQuery({ query: '(min-width: 768px)' })
 
   const settings: Settings = {
     arrows: false,
@@ -107,6 +107,7 @@ const HomePage = () => {
         </Row>
       </Container>
 
+      <div className={styles.alpianMobile}>
       <Container className="mt-lg-7 mt-3 mb-lg-8 mb-5 position-relative">
         <div className={styles.alpian}></div>
         <div className="text-white position-relative p-0 p-md-3">
@@ -125,11 +126,12 @@ const HomePage = () => {
                     <Button
                       as={Link}
                       to="/case-studies"
-                      variant="light">
+                      variant="light"
+                      className="mb-lg-0 mb-6 mb-md-4">
                         Full case study
                     </Button>
                 </Col>
-                <Col lg={6} md={6} className="mt-9 flex relative">
+                <Col lg={6} md={6} className="mt-9  flex relative">
                   <div className={styles.rombik}>
                     <div className={styles.parent}>
                       <svg viewBox="0 0 300 300">
@@ -159,10 +161,12 @@ const HomePage = () => {
           </Row>
         </div>
       </Container>
+      </div>
       
       <Container>
-        <Row className="align-items-end pt-lg-9 pt-6 ">
+        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 ">
           <Col lg={{ span: 6, order: "first"}}
+              md={{ span: 6, order: "first" }}
               sm={{ span: 12, order: "last" }}
               xs={{ span: 12, order: "last" }}>
             <div className="tiktokImage">
@@ -171,7 +175,7 @@ const HomePage = () => {
                 alt="TikTok website" />
             </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} md={6}>
             <StaticImage
                 src="./index-assets/tiktok_logo.svg"
                 alt="TikTok logo"

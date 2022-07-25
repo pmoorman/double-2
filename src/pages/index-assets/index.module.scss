@@ -58,6 +58,7 @@ small {
         padding-top: 180px;
         border-bottom-width: 2px;
         margin: 0 12px;
+        width: calc(100% - 12px);
     }
 
 }
@@ -125,7 +126,14 @@ h2 {
     }
 
     @include media-breakpoint-down(md) {
-        width: 100%;
+        display: none;
+    }
+}
+
+.alpianMobile {
+    @include media-breakpoint-down(md) {
+        background: url(./alpian_bg.jpeg) no-repeat;
+        background-size: cover;
     }
 }
 
@@ -139,19 +147,21 @@ h2 {
     }
     @include media-breakpoint-down(md) {
         margin-top: 0;
-        width: 100%;
+        width: calc(100% + 24px);
+        left: -12px;
+        right: -12px;
     }
     
     .parent {
         width: 570px;
         display: flex;
 
+        @include media-breakpoint-down(xl) {
+            width: 460px;
+        }
+
         @include media-breakpoint-down(lg) {
             width: 330px;
-
-            & + div > div > div {
-                font-size: 2rem;
-            }
         }
 
         @include media-breakpoint-down(md) {
@@ -164,6 +174,25 @@ h2 {
             left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
+
+            & > div > div {
+                @include media-breakpoint-down(xl) {
+                    font-size: 3.5rem;
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 2rem;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 1.75rem;
+                }
+            }
+
+
+
+            @include media-breakpoint-down(md) {
+                top: 0;
+            }
+
         }
 
         svg {
@@ -309,7 +338,11 @@ blockquote {
 }
 
 .teamMember {
-    width: calc(50vw + 50%);
+    width: calc(50vw + 35%);
+
+    @include media-breakpoint-down(lg) {
+        width: calc(50vw + 50%);
+    }
 
     .logo {
         margin-right: 140px;
