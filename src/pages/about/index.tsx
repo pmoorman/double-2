@@ -46,49 +46,66 @@ const AboutPage = () => {
       {/* Intro */}
       <Container className="pt-lg-8 py-4 pb-lg-6">
         <Row>
-          <div className={styles.mobileLines}>
-            <Col
-              lg={{ span: 10, offset: 1 }}
-              md={12}
-              className={styles.aboutUs}
-            >
-              <Row>
-                <Col lg={{ span: 11, offset: 1 }} md={{ span: 11, offset: 1 }}>
-                  <h2 className={styles.headingStyle}>
-                    We’re sales funnel experts
-                  </h2>
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={5} md={5}>
-                  <h2>
-                    Who understand
-                    <div className="mt-lg-3 mt-2">systems thinking</div>
-                  </h2>
-                </Col>
-                <Col lg={2} md={2} className="d-lg-block d-md-block d-none">
-                  <div className={`mt-4 + ${styles.polygonIcon}`}></div>
-                </Col>
-                <Col lg={5} md={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
-                  <p>
-                    We unlock sustainable, long-term growth by building copy,
-                    videos, and articles into the context of loops, flywheels,
-                    and funnels, We make sure every asset plays its part in a
-                    wider acquisition and retention system.
-                  </p>
-                  <Button
-                    as={Link}
-                    to="/case-studies"
-                    variant="outline-secondary"
-                  >
-                    View all case studies
-                  </Button>
-                </Col>
-              </Row>
-            </Col>
-          </div>
+          <Col md={6}>
+            <h2 className="text-end">
+              We’re a full-stack
+              <div className="mt-lg-3 mt-2">Growth Marketing agency</div>
+            </h2>
+          </Col>
+          <Col md={1}>
+            <StaticImage src="./intro.svg" alt="" />
+          </Col>
+          <Col md={5} className="d-flex justify-content-end">
+            <div className="mt-7" style={{ maxWidth: "450px" }}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim.
+              </p>
+              <Button as={Link} to="/services" variant="outline-secondary">
+                View all services
+              </Button>
+            </div>
+          </Col>
         </Row>
       </Container>
+
+      {/* Images */}
+      <div className="bg-secondary">
+        <Container className="pt-lg-8 py-4 pb-lg-6">
+          <Row>
+            <Col md={12}>
+              <StaticImage src="./about_img_1.jpg" alt="TODO" />
+              <h2 className="text-end">
+                We’re Double. We’re
+                <div className="mt-lg-3 mt-2">
+                  Lunch time jokers
+                  <StaticImage
+                    className="ms-4"
+                    src="./about_img_overlay.svg"
+                    alt="TODO"
+                  />
+                </div>
+              </h2>
+            </Col>
+            <Col md={1}>
+              <StaticImage src="./intro.svg" alt="" />
+            </Col>
+            <Col md={5} className="d-flex justify-content-end">
+              <div className="mt-7" style={{ maxWidth: "450px" }}>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim.
+                </p>
+                <Button as={Link} to="/services" variant="outline-secondary">
+                  View all services
+                </Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
       <Container>
         <Row>
