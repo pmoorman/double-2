@@ -23,7 +23,7 @@ export const Header = () => {
     [styles.navbarTogglerCollapsed]: !isOpen,
   });
 
-  const isMdDevice = useMediaQuery({ query: '(min-width: 992px)' })
+  const isMdDevice = useMediaQuery({ query: "(min-width: 992px)" });
 
   return (
     <Navbar expand="lg" className={styles.navbar}>
@@ -33,20 +33,20 @@ export const Header = () => {
           <DoubleLogo />
         </Navbar.Brand>
 
-          <Nav className={styles.navbarNav}>
-            {LINKS.map((link) => (
-              <Nav.Link
-                key={link.to}
-                className={styles.navLink}
-                activeClassName={styles.navLinkActive}
-                onClick={() => setIsOpen(false)}
-                as={Link}
-                to={link.to}
-              >
-                {link.label}
-              </Nav.Link>
-            ))}
-          </Nav>
+        <Nav className={styles.navbarNav}>
+          {LINKS.map((link) => (
+            <Nav.Link
+              key={link.to}
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
+              as={Link}
+              to={link.to}
+            >
+              {link.label}
+            </Nav.Link>
+          ))}
+        </Nav>
       </div>
     </Navbar>
   );

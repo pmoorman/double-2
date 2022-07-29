@@ -9,6 +9,22 @@ body {
           mask: var(--mask);
 }
 
+.cutted_image_double {
+  --g: #000, #0000 1deg 179deg, #000 180deg;
+    --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /100% 100% no-repeat;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+  @include media-breakpoint-down(md) {
+      --g: #000, #0000 1deg 179deg, #000 180deg;
+        --mask:
+          conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /51% 100% no-repeat,
+          conic-gradient(from 45deg at bottom 20px right 20px, var(--g)) 100% 100%/51% 100% no-repeat;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+  }
+}
+
 .tiktokImage {
   padding: 8.43rem 0;
   background-color: #000;
@@ -64,6 +80,12 @@ body {
   @include media-breakpoint-down(md) {
     width: 160px;
   }
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: $font-family-monospace;
 }
 
 

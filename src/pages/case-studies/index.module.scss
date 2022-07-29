@@ -1,0 +1,151 @@
+.heroBg {
+    background:  url(./hero_bg.svg) no-repeat right;
+    background-size: contain;
+    width: 44%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: block;
+    top: 0;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.blueBg {
+    background-color: $primary;
+    width: calc(50vw + 50% + 32px);
+    padding-top: 2rem;
+    padding-bottom: 12.3rem;
+    padding-left: 32px;
+    color: white;
+    margin-left: -32px;
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 5rem;
+    }
+}
+
+.cardSection {
+    margin-top: -150px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: -80px;
+    }
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    
+    @include media-breakpoint-down(md) {
+        overflow-x: auto;
+    }
+    
+    div {
+        opacity: 0.5;
+        margin: 2.5rem 1rem;
+        cursor: pointer;
+
+        small {
+            @include media-breakpoint-down(md) {
+                white-space: nowrap;
+            }
+        }
+        
+        &.active {
+            color: $secondary;
+            border-bottom: 2px solid $primary;
+            opacity: 1;
+        }
+    }
+
+    .title {
+        margin-left: 0;
+        opacity: 1;
+        cursor: inherit;
+
+        small {
+            font-weight: 400;
+        }
+    }
+}
+
+.alpian {
+    background: url(./alpian_bg.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: calc(50vw + 50%);
+    height: 100%;
+
+    small {
+        font-weight: 500;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.alpianMobile {
+    @include media-breakpoint-down(md) {
+        background: url(./alpian_bg.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+.alpianStats {
+    background-color: white;
+    padding: 24px 50px 46px 107px;
+    z-index: 3;
+    position: relative;
+    display: inline-block;
+    float: right;
+
+    & > div {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 24px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 24px 32px;
+    }
+}
+
+.arrowDown {
+    width: calc(100% - 617px);
+    text-align: right;
+    margin-top: -85px;
+
+    @include media-breakpoint-down(lg) {
+        width: calc(100% - 508px);
+        margin-top: -90px;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-top: -30px;
+        width: calc(100% - 226px);
+    }
+    
+    & > div {
+        background: url(./arrow_down.svg) no-repeat right;
+        background-size: contain;
+        height: 250px;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+            background: url(./arrow_down_mobile.svg) no-repeat right;
+            height: 100px;
+            width: 100%;
+            margin-left: 9px;
+            z-index: 20;
+            position: relative;
+
+        }
+    }
+}
