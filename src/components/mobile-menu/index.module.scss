@@ -1,12 +1,12 @@
 .mobileLink {
-    font-weight: 500;
-    font-size: 1rem;
-    color: white;
-    margin: 1rem 0;
-    font-family: $font-family-monospace;
-    text-decoration: none;
-  
-    &:hover {
-      color: $grey;
-    }
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin: 1rem 0;
+  font-family: $font-family-monospace;
+  text-decoration: none;
+
+  &:hover {
+    color: $grey;
+  }
 }

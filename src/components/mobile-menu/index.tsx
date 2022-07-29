@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "@app/components";
-import { slide as Menu } from "react-burger-menu";
+import { slide as Menu, State as MenuState } from "react-burger-menu";
 import * as styles from "./index.module.scss";
 
 const ID = "main-nav";
@@ -14,16 +14,23 @@ const LINKS = [
 ];
 
 export const MobileMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleStateChange = (state: MenuState) => {
+    setIsOpen(state.isOpen);
+  };
+
   return (
     <Menu
-      left
-      width={"260px"}
+      isOpen={isOpen}
+      onStateChange={(state) => handleStateChange(state)}
+      width={260}
       burgerBarClassName={"menuIcon"}
-      noOverlay
-      disableOverlayClick
+      bodyClassName={"bodyScroll"}
     >
       {LINKS.map((link) => (
         <Link
+          onClick={() => setIsOpen(false)}
           key={link.to}
           className={styles.mobileLink}
           as={Link}

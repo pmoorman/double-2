@@ -73,7 +73,7 @@ const CaseStudiesPage = () => {
 
       <div className={styles.alpianMobile}>
         <Container className="position-relative">
-          <div className={styles.alpian}></div>
+          <div className={`bg_image + ${styles.alpian}`}></div>
           <div className="text-white position-relative p-0 p-md-3">
             <Row className="pt-lg-5 pb-lg-9 py-0 pt-3 pb-6">
               <Col lg={{ span: 10, offset: 1 }}>
@@ -109,8 +109,8 @@ const CaseStudiesPage = () => {
           </div>
         </div>
 
-        <div className="mt-lg-6 mb-lg-7">
-          <Row>
+        <div className="mt-lg-6 mb-lg-7 clearfix">
+          <Row className="clearfix">
             <Col lg="5">
               <h3>Section title</h3>
             </Col>
@@ -179,10 +179,10 @@ const CaseStudiesPage = () => {
         </div>
       </Container>
 
-      <div className={styles.alpianMobile}>
+      <div className={styles.alpianMobile2}>
         <Container className="position-relative">
-          <div className={styles.alpian}></div>
-          <div className="text-white position-relative p-0 p-md-3">
+          <div className={`bg_image + ${styles.alpian2}`}></div>
+          <div className="position-relative p-0 p-md-3">
             <Row className="pt-lg-5 pb-lg-9 py-0 pt-3 pb-6">
               <Col lg={{ span: 10, offset: 1 }}>
                 <Row>
@@ -207,8 +207,10 @@ const CaseStudiesPage = () => {
         </Container>
       </div>
 
-      <Container>
-        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 ">
+      <Container className="position-relative">
+        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 position-relative">
+          <div className={styles.line}></div>
+          <div className={styles.lineRight}></div>
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
@@ -246,9 +248,13 @@ const CaseStudiesPage = () => {
             </Button>
           </Col>
         </Row>
-        {isMdDevice && <Stats></Stats>}
+        <div className="position-relative">
+          <div className={styles.lineRight2}></div>
+          {isMdDevice && <Stats></Stats>}
+        </div>
 
-        <div className="mt-lg-6 mb-lg-7">
+        <div className="mt-lg-9 mb-lg-7">
+          <div className={styles.bgArrow}></div>
           <Row>
             <Col lg="5">
               <h3>Section title</h3>

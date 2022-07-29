@@ -19,10 +19,6 @@ const LINKS = [
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const togglerClass = cn(styles.navbarToggler, {
-    [styles.navbarTogglerCollapsed]: !isOpen,
-  });
-
   const isMdDevice = useMediaQuery({ query: "(min-width: 992px)" });
 
   return (
