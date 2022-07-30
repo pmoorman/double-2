@@ -110,7 +110,7 @@ const AboutPage = () => {
             </Col>
           </Row>
           <div className="d-flex justify-content-between">
-            <div className={styles.img_2}>
+            <div>
               <StaticImage src="./about_img_2.jpg" alt="TODO" width={481} />
               <h3 className="mt-3 text-white">Title about picture</h3>
             </div>

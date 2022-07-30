@@ -13,7 +13,6 @@ export interface TeamMemberProps {
 
 export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
   let image: JSX.Element | null = null;
-  const layout = !inSlider ? "fullWidth" : undefined;
   const teamImageClass = cn({
     [styles.teamImageSlider]: inSlider,
   });
@@ -25,7 +24,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./carine_engbers.jpg"
           alt="carine engbers"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -37,7 +35,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./caspar_lusink.jpg"
           alt="caspar lusink"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -49,7 +46,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./dominik_kondziela.jpg"
           alt="dominik kondziela"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -61,7 +57,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./erik_brendon.jpg"
           alt="erik_brendon"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -73,7 +68,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./james_wilkinson.jpg"
           alt="james wilkinson"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -85,7 +79,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./louise_de_sadeleer.jpg"
           alt="louise de sadeleer"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -97,7 +90,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./naveed_tariq.jpg"
           alt="naveed tariq"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
@@ -109,7 +101,6 @@ export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
           src="./pieter_moorman.jpg"
           alt="pieter moorman"
           width={298}
-          layout={layout}
           className={teamImageClass}
         />
       );
