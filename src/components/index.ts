@@ -1,4 +1,3 @@
-
 export * from "./footer";
 export * from "./header";
 export * from "./seo";
@@ -11,3 +10,5 @@ export * from "./careers-grid-list";
 export * from "./tiktok-stats";
 export * from "./mobile-menu";
 export * from "./image-card";
+export * from "./section-featured-articles";
+export * from "./section-open-roles";

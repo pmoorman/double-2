@@ -1,0 +1,13 @@
+.blogArtical {
+  margin-top: 4rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
+
+  .date {
+    font-family: $font-family-monospace;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,368 +1,344 @@
 .hero {
-    margin: 0;
+  margin: 0;
 
-    h1 {
-        font-size: 5rem;
+  h1 {
+    font-size: 5rem;
 
-        @include media-breakpoint-down(lg) {
-            font-size: 2.875rem;
-        }
+    @include media-breakpoint-down(lg) {
+      font-size: 2.875rem;
+    }
+  }
+
+  .vectorLine {
+    background: url(./arrow-vector.svg) no-repeat;
+    position: absolute;
+    background-size: contain;
+    right: 12px;
+    bottom: -245px;
+    height: 500px;
+    display: block;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  .heroImage {
+    height: 318px;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
     }
 
-    .vectorLine {
-        background: url(./arrow-vector.svg) no-repeat;
-        position: absolute;
-        background-size: contain;
-        right: 12px;
-        bottom: -245px;
-        height: 500px;
-        display: block;
-        width: 100%;
-
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
+    @include media-breakpoint-down(md) {
+      padding: 12px;
+      height: 200px;
+      width: 100%;
     }
-
-    .heroImage {
-        height: 318px;
-        
-        @include media-breakpoint-down(lg) {
-            width: 100%;
-        }
-
-        @include media-breakpoint-down(md) {
-            padding: 12px;
-            height: 200px;
-            width: 100%;
-        }
-    }
+  }
 }
 
 small {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .mobileLines {
-    background: none;
+  background: none;
 
-    @include media-breakpoint-down(md) {
-        background: url(./mobile_arrows.svg) no-repeat;
-        background-size: cover;
-        padding-top: 200px;
-        padding-bottom: 30px;
-        border-bottom: 3px solid $primary;
-    }
+  @include media-breakpoint-down(md) {
+    background: url(./mobile_arrows.svg) no-repeat;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid $primary;
+  }
 
-    @include media-breakpoint-down(sm) {
-        padding-top: 180px;
-        border-bottom-width: 2px;
-        margin: 0 12px;
-        width: calc(100% - 12px);
-    }
-
+  @include media-breakpoint-down(sm) {
+    padding-top: 180px;
+    border-bottom-width: 2px;
+    margin: 0 12px;
+    width: calc(100% - 12px);
+  }
 }
 
 .headingStyle {
-    @include media-breakpoint-down(md) {
-        margin-left: 40px;
-    }
+  @include media-breakpoint-down(md) {
+    margin-left: 40px;
+  }
 }
 
 .polygonIcon {
-    background: url(./polygon.svg) no-repeat;
-    width: 128px;
-    height: 108px;
-    
-    @include media-breakpoint-down(lg) {
-        background-size: contain;
-        width: 94px;
-        height: 98px;
-    }
+  background: url(./polygon.svg) no-repeat;
+  width: 128px;
+  height: 108px;
+
+  @include media-breakpoint-down(lg) {
+    background-size: contain;
+    width: 94px;
+    height: 98px;
+  }
 }
 
 .polygonRightIcon {
-    background: url(./polygon_right.svg) no-repeat;
-    width: 120px;
-    height: 98px;
-    position: absolute;
-    top: -49px;
+  background: url(./polygon_right.svg) no-repeat;
+  width: 120px;
+  height: 98px;
+  position: absolute;
+  top: -49px;
 
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 
 .aboutUs {
-    h2 {
-        margin-bottom: 1rem;
+  h2 {
+    margin-bottom: 1rem;
 
-        @include media-breakpoint-down(lg) {
-            font-size: 2rem;
-        }
-        @include media-breakpoint-down(md) {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-
-        }
+    @include media-breakpoint-down(lg) {
+      font-size: 2rem;
     }
+    @include media-breakpoint-down(md) {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 }
 
 h2 {
-    div {
-        margin-bottom: 1;
-    }
+  div {
+    margin-bottom: 1;
+  }
 }
 
 .alpian {
-    background: url(./alpian_bg.jpeg) no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: calc(50vw + 50%);
-    height: 100%;
-    
-    small {
-        font-weight: 500;
-    }
+  background: url(./alpian_bg.jpeg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: calc(50vw + 50%);
+  height: 100%;
 
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
+  small {
+    font-weight: 500;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
 .alpianMobile {
-    @include media-breakpoint-down(md) {
-        background: url(./alpian_bg.jpeg) no-repeat;
-        background-size: cover;
-    }
+  @include media-breakpoint-down(md) {
+    background: url(./alpian_bg.jpeg) no-repeat;
+    background-size: cover;
+  }
 }
 
 .rombik {
-    text-align: center;
-    display: inline-block;
-    position: absolute;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+    width: calc(100% + 24px);
+    left: -12px;
+    right: -12px;
+  }
+
+  .parent {
+    width: 570px;
+    display: flex;
+
+    @include media-breakpoint-down(xl) {
+      width: 460px;
+    }
 
     @include media-breakpoint-down(lg) {
-        margin-top: 40px;
+      width: 330px;
     }
+
     @include media-breakpoint-down(md) {
-        margin-top: 0;
-        width: calc(100% + 24px);
-        left: -12px;
-        right: -12px;
+      transform: translateY(-50%);
+      width: 100%;
     }
-    
-    .parent {
-        width: 570px;
-        display: flex;
 
+    & + div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+
+      & > div > div {
         @include media-breakpoint-down(xl) {
-            width: 460px;
+          font-size: 3.5rem;
         }
-
         @include media-breakpoint-down(lg) {
-            width: 330px;
+          font-size: 2rem;
         }
-
         @include media-breakpoint-down(md) {
-            transform: translateY(-50%);
-            width: 100%;
+          font-size: 1.75rem;
         }
+      }
 
-        & + div {
-            top: 50%;  
-            left: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-
-            & > div > div {
-                @include media-breakpoint-down(xl) {
-                    font-size: 3.5rem;
-                }
-                @include media-breakpoint-down(lg) {
-                    font-size: 2rem;
-                }
-                @include media-breakpoint-down(md) {
-                    font-size: 1.75rem;
-                }
-            }
-
-
-
-            @include media-breakpoint-down(md) {
-                top: 0;
-            }
-
-        }
-
-        svg {
-            width: 100%;
-        }
+      @include media-breakpoint-down(md) {
+        top: 0;
+      }
     }
-      
-      
+
+    svg {
+      width: 100%;
+    }
+  }
 }
 
 .line {
-    border-top: 2px solid $secondary;
-    margin-left: -2000px;
+  border-top: 2px solid $secondary;
+  margin-left: -2000px;
 
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 
 .rightLine {
-    border-right: 2px solid $secondary;
-    height: calc(100% + 5.5rem);
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    top: -5.5rem;
-    left: -12px;
+  border-right: 2px solid $secondary;
+  height: calc(100% + 5.5rem);
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: -5.5rem;
+  left: -12px;
 
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 
 .growforge {
-    background: url(./growforge_bg.jpeg) no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: calc(50vw + 50%);
-    height: 100%;
+  background: url(./growforge_bg.jpeg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: calc(50vw + 50%);
+  height: 100%;
 
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
-    
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 
 .growforge_logo {
-
-    @include media-breakpoint-down(md) {
-        width: 123px;
-    }
+  @include media-breakpoint-down(md) {
+    width: 123px;
+  }
 }
 .mobileBackground {
-
-    @include media-breakpoint-down(lg) {
-        background: url(./growforge_bg.jpeg) no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        left: 0;
-    }
+  @include media-breakpoint-down(lg) {
+    background: url(./growforge_bg.jpeg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+  }
 }
 
 .growforgeRight {
-    z-index: 2;
+  z-index: 2;
 }
 
 blockquote {
-    background-color: white;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: -150px;
-    position: relative;
-    z-index: 2;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -150px;
+  position: relative;
+  z-index: 2;
+
+  @include media-breakpoint-down(lg) {
+    background-color: $primary;
+    padding: 16px;
+    color: white;
+    margin-top: -50px;
+  }
+
+  .quoteLine {
+    border-left: 2px solid $primary;
+    height: 214px;
+    position: absolute;
 
     @include media-breakpoint-down(lg) {
-        background-color: $primary;
-        padding: 16px;
-        color: white;
-        margin-top: -50px;
+      border-left-color: white;
+      height: 87px;
     }
+  }
 
-    .quoteLine {
-        border-left: 2px solid $primary;
-        height: 214px;
-        position: absolute;
+  p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2.5rem;
+    line-height: 1.3;
 
-        @include media-breakpoint-down(lg) {
-            border-left-color: white;
-            height: 87px;
-        }
+    @include media-breakpoint-down(lg) {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      margin-left: 1rem;
     }
+  }
+  footer div {
+    font-family: $font-family-monospace;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 
-    p {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        margin-left: 2.5rem;
-        line-height: 1.3;
-
-        @include media-breakpoint-down(lg) {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            margin-left: 1rem;
-        }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      margin-left: 1rem;
     }
-    footer div {
-        font-family: $font-family-monospace;
-        margin-left: 2.5rem;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            margin-left: 1rem;
-        }
+  }
+  footer:last-child div {
+    @include media-breakpoint-down(md) {
+      font-size: 0.75rem;
     }
-    footer:last-child div {
-        @include media-breakpoint-down(md) {
-            font-size: 0.75rem;
-        }
-    }
+  }
 }
 
 .teamSection {
-    h2 {
-        font-size: 2.5rem;
-        @include media-breakpoint-down(lg) {
-            font-size: 1.75rem;
-        }
+  h2 {
+    font-size: 2.5rem;
+    @include media-breakpoint-down(lg) {
+      font-size: 1.75rem;
     }
+  }
 
-    a {
-        float: right;
-        @include media-breakpoint-down(lg) {
-            float: left;
-        }
+  a {
+    float: right;
+    @include media-breakpoint-down(lg) {
+      float: left;
     }
+  }
 }
 
 .teamMember {
-    width: calc(50vw + 35%);
+  width: calc(50vw + 35%);
 
-    @include media-breakpoint-down(lg) {
-        width: calc(50vw + 50%);
-    }
+  @include media-breakpoint-down(lg) {
+    width: calc(50vw + 50%);
+  }
 
-    .logo {
-        margin-right: 140px;
-    }
+  .logo {
+    margin-right: 140px;
+  }
 
-    .teamCard {
-        padding-right: 24px;
-    }
-}
-
-.blogArtical {
-    margin-top: 4rem;
-
-    @include media-breakpoint-down(lg) {
-        margin-top: 0;
-    }
-
-    .date {
-        font-family: $font-family-monospace;
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
+  .teamCard {
+    padding-right: 24px;
+  }
 }

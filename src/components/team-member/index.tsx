@@ -1,13 +1,22 @@
 import React, { FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import cn from "classnames";
+
 import { TeamMemberData } from "@app/models";
+
+import * as styles from "./index.module.scss";
 
 export interface TeamMemberProps {
   member: TeamMemberData;
+  inSlider?: boolean;
 }
 
-export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
+export const TeamMember: FC<TeamMemberProps> = ({ member, inSlider }) => {
   let image: JSX.Element | null = null;
+  const layout = !inSlider ? "fullWidth" : undefined;
+  const teamImageClass = cn({
+    [styles.teamImageSlider]: inSlider,
+  });
 
   switch (member.name.toLowerCase()) {
     case "carine engbers":
@@ -15,9 +24,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./carine_engbers.jpg"
           alt="carine engbers"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -27,9 +36,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./caspar_lusink.jpg"
           alt="caspar lusink"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -39,9 +48,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./dominik_kondziela.jpg"
           alt="dominik kondziela"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -51,9 +60,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./erik_brendon.jpg"
           alt="erik_brendon"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -63,9 +72,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./james_wilkinson.jpg"
           alt="james wilkinson"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -75,9 +84,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./louise_de_sadeleer.jpg"
           alt="louise de sadeleer"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -87,9 +96,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./naveed_tariq.jpg"
           alt="naveed tariq"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -99,9 +108,9 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
         <StaticImage
           src="./pieter_moorman.jpg"
           alt="pieter moorman"
-          height={368}
           width={298}
-          className="team-image"
+          layout={layout}
+          className={teamImageClass}
         />
       );
       break;
@@ -109,14 +118,13 @@ export const TeamMember: FC<TeamMemberProps> = ({ member }) => {
 
   return (
     <div>
-      <div className="mb-3">
-        {image}
-      </div>
-      <h4 className="mb-2">
-        {member.name}
-      </h4>
+      <div className="mb-3">{image}</div>
+      <h4 className="mb-2">{member.name}</h4>
       <div className="mb-2 lead">{member.position}</div>
-      <p className="mb-2 d-flex align-items-center"><i className="mapIcon"></i>{member.location}</p>
+      <p className="mb-2 d-flex align-items-center">
+        <i className={styles.mapIcon}></i>
+        {member.location}
+      </p>
     </div>
   );
 };

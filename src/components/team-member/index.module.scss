@@ -1,0 +1,14 @@
+.mapIcon {
+  background: url(../../components/team-member/map_logo.svg) no-repeat;
+  width: 15px;
+  height: 22px;
+  margin-right: 0.85rem;
+  display: inline-block;
+  background-size: contain;
+}
+
+.teamImageSlider {
+  @include media-breakpoint-down(md) {
+    width: 160px;
+  }
+}
