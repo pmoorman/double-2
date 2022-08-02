@@ -1,0 +1,20 @@
+.iconStrategy {
+  background-image: url(./strategy.svg);
+}
+.iconCreative {
+  background-image: url(./creative.svg);
+}
+.iconInfrastructure {
+  background-image: url(./Infrastructure.svg);
+}
+.iconPerformance {
+  background-image: url(./performance.svg);
+}
+
+.borderContainer {
+  border-bottom: 1px solid $secondary;
+
+  @include media-breakpoint-down(md) {
+    border-bottom: none;
+  }
+}

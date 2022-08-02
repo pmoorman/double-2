@@ -297,7 +297,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </div>
       </Container>
 
-      <div className={styles.hoverAnimation}>
+      <div className="hoverAnimation gray">
         <Container>
           <Row className="pt-lg-7 pb-lg-5 py-5">
             <Col lg="5">
@@ -309,7 +309,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               />
             </Col>
             <Col lg="1" className="d-flex justify-content-lg-end my-3 my-lg-0">
-              <div className={styles.number}>01</div>
+              <div className="number">01</div>
             </Col>
             <Col lg="6">
               <p>
@@ -324,7 +324,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </Container>
       </div>
 
-      <div className={styles.hoverAnimation}>
+      <div className="hoverAnimation gray">
         <Container>
           <Row className="pt-lg-7 pb-lg-5 py-5">
             <Col lg="5">
@@ -336,7 +336,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               />
             </Col>
             <Col lg="1" className="d-flex justify-content-lg-end my-3 my-lg-0">
-              <div className={styles.number}>02</div>
+              <div className="number">02</div>
             </Col>
             <Col lg="6">
               <p>
@@ -351,7 +351,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </Container>
       </div>
 
-      <div className={styles.hoverAnimation}>
+      <div className="hoverAnimation gray">
         <Container>
           <Row className="pt-lg-7 pb-lg-5 py-5">
             <Col lg="5">
@@ -363,7 +363,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               />
             </Col>
             <Col lg="1" className="d-flex justify-content-lg-end my-3 my-lg-0">
-              <div className={styles.number}>03</div>
+              <div className="number">03</div>
             </Col>
             <Col lg="6">
               <p>
