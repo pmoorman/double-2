@@ -12,3 +12,4 @@ export * from "./mobile-menu";
 export * from "./image-card";
 export * from "./section-featured-articles";
 export * from "./section-open-roles";
+export * from "./heading-row";
