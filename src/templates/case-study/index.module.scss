@@ -8,45 +8,6 @@
   }
 }
 
-.topLine {
-  background-color: $primary;
-  height: 2px;
-  width: 47%;
-  display: block;
-  margin-top: 134px;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-
-  @include media-breakpoint-down(xl) {
-    display: none;
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-top: 65px;
-    height: 1px;
-    width: 80%;
-    display: block;
-  }
-
-  @include media-breakpoint-down(md) {
-    display: none;
-  }
-}
-
-.arrowImg {
-  background-color: white;
-  z-index: 2;
-
-  @include media-breakpoint-down(md) {
-    margin-bottom: 1rem;
-  }
-
-  svg {
-    max-width: 100%;
-  }
-}
-
 .processSection {
   background-color: $secondary;
   padding-top: 120px;
