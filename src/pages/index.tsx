@@ -82,8 +82,40 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <div className="position-relative">
-        <div className={styles.vectorLine}></div>
+      <div className="d-none d-lg-block">
+        <div className={styles.leftVector}>
+          <svg
+            width="129"
+            height="265"
+            viewBox="0 0 129 265"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 263.857H59.8855L58.8855 178.5H128.269V0.886719"
+              stroke="#387CD3"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <Container className="position-relative">
+          <div className={styles.vectorLine}></div>
+          <div className={styles.rightVector}>
+            <svg
+              width="273"
+              height="258"
+              viewBox="0 0 273 258"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M -0.085 256.611 L 271.954 256.387 L 271.954 3 L 18.954 215.953 L 18.954 87.231 M 18.954 87.231 L 1 105.5 M 18.954 87.231 L 36.909 105.5"
+                stroke="#387CD3"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </Container>
       </div>
 
       <Container className="pt-lg-8 py-4 pb-lg-6">

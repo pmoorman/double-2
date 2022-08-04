@@ -9,21 +9,6 @@
     }
   }
 
-  .vectorLine {
-    background: url(./arrow-vector.svg) no-repeat;
-    position: absolute;
-    background-size: contain;
-    right: 12px;
-    bottom: -245px;
-    height: 500px;
-    display: block;
-    width: 100%;
-
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
-  }
-
   .heroImage {
     height: 318px;
 
@@ -39,12 +24,36 @@
   }
 }
 
+.leftVector {
+  position: absolute;
+  left: 0;
+  background-color: white;
+}
+
+.rightVector {
+  position: absolute;
+  right: 0;
+  bottom: -3.5px;
+}
+
+.vectorLine {
+  height: 2px;
+  background-color: #387cd3;
+  width: 200%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  z-index: -1;
+}
+
 small {
   font-weight: 600;
 }
 
 .mobileLines {
   background: none;
+  z-index: 2;
 
   @include media-breakpoint-down(md) {
     background: url(./mobile_arrows.svg) no-repeat;
