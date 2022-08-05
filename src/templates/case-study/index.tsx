@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
-import { Col, Container, Row, Image } from "react-bootstrap";
-import { StaticImage } from "gatsby-plugin-image";
+import { Col, Container, Row } from "react-bootstrap";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { ImageRow, HeadingRow } from "@app/components";
 
@@ -12,39 +13,41 @@ export interface CaseStudyTemplateProps {
     body: string;
     frontmatter: {
       title: string;
+      subtitle: string;
+      content: string;
+      image: any;
+      logo: any;
+      stats: {
+        title: string;
+        value: string;
+      }[];
     };
   };
 }
 
 const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const { mdx } = props.data;
+  const { title, subtitle, content, image, logo, stats } = mdx.frontmatter;
+  const heroImage = getImage(image);
+  const logoImage = getImage(logo);
+
+  console.log({ heroImage });
 
   return (
     <div>
+      <MDXRenderer>{mdx.body}</MDXRenderer>
+
       <Container>
         <Row>
           <div className="pt-lg-7 pb-lg-8 py-4">
             <ImageRow
               imageOrder="last"
-              image={
-                <StaticImage
-                  src="./hero.jpg"
-                  alt="Growth"
-                  className="cutted_image m-3"
-                />
-              }
+              image={heroImage && <GatsbyImage image={heroImage} alt="" />}
             >
-              <StaticImage
-                src="./index-assets/alpian_logo.svg"
-                alt="Alpian logo"
-              />
-              <h2 className="mb-3">Taking growth to the bank</h2>
-              <h3 className="mb-3">Wealth beyond money</h3>
-              <p>
-                We have been a long term growth marketing partner for
-                Switzerland’s first digital private bank. Helping them build an
-                audience from scratch.
-              </p>
+              {logoImage && <GatsbyImage image={logoImage} alt="" />}
+              <h2 className="mb-3">{title}</h2>
+              <h3 className="mb-3">{subtitle}</h3>
+              <p>{content}</p>
             </ImageRow>
           </div>
         </Row>
@@ -53,18 +56,12 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
       <div className={`py-lg-7 py-5 + ${styles.blueBg}`}>
         <Container>
           <div className="numberStat">
-            <div>
-              <div className="mb-lg-3 mb-0">7k</div>
-              <span>Leads</span>
-            </div>
-            <div>
-              <div className="mb-lg-3 mb-0">$30m</div>
-              <span>Raised</span>
-            </div>
-            <div>
-              <div className="mb-lg-3 mb-0">18</div>
-              <span>Months</span>
-            </div>
+            {stats.map((stat) => (
+              <div key={stat.title}>
+                <div className="mb-lg-3 mb-0">{stat.value}</div>
+                <span>{stat.title}</span>
+              </div>
+            ))}
           </div>
         </Container>
       </div>
@@ -364,6 +361,22 @@ export const pageQuery = graphql`
     mdx(slug: { eq: $slug }) {
       frontmatter {
         title
+        subtitle
+        content
+        stats {
+          title
+          value
+        }
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 650)
+          }
+        }
+        logo {
+          childImageSharp {
+            gatsbyImageData(height: 128)
+          }
+        }
       }
       body
     }
