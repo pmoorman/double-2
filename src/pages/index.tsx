@@ -5,8 +5,10 @@ import {
   Link,
   ImageRow,
   TeamMember,
-  Stats,
   SectionFeaturedArticles,
+  CaseStudyAlpian,
+  CaseStudyTikTok,
+  CaseStudyGlowForge,
 } from "@app/components";
 import { useTeam } from "@app/hooks";
 import { useMediaQuery } from "react-responsive";
@@ -164,169 +166,11 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      <div className={styles.alpianMobile}>
-        <Container className="mt-lg-7 mt-3 mb-lg-8 mb-5 position-relative">
-          <div className={styles.alpian}></div>
-          <div className="text-white position-relative p-0 p-md-3">
-            <Row className="py-lg-6 py-0">
-              <Col lg={{ span: 10, offset: 1 }}>
-                <Row>
-                  <Col lg={6} md={6}>
-                    <StaticImage
-                      src="./index-assets/alpian_logo.svg"
-                      alt="Alpian logo"
-                    />
-                    <small className="mb-2">Strategy | Performance</small>
-                    <h2 className="mb-2">Taking growth to the bank</h2>
-                    <h3 className="mb-3">Wealth beyond money</h3>
-                    <p>
-                      We have been a long term growth marketing partner for
-                      Switzerland’s first digital private bank. Helping them
-                      build an audience from scratch.
-                    </p>
-                    <Button
-                      as={Link}
-                      to="/case-studies"
-                      variant="light"
-                      className="mb-lg-0 mb-6 mb-md-4"
-                    >
-                      Full case study
-                    </Button>
-                  </Col>
-                  <Col lg={6} md={6} className="mt-9  flex relative">
-                    <div className={styles.rombik}>
-                      <div className={styles.parent}>
-                        <svg viewBox="0 0 300 300">
-                          <g
-                            transform="translate(0,300) scale(0.1,-0.1)"
-                            fill="#387CD3"
-                          >
-                            <path d="M745 2250 l-750 -750 753 -753 752 -752 752 752 753 753 -750 750 c-412 412 -752 750 -755 750 -3 0 -343 -338 -755 -750z" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="numberStat">
-                        <div className="mb-5">
-                          <div>7k</div>
-                          <span>Leads</span>
-                        </div>
-                        <div className="mb-5">
-                          <div>$30m</div>
-                          <span>Raised</span>
-                        </div>
-                        <div>
-                          <div>18</div>
-                          <span>Months</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
+      <CaseStudyAlpian></CaseStudyAlpian>
+      <CaseStudyTikTok></CaseStudyTikTok>
+      <CaseStudyGlowForge></CaseStudyGlowForge>
 
       <Container>
-        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 ">
-          <Col
-            lg={{ span: 6, order: "first" }}
-            md={{ span: 6, order: "first" }}
-            sm={{ span: 12, order: "last" }}
-            xs={{ span: 12, order: "last" }}
-          >
-            <div className="tiktokImage">
-              <StaticImage
-                src="./index-assets/tiktok.jpg"
-                alt="TikTok website"
-              />
-            </div>
-          </Col>
-          <Col lg={6} md={6}>
-            <StaticImage
-              src="./index-assets/tiktok_logo.svg"
-              alt="TikTok logo"
-            />
-            <small className="my-2">Infrastructure</small>
-            <h2>Turbo charged partnerships</h2>
-            <h3>Social media giants</h3>
-            <p>
-              Something wasn't adding up. Based on TikTok's unreal success,
-              businesses should have been flooding in to partner up as
-              advertisers...
-            </p>
-            {!isMdDevice && <Stats></Stats>}
-            <Button
-              as={Link}
-              to="/case-studies"
-              variant="secondary"
-              className="mb-lg-0 mb-5"
-            >
-              Full case study
-            </Button>
-          </Col>
-        </Row>
-        {isMdDevice && <Stats></Stats>}
-
-        <div className={styles.line}></div>
-        <div className="position-relative">
-          <div className={styles.polygonRightIcon}></div>
-        </div>
-      </Container>
-
-      <div className="position-relative">
-        <div className={styles.mobileBackground}></div>
-        <Container className="mt-lg-6 mt-0 position-relative">
-          <div className={styles.growforge}></div>
-          <Row className="pb-lg-8 pt-lg-6 pt-2 pb-6">
-            <div className={styles.rightLine}></div>
-            <div
-              className={`text-white position-relative + ${styles.growforgeRight}`}
-            >
-              <Col lg={{ span: 10, offset: 1 }} md={12}>
-                <Row>
-                  <Col lg={6}>
-                    <StaticImage
-                      src="./index-assets/growforge_logo.svg"
-                      alt="Growforge logo"
-                      className={styles.growforge_logo}
-                    />
-                    <small className="mb-2 mt-lg-4 mt-2">Performance</small>
-                    <h2 className="mb-2">Crossing the Atlantic</h2>
-                    <h3 className="mb-3">The iconic 3D printer</h3>
-                    <p>
-                      We helped Glowforge build a new lead-nurturing system
-                      designed to speed up the sales cycle, as well as creating
-                      new performance advertisements- both tuned for the UK
-                      market.
-                    </p>
-                    <Button as={Link} to="/case-studies" variant="light">
-                      Full case study
-                    </Button>
-                  </Col>
-                </Row>
-              </Col>
-            </div>
-          </Row>
-        </Container>
-      </div>
-      <Container>
-        <Row>
-          <Col lg={{ span: 6, offset: 6 }} md={12}>
-            <blockquote className="blockquote">
-              <div className={styles.quoteLine}></div>
-              <p>
-                “Double made me feel confident that all our needs would be met
-                above and beyond’
-              </p>
-              <footer>
-                <div>John Doe</div>
-                <div>CTO , Glowforge</div>
-              </footer>
-            </blockquote>
-          </Col>
-        </Row>
         <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>
           <Col lg="9">
             <h2 className="mb-2">Our people</h2>
