@@ -13,7 +13,7 @@ export const CareersGridList = () => {
   const careers = useCareers();
 
   const renderItem = (career: CareerData) => (
-    <Col md={4} key={career.title}>
+    <Col md={4} key={career.title} className="mb-4">
       <div className={cn(styles.item, "p-4")}>
         <div className={styles.itemContent}>
           <h3>{career.title}</h3>

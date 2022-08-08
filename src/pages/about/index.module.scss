@@ -1,5 +1,9 @@
 .images {
   padding-bottom: 150px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .img_1 {
@@ -9,12 +13,23 @@
   }
 }
 
+.img_2,
+.img_3,
+.img_5 {
+  width: 35%;
+
+  @include media-breakpoint-down(md) {
+    width: 45%;
+  }
+}
+
 .img_3 {
-  margin-top: 100px;
+  margin-top: 174px;
 }
 
 .img_4 {
-  margin-top: 40px;
+  width: 50%;
+  margin-top: 45px;
 }
 
 .img_5 {
@@ -22,14 +37,28 @@
 }
 
 .img_6 {
-  position: relative;
   top: -60px;
-  min-width: 644px;
+  width: 65%;
+  @include media-breakpoint-down(lg) {
+    width: 55%;
+  }
+  @include media-breakpoint-down(md) {
+    width: 50%;
+  }
 }
 
 .img_7 {
-  position: relative;
-  min-width: 775px;
-  right: 125px;
-  top: 100px;
+  display: flex;
+  justify-content: end;
+  margin-top: -280px;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: -200px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: -120px;
+  }
+  & > div {
+    width: 55%;
+  }
 }
