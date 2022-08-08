@@ -8,7 +8,7 @@ export const useCareers = () => {
       allFile(
         filter: {
           sourceInstanceName: { eq: "content" }
-          relativeDirectory: { eq: "careers" }
+          relativeDirectory: { glob: "careers/*" }
         }
       ) {
         edges {
