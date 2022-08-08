@@ -4,7 +4,6 @@ export * from "./seo";
 export * from "./double-logo";
 export * from "./link";
 export * from "./image-row";
-
 export * from "./team-member";
 export * from "./careers-grid-list";
 export * from "./tiktok-stats";
@@ -13,3 +12,8 @@ export * from "./image-card";
 export * from "./section-featured-articles";
 export * from "./section-open-roles";
 export * from "./heading-row";
+export * from "./case-study-alpian";
+export * from "./case-study-tiktok";
+export * from "./case-study-glowforge";
+export * from "./case-study-no-stat";
+export * from "./case-study-arrow-down";

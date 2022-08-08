@@ -22,10 +22,7 @@ export const SectionFeaturedArticles = () => {
       <div className={styles.blogArtical}>
         <Row className="py-4">
           <Col lg="3" md="6" sm="6" xs="4">
-            <StaticImage
-              src="./index-assets/blog-1.jpeg"
-              alt="Hire talent remote"
-            />
+            <StaticImage src="./blog-1.jpeg" alt="Hire talent remote" />
           </Col>
           <Col lg="7" md="6" sm="6" xs="8">
             <div className={styles.date}>6 Aug 2021 | Author</div>
@@ -38,10 +35,7 @@ export const SectionFeaturedArticles = () => {
         </Row>
         <Row className="py-4">
           <Col lg="3" md="6" sm="6" xs="4">
-            <StaticImage
-              src="./index-assets/blog-2.jpeg"
-              alt="Hire talent remote"
-            />
+            <StaticImage src="./blog-2.jpeg" alt="Hire talent remote" />
           </Col>
           <Col lg="7" md="6" sm="6" xs="8">
             <div className={styles.date}>6 Aug 2021 | Author</div>
@@ -56,10 +50,7 @@ export const SectionFeaturedArticles = () => {
         </Row>
         <Row className="py-4 align-items-center">
           <Col lg="3" md="6" sm="6" xs="4">
-            <StaticImage
-              src="./index-assets/blog-3.jpeg"
-              alt="Hire talent remote"
-            />
+            <StaticImage src="./blog-3.jpeg" alt="Hire talent remote" />
           </Col>
           <Col lg="7" md="6" sm="6" xs="8">
             <div className={styles.date}>6 Aug 2021 | Author</div>
