@@ -199,7 +199,7 @@ const ServicesPage = () => {
               <Col lg="4" md="5" sm="12">
                 <h3 className="mb-5">Hypothesize</h3>
                 <StaticImage
-                  src="./milestone1.jpg"
+                  src="./milestone1.jpeg"
                   alt="Milestone 1"
                   className="cutted_image d-none d-lg-block d-md-block"
                 />
@@ -231,7 +231,7 @@ const ServicesPage = () => {
               <Col lg="4" md="5" sm="12">
                 <h3 className="mb-5">Test</h3>
                 <StaticImage
-                  src="./milestone1.jpg"
+                  src="./milestone1.jpeg"
                   alt="Milestone 1"
                   className="cutted_image d-none d-lg-block d-md-block"
                 />
@@ -263,7 +263,7 @@ const ServicesPage = () => {
               <Col lg="4" md="5" sm="12">
                 <h3 className="mb-5">Learn</h3>
                 <StaticImage
-                  src="./milestone1.jpg"
+                  src="./milestone1.jpeg"
                   alt="Milestone 1"
                   className="cutted_image d-none d-lg-block d-md-block"
                 />

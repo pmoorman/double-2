@@ -39,9 +39,14 @@ body,
 
 .bg_image {
   position: absolute;
+  background-repeat: no-repeat;
   width: calc(50vw + 50%);
   height: 100%;
   background-size: cover !important;
+
+  @include media-breakpoint-down(lg) {
+    background-image: none !important;
+  }
 
   small {
     font-weight: 500;
@@ -49,6 +54,12 @@ body,
 
   @include media-breakpoint-down(md) {
     display: none;
+  }
+}
+
+.caseStudyBgMobile {
+  @include media-breakpoint-up(lg) {
+    background-image: none !important;
   }
 }
 

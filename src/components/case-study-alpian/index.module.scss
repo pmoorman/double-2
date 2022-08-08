@@ -1,0 +1,76 @@
+.alpian {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: calc(50vw + 50%);
+  height: 100%;
+
+  small {
+    font-weight: 500;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.rombik {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+    width: calc(100% + 24px);
+    left: -12px;
+    right: -12px;
+  }
+
+  .parent {
+    width: 570px;
+    display: flex;
+
+    @include media-breakpoint-down(xl) {
+      width: 460px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 330px;
+    }
+
+    @include media-breakpoint-down(md) {
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    & + div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+
+      & > div > div {
+        @include media-breakpoint-down(xl) {
+          font-size: 3.5rem;
+        }
+        @include media-breakpoint-down(lg) {
+          font-size: 2rem;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 1.75rem;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+      }
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+}

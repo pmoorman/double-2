@@ -1,7 +1,13 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, Stats, ImageCard } from "@app/components";
+import {
+  Link,
+  Stats,
+  ImageCard,
+  CaseStudyNoStat,
+  CaseStudyArrowDown,
+} from "@app/components";
 import { useMediaQuery } from "react-responsive";
 
 import * as styles from "./index.module.scss";
@@ -71,44 +77,9 @@ const CaseStudiesPage = () => {
         </div>
       </Container>
 
-      <div className={styles.alpianMobile}>
-        <Container className="position-relative">
-          <div className={`bg_image + ${styles.alpian}`}></div>
-          <div className="text-white position-relative p-0 p-md-3">
-            <Row className="pt-lg-5 pb-lg-9 py-0 pt-3 pb-6">
-              <Col lg={{ span: 10, offset: 1 }}>
-                <Row>
-                  <Col lg={8} md={8}>
-                    <StaticImage
-                      src="./index-assets/alpian_logo.svg"
-                      alt="Alpian logo"
-                    />
-                    <small className="mb-2">Strategy | Performance</small>
-                    <h2 className="mb-2">Taking growth to the bank</h2>
-                    <h3 className="mb-3">Wealth beyond money</h3>
-                    <p>
-                      We have been a long term growth marketing partner for
-                      Switzerland’s first digital private bank. Helping them
-                      build an audience from scratch.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
+      <CaseStudyArrowDown></CaseStudyArrowDown>
 
       <Container>
-        <div>
-          <div className={styles.alpianStats}>
-            <Stats></Stats>
-          </div>
-          <div className={styles.arrowDown}>
-            <div></div>
-          </div>
-        </div>
-
         <div className="mt-lg-6 mb-lg-7 clearfix">
           <Row className="clearfix">
             <Col lg="5">
@@ -179,33 +150,7 @@ const CaseStudiesPage = () => {
         </div>
       </Container>
 
-      <div className={styles.alpianMobile2}>
-        <Container className="position-relative">
-          <div className={`bg_image + ${styles.alpian2}`}></div>
-          <div className="position-relative p-0 p-md-3">
-            <Row className="pt-lg-5 pb-lg-9 py-0 pt-3 pb-6">
-              <Col lg={{ span: 10, offset: 1 }}>
-                <Row>
-                  <Col lg={8} md={8}>
-                    <StaticImage
-                      src="./index-assets/alpian_logo.svg"
-                      alt="Alpian logo"
-                    />
-                    <small className="mb-2">Strategy | Performance</small>
-                    <h2 className="mb-2">Taking growth to the bank</h2>
-                    <h3 className="mb-3">Wealth beyond money</h3>
-                    <p>
-                      We have been a long term growth marketing partner for
-                      Switzerland’s first digital private bank. Helping them
-                      build an audience from scratch.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
+      <CaseStudyNoStat></CaseStudyNoStat>
 
       <Container className="position-relative">
         <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 position-relative">
@@ -218,17 +163,11 @@ const CaseStudiesPage = () => {
             xs={{ span: 12, order: "last" }}
           >
             <div className="tiktokImage">
-              <StaticImage
-                src="./index-assets/tiktok.jpg"
-                alt="TikTok website"
-              />
+              <StaticImage src="./tiktok.jpg" alt="TikTok website" />
             </div>
           </Col>
           <Col lg={6} md={6}>
-            <StaticImage
-              src="./index-assets/tiktok_logo.svg"
-              alt="TikTok logo"
-            />
+            <StaticImage src="./tiktok_logo.svg" alt="TikTok logo" />
             <small className="my-2">Infrastructure</small>
             <h2>Turbo charged partnerships</h2>
             <h3>Social media giants</h3>
@@ -257,7 +196,7 @@ const CaseStudiesPage = () => {
           <div className={styles.bgArrow}></div>
           <Row>
             <Col lg="5">
-              <h3>Section title</h3>
+              <h3 className="mt-3 mt-lg-0">Section title</h3>
             </Col>
             <Col ld="7">
               <p>
