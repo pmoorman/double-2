@@ -1,21 +1,9 @@
-import React, { FC } from "react";
-import { graphql, PageProps } from "gatsby";
+import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, HeadingRow, ImageCard } from "@app/components";
 
-export interface ServiceTemplateProps {
-  mdx: {
-    body: string;
-    frontmatter: {
-      title: string;
-    };
-  };
-}
-
-const ServiceTemplate: FC<PageProps<ServiceTemplateProps>> = (props) => {
-  const { mdx } = props.data;
-
+const ServiceStrategy = () => {
   return (
     <div>
       <Container>
@@ -124,15 +112,4 @@ const ServiceTemplate: FC<PageProps<ServiceTemplateProps>> = (props) => {
   );
 };
 
-export default ServiceTemplate;
-
-export const pageQuery = graphql`
-  query ($slug: String!) {
-    mdx(slug: { eq: $slug }) {
-      frontmatter {
-        title
-      }
-      body
-    }
-  }
-`;
+export default ServiceStrategy;
