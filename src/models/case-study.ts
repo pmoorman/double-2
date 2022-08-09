@@ -1,4 +1,4 @@
-interface CaseStudyStats {
+export interface CaseStudyStats {
   title: string;
   value: string;
 }

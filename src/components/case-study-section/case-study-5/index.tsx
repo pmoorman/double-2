@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row } from "react-bootstrap";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { CaseStudySectionProps } from "..";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
   return (

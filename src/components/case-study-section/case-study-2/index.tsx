@@ -2,11 +2,12 @@ import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-
-import { Link, Stats } from "@app/components";
-
-import { CaseStudySectionProps } from "..";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+
+import { Link } from "@app/components";
+
+import { Statistics } from "../statistics";
+import { CaseStudySectionProps } from "..";
 
 export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
@@ -30,7 +31,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             <h2>{item.title}</h2>
             <h3>{item.subtitle}</h3>
             <p>{item.hero_body}</p>
-            {!isMdDevice && <Stats></Stats>}
+            {!isMdDevice && <Statistics stats={item.stats} />}
             <Button
               as={Link}
               to={item.slug}
@@ -41,7 +42,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             </Button>
           </Col>
         </Row>
-        {isMdDevice && <Stats></Stats>}
+        {isMdDevice && <Statistics stats={item.stats} />}
       </Container>
       {item.section_body && (
         <Container>

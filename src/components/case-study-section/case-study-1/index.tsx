@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { Link } from "@app/components";
 
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
   return (

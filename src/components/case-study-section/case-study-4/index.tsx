@@ -1,12 +1,11 @@
 import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row } from "react-bootstrap";
-
-import { Stats } from "@app/components";
-
-import * as styles from "./index.module.scss";
-import { CaseStudySectionProps } from "..";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+
+import { CaseStudySectionProps } from "..";
+import { Statistics } from "../statistics";
+import * as styles from "./index.module.scss";
 
 export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
   return (
@@ -47,7 +46,7 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
       <Container>
         <div>
           <div className={styles.alpianStats}>
-            <Stats></Stats>
+            <Statistics stats={item.stats} />
           </div>
           <div className={styles.arrowDown}>
             <div></div>
