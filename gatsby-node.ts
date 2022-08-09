@@ -20,7 +20,6 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
     blog: path.resolve("src/templates/blog-post/index.tsx"),
     careers: path.resolve("src/templates/career/index.tsx"),
     "case-studies": path.resolve("src/templates/case-study/index.tsx"),
-    services: path.resolve("src/templates/service/index.tsx"),
   };
 
   data.items.edges.forEach(

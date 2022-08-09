@@ -32,7 +32,7 @@ const ServicesPage = () => {
           <h2 className="mb-5">Find out more about our services</h2>
         </Container>
         <div className="hoverAnimation blue">
-          <a href="#" className="text-decoration-none">
+          <Link to="strategy" className="text-decoration-none">
             <Container>
               <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
                 <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
@@ -50,7 +50,7 @@ const ServicesPage = () => {
                   </p>
                   <Button
                     as={Link}
-                    to="/#"
+                    to="strategy"
                     variant="outline-secondary"
                     className="d-lg-none d-md-none d-block mt-3"
                   >
@@ -59,10 +59,10 @@ const ServicesPage = () => {
                 </Col>
               </Row>
             </Container>
-          </a>
+          </Link>
         </div>
         <div className="hoverAnimation blue">
-          <a href="#" className="text-decoration-none">
+          <Link to="infrastructure" className="text-decoration-none">
             <Container>
               <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
                 <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
@@ -82,7 +82,7 @@ const ServicesPage = () => {
                   </p>
                   <Button
                     as={Link}
-                    to="/#"
+                    to="infrastructure"
                     variant="outline-secondary"
                     className="d-lg-none d-md-none d-block mt-3"
                   >
@@ -91,10 +91,10 @@ const ServicesPage = () => {
                 </Col>
               </Row>
             </Container>
-          </a>
+          </Link>
         </div>
         <div className="hoverAnimation blue">
-          <a href="#" className="text-decoration-none">
+          <Link to="creative" className="text-decoration-none">
             <Container>
               <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
                 <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
@@ -112,7 +112,7 @@ const ServicesPage = () => {
                   </p>
                   <Button
                     as={Link}
-                    to="/#"
+                    to="creative"
                     variant="outline-secondary"
                     className="d-lg-none d-md-none d-block mt-3"
                   >
@@ -121,10 +121,10 @@ const ServicesPage = () => {
                 </Col>
               </Row>
             </Container>
-          </a>
+          </Link>
         </div>
         <div className="hoverAnimation blue">
-          <a href="#" className="text-decoration-none">
+          <Link to="performance" className="text-decoration-none">
             <Container>
               <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
                 <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
@@ -144,7 +144,7 @@ const ServicesPage = () => {
                   </p>
                   <Button
                     as={Link}
-                    to="/#"
+                    to="performance"
                     variant="outline-secondary"
                     className="d-lg-none d-md-none d-block mt-3"
                   >
@@ -153,7 +153,7 @@ const ServicesPage = () => {
                 </Col>
               </Row>
             </Container>
-          </a>
+          </Link>
         </div>
       </div>
 
