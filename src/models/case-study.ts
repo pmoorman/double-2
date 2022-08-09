@@ -26,4 +26,9 @@ export interface CaseStudy {
   featured_thumbnail?: any;
   featured?: boolean;
   show_on_homepage?: boolean;
+
+  how_we_did_it: string;
+  results: string;
+  results_image: any;
+  milestones: { title: string; image: any; body: string }[];
 }
