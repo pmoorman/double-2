@@ -12,7 +12,6 @@ export const TwoColumnSectionWithImage: FC<TwoColumnSectionWithImageProps> = ({
   children,
   image,
 }) => {
-  console.log({ image });
   return (
     <div className="mt-lg-8 mb-lg-6">
       <Row>

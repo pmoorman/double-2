@@ -1,7 +1,6 @@
 import { CaseStudy } from "@app/models";
 
 export const getCaseStudyCategories = (caseStudies: CaseStudy[]): string[] => {
-  console.log({ caseStudies });
   const categories = caseStudies.reduce((acc, curr) => {
     return [...acc, ...curr.categories];
   }, [] as string[]);
