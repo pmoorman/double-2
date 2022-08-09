@@ -1,12 +1,29 @@
 import React from "react";
 import { PageProps } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { MDXProvider } from "@mdx-js/react";
+import { Button } from "react-bootstrap";
 
 import "@app/styles/current/style.scss";
 
-import { Footer, Header, SEO, DoubleLogo } from "@app/components";
+import {
+  Footer,
+  Header,
+  SEO,
+  DoubleLogo,
+  Link,
+  TwoColumnSection,
+  TwoColumnSectionWithImage,
+} from "@app/components";
 
-const mdxComponents = { DoubleLogo };
+const mdxComponents = {
+  DoubleLogo,
+  TwoColumnSection,
+  TwoColumnSectionWithImage,
+  Button,
+  Link,
+  StaticImage,
+};
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   return (

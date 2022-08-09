@@ -7,27 +7,18 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ImageRow, HeadingRow } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import { CaseStudy } from "@app/models";
 
 export interface CaseStudyTemplateProps {
   mdx: {
     body: string;
-    frontmatter: {
-      title: string;
-      subtitle: string;
-      content: string;
-      image: any;
-      logo: any;
-      stats: {
-        title: string;
-        value: string;
-      }[];
-    };
+    frontmatter: CaseStudy;
   };
 }
 
 const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const { mdx } = props.data;
-  const { title, subtitle, content, image, logo, stats } = mdx.frontmatter;
+  const { title, subtitle, hero_body, image, logo, stats } = mdx.frontmatter;
   const heroImage = getImage(image);
   const logoImage = getImage(logo);
 
@@ -47,7 +38,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               {logoImage && <GatsbyImage image={logoImage} alt="" />}
               <h2 className="mb-3">{title}</h2>
               <h3 className="mb-3">{subtitle}</h3>
-              <p>{content}</p>
+              <p>{hero_body}</p>
             </ImageRow>
           </div>
         </Row>
@@ -362,7 +353,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        content
+        hero_body
         stats {
           title
           value

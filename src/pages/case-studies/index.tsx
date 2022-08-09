@@ -1,19 +1,26 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  Link,
-  Stats,
-  ImageCard,
-  CaseStudyNoStat,
-  CaseStudyArrowDown,
-} from "@app/components";
-import { useMediaQuery } from "react-responsive";
+import cn from "classnames";
+
+import { Link, CaseStudySection, FeaturedCaseStudies } from "@app/components";
+import { useCaseStudies } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
+import {
+  filterCaseStudiesByCategory,
+  getCaseStudyCategories,
+} from "@app/helpers";
 
 const CaseStudiesPage = () => {
-  const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
+  const caseStudies = useCaseStudies();
+  const categories = getCaseStudyCategories(caseStudies);
+  const [category, setCategory] = React.useState("");
+  const filteredCaseStudies = filterCaseStudiesByCategory(
+    caseStudies,
+    category
+  );
+
   return (
     <div>
       <Container>
@@ -45,223 +52,44 @@ const CaseStudiesPage = () => {
             <h3>Featured case studies</h3>
           </div>
           <div className={styles.cardSection}>
-            <ImageCard></ImageCard>
+            <FeaturedCaseStudies />
           </div>
         </div>
 
         <div>
           <h2>Explore our case studies</h2>
+
+          {/* Filters */}
           <div className={styles.filters}>
             <div className={styles.title}>
               <small>Filter by:</small>
             </div>
-            <div className={styles.active}>
+            <div
+              className={cn({ [styles.active]: category === "" })}
+              onClick={() => setCategory("")}
+            >
               <small>All</small>
             </div>
-            <div>
-              <small>SaaS</small>
-            </div>
-            <div>
-              <small>Mobile</small>
-            </div>
-            <div>
-              <small>Fintech</small>
-            </div>
-            <div>
-              <small>E-commerence</small>
-            </div>
-            <div>
-              <small>B2B</small>
-            </div>
+            {categories.map((c) => (
+              <div
+                key={c}
+                className={cn({ [styles.active]: category === c })}
+                onClick={() => setCategory(c)}
+              >
+                <small>{c}</small>
+              </div>
+            ))}
           </div>
         </div>
       </Container>
 
-      <CaseStudyArrowDown></CaseStudyArrowDown>
-
-      <Container>
-        <div className="mt-lg-6 mb-lg-7 clearfix">
-          <Row className="clearfix">
-            <Col lg="5">
-              <h3>Section title</h3>
-            </Col>
-            <Col ld="7">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim.Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed doeiusmod tempor incididunt ut labore et dolore magna
-                aliqua.
-              </p>
-              <p>
-                Ut enim ad minim.Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-              </p>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="mt-lg-8 mb-lg-6">
-          <Row>
-            <Col
-              lg={{ span: 5, order: 0 }}
-              md={{ span: 12 }}
-              sm={{ span: 12, order: 2 }}
-              xs={{ span: 12, order: 2 }}
-            >
-              <h3>Section title</h3>
-              <p>
-                Our goal with Glowforge is simple; collect leads at a low CPA
-                and help their team convert them into sales.
-              </p>
-              <p>
-                We built a new lead-nurturing system in the form of a 9-part
-                email series, introducing our audience to “Modern Making”,
-                something synonymous with Glowforge printers. Our carefully
-                targeted performance marketing drove awareness across multiple
-                channels and built a healthy funnel of leads.
-              </p>
-              <p>
-                We continue to work with Glowforge on a variety of projects,
-                from content marketing to domain optimisation and web page
-                design.
-              </p>
-              <Button
-                as={Link}
-                to="/case-studies"
-                variant="secondary"
-                className="mb-lg-0 mb-4"
-              >
-                Full case study
-              </Button>
-            </Col>
-
-            <Col lg="7" md="12">
-              <StaticImage
-                src="./glowforge.jpg"
-                alt="Alpian logo"
-                className="cutted_image_double mb-lg-0 mb-3"
-              />
-            </Col>
-          </Row>
-        </div>
-      </Container>
-
-      <CaseStudyNoStat></CaseStudyNoStat>
-
-      <Container className="position-relative">
-        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 position-relative">
-          <div className={styles.line}></div>
-          <div className={styles.lineRight}></div>
-          <Col
-            lg={{ span: 6, order: "first" }}
-            md={{ span: 6, order: "first" }}
-            sm={{ span: 12, order: "last" }}
-            xs={{ span: 12, order: "last" }}
-          >
-            <div className="tiktokImage">
-              <StaticImage src="./tiktok.jpg" alt="TikTok website" />
-            </div>
-          </Col>
-          <Col lg={6} md={6}>
-            <StaticImage src="./tiktok_logo.svg" alt="TikTok logo" />
-            <small className="my-2">Infrastructure</small>
-            <h2>Turbo charged partnerships</h2>
-            <h3>Social media giants</h3>
-            <p>
-              Something wasn't adding up. Based on TikTok's unreal success,
-              businesses should have been flooding in to partner up as
-              advertisers...
-            </p>
-            {!isMdDevice && <Stats></Stats>}
-            <Button
-              as={Link}
-              to="/case-studies"
-              variant="secondary"
-              className="mb-lg-0 mb-5"
-            >
-              Full case study
-            </Button>
-          </Col>
-        </Row>
-        <div className="position-relative">
-          <div className={styles.lineRight2}></div>
-          {isMdDevice && <Stats></Stats>}
-        </div>
-
-        <div className="mt-lg-9 mb-lg-7">
-          <div className={styles.bgArrow}></div>
-          <Row>
-            <Col lg="5">
-              <h3 className="mt-3 mt-lg-0">Section title</h3>
-            </Col>
-            <Col ld="7">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim.Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed doeiusmod tempor incididunt ut labore et dolore magna
-                aliqua.
-              </p>
-              <p>
-                Ut enim ad minim.Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-              </p>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="mt-lg-8 mb-lg-6">
-          <Row>
-            <Col
-              lg={{ span: 5, order: 0 }}
-              md={{ span: 12 }}
-              sm={{ span: 12, order: 2 }}
-              xs={{ span: 12, order: 2 }}
-            >
-              <h3>Section title</h3>
-              <p>
-                Our goal with Glowforge is simple; collect leads at a low CPA
-                and help their team convert them into sales.
-              </p>
-              <p>
-                We built a new lead-nurturing system in the form of a 9-part
-                email series, introducing our audience to “Modern Making”,
-                something synonymous with Glowforge printers. Our carefully
-                targeted performance marketing drove awareness across multiple
-                channels and built a healthy funnel of leads.
-              </p>
-              <p>
-                We continue to work with Glowforge on a variety of projects,
-                from content marketing to domain optimisation and web page
-                design.
-              </p>
-              <Button
-                as={Link}
-                to="/case-studies"
-                variant="secondary"
-                className="mb-lg-0 mb-4"
-              >
-                Full case study
-              </Button>
-            </Col>
-
-            <Col lg="7" md="12">
-              <StaticImage
-                src="./glowforge.jpg"
-                alt="Alpian logo"
-                className="cutted_image_double mb-lg-0 mb-3"
-              />
-            </Col>
-          </Row>
-        </div>
-      </Container>
+      {filteredCaseStudies.map((item) => (
+        <CaseStudySection
+          type={item.section_type}
+          item={item}
+          key={item.slug}
+        />
+      ))}
     </div>
   );
 };

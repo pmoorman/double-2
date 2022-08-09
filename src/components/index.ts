@@ -8,10 +8,14 @@ export * from "./team-member";
 export * from "./careers-grid-list";
 export * from "./tiktok-stats";
 export * from "./mobile-menu";
-export * from "./image-card";
+export * from "./featured-case-studies";
 export * from "./section-featured-articles";
 export * from "./section-open-roles";
 export * from "./heading-row";
+export * from "./two-column-section";
+export * from "./two-column-section-with-image";
+
+export * from "./case-study-section";
 export * from "./case-study-alpian";
 export * from "./case-study-tiktok";
 export * from "./case-study-glowforge";
