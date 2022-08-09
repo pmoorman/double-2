@@ -6,6 +6,7 @@ interface CaseStudyStats {
 export interface CaseStudy {
   section_type: 1 | 2 | 3 | 4 | 5;
   section_body?: any;
+  weight?: number;
   title: string;
   subtitle: string;
   hero_body: string;

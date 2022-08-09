@@ -36,6 +36,7 @@ export const useCaseStudies = () => {
           relativePath: { glob: "case-studies/**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
+        sort: { fields: childMdx___frontmatter___weight }
       ) {
         edges {
           node {
