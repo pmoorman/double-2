@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { Parallax } from "react-scroll-parallax";
 import cn from "classnames";
 
 import { useTeam } from "@app/hooks";
@@ -113,13 +114,15 @@ const AboutPage = () => {
           <Row>
             {/* Image 1 */}
             <Col md={12}>
-              <div className={styles.img_1}>
+              <Parallax scale={[1, 1.3, "easeInQuad"]}>
                 <StaticImage
                   src="./about_img_1.jpg"
                   alt="TODO"
                   className="cutted_image"
                 />
+              </Parallax>
 
+              <div className={styles.img_1}>
                 <div
                   className={cn(
                     styles.img_1Text,
@@ -147,28 +150,38 @@ const AboutPage = () => {
               <h3 className="mt-3 text-white">Title about picture</h3>
             </div>
             <div className={styles.img_3}>
-              <StaticImage src="./about_img_3.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <Parallax speed={10}>
+                <StaticImage src="./about_img_3.jpg" alt="TODO" />
+                <h3 className="mt-3 text-white">Title about picture</h3>
+              </Parallax>
             </div>
           </div>
           <div className="d-flex justify-content-between">
             <div className={styles.img_4}>
-              <StaticImage src="./about_img_4.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <Parallax speed={20}>
+                <StaticImage src="./about_img_4.jpg" alt="TODO" />
+                <h3 className="mt-3 text-white">Title about picture</h3>
+              </Parallax>
             </div>
             <div className={styles.img_5}>
-              <StaticImage src="./about_img_5.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <Parallax speed={30}>
+                <StaticImage src="./about_img_5.jpg" alt="TODO" />
+                <h3 className="mt-3 text-white">Title about picture</h3>
+              </Parallax>
             </div>
           </div>
           <div className={styles.img_6}>
-            <StaticImage src="./about_img_6.jpg" alt="TODO" />
-            <h3 className="mt-3 text-white">Title about picture</h3>
+            <Parallax speed={0}>
+              <StaticImage src="./about_img_6.jpg" alt="TODO" />
+              <h3 className="mt-3 text-white">Title about picture</h3>
+            </Parallax>
           </div>
           <div className={styles.img_7}>
             <div>
-              <StaticImage src="./about_img_7.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <Parallax speed={-10}>
+                <StaticImage src="./about_img_7.jpg" alt="TODO" />
+                <h3 className="mt-3 text-white">Title about picture</h3>
+              </Parallax>
             </div>
           </div>
         </Container>
