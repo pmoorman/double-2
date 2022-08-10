@@ -14,7 +14,7 @@ export interface CaseStudy {
   image: any;
   image_url: string;
   logo: any;
-  stats: CaseStudyStats[];
+  stats?: CaseStudyStats[];
   categories: string[];
   slug: string;
   quote?: {
@@ -30,5 +30,5 @@ export interface CaseStudy {
   how_we_did_it: string;
   results: string;
   results_image: any;
-  milestones: { title: string; image: any; body: string }[];
+  milestones?: { title: string; image: any; body: string }[];
 }

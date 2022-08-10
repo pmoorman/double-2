@@ -18,7 +18,13 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
 
   const { data } = await graphql<any>(`
     {
-      items: allFile(filter: { sourceInstanceName: { eq: "content" } }) {
+      items: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          relativePath: { glob: "**/*/index.mdx" }
+          extension: { eq: "mdx" }
+        }
+      ) {
         edges {
           node {
             relativeDirectory

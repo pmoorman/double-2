@@ -63,18 +63,20 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </Row>
       </Container>
 
-      <div className={`py-lg-7 py-5 + ${styles.blueBg}`}>
-        <Container>
-          <div className="numberStat">
-            {stats.map((stat) => (
-              <div key={stat.title}>
-                <div className="mb-lg-3 mb-0">{stat.value}</div>
-                <span>{stat.title}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </div>
+      {stats && (
+        <div className={`py-lg-7 py-5 + ${styles.blueBg}`}>
+          <Container>
+            <div className="numberStat">
+              {stats.map((stat) => (
+                <div key={stat.title}>
+                  <div className="mb-lg-3 mb-0">{stat.value}</div>
+                  <span>{stat.title}</span>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </div>
+      )}
 
       <HeadingRow>
         <h2>Strategy</h2>
@@ -140,7 +142,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </div>
       </Container>
 
-      {milestones.map((m, i) => {
+      {milestones?.map((m, i) => {
         const image = getImage(m.image);
 
         return (

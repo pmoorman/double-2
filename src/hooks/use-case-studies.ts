@@ -118,25 +118,29 @@ export const useCaseStudies = () => {
     const embeddedImages = section?.node.childMdx.frontmatter.embeddedImages;
 
     const item: CaseStudy = {
-      title,
-      subtitle,
+      title: title || "",
+      subtitle: subtitle || "",
       categories: categories || [],
-      hero_body,
+      hero_body: hero_body || "",
       hero_image: getImage(hero_image),
       image: getImage(image),
       image_url: image.publicURL,
       logo: getImage(logo),
       quote,
-      section_type,
-      stats,
+      section_type: section_type || 1,
+      stats: stats || [],
       slug: `/${relativeDirectory}`,
       section_body: sectionBody,
       embeddedImages: embeddedImages || [],
-      featured,
-      show_on_homepage,
+      featured: !!featured,
+      show_on_homepage: !!show_on_homepage,
       featured_thumbnail: featured_thumbnail
         ? getImage(featured_thumbnail)
         : undefined,
+      how_we_did_it: "",
+      results: "",
+      results_image: undefined,
+      milestones: [],
     };
 
     return item;
