@@ -3,4 +3,5 @@ export interface TeamMemberData {
   title: string;
   location: string;
   position: string;
+  image: any;
 }
