@@ -1,12 +1,30 @@
-import { CreatePageArgs, CreatePagesArgs } from "gatsby";
+import { CreatePagesArgs, CreateSchemaCustomizationArgs } from "gatsby";
 import path from "path";
+
+exports.createSchemaCustomization = ({
+  actions,
+}: CreateSchemaCustomizationArgs) => {
+  const { createTypes } = actions;
+
+  createTypes(`
+    type Frontmatter @dontInfer {
+      embeddedImages: [File] @fileByRelativePath
+    }
+  `);
+};
 
 export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
 
   const { data } = await graphql<any>(`
     {
-      items: allFile(filter: { sourceInstanceName: { eq: "content" } }) {
+      items: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          relativePath: { glob: "**/*/index.mdx" }
+          extension: { eq: "mdx" }
+        }
+      ) {
         edges {
           node {
             relativeDirectory

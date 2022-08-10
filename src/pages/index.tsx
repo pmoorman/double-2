@@ -1,27 +1,26 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   Link,
   ImageRow,
   TeamMember,
   SectionFeaturedArticles,
-  CaseStudyAlpian,
-  CaseStudyTikTok,
-  CaseStudyGlowForge,
+  CaseStudySection,
 } from "@app/components";
-import { useTeam } from "@app/hooks";
-import { useMediaQuery } from "react-responsive";
-import Slider, { Settings } from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useCaseStudies, useTeam } from "@app/hooks";
+import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
 
 const HomePage = () => {
   const team = useTeam();
-  const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
+  const _caseStudies = useCaseStudies();
+  const caseStudies = getHomepageCaseStudies(_caseStudies);
 
   const settings: Settings = {
     arrows: false,
@@ -166,9 +165,13 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      <CaseStudyAlpian></CaseStudyAlpian>
-      <CaseStudyTikTok></CaseStudyTikTok>
-      <CaseStudyGlowForge></CaseStudyGlowForge>
+      {caseStudies.map((item) => (
+        <CaseStudySection
+          type={item.section_type}
+          item={item}
+          key={item.slug}
+        />
+      ))}
 
       <Container>
         <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>

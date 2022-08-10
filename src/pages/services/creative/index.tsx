@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, HeadingRow, ImageCard } from "@app/components";
+import { Link, HeadingRow, FeaturedCaseStudies } from "@app/components";
 
 const ServiceCreative = () => {
   return (
@@ -105,7 +105,7 @@ const ServiceCreative = () => {
         </Row>
         <div className="py-lg-6 py-5">
           <h2 className="mb-5">See our work in practise</h2>
-          <ImageCard></ImageCard>
+          <FeaturedCaseStudies />
         </div>
       </Container>
     </div>
