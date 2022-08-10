@@ -9,7 +9,7 @@ import * as styles from "./index.module.scss";
 
 export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
   return (
-    <div>
+    <div className="pt-lg-7 pb-lg-8 py-4">
       <div
         className="caseStudyBgMobile"
         style={{
@@ -43,13 +43,17 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
         </Container>
       </div>
 
-      <Container>
-        <div>
+      <Container className={styles.statistics}>
+        <div className="position-relative">
           <div className={styles.alpianStats}>
             <Statistics stats={item.stats} />
           </div>
           <div className={styles.arrowDown}>
-            <div></div>
+            <div className={styles.arrow}>
+              <i className={styles.arrowDownIcon}></i>
+            </div>
+            <div className={styles.line}></div>
+            <div className={styles.border}></div>
           </div>
         </div>
       </Container>
