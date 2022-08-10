@@ -11,6 +11,12 @@ import * as styles from "./index.module.scss";
 export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
   return (
     <div>
+      <Container>
+        <div className={styles.line}></div>
+        <div className="position-relative">
+          <div className={styles.polygonRightIcon}></div>
+        </div>
+      </Container>
       <div className="position-relative">
         <div
           className={`caseStudyBgMobile + ${styles.mobileBackground}`}
@@ -26,6 +32,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
             }}
           ></div>
           <Row className="pb-lg-8 pt-lg-6 pt-2 pb-6">
+            <div className={styles.rightLine}></div>
             <div
               className={`text-white position-relative + ${styles.growforgeRight}`}
             >
