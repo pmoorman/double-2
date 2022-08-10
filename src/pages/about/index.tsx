@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { Parallax } from "react-scroll-parallax";
 import cn from "classnames";
 
 import { useTeam } from "@app/hooks";
@@ -113,13 +114,15 @@ const AboutPage = () => {
           <Row>
             {/* Image 1 */}
             <Col md={12}>
-              <div className={styles.img_1}>
+              <Parallax scale={[0.5, 1, "easeInQuad"]}>
                 <StaticImage
                   src="./about_img_1.jpg"
                   alt="TODO"
                   className="cutted_image"
                 />
+              </Parallax>
 
+              <div className={styles.img_1}>
                 <div
                   className={cn(
                     styles.img_1Text,
