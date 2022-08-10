@@ -89,18 +89,6 @@ small {
   }
 }
 
-.polygonRightIcon {
-  background: url(./polygon_right.svg) no-repeat;
-  width: 120px;
-  height: 98px;
-  position: absolute;
-  top: -49px;
-
-  @include media-breakpoint-down(lg) {
-    display: none;
-  }
-}
-
 .aboutUs {
   h2 {
     margin-bottom: 1rem;
