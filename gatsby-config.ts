@@ -67,9 +67,34 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content`,
-        name: `content`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
+      __key: "blog",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/case-studies`,
+        name: `case-studies`,
+      },
+      __key: "case-studies",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/careers`,
+        name: `careers`,
+      },
+      __key: "careers",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/team`,
+        name: `team`,
+      },
+      __key: "team",
     },
   ],
 };
