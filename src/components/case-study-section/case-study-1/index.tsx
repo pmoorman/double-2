@@ -11,12 +11,12 @@ import * as styles from "./index.module.scss";
 export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
   return (
     <div
-      className="caseStudyBgMobile"
+      className="caseStudyBgMobile mt-lg-7 mt-3 mb-lg-8 mb-5"
       style={{
         backgroundImage: `url(${item.image_url})`,
       }}
     >
-      <Container className="mt-lg-7 mt-3 mb-lg-8 mb-5 position-relative">
+      <Container className="position-relative">
         <div
           className="bg_image"
           style={{

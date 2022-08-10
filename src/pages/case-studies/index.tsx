@@ -55,8 +55,10 @@ const CaseStudiesPage = () => {
             <FeaturedCaseStudies />
           </div>
         </div>
+      </Container>
 
-        <div>
+      <div className={styles.filtersSection}>
+        <Container>
           <h2>Explore our case studies</h2>
 
           {/* Filters */}
@@ -80,8 +82,8 @@ const CaseStudiesPage = () => {
               </div>
             ))}
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       {filteredCaseStudies.map((item) => (
         <CaseStudySection

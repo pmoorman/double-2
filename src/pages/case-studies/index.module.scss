@@ -35,6 +35,11 @@
   }
 }
 
+.filtersSection + div {
+  margin-top: 1rem !important;
+  padding-top: 0 !important;
+}
+
 .filters {
   display: flex;
   flex-direction: row;
