@@ -8,8 +8,8 @@ export const useCaseStudies = () => {
     {
       sections: allFile(
         filter: {
-          sourceInstanceName: { eq: "content" }
-          relativePath: { glob: "case-studies/**/*/section.mdx" }
+          sourceInstanceName: { eq: "case-studies" }
+          relativePath: { glob: "**/*/section.mdx" }
           extension: { eq: "mdx" }
         }
       ) {
@@ -32,8 +32,8 @@ export const useCaseStudies = () => {
       }
       pages: allFile(
         filter: {
-          sourceInstanceName: { eq: "content" }
-          relativePath: { glob: "case-studies/**/*/index.mdx" }
+          sourceInstanceName: { eq: "case-studies" }
+          relativePath: { glob: "**/*/page.mdx" }
           extension: { eq: "mdx" }
         }
         sort: { fields: childMdx___frontmatter___weight }
@@ -129,7 +129,7 @@ export const useCaseStudies = () => {
       quote,
       section_type: section_type || 1,
       stats: stats || [],
-      slug: `/${relativeDirectory}`,
+      slug: `/case-studies/${relativeDirectory}`,
       section_body: sectionBody,
       embeddedImages: embeddedImages || [],
       featured: !!featured,

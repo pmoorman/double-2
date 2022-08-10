@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { ImageRow, HeadingRow } from "@app/components";
 import { CaseStudy } from "@app/models";
@@ -10,14 +9,15 @@ import { CaseStudy } from "@app/models";
 import * as styles from "./index.module.scss";
 
 export interface CaseStudyTemplateProps {
-  mdx: {
-    body: string;
-    frontmatter: CaseStudy;
+  file: {
+    childMdx: {
+      frontmatter: CaseStudy;
+    };
   };
 }
 
 const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
-  const { mdx } = props.data;
+  const { frontmatter } = props.data.file.childMdx;
   const {
     title,
     subtitle,
@@ -29,7 +29,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     results,
     results_image,
     milestones,
-  } = mdx.frontmatter;
+  } = frontmatter;
 
   const heroImage = getImage(image);
   const logoImage = getImage(logo);
@@ -37,8 +37,6 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
 
   return (
     <div>
-      <MDXRenderer>{mdx.body}</MDXRenderer>
-
       <Container>
         <Row>
           <div className="pt-lg-7 pb-lg-8 py-4">
@@ -180,49 +178,48 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
 export default CaseStudyTemplate;
 
 export const pageQuery = graphql`
-  query ($slug: String!) {
-    mdx(slug: { eq: $slug }) {
-      frontmatter {
-        title
-        subtitle
-        hero_body
-        stats {
+  query ($relativePath: String!) {
+    file(
+      relativePath: { eq: $relativePath }
+      sourceInstanceName: { eq: "case-studies" }
+    ) {
+      childMdx {
+        frontmatter {
           title
-          value
-        }
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 650)
+          subtitle
+          hero_body
+          stats {
+            title
+            value
           }
-        }
-        logo {
-          childImageSharp {
-            gatsbyImageData(height: 128)
-          }
-        }
-        results_image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        results
-        how_we_did_it
-        milestones {
-          title
-          body
           image {
+            childImageSharp {
+              gatsbyImageData(width: 650)
+            }
+          }
+          logo {
+            childImageSharp {
+              gatsbyImageData(height: 128)
+            }
+          }
+          results_image {
             childImageSharp {
               gatsbyImageData
             }
           }
+          results
+          how_we_did_it
+          milestones {
+            title
+            body
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
       }
-      body
     }
   }
 `;
-
-// how_we_did_it: string;
-//   results: string;
-//   results_image: any;
-//   milestones: { title: string; image: string; body: string }[];
