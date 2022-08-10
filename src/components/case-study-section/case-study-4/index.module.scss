@@ -1,14 +1,22 @@
+$arrowHeight: 255px;
+
+.statistics + div {
+  clear: both;
+}
 .alpianStats {
   background-color: white;
-  padding: 24px 50px 46px 107px;
+  padding: 24px 50px 0 107px;
   z-index: 3;
   position: relative;
   display: inline-block;
   float: right;
+  border-left: 2px solid $secondary;
+  margin-bottom: 150px;
 
   & > div {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   @include media-breakpoint-down(lg) {
@@ -20,34 +28,64 @@
   }
 }
 
+.border {
+  height: 2px;
+  background-color: $secondary;
+  width: 50%;
+  left: 50px;
+  position: absolute;
+  bottom: -160.5px;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
 .arrowDown {
   width: calc(100% - 617px);
   text-align: right;
   margin-top: -85px;
-
-  @include media-breakpoint-down(lg) {
-    width: calc(100% - 508px);
-    margin-top: -90px;
-  }
 
   @include media-breakpoint-down(md) {
     margin-top: -30px;
     width: calc(100% - 226px);
   }
 
-  & > div {
-    background: url(./arrow_down.svg) no-repeat right;
-    background-size: contain;
-    height: 250px;
-    width: 100%;
+  .arrowDownIcon {
+    border: solid $secondary;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    bottom: 0;
+    left: -8px;
 
     @include media-breakpoint-down(md) {
-      background: url(./arrow_down_mobile.svg) no-repeat right;
-      height: 100px;
-      width: 100%;
-      margin-left: 9px;
-      z-index: 20;
-      position: relative;
+      bottom: -31px;
+      left: auto;
+      right: 264px;
+      z-index: 100;
+    }
+  }
+
+  .arrow {
+    background-color: $secondary;
+    width: 2px;
+    height: 96px;
+    position: absolute;
+    bottom: -$arrowHeight;
+    left: 50px;
+    z-index: 3;
+
+    @include media-breakpoint-down(lg) {
+      left: 55.5px;
+    }
+
+    @include media-breakpoint-down(md) {
+      background: none;
+      position: inherit;
     }
   }
 }
