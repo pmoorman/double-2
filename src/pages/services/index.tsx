@@ -1,31 +1,22 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "@app/components";
+import { Hero, Link } from "@app/components";
 
 import * as styles from "./index.module.scss";
+
 const ServicesPage = () => {
   return (
     <div>
-      <Container>
-        <Row className="pt-lg-7 pb-lg-8 py-4">
-          <Col lg="8" md="8">
-            <h1 className="mb-lg-5 mb-4">
-              We’re a full-stack Growth Marketing agency{" "}
-            </h1>
-            <div className="subtitle mb-lg-5 mb-4">
-              You’re in the right place whether you’re looking to hire a paid
-              ads expert, a sales funnel architect, or a product marketer.
-            </div>
-            <Button as={Link} to="/contact" variant="secondary">
-              Get in touch
-            </Button>
-          </Col>
-          <Col lg="4" md="4" className="my-lg-0 my-4">
-            <StaticImage src="./union.svg" alt="Union" />
-          </Col>
-        </Row>
-      </Container>
+      <Hero
+        type={1}
+        title="We’re a full-stack Growth Marketing agency"
+        body="You’re in the right place whether you’re looking to hire a paid
+              ads expert, a sales funnel architect, or a product marketer."
+        buttonText="Get in touch"
+        buttonLink="/contact"
+        image={<StaticImage src="./union.svg" alt="Union" />}
+      />
 
       <div>
         <Container>
