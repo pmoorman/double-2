@@ -58,6 +58,8 @@ body,
 }
 
 .caseStudyBgMobile {
+  background-repeat: no-repeat;
+  background-size: cover;
   @include media-breakpoint-up(lg) {
     background-image: none !important;
   }
