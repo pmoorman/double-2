@@ -21,19 +21,18 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const {
     title,
     subtitle,
-    hero_body,
-    image,
+    excerpt,
+    hero_image,
     logo,
     stats,
     how_we_did_it,
     results,
-    results_image,
     milestones,
   } = frontmatter;
 
-  const heroImage = getImage(image);
+  const heroImage = getImage(hero_image);
   const logoImage = getImage(logo);
-  const resultsImage = getImage(results_image);
+  const resultsImage = getImage(results.image);
 
   return (
     <div>
@@ -55,7 +54,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               {logoImage && <GatsbyImage image={logoImage} alt="" />}
               <h2 className="mb-3">{title}</h2>
               <h3 className="mb-3">{subtitle}</h3>
-              <p>{hero_body}</p>
+              <p>{excerpt}</p>
             </ImageRow>
           </div>
         </Row>
@@ -111,7 +110,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               <h3 className="mb-3">Results</h3>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: results.replaceAll("\n", "<br/>"),
+                  __html: results?.body?.replaceAll("\n", "<br/>"),
                 }}
               />
             </ImageRow>
@@ -187,27 +186,29 @@ export const pageQuery = graphql`
         frontmatter {
           title
           subtitle
-          hero_body
-          stats {
-            title
-            value
-          }
-          image {
+          excerpt
+          hero_image {
             childImageSharp {
               gatsbyImageData(width: 650)
             }
+          }
+          stats {
+            title
+            value
           }
           logo {
             childImageSharp {
               gatsbyImageData(height: 128)
             }
           }
-          results_image {
-            childImageSharp {
-              gatsbyImageData
+          results {
+            body
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
           }
-          results
           how_we_did_it
           milestones {
             title

@@ -10,7 +10,9 @@ import { Statistics } from "../statistics";
 import { CaseStudySectionProps } from "..";
 
 export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
+  const { section } = item;
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
+
   return (
     <div>
       <Container>
@@ -22,7 +24,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             xs={{ span: 12, order: "last" }}
           >
             <div className="tiktokImage">
-              <GatsbyImage image={item.image} alt={item.title} />
+              <GatsbyImage image={section.image} alt={item.title} />
             </div>
           </Col>
           <Col lg={6} md={6}>
@@ -30,8 +32,8 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             <small className="my-2">{item.categories.join(" | ")}</small>
             <h2>{item.title}</h2>
             <h3>{item.subtitle}</h3>
-            <p>{item.hero_body}</p>
-            {!isMdDevice && <Statistics stats={item.stats} />}
+            <p>{item.excerpt}</p>
+            {!isMdDevice && item.stats && <Statistics stats={item.stats} />}
             <Button
               as={Link}
               to={item.slug}
@@ -42,13 +44,11 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             </Button>
           </Col>
         </Row>
-        {isMdDevice && <Statistics stats={item.stats} />}
+        {isMdDevice && item.stats && <Statistics stats={item.stats} />}
       </Container>
-      {item.section_body && (
+      {section.body && (
         <Container>
-          <MDXRenderer images={item.embeddedImages}>
-            {item.section_body}
-          </MDXRenderer>
+          <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
         </Container>
       )}
     </div>

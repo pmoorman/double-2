@@ -9,18 +9,20 @@ import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
 
 export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
+  const { section } = item;
+
   return (
     <div
       className="caseStudyBgMobile mt-lg-7 mt-3 mb-lg-8 mb-5"
       style={{
-        backgroundImage: `url(${item.image_url})`,
+        backgroundImage: `url(${section.image_url})`,
       }}
     >
       <Container className="position-relative">
         <div
           className="bg_image"
           style={{
-            backgroundImage: `url(${item.image_url})`,
+            backgroundImage: `url(${section.image_url})`,
           }}
         ></div>
         <div className="text-white position-relative p-0 p-md-3">
@@ -36,7 +38,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
                   )}
                   <h2 className="mb-2">{item.title}</h2>
                   <h3 className="mb-3">{item.subtitle}</h3>
-                  <p>{item.hero_body}</p>
+                  <p>{item.excerpt}</p>
                   <Button
                     as={Link}
                     to={item.slug}
@@ -58,14 +60,16 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
                         </g>
                       </svg>
                     </div>
-                    <div className="numberStat">
-                      {item.stats.map((s) => (
-                        <div className="mb-5" key={s.title}>
-                          <div>{s.value}</div>
-                          <span>{s.title}</span>
-                        </div>
-                      ))}
-                    </div>
+                    {item.stats && (
+                      <div className="numberStat">
+                        {item.stats.map((s) => (
+                          <div className="mb-5" key={s.title}>
+                            <div>{s.value}</div>
+                            <span>{s.title}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </Col>
               </Row>
@@ -73,11 +77,9 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
           </Row>
         </div>
       </Container>
-      {item.section_body && (
+      {section.body && (
         <Container>
-          <MDXRenderer images={item.embeddedImages}>
-            {item.section_body}
-          </MDXRenderer>
+          <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
         </Container>
       )}
     </div>

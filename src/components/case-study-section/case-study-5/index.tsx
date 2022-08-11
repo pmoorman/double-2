@@ -6,18 +6,20 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CaseStudySectionProps } from "..";
 
 export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
+  const { section } = item;
+
   return (
     <div
       className="caseStudyBgMobile"
       style={{
-        backgroundImage: `url(${item.image_url})`,
+        backgroundImage: `url(${section.image_url})`,
       }}
     >
       <Container className="position-relative">
         <div
           className="bg_image"
           style={{
-            backgroundImage: `url(${item.image_url})`,
+            backgroundImage: `url(${section.image_url})`,
           }}
         ></div>
         <div className="position-relative p-0 p-md-3">
@@ -29,18 +31,16 @@ export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
                   <small className="mb-2">{item.categories.join(" | ")}</small>
                   <h2 className="mb-2">{item.title}</h2>
                   <h3 className="mb-3">{item.subtitle}</h3>
-                  <p>{item.hero_body}</p>
+                  <p>{item.excerpt}</p>
                 </Col>
               </Row>
             </Col>
           </Row>
         </div>
       </Container>
-      {item.section_body && (
+      {section.body && (
         <Container>
-          <MDXRenderer images={item.embeddedImages}>
-            {item.section_body}
-          </MDXRenderer>
+          <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
         </Container>
       )}
     </div>

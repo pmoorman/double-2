@@ -13,5 +13,6 @@ export * from "./section-open-roles";
 export * from "./heading-row";
 export * from "./two-column-section";
 export * from "./two-column-section-with-image";
+export * from "./hero";
 
 export * from "./case-study-section";

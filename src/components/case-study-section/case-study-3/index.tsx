@@ -9,6 +9,8 @@ import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
 
 export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
+  const { section } = item;
+
   return (
     <div>
       <Container>
@@ -21,14 +23,14 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
         <div
           className={`caseStudyBgMobile + ${styles.mobileBackground}`}
           style={{
-            backgroundImage: `url(${item.image_url})`,
+            backgroundImage: `url(${section.image_url})`,
           }}
         ></div>
         <Container className="mt-lg-6 mt-0 position-relative">
           <div
             className="bg_image"
             style={{
-              backgroundImage: `url(${item.image_url})`,
+              backgroundImage: `url(${section.image_url})`,
             }}
           ></div>
           <Row className="pb-lg-8 pt-lg-6 pt-2 pb-6">
@@ -49,7 +51,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
                     </small>
                     <h2 className="mb-2">{item.title}</h2>
                     <h3 className="mb-3">{item.subtitle}</h3>
-                    <p>{item.hero_body}</p>
+                    <p>{item.excerpt}</p>
                     <Button as={Link} to="/case-studies" variant="light">
                       Full case study
                     </Button>
@@ -60,27 +62,25 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
           </Row>
         </Container>
       </div>
-      {item.quote && (
+      {section.quote && (
         <Container>
           <Row>
             <Col lg={{ span: 6, offset: 6 }} md={12}>
               <blockquote className="blockquote">
                 <div className={styles.quoteLine}></div>
-                <p>{item.quote.content}</p>
+                <p>{section.quote.content}</p>
                 <footer>
-                  <div>{item.quote.name}</div>
-                  <div>{item.quote.title}</div>
+                  <div>{section.quote.name}</div>
+                  <div>{section.quote.title}</div>
                 </footer>
               </blockquote>
             </Col>
           </Row>
         </Container>
       )}
-      {item.section_body && (
+      {section.body && (
         <Container>
-          <MDXRenderer images={item.embeddedImages}>
-            {item.section_body}
-          </MDXRenderer>
+          <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
         </Container>
       )}
     </div>

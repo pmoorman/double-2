@@ -44,31 +44,35 @@ export const useCaseStudies = () => {
             childMdx {
               frontmatter {
                 title
-                categories
-                featured
-                show_on_homepage
-                hero_body
-                hero_image {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
+                subtitle
+                excerpt
                 logo {
                   childImageSharp {
                     gatsbyImageData
                   }
                 }
-                quote {
-                  content
-                  name
-                  title
-                }
-                section_type
+                weight
+                categories
                 stats {
                   title
                   value
                 }
-                subtitle
+                section {
+                  type
+                  on_homepage
+                  quote {
+                    content
+                    name
+                    title
+                  }
+                  image {
+                    publicURL
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+                featured
                 featured_thumbnail {
                   childImageSharp {
                     gatsbyImageData(
@@ -77,12 +81,6 @@ export const useCaseStudies = () => {
                       layout: FIXED
                       transformOptions: { fit: COVER }
                     )
-                  }
-                }
-                image {
-                  publicURL
-                  childImageSharp {
-                    gatsbyImageData
                   }
                 }
               }
@@ -95,52 +93,53 @@ export const useCaseStudies = () => {
 
   const items: CaseStudy[] = pages.edges.map((edge: any) => {
     const { relativeDirectory, childMdx } = edge.node;
+    console.log({ edge });
     const {
       title,
       subtitle,
-      categories,
-      hero_body,
-      hero_image,
-      featured_thumbnail,
-      image,
+      excerpt,
       logo,
-      quote,
-      section_type,
+      weight,
+      categories,
       stats,
+      section = {},
       featured,
-      show_on_homepage,
+      featured_thumbnail,
     } = childMdx.frontmatter;
 
-    const section = sections.edges.find(
+    const sectionNode = sections.edges.find(
       (edge: any) => edge.node.relativeDirectory === relativeDirectory
     );
-    const sectionBody = section?.node?.childMdx?.body;
-    const embeddedImages = section?.node.childMdx.frontmatter.embeddedImages;
+    const sectionBody = sectionNode?.node?.childMdx?.body;
+    const embeddedImages =
+      sectionNode?.node.childMdx.frontmatter.embeddedImages;
 
     const item: CaseStudy = {
+      embeddedImages,
+      slug: `/case-studies/${relativeDirectory}`,
       title: title || "",
       subtitle: subtitle || "",
-      categories: categories || [],
-      hero_body: hero_body || "",
-      hero_image: getImage(hero_image),
-      image: getImage(image),
-      image_url: image.publicURL,
+      excerpt: excerpt || "",
       logo: getImage(logo),
-      quote,
-      section_type: section_type || 1,
+      weight,
+      categories: categories || [],
       stats: stats || [],
-      slug: `/case-studies/${relativeDirectory}`,
-      section_body: sectionBody,
-      embeddedImages: embeddedImages || [],
+      section: {
+        ...section,
+        body: sectionBody,
+        image: getImage(section.image),
+        image_url: section.image.publicURL,
+      },
       featured: !!featured,
-      show_on_homepage: !!show_on_homepage,
       featured_thumbnail: featured_thumbnail
         ? getImage(featured_thumbnail)
         : undefined,
+      hero_image: "",
       how_we_did_it: "",
-      results: "",
-      results_image: undefined,
-      milestones: [],
+      results: {
+        body: "",
+        image: "",
+      },
     };
 
     return item;
