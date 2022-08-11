@@ -16,9 +16,13 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
-    <div className="pt-lg-9 pt-9 pt-md-6">
-      <Container>
-        <Row className="align-items-lg-end">
+    <div className="pt-lg-9 pt-9 pt-md-6 mb-7">
+      <Container className="position-relative">
+        <Row className="align-items-lg-end position-relative">
+          {/* LIne 1 */}
+          <div className={styles.line}></div>
+
+          <div className={styles.lineRight}></div>
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
@@ -26,7 +30,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             xs={{ span: 12, order: "last" }}
           >
             <div className={styles.tiktokImage}>
-              <GatsbyImage image={item.image} alt={item.title} />
+              <GatsbyImage image={section.image} alt={item.title} />
             </div>
           </Col>
           <Col lg={6} md={6}>
@@ -46,8 +50,16 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             </Button>
           </Col>
         </Row>
-        {isMdDevice && item.stats && <Statistics stats={item.stats} />}
+        <div className="position-relative">
+          {/* Line 2 */}
+          <div className={styles.lineRight2}></div>
+
+          {isMdDevice && item.stats && <Statistics stats={item.stats} />}
+          {/* Line 3  */}
+          <div className={styles.bgArrow}></div>
+        </div>
       </Container>
+      <div className="position-relative"></div>
       {section.body && (
         <Container>
           <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
