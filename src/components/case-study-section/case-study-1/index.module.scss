@@ -52,15 +52,20 @@
       transform: translate(-50%, -50%);
       position: absolute;
 
-      & > div > div {
-        @include media-breakpoint-down(xl) {
-          font-size: 3.5rem;
-        }
-        @include media-breakpoint-down(lg) {
-          font-size: 2rem;
-        }
-        @include media-breakpoint-down(md) {
-          font-size: 1.75rem;
+      & > div:last-child {
+        margin-bottom: 0 !important;
+      }
+      & > div {
+        & > div {
+          @include media-breakpoint-down(xl) {
+            font-size: 3.5rem;
+          }
+          @include media-breakpoint-down(lg) {
+            font-size: 2rem;
+          }
+          @include media-breakpoint-down(md) {
+            font-size: 1.75rem;
+          }
         }
       }
 
