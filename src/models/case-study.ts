@@ -4,31 +4,41 @@ export interface CaseStudyStats {
 }
 
 export interface CaseStudy {
-  section_type: 1 | 2 | 3 | 4 | 5;
-  section_body?: any;
-  weight?: number;
+  // Common (both page and section)
   title: string;
   subtitle: string;
-  hero_body: string;
-  hero_image: any;
-  image: any;
-  image_url: string;
+  excerpt: string;
   logo: any;
-  stats?: CaseStudyStats[];
+  weight?: number;
   categories: string[];
+  stats?: CaseStudyStats[];
   slug: string;
-  quote?: {
-    content: string;
-    name: string;
-    title: string;
-  };
-  embeddedImages: any[];
-  featured_thumbnail?: any;
-  featured?: boolean;
-  show_on_homepage?: boolean;
 
+  // page
+  hero_image: any;
   how_we_did_it: string;
-  results: string;
-  results_image: any;
+  results: {
+    body: string;
+    image: any;
+  };
   milestones?: { title: string; image: any; body: string }[];
+
+  // section (on index page)
+  embeddedImages: any[];
+  section: {
+    type: 1 | 2 | 3 | 4 | 5;
+    image: any;
+    image_url: string;
+    on_homepage?: boolean;
+    body?: any;
+    quote?: {
+      content: string;
+      name: string;
+      title: string;
+    };
+  };
+
+  // Is featured?
+  featured?: boolean;
+  featured_thumbnail?: any;
 }
