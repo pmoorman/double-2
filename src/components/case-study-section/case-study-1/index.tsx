@@ -24,7 +24,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
           }}
         ></div>
         <div className="text-white position-relative p-0 p-md-3">
-          <Row className="py-lg-6 py-0">
+          <Row className="py-lg-6 py-0 mb-9 mb-lg-0 mb-md-0">
             <Col lg={{ span: 10, offset: 1 }}>
               <Row>
                 <Col lg={6} md={6}>

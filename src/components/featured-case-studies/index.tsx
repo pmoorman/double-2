@@ -19,6 +19,7 @@ export const FeaturedCaseStudies = () => {
             <GatsbyImage
               image={caseStudy.featured_thumbnail}
               alt={caseStudy.title}
+              className={styles.cardImg}
             />
 
             <small className="mt-2">{caseStudy.categories.join(" | ")}</small>
