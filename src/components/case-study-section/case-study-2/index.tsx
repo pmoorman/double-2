@@ -9,21 +9,23 @@ import { Link } from "@app/components";
 import { Statistics } from "../statistics";
 import { CaseStudySectionProps } from "..";
 
+import * as styles from "./index.module.scss";
+
 export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
   const { section } = item;
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
-    <div>
+    <div className="pt-lg-9 pt-9 pt-md-6">
       <Container>
-        <Row className="align-items-lg-end pt-lg-9 pt-9 pt-md-6 ">
+        <Row className="align-items-lg-end">
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
             sm={{ span: 12, order: "last" }}
             xs={{ span: 12, order: "last" }}
           >
-            <div className="tiktokImage">
+            <div className={styles.tiktokImage}>
               <GatsbyImage image={section.image} alt={item.title} />
             </div>
           </Col>
