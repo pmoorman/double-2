@@ -26,7 +26,11 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             xs={{ span: 12, order: "last" }}
           >
             <div className={styles.tiktokImage}>
+<<<<<<< HEAD
               <GatsbyImage image={item.image} alt={item.title} />
+=======
+              <GatsbyImage image={section.image} alt={item.title} />
+>>>>>>> 9c6a158 (Deleting some styles from elemebt.scss)
             </div>
           </Col>
           <Col lg={6} md={6}>
