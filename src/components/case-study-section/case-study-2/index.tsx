@@ -25,8 +25,8 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             sm={{ span: 12, order: "last" }}
             xs={{ span: 12, order: "last" }}
           >
-            <div className="tiktokImage">
-              <GatsbyImage image={item.image} alt={item.title} />
+            <div className={styles.tiktokImage}>
+              <GatsbyImage image={section.image} alt={item.title} />
             </div>
           </Col>
           <Col lg={6} md={6}>
