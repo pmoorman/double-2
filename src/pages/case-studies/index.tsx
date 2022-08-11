@@ -87,7 +87,7 @@ const CaseStudiesPage = () => {
 
       {filteredCaseStudies.map((item) => (
         <CaseStudySection
-          type={item.section_type}
+          type={item.section.type}
           item={item}
           key={item.slug}
         />

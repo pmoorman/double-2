@@ -8,19 +8,21 @@ import { Statistics } from "../statistics";
 import * as styles from "./index.module.scss";
 
 export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
+  const { section } = item;
+
   return (
     <div className="pt-lg-7 pb-lg-8 py-4">
       <div
         className="caseStudyBgMobile"
         style={{
-          backgroundImage: `url(${item.image_url})`,
+          backgroundImage: `url(${section.image_url})`,
         }}
       >
         <Container className="position-relative">
           <div
             className="bg_image"
             style={{
-              backgroundImage: `url(${item.image_url})`,
+              backgroundImage: `url(${section.image_url})`,
             }}
           ></div>
           <div className="text-white position-relative p-0 p-md-3">
@@ -34,7 +36,7 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
                     </small>
                     <h2 className="mb-2">{item.title}</h2>
                     <h3 className="mb-3">{item.subtitle}</h3>
-                    <p>{item.hero_body}</p>
+                    <p>{item.excerpt}</p>
                   </Col>
                 </Row>
               </Col>
@@ -43,26 +45,26 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
         </Container>
       </div>
 
-      <Container className={styles.statistics}>
-        <div className="position-relative">
-          <div className={styles.alpianStats}>
-            <Statistics stats={item.stats} />
-          </div>
-          <div className={styles.arrowDown}>
-            <div className={styles.arrow}>
-              <i className={styles.arrowDownIcon}></i>
+      {item.stats && (
+        <Container className={styles.statistics}>
+          <div className="position-relative">
+            <div className={styles.alpianStats}>
+              <Statistics stats={item.stats} />
             </div>
-            <div className={styles.line}></div>
-            <div className={styles.border}></div>
+            <div className={styles.arrowDown}>
+              <div className={styles.arrow}>
+                <i className={styles.arrowDownIcon}></i>
+              </div>
+              <div className={styles.line}></div>
+              <div className={styles.border}></div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      )}
 
-      {item.section_body && (
+      {section.body && (
         <Container>
-          <MDXRenderer images={item.embeddedImages}>
-            {item.section_body}
-          </MDXRenderer>
+          <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>
         </Container>
       )}
     </div>
