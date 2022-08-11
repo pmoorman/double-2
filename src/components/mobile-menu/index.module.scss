@@ -10,3 +10,30 @@
     color: $gray;
   }
 }
+
+.mobileBarBurgerButton {
+  position: relative;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  background: url(../../components/header/icon_bar.svg) no-repeat;
+}
+
+.mobileBarCrossButton {
+  background: url(../../components/header/cross.svg) no-repeat;
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+}
+
+.mobileBar {
+  background: $secondary;
+  padding: 2.5em 1.5em 0;
+  color: white;
+  overflow: hidden !important;
+}
+
+.mobileBarOverlay {
+  background-color: transparent;
+  top: 0;
+}
