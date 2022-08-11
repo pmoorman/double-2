@@ -25,8 +25,13 @@ export const MobileMenu = () => {
       isOpen={isOpen}
       onStateChange={(state) => handleStateChange(state)}
       width={260}
-      burgerBarClassName={"menuIcon"}
+      burgerBarClassName={styles.menuIcon}
       bodyClassName={"bodyScroll"}
+      menuClassName={styles.mobileBar}
+      overlayClassName={styles.mobileBarOverlay}
+      burgerButtonClassName={styles.mobileBarBurgerButton}
+      crossButtonClassName={styles.mobileBarCrossButton}
+      morphShapeClassName={"my-class"}
     >
       {LINKS.map((link) => (
         <Link
