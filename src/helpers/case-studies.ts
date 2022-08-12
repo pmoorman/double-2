@@ -27,5 +27,5 @@ export const getFeaturedCaseStudies = (
 export const getHomepageCaseStudies = (
   caseStudies: CaseStudy[]
 ): CaseStudy[] => {
-  return caseStudies.filter((c) => c.show_on_homepage);
+  return caseStudies.filter((c) => c.section.on_homepage);
 };

@@ -60,6 +60,7 @@ export const useCaseStudies = () => {
                 section {
                   type
                   on_homepage
+                  hide_arrow
                   quote {
                     content
                     name

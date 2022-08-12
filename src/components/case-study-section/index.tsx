@@ -11,6 +11,7 @@ import { CaseStudy5 } from "./case-study-5";
 export interface CaseStudySectionProps {
   type: 1 | 2 | 3 | 4 | 5;
   item: CaseStudy;
+  isIndexPage?: boolean;
 }
 
 export const CaseStudySection: FC<CaseStudySectionProps> = (props) => {

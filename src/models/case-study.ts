@@ -31,6 +31,7 @@ export interface CaseStudy {
     image_url: string;
     on_homepage?: boolean;
     body?: any;
+    hide_arrow?: boolean;
     quote?: {
       content: string;
       name: string;

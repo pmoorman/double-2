@@ -87,6 +87,7 @@ const CaseStudiesPage = () => {
 
       {filteredCaseStudies.map((item) => (
         <CaseStudySection
+          isIndexPage={true}
           type={item.section.type}
           item={item}
           key={item.slug}

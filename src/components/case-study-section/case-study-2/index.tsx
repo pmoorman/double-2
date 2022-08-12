@@ -14,15 +14,16 @@ import * as styles from "./index.module.scss";
 export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
   const { section } = item;
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
+  const hideLine = section.hide_arrow;
 
   return (
     <div className="pt-lg-9 pt-9 pt-md-6 mb-7">
       <Container className="position-relative">
         <Row className="align-items-lg-end position-relative">
           {/* LIne 1 */}
-          <div className={styles.line}></div>
+          {!hideLine && <div className={styles.line}></div>}
+          {!hideLine && <div className={styles.lineRight}></div>}
 
-          <div className={styles.lineRight}></div>
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
@@ -52,11 +53,11 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
         </Row>
         <div className="position-relative">
           {/* Line 2 */}
-          <div className={styles.lineRight2}></div>
+          {!hideLine && <div className={styles.lineRight2}></div>}
 
           {isMdDevice && item.stats && <Statistics stats={item.stats} />}
           {/* Line 3  */}
-          <div className={styles.bgArrow}></div>
+          {!hideLine && <div className={styles.bgArrow}></div>}
         </div>
       </Container>
       <div className="position-relative"></div>
