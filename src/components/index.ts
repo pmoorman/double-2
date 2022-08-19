@@ -16,3 +16,4 @@ export * from "./two-column-section-with-image";
 export * from "./hero";
 
 export * from "./case-study-section";
+export * from "./application-process";
