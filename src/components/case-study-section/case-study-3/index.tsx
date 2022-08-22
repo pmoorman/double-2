@@ -66,8 +66,8 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
         <Container>
           <Row>
             <Col lg={{ span: 6, offset: 6 }} md={12}>
-              <blockquote className="blockquote">
-                <div className={styles.quoteLine}></div>
+              <blockquote className={styles.blockquote}>
+                <div className="quoteLine"></div>
                 <p>{section.quote.content}</p>
                 <footer>
                   <div>{section.quote.name}</div>

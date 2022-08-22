@@ -1,0 +1,176 @@
+.heroSection {
+  background-color: $secondary;
+  padding: 80px 0;
+  color: white;
+  padding-bottom: 240px;
+  text-align: center;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+}
+
+.articles {
+  color: white;
+  margin-top: -150px;
+
+  @include media-breakpoint-down(xl) {
+    background-color: $gray;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-color: $secondary;
+  }
+
+  h3 {
+    position: relative;
+  }
+
+  .featuredArticles {
+    position: absolute;
+    width: calc(50vw + 50% - 70px);
+    background-color: $secondary;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+
+    @include media-breakpoint-down(xl) {
+      position: relative;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0;
+    }
+
+    & > div > div {
+      display: flex;
+      flex-direction: row;
+
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 1rem;
+      }
+
+      & > div {
+        background-color: white;
+        color: $secondary;
+
+        &:last-child {
+          padding: 24px;
+
+          @include media-breakpoint-down(xl) {
+            width: 100%;
+          }
+          small {
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.collectionSection {
+  background-color: $gray;
+  padding-bottom: 600px;
+  padding-top: 300px;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 2px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 80px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 5rem;
+  }
+
+  .sliderSection {
+    position: absolute;
+    width: calc(50vw + 50% - 70px);
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .blogSlider {
+    margin-top: 1.4rem;
+
+    & > ul {
+      bottom: -50px;
+
+      & > li {
+        width: 250px;
+        margin: 0;
+
+        @include media-breakpoint-down(lg) {
+          width: 120px;
+        }
+
+        button {
+          width: 250px;
+
+          @include media-breakpoint-down(lg) {
+            width: 120px;
+          }
+
+          &:before {
+            content: "";
+            background-image: url(./sliderTrack.svg);
+            height: 6px;
+            width: 250px;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(lg) {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+
+    & > div > div > div {
+      padding-right: 1.4rem;
+    }
+  }
+}
+.cardSlider {
+  background-color: $secondary;
+  padding: 24px;
+  min-height: 379px;
+  color: white;
+
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    margin-bottom: 1rem;
+  }
+
+  & > div:first-child {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.caseStudy {
+  background-color: $gray;
+  padding: 7rem 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  & > div > div > div:last-child {
+    justify-content: flex-end;
+  }
+}
