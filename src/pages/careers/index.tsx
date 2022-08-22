@@ -12,7 +12,11 @@ import {
   Link,
   SEO,
 =======
+<<<<<<< HEAD
 >>>>>>> c69a99989799b21eb613ea44c59d7cd51bb40f8c
+=======
+>>>>>>> c69a999 (Blog pages)
+>>>>>>> d8dfa00 (Blog pages)
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
