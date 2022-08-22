@@ -17,3 +17,5 @@ export * from "./hero";
 
 export * from "./case-study-section";
 export * from "./application-process";
+export * from "./blog-artical";
+export * from "./double-quote-slider";

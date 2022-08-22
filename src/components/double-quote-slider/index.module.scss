@@ -1,0 +1,30 @@
+.quote {
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    width: 1120px;
+    margin-right: 80px;
+  }
+
+  blockquote {
+    padding: 40px 40px 40px 0px;
+    position: relative;
+    z-index: 2;
+
+    @include media-breakpoint-down(lg) {
+      background-color: transparent;
+      padding: 16px;
+      color: $secondary;
+    }
+  }
+
+  .mapIcon {
+    background: url(../../components/team-member/map_logo.svg) no-repeat;
+    width: 15px;
+    height: 22px;
+    margin-right: 0.85rem;
+    display: inline-block;
+    background-size: contain;
+  }
+}

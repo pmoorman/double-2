@@ -1,0 +1,8 @@
+.hero {
+  background-color: $secondary;
+  padding: 80px 0 120px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 24px 0 80px 0;
+  }
+}

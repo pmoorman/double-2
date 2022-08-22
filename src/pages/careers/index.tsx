@@ -6,6 +6,7 @@ import { Parallax } from "react-scroll-parallax";
 import {
   ApplicationProcess,
   SectionFeaturedArticles,
+  QuoteSlider,
   SectionOpenRoles,
   Link,
   SEO,
@@ -115,65 +116,17 @@ const CareersPage = () => {
       </Container>
 
       <Container>
-        <SectionOpenRoles />
-
-        <div className="mt-lg-7 mb-lg-8 my-5">
-          <h3>
-            What Double Agents have to say? (...and they usually talk a lot)
-          </h3>
-          <Parallax>
-            <div className={styles.quote}>
-              <div>
-                <Row className="d-flex align-items-center">
-                  <Col md="8">
-                    <blockquote className="blockquote">
-                      <div className={styles.quoteLine}></div>
-                      <p>“I’m really proud of what we’ve created at Double.’</p>
-                      <footer>
-                        <div>Caspar Lusink</div>
-                        <div>Agency Director</div>
-                        <div className="d-flex align-items-center">
-                          <i className={styles.mapIcon}></i>Amsterdam
-                        </div>
-                      </footer>
-                    </blockquote>
-                  </Col>
-                  <Col md="4">
-                    <StaticImage
-                      src="./quote-1.jpeg"
-                      alt="Member 4"
-                      className="mt-4"
-                    />
-                  </Col>
-                </Row>
-              </div>
-              <div>
-                <Row className="d-flex align-items-center">
-                  <Col md="8">
-                    <blockquote className="blockquote">
-                      <div className={styles.quoteLine}></div>
-                      <p>“I’m really proud of what we’ve created at Double.’</p>
-                      <footer>
-                        <div>Caspar Lusink</div>
-                        <div>Agency Director</div>
-                        <div className="d-flex align-items-center">
-                          <i className={styles.mapIcon}></i>Amsterdam
-                        </div>
-                      </footer>
-                    </blockquote>
-                  </Col>
-                  <Col md="4">
-                    <StaticImage
-                      src="./quote-1.jpeg"
-                      alt="Member 4"
-                      className="mt-4"
-                    />
-                  </Col>
-                </Row>
-              </div>
-            </div>
-          </Parallax>
-        </div>
+        <Row className="my-5">
+          <Col lg="6" xl="4" md="8">
+            <h2>Our open roles</h2>
+            <p>
+              We are always on the look out for talent to join us. Check out our
+              open roles below.
+            </p>
+          </Col>
+        </Row>
+        <CareersGridList />
+        <QuoteSlider></QuoteSlider>
       </Container>
 
       <ApplicationProcess></ApplicationProcess>
