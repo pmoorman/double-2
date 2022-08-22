@@ -7,6 +7,7 @@ import { ImageRow, HeadingRow } from "@app/components";
 import { CaseStudy } from "@app/models";
 
 import * as styles from "./index.module.scss";
+import ReactMarkdown from "react-markdown";
 
 export interface CaseStudyTemplateProps {
   file: {
@@ -85,11 +86,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               <h3>How we did it</h3>
             </Col>
             <Col md="6">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: how_we_did_it.replaceAll("\n", "<br/>"),
-                }}
-              />
+              <ReactMarkdown>{how_we_did_it}</ReactMarkdown>
             </Col>
           </Row>
         )}
@@ -108,11 +105,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               }
             >
               <h3 className="mb-3">Results</h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: results?.body?.replaceAll("\n", "<br/>"),
-                }}
-              />
+              <ReactMarkdown>{results.body}</ReactMarkdown>
             </ImageRow>
           </div>
         )}

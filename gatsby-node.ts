@@ -24,6 +24,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
         node: { relativeDirectory: string; relativePath: string };
       }) => {
         const { relativeDirectory, relativePath } = entry.node;
+
         const slug = `${pathPrefix}/${relativeDirectory}`;
         const page = {
           path: `/${slug}`,
@@ -40,7 +41,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
       blog: allFile(
         filter: {
           sourceInstanceName: { eq: "blog" }
-          relativePath: { glob: "**/*/page.mdx" }
+          relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
       ) {
@@ -54,7 +55,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
       casestudies: allFile(
         filter: {
           sourceInstanceName: { eq: "case-studies" }
-          relativePath: { glob: "**/*/page.mdx" }
+          relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
       ) {
@@ -68,7 +69,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
       careers: allFile(
         filter: {
           sourceInstanceName: { eq: "careers" }
-          relativePath: { glob: "**/*/page.mdx" }
+          relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
       ) {

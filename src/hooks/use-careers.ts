@@ -6,14 +6,12 @@ export const useCareers = () => {
   const { allFile } = useStaticQuery(graphql`
     {
       allFile(
-        filter: {
-          sourceInstanceName: { eq: "content" }
-          relativeDirectory: { glob: "careers/*" }
-        }
+        filter: { sourceInstanceName: { eq: "careers" }, ext: { eq: ".mdx" } }
       ) {
         edges {
           node {
             childMdx {
+              slug
               frontmatter {
                 excerpt
                 location
@@ -30,6 +28,7 @@ export const useCareers = () => {
     title: edge.node.childMdx.frontmatter.title,
     location: edge.node.childMdx.frontmatter.location,
     excerpt: edge.node.childMdx.frontmatter.excerpt,
+    slug: `/careers/${edge.node.childMdx.slug}`,
   }));
 
   return careers;

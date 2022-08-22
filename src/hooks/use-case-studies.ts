@@ -33,7 +33,7 @@ export const useCaseStudies = () => {
       pages: allFile(
         filter: {
           sourceInstanceName: { eq: "case-studies" }
-          relativePath: { glob: "**/*/page.mdx" }
+          relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
         sort: { fields: childMdx___frontmatter___weight }

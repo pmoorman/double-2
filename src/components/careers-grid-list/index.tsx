@@ -24,7 +24,7 @@ export const CareersGridList = () => {
           <p>{career.excerpt}</p>
         </div>
         <div>
-          <Button as={Link} to="/TODO" variant="outline-secondary">
+          <Button as={Link} to={career.slug} variant="outline-secondary">
             More info
           </Button>
         </div>

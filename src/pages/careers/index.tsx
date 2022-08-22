@@ -1,12 +1,14 @@
-import {
-  CareersGridList,
-  ApplicationProcess,
-  SectionFeaturedArticles,
-} from "@app/components";
 import * as React from "react";
-import { Col, Container, Row, Button, Link } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
+
+import {
+  ApplicationProcess,
+  SectionFeaturedArticles,
+  SectionOpenRoles,
+  Link,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -111,16 +113,7 @@ const CareersPage = () => {
       </Container>
 
       <Container>
-        <Row className="my-5">
-          <Col lg="6" xl="4" md="8">
-            <h2>Our open roles</h2>
-            <p>
-              We are always on the look out for talent to join us. Check out our
-              open roles below.
-            </p>
-          </Col>
-        </Row>
-        <CareersGridList />
+        <SectionOpenRoles />
 
         <div className="mt-lg-7 mb-lg-8 my-5">
           <h3>
