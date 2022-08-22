@@ -7,9 +7,12 @@ import {
   ApplicationProcess,
   SectionFeaturedArticles,
   QuoteSlider,
+<<<<<<< HEAD
   SectionOpenRoles,
   Link,
   SEO,
+=======
+>>>>>>> c69a99989799b21eb613ea44c59d7cd51bb40f8c
 } from "@app/components";
 
 import * as styles from "./index.module.scss";

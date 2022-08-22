@@ -26,7 +26,10 @@ const settings: Settings = {
 const BlogPage = () => {
   return (
     <>
+<<<<<<< HEAD
       <SEO title="Blog" />
+=======
+>>>>>>> c69a99989799b21eb613ea44c59d7cd51bb40f8c
       <div className={styles.heroSection}>
         <Container>
           <Row>
