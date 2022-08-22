@@ -94,7 +94,6 @@ export const useCaseStudies = () => {
 
   const items: CaseStudy[] = pages.edges.map((edge: any) => {
     const { relativeDirectory, childMdx } = edge.node;
-    console.log({ edge });
     const {
       title,
       subtitle,

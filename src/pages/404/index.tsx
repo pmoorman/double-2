@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
+import { SEO } from "@app/components";
+
 const NotFoundPage = () => {
   return (
     <>
