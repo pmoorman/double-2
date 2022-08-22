@@ -116,15 +116,6 @@ const CareersPage = () => {
       </Container>
 
       <Container>
-        <Row className="my-5">
-          <Col lg="6" xl="4" md="8">
-            <h2>Our open roles</h2>
-            <p>
-              We are always on the look out for talent to join us. Check out our
-              open roles below.
-            </p>
-          </Col>
-        </Row>
         <SectionOpenRoles />
         <QuoteSlider></QuoteSlider>
       </Container>
