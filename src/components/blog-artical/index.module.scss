@@ -1,0 +1,17 @@
+.aricalCard {
+  a {
+    text-decoration: none;
+  }
+  small {
+    width: 100%;
+    display: block;
+
+    & > span {
+      font-weight: 400;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
