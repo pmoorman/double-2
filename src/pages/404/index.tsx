@@ -3,13 +3,16 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const NotFoundPage = () => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1>NotFoundPage</h1>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <SEO title="Not found" />
+      <Container>
+        <Row>
+          <Col>
+            <h1>NotFoundPage</h1>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

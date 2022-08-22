@@ -1,9 +1,13 @@
 import type { GatsbyConfig } from "gatsby";
 
+const siteUrl = "https://www.double-agency.com";
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Double Agency`,
-    siteUrl: `https://www.double-agency.com`,
+    siteUrl,
+    title: "Double Agency",
+    description:
+      "Growthmarketing and Growth Hacking are new business strategies for startups that incorporate marketing within your product and core business values. Build growth right into the hard of your company, by using feedback and customer data to test, enhance your product, build a lean and sustainable business and become a master entrepreneur.",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

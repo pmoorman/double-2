@@ -21,15 +21,23 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
     const component = path.resolve(template);
     data.edges.forEach(
       (entry: {
-        node: { relativeDirectory: string; relativePath: string };
+        node: {
+          relativeDirectory: string;
+          relativePath: string;
+          childMdx: any;
+        };
       }) => {
-        const { relativeDirectory, relativePath } = entry.node;
-
+        const { relativeDirectory, relativePath, childMdx } = entry.node;
         const slug = `${pathPrefix}/${relativeDirectory}`;
         const page = {
           path: `/${slug}`,
           component: component,
-          context: { relativePath },
+          context: {
+            relativePath,
+            isArticle: true,
+            title: childMdx.frontmatter.seo_title,
+            description: childMdx.frontmatter.seo_description,
+          },
         };
         createPage(page);
       }
@@ -49,6 +57,12 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           node {
             relativeDirectory
             relativePath
+            childMdx {
+              frontmatter {
+                seo_title
+                seo_description
+              }
+            }
           }
         }
       }
@@ -63,6 +77,12 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           node {
             relativeDirectory
             relativePath
+            childMdx {
+              frontmatter {
+                seo_title
+                seo_description
+              }
+            }
           }
         }
       }
@@ -77,6 +97,12 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           node {
             relativeDirectory
             relativePath
+            childMdx {
+              frontmatter {
+                seo_title
+                seo_description
+              }
+            }
           }
         }
       }

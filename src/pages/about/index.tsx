@@ -10,6 +10,7 @@ import {
   Link,
   SectionFeaturedArticles,
   SectionOpenRoles,
+  SEO,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
@@ -19,6 +20,7 @@ const AboutPage = () => {
 
   return (
     <>
+      <SEO title="About" />
       {/* Hero */}
       <div>
         <Container className="pt-lg-6 pb-lg-8 py-4">
