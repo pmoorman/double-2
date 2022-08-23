@@ -103,7 +103,7 @@ const BlogPage = () => {
             <Slider {...settings}>
               <div className={styles.cardSlider}>
                 <div>
-                  <StaticImage src="./union.svg" alt="union" />
+                  <StaticImage src="./Union.svg" alt="union" />
                 </div>
                 <div>
                   <h4>Sales funnels</h4>
