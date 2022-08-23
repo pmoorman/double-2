@@ -11,6 +11,14 @@ body,
   overflow-y: hidden;
 }
 
+input {
+  &:focus {
+    outline: none !important;
+  }
+  border: none !important;
+  border-bottom: 1px solid !important;
+}
+
 .bm-menu-wrap {
   left: 0;
   top: 0;

@@ -41,6 +41,28 @@ $theme-colors: (
   "light": $light,
 );
 
+// Input
+
+$input-font-size: 1.25rem;
+$input-font-weight: 400;
+$input-bg: transparent;
+$input-color: rgba(0, 0, 0, 0.5);
+$input-border-color: rgba(0, 0, 0, 0.5);
+$input-box-shadow: none;
+$input-focus-bg: transparent;
+$input-focus-border-color: #000;
+$input-focus-color: #000;
+$input-placeholder-color: rgba(0, 0, 0, 0.5);
+$input-btn-focus-box-shadow: none;
+$input-btn-padding-x: 0;
+
+// Label
+
+$form-label-margin-bottom: 0.5rem;
+$form-label-font-size: 0.85rem;
+$form-label-font-weight: 400;
+$form-label-color: #000;
+
 // Spacing
 $spacer: 1rem;
 $spacers: (
