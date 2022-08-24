@@ -3,18 +3,7 @@ body,
   overflow-x: clip;
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
-.bodyScroll {
-  overflow-y: hidden;
-}
-
 input {
-  &:focus {
-    outline: none !important;
-  }
   border: none !important;
   border-bottom: 1px solid !important;
 }
