@@ -8,13 +8,24 @@ const ContactPage = () => {
   return (
     <>
       <SEO title="Contact" />
+      <Container>
+        <div className={styles.heading}>
+          <h1>
+            Interested? <div>We’d love to </div>
+            <div>hear from you.</div>
+          </h1>
+        </div>
+      </Container>
       <div className="d-lg-flex">
         <div className={styles.blueSection}>
-          <Container>
-            <h1>Interested? </h1>
-            <h1>We’d love to hear from you.</h1>
+          <Container className="d-block d-lg-none">
+            <div>
+              <h1>Interested? </h1>
+              <h1>We’d love to hear from you.</h1>
+            </div>
           </Container>
           <div className={styles.lines}></div>
+          <div></div>
         </div>
         <div className={styles.greySection}>
           <Container>
