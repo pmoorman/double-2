@@ -12,7 +12,33 @@
   padding-top: 144px;
 }
 
-.postContent {
+.fbIcon {
+  background: url(./fb.svg) no-repeat center;
+}
+
+.twitterIcon {
+  background: url(./twitter.svg) no-repeat center;
+}
+
+.linkedinIcon {
+  background: url(./linkedin.svg) no-repeat center;
+}
+
+.shareIcon {
+  background: url(./share.svg) no-repeat center;
+}
+
+.leftMenu {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    flex-direction: column-reverse;
+  }
+
   a > i {
     background-size: contain;
     width: 40px;
@@ -26,53 +52,27 @@
       display: inline-block;
     }
   }
+}
 
-  .fbIcon {
-    background: url(./fb.svg) no-repeat center;
-  }
+.points {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.2rem;
 
-  .twitterIcon {
-    background: url(./twitter.svg) no-repeat center;
-  }
+    li {
+      border-bottom: 2px solid #d7d7d7;
+      font-size: 0.85rem;
+      padding: 8px 0;
 
-  .linkedinIcon {
-    background: url(./linkedin.svg) no-repeat center;
-  }
-
-  .shareIcon {
-    background: url(./share.svg) no-repeat center;
-  }
-
-  .leftMenu {
-    display: flex;
-    flex-direction: row;
-    position: sticky;
-    top: 0;
-
-    @include media-breakpoint-down(md) {
-      position: relative;
-      flex-direction: column-reverse;
-    }
-  }
-
-  .points {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1.2rem;
-
-      li {
-        border-bottom: 2px solid #d7d7d7;
-        font-size: 0.85rem;
-        padding: 8px 0;
-
-        &.active {
-          border-color: $primary;
-        }
+      &.active {
+        border-color: $primary;
       }
     }
   }
+}
 
+.postContent {
   h3 {
     margin-bottom: 1.85rem;
     margin-top: 1rem;
