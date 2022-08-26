@@ -136,7 +136,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         const image = getImage(m.image);
 
         return (
-          <div className="hoverAnimation gray" key={m.title}>
+          <div className="gray" key={m.title}>
             <Container>
               <Row className="pt-lg-7 pb-lg-5 py-5">
                 <Col lg="5">
