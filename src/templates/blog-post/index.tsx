@@ -6,30 +6,24 @@ import { Parallax } from "react-scroll-parallax";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { format } from "date-fns";
 
+import { useBlogPosts, useSocialShareLinks } from "@app/hooks";
+import { BlogPost } from "@app/models";
+
 import * as styles from "./index.module.scss";
-import { useSiteMetadata, useSocialShareLinks } from "@app/hooks";
+import { SectionFeaturedArticles } from "@app/components";
 
 export interface BlogPostTemplateProps {
   file: {
     childMdx: {
+      slug: string;
       body: string;
-      frontmatter: {
-        title: string;
-        subtitle: string;
-        date: string;
-        featured: boolean;
-        excerpt: string;
-        author: string;
-        categories: string[];
-        summary_points: string[];
-        hero_image: any;
-      };
+      frontmatter: BlogPost;
     };
   };
 }
 
 const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
-  const { body, frontmatter } = props.data.file.childMdx;
+  const { slug, body, frontmatter } = props.data.file.childMdx;
   const {
     title,
     subtitle,
@@ -43,6 +37,11 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
   } = frontmatter;
   const heroImage = getImage(hero_image);
   const shareLinks = useSocialShareLinks(title);
+  const posts = useBlogPosts({
+    categories: categories,
+    exclude: [slug],
+    limit: 3,
+  });
 
   console.log({ heroImage, hero_image });
 
@@ -107,46 +106,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
               <MDXRenderer>{body}</MDXRenderer>
 
               <div className="mt-lg-6 mb-lg-5 my-5">
-                <h2 className="mb-4">You may like</h2>
-                <Row className="mb-5">
-                  <Col md="3">
-                    <StaticImage src="./artical.svg" alt="artical" />
-                  </Col>
-                  <Col md="9">
-                    <small>6 Aug 2021 | Author</small>
-                    <h3>Want to hire the best talent? Hire remote</h3>
-                    <p>
-                      Remote work has made hidden gems more accessible. When
-                      will you take advantage?
-                    </p>
-                  </Col>
-                </Row>
-                <Row className="mb-5">
-                  <Col md="3">
-                    <StaticImage src="./artical.svg" alt="artical" />
-                  </Col>
-                  <Col md="9">
-                    <small>6 Aug 2021 | Author</small>
-                    <h3>Want to hire the best talent? Hire remote</h3>
-                    <p>
-                      Remote work has made hidden gems more accessible. When
-                      will you take advantage?
-                    </p>
-                  </Col>
-                </Row>
-                <Row className="mb-5">
-                  <Col md="3">
-                    <StaticImage src="./artical.svg" alt="artical" />
-                  </Col>
-                  <Col md="9" className={styles.featuredPosts}>
-                    <small>6 Aug 2021 | Author</small>
-                    <h3>Want to hire the best talent? Hire remote</h3>
-                    <p>
-                      Remote work has made hidden gems more accessible. When
-                      will you take advantage?
-                    </p>
-                  </Col>
-                </Row>
+                <SectionFeaturedArticles title="You may like" posts={posts} />
               </div>
             </Col>
           </Row>
@@ -166,6 +126,7 @@ export const pageQuery = graphql`
     ) {
       childMdx {
         body
+        slug
         frontmatter {
           title
           subtitle
