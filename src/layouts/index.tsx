@@ -15,6 +15,7 @@ import {
   Link,
   TwoColumnSection,
   TwoColumnSectionWithImage,
+  BlockQuote,
 } from "@app/components";
 
 const mdxComponents = {
@@ -24,6 +25,7 @@ const mdxComponents = {
   Button,
   Link,
   StaticImage,
+  BlockQuote,
 };
 
 export const Layout = ({ children, pageContext }: PageProps) => {

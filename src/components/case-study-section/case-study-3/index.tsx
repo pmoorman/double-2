@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Link } from "@app/components";
+import { Link, BlockQuote } from "@app/components";
 
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
@@ -66,14 +66,14 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
         <Container>
           <Row>
             <Col lg={{ span: 6, offset: 6 }} md={12}>
-              <blockquote className={styles.blockquote}>
-                <div className="quoteLine"></div>
-                <p>{section.quote.content}</p>
-                <footer>
-                  <div>{section.quote.name}</div>
-                  <div>{section.quote.title}</div>
-                </footer>
-              </blockquote>
+              <div className={styles.blockquote}>
+                <BlockQuote
+                  name={section.quote.name}
+                  title={section.quote.title}
+                >
+                  {section.quote.content}
+                </BlockQuote>
+              </div>
             </Col>
           </Row>
         </Container>
