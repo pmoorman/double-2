@@ -44,6 +44,8 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
   const heroImage = getImage(hero_image);
   const shareLinks = useSocialShareLinks(title);
 
+  console.log({ heroImage, hero_image });
+
   return (
     <>
       <div className={styles.hero}>
@@ -63,7 +65,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
       {heroImage && (
         <div className={styles.imageSection}>
           <Container>
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
               <Parallax scale={[0.7, 1, "easeInQuad"]}>
                 <GatsbyImage image={heroImage} alt="" />
               </Parallax>
@@ -175,7 +177,7 @@ export const pageQuery = graphql`
           summary_points
           hero_image {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(width: 700)
             }
           }
         }
