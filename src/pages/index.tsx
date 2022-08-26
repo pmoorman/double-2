@@ -23,12 +23,13 @@ const HomePage = () => {
   const caseStudies = getHomepageCaseStudies(_caseStudies);
 
   const settings: Settings = {
+    autoplay: true,
+    autoplaySpeed: 2300,
     arrows: false,
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3.5,
     slidesToScroll: 1,
-    swipeToSlide: true,
     className: styles.teamMember,
     responsive: [
       {
@@ -55,7 +56,7 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.hero}>
-        <Container className="pt-lg-6 pb-lg-8 pt-4">
+        <Container className="pt-lg-6 pt-xl-9 pb-lg-8 pt-4">
           <ImageRow
             imageOrder="last"
             image={
