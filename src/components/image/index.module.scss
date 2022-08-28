@@ -1,0 +1,25 @@
+.single {
+  --g: #000, #0000 1deg 179deg, #000 180deg;
+  --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /100%
+    100% no-repeat;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.double {
+  --g: #000, #0000 1deg 179deg, #000 180deg;
+  --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /100%
+    100% no-repeat;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+
+  @include media-breakpoint-down(md) {
+    --g: #000, #0000 1deg 179deg, #000 180deg;
+    --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /51%
+        100% no-repeat,
+      conic-gradient(from 45deg at bottom 20px right 20px, var(--g)) 100% 100%/51%
+        100% no-repeat;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+}

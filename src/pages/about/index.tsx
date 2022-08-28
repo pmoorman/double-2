@@ -11,6 +11,7 @@ import {
   SectionFeaturedArticles,
   SectionOpenRoles,
   SEO,
+  Image,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
@@ -117,11 +118,9 @@ const AboutPage = () => {
             {/* Image 1 */}
             <Col md={12}>
               <Parallax scale={[1, 1.3, "easeInQuad"]}>
-                <StaticImage
-                  src="./about_img_1.jpg"
-                  alt="TODO"
-                  className="cutted_image"
-                />
+                <Image>
+                  <StaticImage src="./about_img_1.jpg" alt="TODO" />
+                </Image>
               </Parallax>
 
               <div className={styles.img_1}>

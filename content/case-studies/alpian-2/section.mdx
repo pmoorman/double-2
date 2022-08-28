@@ -24,11 +24,9 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 <TwoColumnSectionWithImage
   title="section titleccc"
   image={
-    <GatsbyImage
-      alt=""
-      image={getImage(props.images[0])}
-      className="cutted_image_double mb-lg-0 mb-3"
-    />
+    <Image double className="mb-lg-0 mb-3">
+      <GatsbyImage alt="" image={getImage(props.images[0])} />
+    </Image>
   }
 >
   <p>

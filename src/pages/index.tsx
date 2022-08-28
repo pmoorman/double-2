@@ -11,6 +11,7 @@ import {
   TeamMember,
   SectionFeaturedArticles,
   CaseStudySection,
+  Image,
 } from "@app/components";
 import { useCaseStudies, useTeam } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
@@ -60,11 +61,13 @@ const HomePage = () => {
           <ImageRow
             imageOrder="last"
             image={
-              <StaticImage
-                src="./index-assets/hero_image.jpeg"
-                alt="Growth"
-                className={`cutted_image + ${styles.heroImage}`}
-              />
+              <Image>
+                <StaticImage
+                  src="./index-assets/hero_image.jpeg"
+                  alt="Growth"
+                  className={styles.heroImage}
+                />
+              </Image>
             }
           >
             <h1 className="mb-lg-3 mb-4">Your allies in exponential growth.</h1>

@@ -8,6 +8,7 @@ import {
   FeaturedCaseStudies,
   Hero,
   TwoColumnSection,
+  Image,
 } from "@app/components";
 
 const ServiceInfrastructure = () => {
@@ -25,20 +26,16 @@ const ServiceInfrastructure = () => {
       <Container>
         <Row className="mb-lg-7 mb-5">
           <Col lg="5" md="6" className="d-none d-lg-flex">
-            <StaticImage
-              src="./services.jpeg"
-              alt="services"
-              className="cutted_image"
-            />
+            <Image>
+              <StaticImage src="./services.jpeg" alt="services" />
+            </Image>
           </Col>
           <Col lg="1" className="d-none d-xl-flex"></Col>
           <Col xl="6" lg="6" md="6">
             <h2 className="mb-4">Our approach</h2>
-            <StaticImage
-              src="./services.jpeg"
-              alt="services"
-              className="cutted_image_double d-lg-none d-block mb-3"
-            />
+            <Image double className="d-lg-none d-block mb-3">
+              <StaticImage src="./services.jpeg" alt="services" />
+            </Image>
             <p className="mb-lg-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

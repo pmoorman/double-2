@@ -1,14 +1,20 @@
-import { BlogPostGridItem, SEO } from "@app/components";
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Slider, { Settings } from "react-slick";
+import { format } from "date-fns";
 
-import { Link, ImageRow, TestimonialSlider } from "@app/components";
+import {
+  Link,
+  ImageRow,
+  TestimonialSlider,
+  BlogPostGridItem,
+  Image,
+  SEO,
+} from "@app/components";
+import { useBlogPosts } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
-import { useBlogPosts } from "@app/hooks";
-import { format } from "date-fns";
 
 const settings: Settings = {
   arrows: false,
@@ -143,11 +149,9 @@ const BlogPage = () => {
           <ImageRow
             imageOrder="first"
             image={
-              <StaticImage
-                src="./tiktok.jpeg"
-                alt="Case Studies"
-                className="cutted_image_double mb-lg-0 mb-3"
-              />
+              <Image double className="mb-lg-0 mb-3">
+                <StaticImage src="./tiktok.jpeg" alt="Case Studies" />
+              </Image>
             }
           >
             <h2 className="mb-lg-3 mb-4">See our growth marketing in action</h2>

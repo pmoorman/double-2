@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import ReactMarkdown from "react-markdown";
 
-import { ImageRow, HeadingRow } from "@app/components";
+import { ImageRow, HeadingRow, Image } from "@app/components";
 import { CaseStudy } from "@app/models";
 
 import * as styles from "./index.module.scss";
-import ReactMarkdown from "react-markdown";
 
 export interface CaseStudyTemplateProps {
   file: {
@@ -44,11 +44,9 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               imageOrder="last"
               image={
                 heroImage && (
-                  <GatsbyImage
-                    image={heroImage}
-                    alt=""
-                    className="cutted_image"
-                  />
+                  <Image>
+                    <GatsbyImage image={heroImage} alt="" />
+                  </Image>
                 )
               }
             >
@@ -96,11 +94,9 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               imageOrder="last"
               image={
                 resultsImage && (
-                  <GatsbyImage
-                    image={resultsImage}
-                    alt="Results"
-                    className="cutted_image m-3"
-                  />
+                  <Image className="m-3">
+                    <GatsbyImage image={resultsImage} alt="Results" />
+                  </Image>
                 )
               }
             >
@@ -142,11 +138,9 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 <Col lg="5">
                   <h3 className="mb-5">{m.title}</h3>
                   {image && (
-                    <GatsbyImage
-                      image={image}
-                      alt={`Milestone ${i + 1}`}
-                      className="cutted_image"
-                    />
+                    <Image>
+                      <GatsbyImage image={image} alt={`Milestone ${i + 1}`} />
+                    </Image>
                   )}
                 </Col>
                 <Col

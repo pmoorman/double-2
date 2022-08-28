@@ -20,3 +20,4 @@ export * from "./application-process";
 export * from "./testimonial-slider";
 export * from "./block-quote";
 export * from "./blog-post-grid-item";
+export * from "./image";

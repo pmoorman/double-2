@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Hero, Link, SEO } from "@app/components";
+
+import { Hero, Image, Link, SEO } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -160,11 +161,9 @@ const ServicesPage = () => {
               <h2 className="mb-4">
                 See our services in action with our client case studies
               </h2>
-              <StaticImage
-                src="./services.jpeg"
-                alt="services"
-                className="cutted_image_double d-lg-none d-block mb-3"
-              />
+              <Image double className="d-lg-none d-block mb-3">
+                <StaticImage src="./services.jpeg" alt="services" />
+              </Image>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -176,11 +175,9 @@ const ServicesPage = () => {
             </Col>
             <Col lg="1" className="d-none d-xl-flex"></Col>
             <Col lg="6" md="6" className="d-none d-lg-flex">
-              <StaticImage
-                src="./services.jpeg"
-                alt="services"
-                className="cutted_image"
-              />
+              <Image>
+                <StaticImage src="./services.jpeg" alt="services" />
+              </Image>
             </Col>
           </Row>
         </Container>
@@ -195,11 +192,9 @@ const ServicesPage = () => {
               <Row className="pt-lg-7 pb-lg-7 py-5">
                 <Col lg="4" md="5" sm="12">
                   <h3 className="mb-5">Hypothesize</h3>
-                  <StaticImage
-                    src="./milestone1.jpeg"
-                    alt="Milestone 1"
-                    className="cutted_image d-none d-lg-block d-md-block"
-                  />
+                  <Image className="d-none d-lg-block d-md-block">
+                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
+                  </Image>
                 </Col>
                 <Col
                   lg="2"
@@ -228,11 +223,9 @@ const ServicesPage = () => {
               <Row className="pt-lg-7 pb-lg-7 py-5">
                 <Col lg="4" md="5" sm="12">
                   <h3 className="mb-5">Test</h3>
-                  <StaticImage
-                    src="./milestone1.jpeg"
-                    alt="Milestone 1"
-                    className="cutted_image d-none d-lg-block d-md-block"
-                  />
+                  <Image className="d-none d-lg-block d-md-block">
+                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
+                  </Image>
                 </Col>
                 <Col
                   lg="2"
@@ -261,11 +254,9 @@ const ServicesPage = () => {
               <Row className="pt-lg-7 pb-lg-7 py-5">
                 <Col lg="4" md="5" sm="12">
                   <h3 className="mb-5">Learn</h3>
-                  <StaticImage
-                    src="./milestone1.jpeg"
-                    alt="Milestone 1"
-                    className="cutted_image d-none d-lg-block d-md-block"
-                  />
+                  <Image className="d-none d-lg-block d-md-block">
+                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
+                  </Image>
                 </Col>
                 <Col
                   lg="2"

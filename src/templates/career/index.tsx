@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
-
-import { Col, Container, Row, Button, Link } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 
@@ -9,7 +8,9 @@ import * as styles from "./index.module.scss";
 import {
   ApplicationProcess,
   HeadingRow,
+  Image,
   TwoColumnSection,
+  Link,
 } from "@app/components";
 
 export interface CareerTemplateProps {
@@ -60,11 +61,9 @@ const CareerTemplate: FC<PageProps<CareerTemplateProps>> = (props) => {
         <Container>
           <Row>
             <Col md="5">
-              <StaticImage
-                src="./role.jpeg"
-                alt="Role"
-                className="cutted_image_double"
-              />
+              <Image double>
+                <StaticImage src="./role.jpeg" alt="Role" />
+              </Image>
             </Col>
             <Col md="1"></Col>
             <Col md="6">
