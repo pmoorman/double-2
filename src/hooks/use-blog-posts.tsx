@@ -5,11 +5,12 @@ import { BlogPost } from "@app/models";
 
 export interface UseBlogPostsProps {
   categories?: string[];
-  exclude: string[];
-  limit: number;
+  featured?: boolean;
+  exclude?: string[];
+  limit?: number;
 }
 
-export const useBlogPosts = (props: UseBlogPostsProps) => {
+export const useBlogPosts = (props?: UseBlogPostsProps) => {
   const { allFile } = useStaticQuery(graphql`
     {
       allFile(
@@ -34,7 +35,7 @@ export const useBlogPosts = (props: UseBlogPostsProps) => {
                 summary_points
                 thumbnail {
                   childImageSharp {
-                    gatsbyImageData(width: 300)
+                    gatsbyImageData(width: 420, layout: FULL_WIDTH)
                   }
                 }
                 hero_image {
@@ -51,7 +52,19 @@ export const useBlogPosts = (props: UseBlogPostsProps) => {
   `);
 
   const posts: BlogPost[] = allFile.edges
-    .filter((edge: any) => !props.exclude.includes(edge.node.childMdx.slug))
+    .filter((edge: any) =>
+      props?.exclude ? !props.exclude.includes(edge.node.childMdx.slug) : true
+    )
+    .filter((edge: any) => {
+      return props?.featured ? edge.node.childMdx.frontmatter.featured : true;
+    })
+    .filter((edge: any) => {
+      return props?.categories
+        ? edge.node.childMdx.frontmatter.categories.some((c: string) =>
+            props?.categories?.includes(c)
+          )
+        : true;
+    })
     .map((edge: any) => {
       const { frontmatter, slug } = edge.node.childMdx;
       return {
@@ -63,5 +76,5 @@ export const useBlogPosts = (props: UseBlogPostsProps) => {
       };
     });
 
-  return posts.slice(0, props.limit);
+  return posts.slice(0, props?.limit || 1000);
 };

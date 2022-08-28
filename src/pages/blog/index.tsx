@@ -1,11 +1,14 @@
-import { SEO } from "@app/components";
+import { BlogPostGridItem, SEO } from "@app/components";
 import * as React from "react";
-import { Col, Container, Row, Button, Link } from "react-bootstrap";
-import { StaticImage } from "gatsby-plugin-image";
+import { Col, Container, Row, Button } from "react-bootstrap";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Slider, { Settings } from "react-slick";
-import { BlogArtical, ImageRow, QuoteSlider } from "@app/components";
+
+import { Link, ImageRow, TestimonialSlider } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import { useBlogPosts } from "@app/hooks";
+import { format } from "date-fns";
 
 const settings: Settings = {
   arrows: false,
@@ -24,6 +27,12 @@ const settings: Settings = {
 };
 
 const BlogPage = () => {
+  const allArticles = useBlogPosts();
+  const featuredArticles = useBlogPosts({
+    featured: true,
+    limit: 3,
+  });
+
   return (
     <>
       <SEO title="Blog" />
@@ -46,54 +55,28 @@ const BlogPage = () => {
           <h3 className="mb-0">Featured articles</h3>
           <div className={styles.featuredArticles}>
             <Row>
-              <Col lg="12" xl="4">
-                <div>
-                  <StaticImage
-                    src="./featured-1.jpg"
-                    alt="featured artical"
-                    layout="fixed"
-                    height={176}
-                  />
-                </div>
-                <div>
-                  <small>17 Aug 2021 | Sandy</small>
-                  <h4>Write like a lawyer first, copywriter second</h4>
-                </div>
-              </Col>
-              <Col lg="12" xl="4">
-                <div>
-                  <StaticImage
-                    src="./featured-2.jpg"
-                    alt="featured artical"
-                    layout="fixed"
-                    height={176}
-                  />
-                </div>
-                <div>
-                  <small>6 Aug 2021 | Naveed</small>
-                  <h4>Stop repulsing your prospects</h4>
-                </div>
-              </Col>
-              <Col lg="12" xl="4">
-                <div>
-                  <StaticImage
-                    src="./featured-3.jpg"
-                    alt="featured artical"
-                    layout="fixed"
-                    height={176}
-                  />
-                </div>
-                <div>
-                  <small>6 Aug 2021 | Sandy</small>
-                  <h4>Stop repulsing your prospects</h4>
-                </div>
-              </Col>
+              {featuredArticles.map((post) => (
+                <Col lg="12" xl="4">
+                  <Link to={post.slug}>
+                    <div style={{ width: 240 }}>
+                      <GatsbyImage image={post.thumbnail} alt="featured" />
+                    </div>
+                    <div>
+                      <small>
+                        {format(new Date(post.date), "dd MMM yyyy")} |{" "}
+                        {post.author}
+                      </small>
+                      <h4>{post.title}</h4>
+                    </div>
+                  </Link>
+                </Col>
+              ))}
             </Row>
           </div>
         </Container>
       </div>
 
-      <div className={styles.collectionSection}>
+      {/* <div className={styles.collectionSection}>
         <Container>
           <h2 className="mt-lg-7">Browse by collection</h2>
           <div className="subtitle">
@@ -140,14 +123,19 @@ const BlogPage = () => {
             </Slider>
           </div>
         </Container>
-      </div>
+      </div> */}
 
       <Container>
-        <QuoteSlider></QuoteSlider>
+        <TestimonialSlider />
       </Container>
+
       <Container className="my-lg-7 my-5">
         <h2>Explore our articles</h2>
-        <BlogArtical></BlogArtical>
+        <Row>
+          {allArticles.map((post, i) => (
+            <BlogPostGridItem key={post.title + i} post={post} />
+          ))}
+        </Row>
       </Container>
 
       <div className={styles.caseStudy}>

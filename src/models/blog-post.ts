@@ -9,4 +9,5 @@ export interface BlogPost {
   summary_points: string[];
   hero_image: any;
   thumbnail?: any;
+  slug: string;
 }

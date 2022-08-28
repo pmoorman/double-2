@@ -17,6 +17,6 @@ export * from "./hero";
 
 export * from "./case-study-section";
 export * from "./application-process";
-export * from "./blog-artical";
-export * from "./quote-slider";
+export * from "./testimonial-slider";
 export * from "./block-quote";
+export * from "./blog-post-grid-item";

@@ -108,6 +108,14 @@ const config: GatsbyConfig = {
       },
       __key: "team",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/testimonials`,
+        name: `testimonials`,
+      },
+      __key: "testimonials",
+    },
   ],
 };
 

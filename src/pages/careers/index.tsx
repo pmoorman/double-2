@@ -6,7 +6,7 @@ import { Parallax } from "react-scroll-parallax";
 import {
   ApplicationProcess,
   SectionFeaturedArticles,
-  QuoteSlider,
+  TestimonialSlider,
   SectionOpenRoles,
   Link,
   SEO,
@@ -117,7 +117,7 @@ const CareersPage = () => {
 
       <Container>
         <SectionOpenRoles />
-        <QuoteSlider></QuoteSlider>
+        <TestimonialSlider />
       </Container>
 
       <ApplicationProcess></ApplicationProcess>
