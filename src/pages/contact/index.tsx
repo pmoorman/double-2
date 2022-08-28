@@ -1,10 +1,30 @@
+import React, { useState } from "react";
+import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+
 import { SEO } from "@app/components";
-import * as React from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { submitNetlifyForm } from "@app/helpers";
 
 import * as styles from "./index.module.scss";
 
 const ContactPage = () => {
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    const { response, form } = await submitNetlifyForm(e);
+
+    if (response.ok) {
+      setError("");
+      setMessage("Thank you, we received your submission");
+      form.reset();
+      return;
+    }
+
+    setError("Something went wrong. Please try again later.");
+    setMessage("");
+  };
+
   return (
     <>
       <SEO title="Contact" />
@@ -27,13 +47,21 @@ const ContactPage = () => {
           <div className={styles.lines}></div>
           <div></div>
         </div>
-        <div className={styles.greySection}>
+        <Form
+          className={styles.greySection}
+          id="#contact"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+        >
           <Container>
             <h2>Get in touch</h2>
             <Row>
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="first-name">First name</Form.Label>
                 <Form.Control
+                  required
                   placeholder="Enter your first name"
                   aria-describedby="first-name"
                 />
@@ -41,6 +69,7 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="last-name">Last name</Form.Label>
                 <Form.Control
+                  required
                   placeholder="Enter your last name"
                   aria-describedby="last-name"
                 />
@@ -50,6 +79,7 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
+                  required
                   placeholder="Enter your email"
                   aria-describedby="email"
                 />
@@ -66,14 +96,24 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="Enter your message">Message</Form.Label>
                 <Form.Control
+                  required
                   placeholder="Enter your message"
                   aria-describedby="Enter your message"
                 />
               </Col>
             </Row>
-            <div className="mt-5">
-              <Button variant="secondary">Submit</Button>
-            </div>
+            {!message && (
+              <div className="mt-5">
+                <Button variant="secondary" type="submit">
+                  Submit
+                </Button>
+              </div>
+            )}
+            {(error || message) && (
+              <Alert variant={error ? "danger" : "success"} className={`mt-3`}>
+                {error || message}
+              </Alert>
+            )}
 
             <div className="mt-5">
               <h4 className="mb-3">Email us</h4>
@@ -82,7 +122,7 @@ const ContactPage = () => {
               <div className="mb-4">xxxxxxxxx</div>
             </div>
           </Container>
-        </div>
+        </Form>
       </div>
     </>
   );

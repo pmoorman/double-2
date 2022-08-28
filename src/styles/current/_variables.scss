@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
 // General
 $enable-smooth-scroll: false;
 
@@ -35,11 +38,12 @@ $secondary: #2a2f45;
 $gray: #f4f4f4;
 $light: #fff;
 
-$theme-colors: (
+$custom-colors: (
   "primary": $primary,
   "secondary": $secondary,
   "light": $light,
 );
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Input
 
