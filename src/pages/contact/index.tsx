@@ -3,10 +3,12 @@ import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
 
 import { SEO } from "@app/components";
 import { submitNetlifyForm } from "@app/helpers";
+import { useSiteMetadata } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
 
 const ContactPage = () => {
+  const { contact_email, contact_phone } = useSiteMetadata();
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
@@ -117,9 +119,9 @@ const ContactPage = () => {
 
             <div className="mt-5">
               <h4 className="mb-3">Email us</h4>
-              <div className="mb-3">Hello@double-agency.com</div>
+              <div className="mb-3">{contact_email}</div>
               <h4 className="mb-3 mt-lg-0 mt-5">Call us</h4>
-              <div className="mb-4">xxxxxxxxx</div>
+              <div className="mb-4">{contact_phone}</div>
             </div>
           </Container>
         </Form>
