@@ -57,14 +57,14 @@ const BlogPage = () => {
       </div>
 
       <div className={styles.articles}>
-        <Container>
+        <Container className="position-relative">
           <h3 className="mb-0">Featured articles</h3>
           <div className={styles.featuredArticles}>
             <Row>
               {featuredArticles.map((post) => (
                 <Col lg="12" xl="4">
                   <Link to={post.slug}>
-                    <div style={{ width: 240 }}>
+                    <div>
                       <GatsbyImage image={post.thumbnail} alt="featured" />
                     </div>
                     <div>

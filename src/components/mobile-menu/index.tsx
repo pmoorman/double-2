@@ -25,7 +25,6 @@ export const MobileMenu = () => {
       isOpen={isOpen}
       onStateChange={(state) => handleStateChange(state)}
       width={260}
-      burgerBarClassName={styles.menuIcon}
       bodyClassName={"bodyScroll"}
       menuClassName={styles.mobileBar}
       overlayClassName={styles.mobileBarOverlay}

@@ -47,3 +47,20 @@ ol,
 ul {
   padding-left: 1rem;
 }
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: $font-family-monospace;
+}
+
+.title-icon {
+  background-size: contain;
+  width: 40px;
+  display: inline-block;
+  margin-right: 30px;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}

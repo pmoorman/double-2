@@ -10,6 +10,7 @@ import {
   SectionOpenRoles,
   Link,
   SEO,
+  VideoSection,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
@@ -117,6 +118,9 @@ const CareersPage = () => {
 
       <Container>
         <SectionOpenRoles />
+      </Container>
+      <VideoSection />
+      <Container>
         <TestimonialSlider />
       </Container>
 

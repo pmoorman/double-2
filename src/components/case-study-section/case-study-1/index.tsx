@@ -61,7 +61,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
                       </svg>
                     </div>
                     {item.stats && (
-                      <div className="numberStat">
+                      <div className={styles.numberStat}>
                         {item.stats.map((s) => (
                           <div className="mb-5" key={s.title}>
                             <div>{s.value}</div>
