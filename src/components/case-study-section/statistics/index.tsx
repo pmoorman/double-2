@@ -9,7 +9,7 @@ export interface StatisticsProps {
 export const Statistics: FC<StatisticsProps> = ({ stats }) => {
   return (
     <div className="pt-lg-5 pb-lg-6 py-4">
-      <div className={`numberStat d-flex + ${styles.tiktokStatics}`}>
+      <div className={`numberStat d-flex + ${styles.numberStat}`}>
         {stats.map((s) => (
           <div key={s.title}>
             <div>{s.value}</div>

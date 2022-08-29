@@ -62,7 +62,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
       {stats && (
         <div className={`py-lg-7 py-5 + ${styles.blueBg}`}>
           <Container>
-            <div className="numberStat">
+            <div className={styles.numberStat}>
               {stats.map((stat) => (
                 <div key={stat.title}>
                   <div className="mb-lg-3 mb-0">{stat.value}</div>

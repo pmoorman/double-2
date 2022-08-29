@@ -55,7 +55,6 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
               <div className={styles.arrow}>
                 <i className={styles.arrowDownIcon}></i>
               </div>
-              <div className={styles.line}></div>
               <div className={styles.border}></div>
             </div>
           </div>
