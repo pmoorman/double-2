@@ -25,12 +25,16 @@ const HomePage = () => {
 
   const settings: Settings = {
     autoplay: true,
-    autoplaySpeed: 2300,
+    speed: 9000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToShow: 3.5,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    useTransform: false,
+    pauseOnHover: false,
     className: styles.teamMember,
     responsive: [
       {
@@ -77,7 +81,7 @@ const HomePage = () => {
             </p>
             <Button
               as={Link}
-              to="/case-studies"
+              to="/#caseStudies"
               variant="secondary"
               className="mb-lg-0 mb-4"
             >
@@ -169,13 +173,15 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      {caseStudies.map((item) => (
-        <CaseStudySection
-          type={item.section.type}
-          item={item}
-          key={item.slug}
-        />
-      ))}
+      <div id="caseStudies">
+        {caseStudies.map((item) => (
+          <CaseStudySection
+            type={item.section.type}
+            item={item}
+            key={item.slug}
+          />
+        ))}
+      </div>
 
       <Container>
         <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>
