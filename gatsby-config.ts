@@ -58,7 +58,12 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-transformer-remark",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaultQuality: 90,
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

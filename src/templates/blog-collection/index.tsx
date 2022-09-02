@@ -4,7 +4,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./index.module.scss";
-import { BlogArtical } from "@app/components";
 
 export interface BlogCollectionProps {
   file: {
@@ -36,8 +35,6 @@ const BlogCollection: FC<PageProps<BlogCollectionProps>> = (props) => {
               <StaticImage src="./hero.svg" alt="Sales funnels" />
             </Col>
           </Row>
-
-          <BlogArtical></BlogArtical>
         </Container>
       </div>
     </>
@@ -46,18 +43,18 @@ const BlogCollection: FC<PageProps<BlogCollectionProps>> = (props) => {
 
 export default BlogCollection;
 
-export const pageQuery = graphql`
-  query ($relativePath: String!) {
-    file(
-      relativePath: { eq: $relativePath }
-      sourceInstanceName: { eq: "blog" }
-    ) {
-      childMdx {
-        body
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query ($relativePath: String!) {
+//     file(
+//       relativePath: { eq: $relativePath }
+//       sourceInstanceName: { eq: "blog" }
+//     ) {
+//       childMdx {
+//         body
+//         frontmatter {
+//           title
+//         }
+//       }
+//     }
+//   }
+// `;
