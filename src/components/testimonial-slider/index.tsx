@@ -1,11 +1,24 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
+import Slider, { Settings } from "react-slick";
+import cn from "classnames";
+
+import { BlockQuote } from "../block-quote";
+import { useTestimonials } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
-import { BlockQuote } from "../block-quote";
-import { useTestimonials } from "@app/hooks/use-testimonials";
+
+const settings: Settings = {
+  autoplay: true,
+  autoplaySpeed: 4000,
+  arrows: false,
+  dots: false,
+  infinite: true,
+  slidesToShow: 1.1,
+  slidesToScroll: 1,
+};
 
 export const TestimonialSlider = () => {
   const testimonials = useTestimonials();
@@ -18,30 +31,37 @@ export const TestimonialSlider = () => {
         </h3>
         <Parallax>
           <div className={styles.quote}>
-            {testimonials.map((t, i) => (
-              <div key={t.title + i}>
-                <Row className="d-flex align-items-center">
-                  <Col md="8">
-                    <div className={styles.blockquote}>
-                      <BlockQuote
-                        name={t.name}
-                        title={t.title}
-                        location={t.location}
-                      >
-                        {t.quote}
-                      </BlockQuote>
-                    </div>
-                  </Col>
-                  <Col md="4">
-                    <GatsbyImage
-                      image={t.image}
-                      alt="Testimonial"
-                      className="mt-4"
-                    />
-                  </Col>
-                </Row>
-              </div>
-            ))}
+            <Slider {...settings}>
+              {testimonials.map((t, i) => (
+                <div key={t.title + i}>
+                  <Row
+                    className={cn(
+                      styles.testimonialItem,
+                      "d-flex align-items-center"
+                    )}
+                  >
+                    <Col md="8">
+                      <div className={styles.blockquote}>
+                        <BlockQuote
+                          name={t.name}
+                          title={t.title}
+                          location={t.location}
+                        >
+                          {t.quote}
+                        </BlockQuote>
+                      </div>
+                    </Col>
+                    <Col md="4">
+                      <GatsbyImage
+                        image={t.image}
+                        alt="Testimonial"
+                        className="mt-4"
+                      />
+                    </Col>
+                  </Row>
+                </div>
+              ))}
+            </Slider>
           </div>
         </Parallax>
       </div>
