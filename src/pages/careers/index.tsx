@@ -23,7 +23,7 @@ const CareersPage = () => {
         <Container>
           <Row className={styles.heroContent}>
             <Col lg="5">
-              <h1 className="mb-5">Join the action </h1>
+              <h1 className="mb-5">Become the next Double Agent</h1>
               <Button
                 as={Link}
                 to="#roles"
@@ -38,7 +38,7 @@ const CareersPage = () => {
               <Row>
                 <Col md="10" sm="10" xs="10">
                   <h3 className="mb-2">to help awesome companies scale.</h3>
-                  <h3 className="mb-2"> Are you the new Double Agent?</h3>
+                  <h3 className="mb-2"> Want to join in on the action?</h3>
                 </Col>
                 <Col md="2" sm="2" xs="2">
                   <div className={styles.triangleIcon}></div>
@@ -56,18 +56,16 @@ const CareersPage = () => {
             <Col lg="8" md="11" sm="11" xs="11">
               <h2 className="text-right mb-4">Who we are and what we do </h2>
               <p>
-                Innovative companies need novel methods and ideas. That’s where
-                we enter the equation – a modern digital growth agency.
+                Double is made up of specialists and marketing generalists who
+                join forces to deliver the best results for our clients.
               </p>
               <p>
-                We’re a bunch of marketing nerds, spread around the world, who
-                spend their days on finding systems that sell. We write,
-                strategize, quantify, plan, execute, learn, and rethink. We take
-                what works and make it work even better.
+                We learn together, laugh together, and work really, really hard.
               </p>
               <p>
-                Our clients are start-ups and scale-ups that want to grow in a
-                systematic way.
+                Our team is growing all the time and we’re always hungry to
+                bring someone new and exciting to the table. *Note: we don’t
+                want to eat you, just work with you.
               </p>
               <Button
                 as={Link}
