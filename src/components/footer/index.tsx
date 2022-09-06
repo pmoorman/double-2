@@ -35,13 +35,13 @@ export const Footer = () => {
             />
           </Col>
         </Row>
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center justify-content-between py-4">
           <DoubleLogo />
-          <div className={styles.footerLogo}>
+          {/* <div className={styles.footerLogo}>
             <Button to="#" as={Link} variant="text">
               Terms & Conditions
             </Button>
-          </div>
+          </div> */}
         </div>
       </Container>
     </footer>
