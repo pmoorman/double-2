@@ -25,12 +25,16 @@ const HomePage = () => {
 
   const settings: Settings = {
     autoplay: true,
-    autoplaySpeed: 2300,
+    speed: 9000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToShow: 3.5,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    useTransform: false,
+    pauseOnHover: false,
     className: styles.teamMember,
     responsive: [
       {
@@ -70,18 +74,18 @@ const HomePage = () => {
               </Image>
             }
           >
-            <h1 className="mb-lg-3 mb-4">Your allies in exponential growth.</h1>
+            <h1 className="mb-lg-3 mb-4">Experts in exponential growth</h1>
             <p>
-              We’re Growth Marketers from Amsterdam guiding VC-funded scale-ups
-              to their revenue targets Series A startups.
+              Double is a growth marketing agency. We help tech companies do
+              better marketing, and drive explosive user growth.
             </p>
             <Button
               as={Link}
-              to="/case-studies"
+              to="/#caseStudies"
               variant="secondary"
               className="mb-lg-0 mb-4"
             >
-              View all case studies
+              Explore our work
             </Button>
           </ImageRow>
         </Container>
@@ -134,15 +138,14 @@ const HomePage = () => {
               <Row>
                 <Col lg={{ span: 11, offset: 1 }} md={{ span: 11, offset: 1 }}>
                   <h2 className={styles.headingStyle}>
-                    We’re sales funnel experts
+                    We help the world's most ambitious teams
                   </h2>
                 </Col>
               </Row>
               <Row>
                 <Col lg={5} md={5}>
-                  <h2>
-                    Who understand
-                    <div className="mt-lg-3 mt-2">systems thinking</div>
+                  <h2 className={styles.subHeadingStyle}>
+                    build the systems to tell their stories
                   </h2>
                 </Col>
                 <Col lg={2} md={2} className="d-lg-block d-md-block d-none">
@@ -150,17 +153,16 @@ const HomePage = () => {
                 </Col>
                 <Col lg={5} md={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
                   <p>
-                    We unlock sustainable, long-term growth by building copy,
-                    videos, and articles into the context of loops, flywheels,
-                    and funnels, We make sure every asset plays its part in a
-                    wider acquisition and retention system.
+                    Sustained, compounding growth always comes from an
+                    engineered, systematic approach to user acquisition,
+                    activation and retention.
                   </p>
-                  <Button
-                    as={Link}
-                    to="/case-studies"
-                    variant="outline-secondary"
-                  >
-                    View all case studies
+                  <p>
+                    Building such systems — and crafting the content within it —
+                    is what we specialise in.
+                  </p>
+                  <Button as={Link} to="/services" variant="outline-secondary">
+                    Our services
                   </Button>
                 </Col>
               </Row>
@@ -169,22 +171,24 @@ const HomePage = () => {
         </Row>
       </Container>
 
-      {caseStudies.map((item) => (
-        <CaseStudySection
-          type={item.section.type}
-          item={item}
-          key={item.slug}
-        />
-      ))}
+      <div id="caseStudies">
+        {caseStudies.map((item) => (
+          <CaseStudySection
+            type={item.section.type}
+            item={item}
+            key={item.slug}
+          />
+        ))}
+      </div>
 
       <Container>
         <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>
           <Col lg="9">
             <h2 className="mb-2">Our people</h2>
             <p className="text-grey">
-              At Double everyone growth marketing expert regardless of their
-              specialist skills. Meet the people on the ground who will be
-              handling all your marketing needs
+              At Double, everyone is a growth marketing expert first, regardless
+              of their specialist skills. Meet the people on the ground who will
+              be handling all your marketing needs:
             </p>
           </Col>
           <Col lg="3">
@@ -209,9 +213,79 @@ const HomePage = () => {
             </Slider>
           </Col>
         </Row>
-
-        <div className="pt-lg-6 pt-0">
-          <SectionFeaturedArticles />
+        <div>
+          <h2 className="mb-md-6 mb-sm-4">Our views on marketing</h2>
+          <Row className="my-5">
+            <Col sm="12" md="6">
+              <h3>1. Systems drive growth</h3>
+            </Col>
+            <Col sm="12" md="6">
+              <p>
+                To acquire millions of users, high-growth companies cannot rely
+                on manual processes or short-lived tactics. Marketing needs to
+                be predictable, systematic, automated and repeatable. The
+                essence of growth marketing is to build systems that drive user
+                acquisition, activation and retention at scale.
+              </p>
+              <p>
+                <strong>Acquisition loops</strong> Performance | content
+                marketing | product-driven growth
+              </p>
+              <p>
+                <strong>Sales funnels</strong> Copywriting | conversions |
+                design | execution
+              </p>
+              <p>
+                <strong>Product marketing</strong> Onboarding | activation |
+                retention
+              </p>
+              <p>
+                <strong>Data + infrastructure</strong> Analytics, testing &
+                development
+              </p>
+            </Col>
+          </Row>
+          <Row className="my-5">
+            <Col sm="12" md="6">
+              <h3>2. Stories that sell</h3>
+            </Col>
+            <Col sm="12" md="6">
+              <p>
+                Having the right systems alone is not enough: you still need to
+                get noticed and convince people to buy your product. Without a
+                good story, you might as well not exist.
+              </p>
+              <p>
+                The best way to do marketing, is by telling stories that help
+                people see their problems and challenges in a different light.
+                Copywriting thus is the backbone of all good marketing. Stories
+                drive conversions in all sorts of places:
+              </p>
+              <ul>
+                <li>Email copywriting</li>
+                <li>Paid advertising</li>
+                <li>Content & video materials</li>
+                <li>Customer onboarding optimisation</li>
+                <li>Sales Data analysis and analytics</li>
+              </ul>
+            </Col>
+          </Row>
+          <Row className="my-5">
+            <Col sm="12" md="6">
+              <h3>3. Speed matters</h3>
+            </Col>
+            <Col sm="12" md="6">
+              <p>
+                It’s hard to know beforehand what will work, and what won’t. For
+                that reason, it is important to experiment rapidly, and focus on
+                speed of execution above almost everything else.
+              </p>
+              <p>
+                Once you’ve found things that are successful, find ways to
+                double down on them and do more of it. Repeat what works.
+              </p>
+            </Col>
+          </Row>
         </div>
       </Container>
     </>

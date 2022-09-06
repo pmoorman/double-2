@@ -92,10 +92,10 @@ const ServiceCreative = () => {
           </ul>
         </TwoColumnSection>
 
-        <div className="py-lg-6 py-5">
+        {/* <div className="py-lg-6 py-5">
           <h2 className="mb-5">See our work in practise</h2>
           <FeaturedCaseStudies />
-        </div>
+        </div> */}
       </Container>
     </div>
   );

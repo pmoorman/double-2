@@ -54,14 +54,14 @@ const CaseStudiesPage = () => {
             </Row>
           </div>
 
-          <div className="mb-lg-8">
+          {/* <div className="mb-lg-8">
             <div className={styles.blueBg}>
               <h3>Featured case studies</h3>
             </div>
             <div className={styles.cardSection}>
               <FeaturedCaseStudies />
             </div>
-          </div>
+          </div> */}
         </Container>
 
         <div className={styles.filtersSection}>

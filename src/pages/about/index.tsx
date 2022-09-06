@@ -36,14 +36,14 @@ const AboutPage = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim.
               </p>
-              <Button
+              {/* <Button
                 as={Link}
                 to="/contact"
                 variant="secondary"
                 className="mb-lg-0 mb-4"
               >
                 Contact us
-              </Button>
+              </Button> */}
             </Col>
             <Col md={4} className="text-lg-end">
               <StaticImage src="./hero.svg" alt="Growth" />
@@ -217,11 +217,11 @@ const AboutPage = () => {
       </Container>
 
       {/* Featured articles */}
-      <div className="pt-lg-6 pt-0">
+      {/* <div className="pt-lg-6 pt-0">
         <Container>
           <SectionFeaturedArticles />
         </Container>
-      </div>
+      </div> */}
     </>
   );
 };

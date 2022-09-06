@@ -24,6 +24,10 @@
   }
 }
 
+p > strong {
+  display: block;
+}
+
 .leftVector {
   position: absolute;
   left: 0;
@@ -75,6 +79,10 @@ small {
   @include media-breakpoint-down(md) {
     margin-left: 40px;
   }
+}
+
+.subHeadingStyle {
+  line-height: 1.6;
 }
 
 .polygonIcon {

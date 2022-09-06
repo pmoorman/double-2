@@ -11,9 +11,9 @@ const LINKS = [
   { label: "Case studies", to: "/case-studies" },
   { label: "Services", to: "/services" },
   { label: "About", to: "/about" },
-  { label: "Careers", to: "/careers" },
-  { label: "Blog", to: "/blog" },
-  { label: "Contact us", to: "/contact" },
+  // { label: "Careers", to: "/careers" },
+  // { label: "Blog", to: "/blog" },
+  // { label: "Contact us", to: "/contact" },
 ];
 
 export const Header = () => {

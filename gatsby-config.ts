@@ -40,7 +40,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/double-logo.svg",
+        icon: "src/images/double-logo.png",
       },
     },
     {
