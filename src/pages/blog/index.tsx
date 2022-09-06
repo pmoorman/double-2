@@ -46,10 +46,12 @@ const BlogPage = () => {
         <Container>
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }}>
-              <h1 className="mb-5">Here’s the thing about growth marketing</h1>
+              <h1 className="mb-5">
+                We’ve cracked open our skills and emptied out our marketing
+                marbles.
+              </h1>
               <div className="subtitle">
-                Our blog features the tools & mental models to help you maximise
-                your team’s marketing efforts.
+                There’s a fine line between genius and madness marketing.
               </div>
             </Col>
           </Row>

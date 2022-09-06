@@ -28,13 +28,12 @@ const AboutPage = () => {
           <Row className="justify-content-between">
             <Col md={8}>
               <h1 className="mb-4">
-                A bunch of nerds who've mastered marketing and love to try it
-                out on the world.
+                We’re a growth marketing agency with double the drive
               </h1>
               <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim.
+                Double is a close-knit team of experts from around the world,
+                who are obsessed with building systems that drive growth on
+                autopilot.
               </p>
               {/* <Button
                 as={Link}
@@ -62,8 +61,8 @@ const AboutPage = () => {
             xs={{ span: 12, order: 2 }}
           >
             <h2 className="text-end mb-4 mb-lg-0">
-              We’re a full-stack
-              <div className="mt-lg-3 mt-2">Growth Marketing agency</div>
+              We combine psychology
+              <div className="mt-lg-3 mt-2">with data and design</div>
             </h2>
           </Col>
           <Col
@@ -94,9 +93,11 @@ const AboutPage = () => {
           <Col md={12} lg={{ span: 4, offset: 8 }}>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim.
+                There’s a lot more to growth than just marketing. We understand
+                the psychology behind customer acquisition and retention and
+                this insight is what drives our systems and stories. Using data
+                as our guide, we ensure customers build trust with our clients
+                and are consistently reminded of the value they provide.
               </p>
               <Button
                 as={Link}
@@ -133,7 +134,7 @@ const AboutPage = () => {
                   <h2 className="text-end">
                     We’re Double. We’re
                     <div className="mt-lg-3 mt-2">
-                      Lunch time jokers
+                      keen explorers.
                       <StaticImage
                         className="ms-4"
                         src="./about_img_overlay.svg"
@@ -147,41 +148,47 @@ const AboutPage = () => {
           </Row>
           <div className="d-flex justify-content-between">
             <div className={styles.img_2}>
-              <StaticImage src="./about_img_2.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <StaticImage src="./about_img_2.jpg" alt="Idea generators" />
+              <h3 className="mt-3 text-white">Idea generators</h3>
             </div>
             <div className={styles.img_3}>
               <Parallax speed={10}>
-                <StaticImage src="./about_img_3.jpg" alt="TODO" />
-                <h3 className="mt-3 text-white">Title about picture</h3>
+                <StaticImage src="./about_img_3.jpg" alt="Curious ponderers" />
+                <h3 className="mt-3 text-white">Curious ponderers</h3>
               </Parallax>
             </div>
           </div>
           <div className="d-flex justify-content-between">
             <div className={styles.img_4}>
               <Parallax speed={20}>
-                <StaticImage src="./about_img_4.jpg" alt="TODO" />
-                <h3 className="mt-3 text-white">Title about picture</h3>
+                <StaticImage
+                  src="./about_img_4.jpg"
+                  alt="Caring collaborators"
+                />
+                <h3 className="mt-3 text-white">Caring collaborators</h3>
               </Parallax>
             </div>
             <div className={styles.img_5}>
               <Parallax speed={30}>
-                <StaticImage src="./about_img_5.jpg" alt="TODO" />
-                <h3 className="mt-3 text-white">Title about picture</h3>
+                <StaticImage src="./about_img_5.jpg" alt="Part-time jokers" />
+                <h3 className="mt-3 text-white">Part-time jokers</h3>
               </Parallax>
             </div>
           </div>
           <div className={styles.img_6}>
             <Parallax speed={0}>
-              <StaticImage src="./about_img_6.jpg" alt="TODO" />
-              <h3 className="mt-3 text-white">Title about picture</h3>
+              <StaticImage src="./about_img_6.jpg" alt="Solid supporters" />
+              <h3 className="mt-3 text-white">Solid supporters</h3>
             </Parallax>
           </div>
           <div className={styles.img_7}>
             <div>
               <Parallax speed={-10}>
-                <StaticImage src="./about_img_7.jpg" alt="TODO" />
-                <h3 className="mt-3 text-white">Title about picture</h3>
+                <StaticImage
+                  src="./about_img_7.jpg"
+                  alt="Passionate team players"
+                />
+                <h3 className="mt-3 text-white">Passionate team players</h3>
               </Parallax>
             </div>
           </div>
