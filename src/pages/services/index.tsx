@@ -37,12 +37,11 @@ const ServicesPage = () => {
                   </Col>
                   <Col lg="8" md="7">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim.
+                      Growth rests on systems thinking. Marketing isn’t just
+                      about acquisition, but every part of the funnel has a role
+                      in growth. From building engaged audiences to designing
+                      growth loops, we build funnels with exponential growth in
+                      mind.
                     </p>
                     <Button
                       as={Link}
@@ -69,12 +68,9 @@ const ServicesPage = () => {
                   </Col>
                   <Col lg="8" md="7">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim.
+                      The behind-the-scenes. The underlying technology that
+                      ensures everything works smoothly (from data collection to
+                      automations).
                     </p>
                     <Button
                       as={Link}
@@ -101,12 +97,9 @@ const ServicesPage = () => {
                   </Col>
                   <Col lg="8" md="7">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim.
+                      Get the most out of marketing channels by creating quality
+                      content. Clear deliverables (website design, blogpost,
+                      emails).
                     </p>
                     <Button
                       as={Link}
@@ -133,12 +126,9 @@ const ServicesPage = () => {
                   </Col>
                   <Col lg="8" md="7">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim.
+                      Find the winning channel that suits business goals.
+                      Measure what works and optimise for traffic, lead
+                      generation, and conversions.
                     </p>
                     <Button
                       as={Link}
@@ -155,7 +145,7 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <Container>
+        {/* <Container>
           <Row className="my-lg-7 my-5">
             <Col xl="5" lg="6" md="6">
               <h2 className="mb-4">
@@ -180,11 +170,11 @@ const ServicesPage = () => {
               </Image>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
 
-        <div>
+        {/* <div className="mt-lg-7 mt-5">
           <Container>
-            <h2 className="d-flex justify-content-center mb-5">Our approach</h2>
+            <h2 className="d-flex justify-content-center my-5">Our approach</h2>
           </Container>
 
           <div>
@@ -280,7 +270,7 @@ const ServicesPage = () => {
               </Row>
             </Container>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
