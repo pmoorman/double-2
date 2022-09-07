@@ -52,6 +52,7 @@ export const useCaseStudies = () => {
                   }
                 }
                 weight
+                has_single_page
                 categories
                 stats {
                   title
@@ -100,6 +101,7 @@ export const useCaseStudies = () => {
       excerpt,
       logo,
       weight,
+      has_single_page,
       categories,
       stats,
       section = {},
@@ -123,6 +125,7 @@ export const useCaseStudies = () => {
       logo: getImage(logo),
       weight,
       categories: categories || [],
+      has_single_page: has_single_page || false,
       stats: stats || [],
       section: {
         ...section,

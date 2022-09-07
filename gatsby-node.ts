@@ -71,6 +71,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           sourceInstanceName: { eq: "case-studies" }
           relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
+          childMdx: { frontmatter: { has_single_page: { eq: true } } }
         }
       ) {
         edges {
@@ -81,6 +82,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
               frontmatter {
                 seo_title
                 seo_description
+                has_single_page
               }
             }
           }

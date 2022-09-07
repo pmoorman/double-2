@@ -10,6 +10,7 @@ export interface CaseStudy {
   excerpt: string;
   logo: any;
   weight?: number;
+  has_single_page?: boolean;
   categories: string[];
   stats?: CaseStudyStats[];
   slug: string;
