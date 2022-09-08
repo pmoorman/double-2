@@ -205,7 +205,7 @@ const CareersPage = () => {
       </Container>
 
       <Container>
-        <SectionFeaturedArticles></SectionFeaturedArticles>
+        <SectionFeaturedArticles posts={[]}></SectionFeaturedArticles>
       </Container>
     </>
   );

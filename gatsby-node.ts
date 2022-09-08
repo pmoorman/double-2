@@ -93,6 +93,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           sourceInstanceName: { eq: "careers" }
           relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
+          childMdx: { frontmatter: { draft: { ne: true } } }
         }
       ) {
         edges {
