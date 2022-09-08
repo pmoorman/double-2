@@ -133,9 +133,9 @@ const BlogPage = () => {
         </Container>
       </div> */}
 
-      <Container>
+      {/* <Container>
         <TestimonialSlider />
-      </Container>
+      </Container> */}
 
       <Container className="my-lg-7 my-5">
         <h2>Explore our articles</h2>

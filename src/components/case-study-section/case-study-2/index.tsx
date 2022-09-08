@@ -41,14 +41,14 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
             <h3>{item.subtitle}</h3>
             <p>{item.excerpt}</p>
             {!isMdDevice && item.stats && <Statistics stats={item.stats} />}
-            <Button
+            {/* <Button
               as={Link}
               to={item.slug}
               variant="secondary"
               className="mb-lg-0 mb-5"
             >
               Full case study
-            </Button>
+            </Button> */}
           </Col>
         </Row>
         <div className="position-relative">

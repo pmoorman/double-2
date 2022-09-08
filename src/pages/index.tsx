@@ -67,7 +67,7 @@ const HomePage = () => {
             image={
               <Image>
                 <StaticImage
-                  src="./index-assets/hero_image.jpeg"
+                  src="./index-assets/hero_image.png"
                   alt="Growth"
                   className={styles.heroImage}
                 />
