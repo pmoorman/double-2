@@ -4,6 +4,8 @@ export const submitNetlifyForm = async (e: any) => {
   e.preventDefault();
   const form = e.currentTarget;
   const formData = new FormData(form);
+  const body = new URLSearchParams(formData as any).toString();
+  console.log({ formData, body });
   const response = await fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
