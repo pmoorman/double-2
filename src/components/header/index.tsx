@@ -13,7 +13,7 @@ const LINKS = [
   { label: "About", to: "/about" },
   // { label: "Careers", to: "/careers" },
   { label: "Blog", to: "/blog" },
-  // { label: "Contact us", to: "/contact" },
+  { label: "Contact us", to: "/contact" },
 ];
 
 export const Header = () => {
