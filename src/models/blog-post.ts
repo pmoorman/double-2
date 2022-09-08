@@ -6,7 +6,7 @@ export interface BlogPost {
   excerpt: string;
   author: string;
   categories: string[];
-  summary_points: string[];
+  summary_items: string[];
   hero_image: any;
   thumbnail?: any;
   slug: string;

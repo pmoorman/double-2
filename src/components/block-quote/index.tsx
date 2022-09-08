@@ -14,20 +14,24 @@ export const BlockQuote: FC<BlockQuoteProps> = ({
   title,
   location,
 }) => {
+  const hasFooter = !!(name || title || location);
+
   return (
     <blockquote className={styles.blockquote}>
       <div className={styles.quoteLine}></div>
-      <p>“{children}’</p>
-      <footer>
-        <div>{name}</div>
-        {title && <div>{title}</div>}
-        {location && (
-          <div className="d-flex align-items-center">
-            <i className={styles.mapIcon}></i>
-            {location}
-          </div>
-        )}
-      </footer>
+      <p>“{children}”</p>
+      {hasFooter && (
+        <footer>
+          <div>{name}</div>
+          {title && <div>{title}</div>}
+          {location && (
+            <div className="d-flex align-items-center">
+              <i className={styles.mapIcon}></i>
+              {location}
+            </div>
+          )}
+        </footer>
+      )}
     </blockquote>
   );
 };

@@ -17,6 +17,8 @@ export const SectionFeaturedArticles: FC<SectionFeaturedArticlesProps> = ({
   title = "Our featured articles",
   posts = [],
 }) => {
+  if (!posts.length) return null;
+
   return (
     <>
       <Row>

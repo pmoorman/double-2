@@ -32,7 +32,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
     excerpt,
     author,
     categories,
-    summary_points,
+    summary_items,
     hero_image,
   } = frontmatter;
   const heroImage = getImage(hero_image);
@@ -94,7 +94,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
               <div className={styles.points}>
                 <small>Summary points:</small>
                 <ul>
-                  {summary_points.map((point) => (
+                  {summary_items.map((point) => (
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
@@ -135,7 +135,7 @@ export const pageQuery = graphql`
           excerpt
           author
           categories
-          summary_points
+          summary_items
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 700)

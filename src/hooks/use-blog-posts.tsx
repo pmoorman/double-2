@@ -32,7 +32,7 @@ export const useBlogPosts = (props?: UseBlogPostsProps) => {
                 excerpt
                 author
                 categories
-                summary_points
+                summary_items
                 thumbnail {
                   childImageSharp {
                     gatsbyImageData(width: 420, layout: FULL_WIDTH)
