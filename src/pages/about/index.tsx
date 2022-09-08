@@ -219,9 +219,9 @@ const AboutPage = () => {
       </Container>
 
       {/* Our open roles */}
-      <Container className="py-4 pb-lg-6">
+      {/* <Container className="py-4 pb-lg-6">
         <SectionOpenRoles />
-      </Container>
+      </Container> */}
 
       {/* Featured articles */}
       {/* <div className="pt-lg-6 pt-0">
