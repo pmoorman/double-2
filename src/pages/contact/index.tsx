@@ -66,6 +66,7 @@ const ContactPage = () => {
                   required
                   placeholder="Enter your first name"
                   aria-describedby="first-name"
+                  name="first_name"
                 />
               </Col>
               <Col lg="6" md="12" className="mt-5">
@@ -74,6 +75,7 @@ const ContactPage = () => {
                   required
                   placeholder="Enter your last name"
                   aria-describedby="last-name"
+                  name="last_name"
                 />
               </Col>
             </Row>
@@ -84,6 +86,7 @@ const ContactPage = () => {
                   required
                   placeholder="Enter your email"
                   aria-describedby="email"
+                  name="email"
                 />
               </Col>
               <Col lg="6" md="12" className="mt-5">
@@ -91,6 +94,7 @@ const ContactPage = () => {
                 <Form.Control
                   placeholder="Enter your phone number"
                   aria-describedby="phone-number"
+                  name="phone_number"
                 />
               </Col>
             </Row>
@@ -101,6 +105,7 @@ const ContactPage = () => {
                   required
                   placeholder="Enter your message"
                   aria-describedby="Enter your message"
+                  name="message"
                 />
               </Col>
             </Row>
