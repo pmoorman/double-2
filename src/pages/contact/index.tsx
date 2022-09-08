@@ -57,6 +57,7 @@ const ContactPage = () => {
           data-netlify="true"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
           <Container>
             <h2>Get in touch</h2>
             <Row>
