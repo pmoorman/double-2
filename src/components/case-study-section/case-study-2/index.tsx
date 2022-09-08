@@ -4,7 +4,7 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Link } from "@app/components";
+import { Link, TwoColumnSection } from "@app/components";
 
 import { Statistics } from "../statistics";
 import { CaseStudySectionProps } from "..";
@@ -59,6 +59,8 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
           {/* Line 3  */}
           {!hideLine && <div className={styles.bgArrow}></div>}
         </div>
+        <TwoColumnSection title="Situation">{item.situation}</TwoColumnSection>
+        <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
       </Container>
       <div className="position-relative"></div>
       {section.body && (

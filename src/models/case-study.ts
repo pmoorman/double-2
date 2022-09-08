@@ -7,6 +7,8 @@ export interface CaseStudy {
   // Common (both page and section)
   title: string;
   subtitle: string;
+  situation: string;
+  strategy: string;
   excerpt: string;
   logo: any;
   weight?: number;
