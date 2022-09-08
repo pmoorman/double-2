@@ -33,6 +33,10 @@ input {
   }
 }
 
+.darker_image {
+  filter: brightness(80%);
+}
+
 .caseStudyBgMobile {
   background-repeat: no-repeat;
   background-size: cover;

@@ -45,6 +45,8 @@ export const useCaseStudies = () => {
               frontmatter {
                 title
                 subtitle
+                situation
+                strategy
                 excerpt
                 logo {
                   childImageSharp {
@@ -98,6 +100,8 @@ export const useCaseStudies = () => {
     const {
       title,
       subtitle,
+      situation,
+      strategy,
       excerpt,
       logo,
       weight,
@@ -121,6 +125,8 @@ export const useCaseStudies = () => {
       slug: `/case-studies/${relativeDirectory}`,
       title: title || "",
       subtitle: subtitle || "",
+      situation: situation || "",
+      strategy: strategy || "",
       excerpt: excerpt || "",
       logo: getImage(logo),
       weight,
