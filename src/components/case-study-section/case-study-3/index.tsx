@@ -53,9 +53,6 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
                       <h2 className="mb-2">{item.title}</h2>
                       <h3 className="mb-3">{item.subtitle}</h3>
                       <p>{item.excerpt}</p>
-                      <Button as={Link} to="/case-studies" variant="light">
-                        Full case study
-                      </Button>
                     </Col>
                   </Row>
                 </Col>

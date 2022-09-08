@@ -40,14 +40,14 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
                     <h2 className="mb-2">{item.title}</h2>
                     <h3 className="mb-3">{item.subtitle}</h3>
                     <p>{item.excerpt}</p>
-                    <Button
+                    {/* <Button
                       as={Link}
                       to={item.slug}
                       variant="light"
                       className="mb-lg-0 mb-6 mb-md-4"
                     >
                       Full case study
-                    </Button>
+                    </Button> */}
                   </Col>
                   <Col lg={6} md={6} className="mt-9  flex relative">
                     <div className={styles.rombik}>

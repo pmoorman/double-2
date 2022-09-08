@@ -13,7 +13,7 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
 
   return (
     <>
-      <div className="pt-lg-7 pb-lg-8 py-4">
+      <div className="pt-lg-7 py-4">
         <div
           className="caseStudyBgMobile"
           style={{
