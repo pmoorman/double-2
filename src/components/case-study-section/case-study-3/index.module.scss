@@ -67,4 +67,7 @@
 
 .blockquote {
   margin-top: -150px;
+  @include media-breakpoint-down(md) {
+    margin-top: -120px;
+  }
 }

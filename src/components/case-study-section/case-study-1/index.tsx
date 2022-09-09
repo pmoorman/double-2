@@ -14,7 +14,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
   return (
     <>
       <div
-        className="caseStudyBgMobile mt-lg-7 mt-3 mb-lg-8 mb-5"
+        className="caseStudyBgMobile mt-lg-7 mt-3 mb-lg-8 mb-6"
         style={{
           backgroundImage: `url(${section.image_url})`,
         }}
@@ -30,7 +30,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
             <Row className="py-lg-6 py-0 mb-9 mb-lg-0 mb-md-0">
               <Col lg={{ span: 10, offset: 1 }}>
                 <Row>
-                  <Col lg={6} md={6}>
+                  <Col lg={6} md={6} className="mt-0 mb-lg-0 mb-md-5 mb-8">
                     <GatsbyImage image={item.logo} alt={item.title} />
                     {item.categories && (
                       <small className="mb-2">
@@ -86,7 +86,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
           </Container>
         )}
       </div>
-      <Container className="pt-xl-5 pt-6 pt-lg-0">
+      <Container className="pt-xl-5 pt-6 pt-lg-0 mb-lg-0 mb-5">
         <TwoColumnSection title="Situation">{item.situation}</TwoColumnSection>
         <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
       </Container>

@@ -17,7 +17,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
   const hideLine = section.hide_arrow;
 
   return (
-    <div className="pt-lg-9 pt-9 pt-md-6 mb-7">
+    <div className="pt-lg-9 pt-5 pt-md-6 mb-7">
       <Container className="position-relative">
         <Row className="align-items-lg-end position-relative">
           {/* LIne 1 */}
