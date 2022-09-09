@@ -34,7 +34,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
                 backgroundImage: `url(${section.image_url})`,
               }}
             ></div>
-            <Row className="pb-lg-8 pt-lg-6 pt-2 pb-6">
+            <Row className="pb-lg-8 pt-lg-6 pt-2 pb-9">
               <div className={styles.rightLine}></div>
               <div
                 className={`text-white position-relative + ${styles.growforgeRight}`}
@@ -84,7 +84,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
           </Container>
         )}
       </div>
-      <Container>
+      <Container className="mb-lg-0 mb-md-0 mb-6">
         <TwoColumnSection title="Situation">{item.situation}</TwoColumnSection>
         <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
       </Container>
