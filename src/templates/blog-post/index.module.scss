@@ -37,6 +37,7 @@
   @include media-breakpoint-down(md) {
     position: relative;
     flex-direction: column-reverse;
+    top: 0;
   }
 
   a > i {
