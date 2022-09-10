@@ -29,7 +29,11 @@ const ServicesPage = () => {
             <Link to="strategy" className="text-decoration-none">
               <Container>
                 <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
+                  <Col
+                    lg="4"
+                    md="5"
+                    className="d-flex align-items-center mb-lg-0 mb-4"
+                  >
                     <div
                       className={`title-icon + ${styles.iconStrategy}`}
                     ></div>
@@ -60,7 +64,11 @@ const ServicesPage = () => {
             <Link to="infrastructure" className="text-decoration-none">
               <Container>
                 <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
+                  <Col
+                    lg="4"
+                    md="5"
+                    className="d-flex align-items-center mb-lg-0 mb-4"
+                  >
                     <div
                       className={`title-icon + ${styles.iconInfrastructure}`}
                     ></div>
@@ -89,7 +97,11 @@ const ServicesPage = () => {
             <Link to="creative" className="text-decoration-none">
               <Container>
                 <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
+                  <Col
+                    lg="4"
+                    md="5"
+                    className="d-flex align-items-center mb-lg-0 mb-4"
+                  >
                     <div
                       className={`title-icon + ${styles.iconCreative}`}
                     ></div>
@@ -118,7 +130,11 @@ const ServicesPage = () => {
             <Link to="performance" className="text-decoration-none">
               <Container>
                 <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col lg="4" md="5" className="d-flex mb-lg=0 mb-4">
+                  <Col
+                    lg="4"
+                    md="5"
+                    className="d-flex align-items-center mb-lg-0 mb-4"
+                  >
                     <div
                       className={`title-icon + ${styles.iconPerformance}`}
                     ></div>
