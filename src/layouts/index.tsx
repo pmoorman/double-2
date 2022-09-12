@@ -1,6 +1,7 @@
 import React from "react";
 import { PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { useLocation } from "@reach/router";
 import { MDXProvider } from "@mdx-js/react";
 import { Button } from "react-bootstrap";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -29,6 +30,9 @@ const mdxComponents = {
 };
 
 export const Layout = ({ children, pageContext }: PageProps) => {
+  const { pathname } = useLocation();
+  const hideFooter = ["/contact"].includes(pathname);
+
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
@@ -36,7 +40,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
       <MDXProvider components={mdxComponents}>
         <main>{children}</main>
       </MDXProvider>
-      <Footer />
+      {!hideFooter && <Footer />}
     </ParallaxProvider>
   );
 };
