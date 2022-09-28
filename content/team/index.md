@@ -15,15 +15,15 @@ members:
     location: Amsterdam
     image: ./louise_de_sadeleer.jpg
 
-  - name: Erik Brendon
-    title: Campervan Cavalier
-    location: Amsterdam
-    image: ./erik_brendon.jpg
+  - name: Willem Hoogslag
+    title: Witty Wordsmith
+    location: Utrecht
+    image: ./willem.jpeg
 
-  - name: James Wilkinson
-    title: Jedi joker
-    location: Indonesia
-    image: ./james_wilkinson.jpg
+  - name: Tracey Halloran
+    title: Poetic Painter
+    location: Porto
+    image: ./tracey.jpeg
 
   - name: Carine Engbers
     title: Cycling Singer
@@ -39,4 +39,19 @@ members:
     title: Mr Critical
     location: Amsterdam
     image: ./dominik_kondziela.jpg
+
+  - name: Reka Szendi
+    title: Reking machine
+    location: Bali
+    image: ./reka.jpeg
+
+  - name: Zbyszek Trzeciak
+    title: Zee-dog
+    location: Gdynia
+    image: ./james_wilkinson.jpg
+
+  - name: Dennis Amoey
+    title: The Hair God
+    location: Amsterdam
+    image: ./dennis.jpeg
 ---

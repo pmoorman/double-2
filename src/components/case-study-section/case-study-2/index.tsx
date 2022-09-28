@@ -59,8 +59,6 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
           {/* Line 3  */}
           {!hideLine && <div className={styles.bgArrow}></div>}
         </div>
-        <TwoColumnSection title="Situation">{item.situation}</TwoColumnSection>
-        <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
       </Container>
       <div className="position-relative"></div>
       {section.body && (
