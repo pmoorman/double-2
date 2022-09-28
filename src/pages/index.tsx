@@ -113,15 +113,17 @@ const HomePage = () => {
             <svg
               width="273"
               height="258"
-              viewBox="0 0 273 258"
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
             >
-              <path
-                d="M -0.085 256.611 L 271.954 256.387 L 271.954 3 L 18.954 215.953 L 18.954 87.231 M 18.954 87.231 L 1 105.5 M 18.954 87.231 L 36.909 105.5"
-                stroke="#387CD3"
-                stroke-width="2"
-              />
+              <g>
+                <path
+                  id="svg_1"
+                  stroke-width="2"
+                  stroke="#387CD3"
+                  d="m271.954,256.387l0,-253.387l-253,212.953l0,-128.722m0,0l-17.954,18.269m17.954,-18.269l17.955,18.269"
+                />
+              </g>
             </svg>
           </div>
         </Container>
@@ -213,80 +215,6 @@ const HomePage = () => {
             </Slider>
           </Col>
         </Row>
-        <div>
-          <h2 className="mb-md-6 mb-sm-4">Our views on marketing</h2>
-          <Row className="my-5">
-            <Col sm="12" md="6">
-              <h3>1. Systems drive growth</h3>
-            </Col>
-            <Col sm="12" md="6">
-              <p>
-                To acquire millions of users, high-growth companies cannot rely
-                on manual processes or short-lived tactics. Marketing needs to
-                be predictable, systematic, automated and repeatable. The
-                essence of growth marketing is to build systems that drive user
-                acquisition, activation and retention at scale.
-              </p>
-              <p>
-                <strong>Acquisition loops</strong> Performance | content
-                marketing | product-driven growth
-              </p>
-              <p>
-                <strong>Sales funnels</strong> Copywriting | conversions |
-                design | execution
-              </p>
-              <p>
-                <strong>Product marketing</strong> Onboarding | activation |
-                retention
-              </p>
-              <p>
-                <strong>Data + infrastructure</strong> Analytics, testing &
-                development
-              </p>
-            </Col>
-          </Row>
-          <Row className="my-5">
-            <Col sm="12" md="6">
-              <h3>2. Stories that sell</h3>
-            </Col>
-            <Col sm="12" md="6">
-              <p>
-                Having the right systems alone is not enough: you still need to
-                get noticed and convince people to buy your product. Without a
-                good story, you might as well not exist.
-              </p>
-              <p>
-                The best way to do marketing, is by telling stories that help
-                people see their problems and challenges in a different light.
-                Copywriting thus is the backbone of all good marketing. Stories
-                drive conversions in all sorts of places:
-              </p>
-              <ul>
-                <li>Email copywriting</li>
-                <li>Paid advertising</li>
-                <li>Content & video materials</li>
-                <li>Customer onboarding optimisation</li>
-                <li>Sales Data analysis and analytics</li>
-              </ul>
-            </Col>
-          </Row>
-          <Row className="my-5">
-            <Col sm="12" md="6">
-              <h3>3. Speed matters</h3>
-            </Col>
-            <Col sm="12" md="6">
-              <p>
-                It’s hard to know beforehand what will work, and what won’t. For
-                that reason, it is important to experiment rapidly, and focus on
-                speed of execution above almost everything else.
-              </p>
-              <p>
-                Once you’ve found things that are successful, find ways to
-                double down on them and do more of it. Repeat what works.
-              </p>
-            </Col>
-          </Row>
-        </div>
       </Container>
     </>
   );

@@ -86,10 +86,6 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
           </Container>
         )}
       </div>
-      <Container className="pt-xl-5 pt-6 pt-lg-0 mb-lg-0 mb-5">
-        <TwoColumnSection title="Situation">{item.situation}</TwoColumnSection>
-        <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
-      </Container>
     </>
   );
 };

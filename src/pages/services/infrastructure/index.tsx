@@ -21,7 +21,6 @@ const ServiceInfrastructure = () => {
         ads expert, a sales funnel architect, or a product marketer."
         buttonText="Work with us"
         buttonLink="/contact"
-        image={<StaticImage src="./hero.svg" alt="Union" />}
       />
       <Container>
         <Row className="mb-lg-7 mb-5">
@@ -57,15 +56,13 @@ const ServiceInfrastructure = () => {
             Proper data integration ensures that valuable marketing data is
             collected and accessible to stakeholders. Being able to look into
             past data is an essential part of marketing experimentation.
-            <ul>
-              <li>Capture and understand all of your data</li>
-              <li>
-                Ensure you’re not losing any valuable data along the funnel
-              </li>
-              <li>Data sources — Dataiku</li>
-              <li>Data collection integration</li>
-            </ul>
           </p>
+          <ul>
+            <li>Capture and understand all of your data</li>
+            <li>Ensure you’re not losing any valuable data along the funnel</li>
+            <li>Data sources — Dataiku</li>
+            <li>Data collection integration</li>
+          </ul>
           <h4 className="my-3">How we can help</h4>
           <p>
             Our team helps you integrate the business’ key data sources. The

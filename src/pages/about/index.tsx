@@ -44,7 +44,7 @@ const AboutPage = () => {
                 Contact us
               </Button> */}
             </Col>
-            <Col md={4} className="text-lg-end">
+            <Col md={4} className="text-lg-end d-none d-lg-block d-md-block">
               <StaticImage src="./hero.svg" alt="Growth" />
             </Col>
           </Row>
