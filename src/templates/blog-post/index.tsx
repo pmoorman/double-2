@@ -43,8 +43,6 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
     limit: 3,
   });
 
-  console.log({ heroImage, hero_image });
-
   return (
     <>
       <div className={styles.hero}>

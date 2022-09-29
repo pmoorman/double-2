@@ -109,11 +109,32 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
           }
         }
       }
+      legal: allFile(
+        filter: {
+          sourceInstanceName: { eq: "legal" }
+          relativePath: { glob: "**/*/index.mdx" }
+          extension: { eq: "mdx" }
+        }
+      ) {
+        edges {
+          node {
+            relativeDirectory
+            relativePath
+            childMdx {
+              frontmatter {
+                seo_title
+                seo_description
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
-  const { blog, casestudies, careers } = data;
+  const { blog, casestudies, careers, legal } = data;
   create(blog, "blog", "src/templates/blog-post/index.tsx");
   create(casestudies, "case-studies", "src/templates/case-study/index.tsx");
   create(careers, "careers", "src/templates/career/index.tsx");
+  create(legal, "legal", "src/templates/legal/index.tsx");
 };

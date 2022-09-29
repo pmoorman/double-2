@@ -37,11 +37,11 @@ export const Footer = () => {
         </Row>
         <div className="d-flex align-items-center justify-content-between py-4">
           <DoubleLogo />
-          {/* <div className={styles.footerLogo}>
-            <Button to="#" as={Link} variant="text">
-              Terms & Conditions
+          <div className={styles.footerLogo}>
+            <Button to="/legal/privacy-policy" as={Link} variant="text">
+              Privacy Policy
             </Button>
-          </div> */}
+          </div>
         </div>
       </Container>
     </footer>

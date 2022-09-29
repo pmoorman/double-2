@@ -48,6 +48,7 @@ const config: GatsbyConfig = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -120,6 +121,14 @@ const config: GatsbyConfig = {
         name: `testimonials`,
       },
       __key: "testimonials",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/legal`,
+        name: `legal`,
+      },
+      __key: "legal",
     },
   ],
 };

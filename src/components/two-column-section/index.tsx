@@ -13,7 +13,6 @@ export const TwoColumnSection: FC<TwoColumnSectionProps> = ({
   children,
 }) => {
   const rightWidth = 12 - leftWidth;
-  console.log("ch", children);
 
   return (
     <div className="mt-lg-8 mb-lg-7">
