@@ -48,7 +48,7 @@ members:
   - name: Zbyszek Trzeciak
     title: Zee-dog
     location: Gdynia
-    image: ./james_wilkinson.jpg
+    image: ./zbyszek.jpeg
 
   - name: Dennis Amoey
     title: The Hair God
