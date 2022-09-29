@@ -8,7 +8,7 @@ import { Link, BlockQuote, TwoColumnSection } from "@app/components";
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
 
-export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
+export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const { section } = item;
 
   return (
@@ -76,11 +76,23 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item }) => {
             </Row>
           </Container>
         )}
+
         {section.body && (
           <Container>
             <MDXRenderer images={item.embeddedImages}>
               {section.body}
             </MDXRenderer>
+          </Container>
+        )}
+
+        {!isHomepage && (
+          <Container>
+            <TwoColumnSection title="Situation">
+              {item.situation}
+            </TwoColumnSection>
+            <TwoColumnSection title="Strategy">
+              {item.strategy}
+            </TwoColumnSection>
           </Container>
         )}
       </div>

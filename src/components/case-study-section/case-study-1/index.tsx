@@ -8,13 +8,13 @@ import { Link, TwoColumnSection } from "@app/components";
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
 
-export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
+export const CaseStudy1: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const { section } = item;
 
   return (
     <>
       <div
-        className="caseStudyBgMobile mt-lg-7 mt-3 mb-lg-8 mb-6"
+        className="caseStudyBgMobile mt-lg-7 mt-3 mb-6"
         style={{
           backgroundImage: `url(${section.image_url})`,
         }}
@@ -78,6 +78,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
             </Row>
           </div>
         </Container>
+
         {section.body && (
           <Container>
             <MDXRenderer images={item.embeddedImages}>
@@ -86,6 +87,14 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item }) => {
           </Container>
         )}
       </div>
+      {!isHomepage && (
+        <Container className="pt-xl-8  pt-lg-6 pt-6 pt-lg-0 mb-lg-0 mb-5">
+          <TwoColumnSection title="Situation">
+            {item.situation}
+          </TwoColumnSection>
+          <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
+        </Container>
+      )}
     </>
   );
 };

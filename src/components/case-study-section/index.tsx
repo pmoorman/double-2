@@ -9,6 +9,7 @@ import { CaseStudy4 } from "./case-study-4";
 import { CaseStudy5 } from "./case-study-5";
 
 export interface CaseStudySectionProps {
+  isHomepage?: boolean;
   type: 1 | 2 | 3 | 4 | 5;
   item: CaseStudy;
   isIndexPage?: boolean;

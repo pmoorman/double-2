@@ -11,7 +11,7 @@ import { CaseStudySectionProps } from "..";
 
 import * as styles from "./index.module.scss";
 
-export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
+export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const { section } = item;
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
   const hideLine = section.hide_arrow;
@@ -61,6 +61,16 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item }) => {
         </div>
       </Container>
       <div className="position-relative"></div>
+
+      {!isHomepage && (
+        <Container className="pt-6 pt-lg-0 mb-lg-0 mb-5">
+          <TwoColumnSection title="Situation">
+            {item.situation}
+          </TwoColumnSection>
+          <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
+        </Container>
+      )}
+
       {section.body && (
         <Container>
           <MDXRenderer images={item.embeddedImages}>{section.body}</MDXRenderer>

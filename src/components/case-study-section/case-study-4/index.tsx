@@ -8,7 +8,7 @@ import { CaseStudySectionProps } from "..";
 import { Statistics } from "../statistics";
 import * as styles from "./index.module.scss";
 
-export const CaseStudy4: FC<CaseStudySectionProps> = ({ item }) => {
+export const CaseStudy4: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const { section } = item;
 
   return (

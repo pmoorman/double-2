@@ -176,6 +176,7 @@ const HomePage = () => {
       <div id="caseStudies">
         {caseStudies.map((item) => (
           <CaseStudySection
+            isHomepage={true}
             type={item.section.type}
             item={item}
             key={item.slug}
