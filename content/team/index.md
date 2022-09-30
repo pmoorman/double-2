@@ -8,7 +8,7 @@ members:
   - name: Caspar Lusink
     title: Señor Pragmatic
     location: Indonesia
-    image: ./caspar_lusink.jpg
+    image: ./caspar.jpeg
 
   - name: Louise de Sadeleer
     title: Philosophical Debater
