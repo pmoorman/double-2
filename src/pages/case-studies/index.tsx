@@ -33,7 +33,7 @@ const CaseStudiesPage = () => {
         <Container>
           <div className="pt-lg-7 pb-lg-8 py-4 position-relative">
             <Row>
-              <Col lg="8">
+              <Col lg="7">
                 <h1>All of these brands were once where you are now</h1>
                 <div className="subtitle mb-5 mt-4">
                   All of these brands were once where you are now
