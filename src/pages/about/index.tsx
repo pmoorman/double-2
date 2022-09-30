@@ -132,9 +132,9 @@ const AboutPage = () => {
                   )}
                 >
                   <h2 className="text-end">
-                    We’re Double. We’re
+                    We’re keen explorers.
                     <div className="mt-lg-3 mt-2">
-                      keen explorers.
+                      We’re Double.
                       <StaticImage
                         className="ms-4"
                         src="./about_img_overlay.svg"
