@@ -130,6 +130,39 @@ const config: GatsbyConfig = {
       },
       __key: "legal",
     },
+
+    /********************
+     *
+     * Trackers
+     *
+     ********************/
+    {
+      resolve: `gatsby-plugin-linkedin-insight`,
+      options: {
+        partnerId: `1853889`,
+        includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "1613747988773735",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M44383W",
+        includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: ["UA-157579030-1", "AW-670876710"],
+      },
+    },
   ],
 };
 
