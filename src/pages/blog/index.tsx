@@ -51,7 +51,7 @@ const BlogPage = () => {
                 marbles.
               </h1>
               <div className="subtitle">
-                There’s a fine line between genius and madness marketing.
+                There’s a fine line between genius and strikethrough marketing.
               </div>
             </Col>
           </Row>
