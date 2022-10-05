@@ -36,7 +36,7 @@ const CaseStudiesPage = () => {
               <Col lg="7">
                 <h1>All of these brands were once where you are now</h1>
                 <div className="subtitle mb-5 mt-4">
-                  All of these brands were once where you are now
+                  On our website, looking for a Growth Marketing agency.
                 </div>
                 <Button
                   as={Link}
