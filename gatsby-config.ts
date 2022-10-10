@@ -160,7 +160,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: ["UA-157579030-1", "AW-670876710"],
+        trackingIds: ["UA-157579030-1", "AW-10961821835"],
       },
     },
   ],
