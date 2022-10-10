@@ -22,3 +22,6 @@ export * from "./testimonial-slider";
 export * from "./block-quote";
 export * from "./blog-post-grid-item";
 export * from "./image";
+export * from "./oglviy-header";
+export * from "./oglviy-footer";
+export * from "./oglviy-image";

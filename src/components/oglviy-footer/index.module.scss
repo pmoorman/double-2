@@ -1,0 +1,33 @@
+.footer {
+  background-color: $secondary;
+  color: white;
+  padding: 8rem 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 5rem 0;
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+
+  ::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  label {
+    color: white;
+    text-align: left;
+    display: inherit;
+  }
+
+  input {
+    color: rgba(255, 255, 255, 0.5);
+
+    &:focus {
+      color: rgba(255, 255, 255, 0.8);
+      box-shadow: none;
+    }
+  }
+}

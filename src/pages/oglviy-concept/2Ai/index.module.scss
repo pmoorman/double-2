@@ -1,0 +1,91 @@
+.collectionSection {
+  background-color: $gray;
+  padding-bottom: 600px;
+  padding-top: 100px;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 2px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 80px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 5rem;
+  }
+  .sliderSection {
+    position: absolute;
+    width: calc(50vw + 50% - 70px);
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .blogSlider {
+    margin-top: 1.4rem;
+
+    & > ul {
+      bottom: -50px;
+
+      & > li {
+        width: 250px;
+        margin: 0;
+
+        @include media-breakpoint-down(lg) {
+          width: 120px;
+        }
+
+        button {
+          width: 250px;
+
+          @include media-breakpoint-down(lg) {
+            width: 120px;
+          }
+
+          &:before {
+            content: "";
+            background-image: url(./sliderTrack.svg);
+            height: 6px;
+            width: 250px;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(lg) {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+
+    & > div > div > div {
+      padding-right: 1.4rem;
+    }
+  }
+}
+.cardSlider {
+  background-color: $secondary;
+  padding: 24px;
+  min-height: 379px;
+  color: white;
+
+  @include media-breakpoint-down(xl) {
+    min-height: 485px;
+  }
+
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    margin-bottom: 1rem;
+  }
+
+  & > div:first-child {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -31,7 +31,12 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideFooter = ["/contact"].includes(pathname);
+  const hideFooter = [
+    "/contact",
+    "/oglviy-concept/1Ai/",
+    "/oglviy-concept/2Ai/",
+    "/oglviy-concept/thank-you",
+  ].includes(pathname);
 
   return (
     <ParallaxProvider>
