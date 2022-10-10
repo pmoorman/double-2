@@ -45,7 +45,7 @@ const OglviyConcept2 = () => {
             <Slider {...settings}>
               <div className={styles.cardSlider}>
                 <div>
-                  <StaticImage src="./Union.svg" alt="union" />
+                  <StaticImage src="./union.svg" alt="union" />
                 </div>
                 <div>
                   <h4>Law 1: Getting users is hard</h4>

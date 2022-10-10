@@ -26,7 +26,7 @@ const OglviyConcept = () => {
                 growth showing up time and time again
               </h2>
               <StaticImage
-                src="./logos.svg"
+                src="./logos.png"
                 alt="Logos"
                 className="mt-lg-7 mt-4"
               />
