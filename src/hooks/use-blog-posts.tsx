@@ -14,6 +14,7 @@ export const useBlogPosts = (props?: UseBlogPostsProps) => {
   const { allFile } = useStaticQuery(graphql`
     {
       allFile(
+        sort: { fields: childMdx___frontmatter___date, order: DESC }
         filter: {
           sourceInstanceName: { eq: "blog" }
           relativePath: { glob: "**/*/index.mdx" }
