@@ -37,6 +37,10 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     "/freeguide/thankyou",
     "/download/thankyou",
     "/download",
+    "/growthroadmap",
+    "/growthroadmap/thankyou",
+    "/growthaudit",
+    "/growthaudit/thankyou",
   ].includes(pathname);
 
   return (
