@@ -14,7 +14,7 @@ import * as styles from "./index.module.scss";
 const OglviyConcept = () => {
   return (
     <>
-      <SEO title="Ogilvy" />
+      <SEO title="This is how growth marketing works" />
       <OgilvyHeader></OgilvyHeader>
 
       <div className={styles.lightBlueSection}>

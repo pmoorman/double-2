@@ -31,7 +31,7 @@ const settings: Settings = {
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="Ogilvy" />
+      <SEO title="38 laws of growth marketing" />
       <OgilvyHeader></OgilvyHeader>
 
       <div className="mt-lg-6 my-4">
