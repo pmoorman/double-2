@@ -1,10 +1,14 @@
 import React, { FC } from "react";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { OgilvyForm } from "../oglviy-form";
+
 import * as styles from "./index.module.scss";
 
-import { Link } from "@app/components";
+export interface OgilvyFooterProps {
+  dripId: string;
+}
 
-export const OgilvyFooter = () => {
+export const OgilvyFooter: FC<OgilvyFooterProps> = ({ dripId }) => {
   return (
     <div className={styles.footer}>
       <Container>
@@ -15,7 +19,19 @@ export const OgilvyFooter = () => {
           className="text-center"
         >
           <h2>Unlock all the 38 laws of growth for free</h2>
-          <Form>
+          <div className="d-flex justify-content-center">
+            <OgilvyForm
+              dripId={dripId}
+              buttonProps={{
+                variant: "primary",
+              }}
+              recaptchaProps={{
+                theme: "dark",
+                className: "d-flex justify-content-center mt-5",
+              }}
+            />
+          </div>
+          {/* <Form name="form" method="POST" action={action}>
             <Row>
               <Col lg={{ span: 6, offset: 3 }} md="12" className="mt-5">
                 <Form.Label htmlFor="first-name">Name</Form.Label>
@@ -39,14 +55,13 @@ export const OgilvyFooter = () => {
               </Col>
             </Row>
             <Button
-              as={Link}
-              to="#"
+              type="submit"
               variant="primary"
               className=" mt-5 mb-4 text-white"
             >
               Download PDF
             </Button>
-          </Form>
+          </Form> */}
         </Col>
       </Container>
     </div>

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
-import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import React from "react";
+import { navigate } from "gatsby";
+import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, SEO, ImageRow, Image, QuizHeader } from "@app/components";
+import { Widget } from "@typeform/embed-react";
+
+import { SEO, ImageRow, Image, QuizHeader } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -10,7 +13,7 @@ const GrowthAudit = () => {
     <>
       <SEO title="Growth audit" />
 
-      <QuizHeader></QuizHeader>
+      <QuizHeader />
 
       <div id="audit"></div>
 
@@ -130,18 +133,15 @@ const GrowthAudit = () => {
             md="12"
             className="text-center"
           >
-            <h2 className="mb-lg-5 mb-4">
-              Discover what’s blocking growth, get unstuck and start winning.
-            </h2>
-            <h4>P.S. It only takes 5 minutes</h4>
-            <Button
-              as={Link}
-              to="#audit"
-              variant="primary"
-              className=" mt-5 mb-4 text-white"
-            >
-              Audit my growth
-            </Button>
+            <Widget
+              id="UrIQURa8"
+              style={{ width: "100%", height: "600px" }}
+              hideFooter
+              hideHeaders
+              onSubmit={() => {
+                navigate("/growthaudit/thankyou");
+              }}
+            />
           </Col>
         </Container>
       </div>

@@ -25,4 +25,5 @@ export * from "./image";
 export * from "./oglviy-header";
 export * from "./oglviy-footer";
 export * from "./oglviy-image";
+export * from "./oglviy-form";
 export * from "./quiz-header";

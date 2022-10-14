@@ -1,10 +1,14 @@
 import React, { FC } from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+
+import { OgilvyForm } from "@app/components";
+
 import * as styles from "./index.module.scss";
+export interface OgilvyHeaderProps {
+  dripId: string;
+}
 
-import { Link } from "@app/components";
-
-export const OgilvyHeader = () => {
+export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
   return (
     <div>
       <Container>
@@ -29,36 +33,22 @@ export const OgilvyHeader = () => {
           <div className={styles.lines}></div>
           <div></div>
         </div>
-        <Form className={styles.greySection}>
-          <Container>
-            <h2>Download your free copy</h2>
-            <Row>
-              <Col lg="6" md="12" className="mt-5">
-                <Form.Label htmlFor="first-name">Name</Form.Label>
-                <Form.Control
-                  required
-                  placeholder="Enter your name"
-                  aria-describedby="first-name"
-                  name="first_name"
-                />
-              </Col>
-            </Row>
-            <Row>
-              <Col lg="6" md="12" className="mt-5">
-                <Form.Label htmlFor="email">Email</Form.Label>
-                <Form.Control
-                  required
-                  placeholder="Enter your last email"
-                  aria-describedby="email"
-                  name="email"
-                />
-              </Col>
-            </Row>
-            <Button as={Link} to="#" variant="secondary" className=" mt-5 mb-4">
-              Download PDF
-            </Button>
-          </Container>
-        </Form>
+        <div className={styles.greySection}>
+          <Row className="px-3 px-md-0">
+            <Col md={6}>
+              <OgilvyForm
+                dripId={dripId}
+                buttonProps={{
+                  variant: "secondary",
+                }}
+                recaptchaProps={{
+                  theme: "light",
+                  className: "mt-5",
+                }}
+              />
+            </Col>
+          </Row>
+        </div>
       </div>
     </div>
   );

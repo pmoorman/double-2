@@ -1,14 +1,8 @@
-import React, { useState } from "react";
-import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import React from "react";
+import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import Slider, { Settings } from "react-slick";
-import {
-  Link,
-  SEO,
-  OgilvyHeader,
-  OgilvyImage,
-  OgilvyFooter,
-} from "@app/components";
+import { SEO, OgilvyHeader, OgilvyImage, OgilvyFooter } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -28,14 +22,16 @@ const settings: Settings = {
   ],
 };
 
+const dripId = "248444655";
+
 const OglviyConcept2 = () => {
   return (
     <>
       <SEO title="38 laws of growth marketing" />
-      <OgilvyHeader></OgilvyHeader>
+      <OgilvyHeader dripId={dripId} />
 
       <div className="mt-lg-6 my-4">
-        <OgilvyImage></OgilvyImage>
+        <OgilvyImage />
       </div>
 
       <div className={styles.collectionSection}>
@@ -82,7 +78,7 @@ const OglviyConcept2 = () => {
           </div>
         </Container>
       </div>
-      <OgilvyFooter></OgilvyFooter>
+      <OgilvyFooter dripId={dripId} />
     </>
   );
 };
