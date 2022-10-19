@@ -39,6 +39,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     "/download",
     "/growthroadmap/",
     "/growthroadmap/thankyou",
+    "/growthroadmap/#audit",
     "/growthaudit",
     "/growthaudit/thankyou",
   ].includes(pathname);

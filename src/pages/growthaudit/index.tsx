@@ -1,10 +1,17 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Widget } from "@typeform/embed-react";
 
-import { SEO, ImageRow, Image, QuizHeader, QuizLogos } from "@app/components";
+import {
+  SEO,
+  ImageRow,
+  Image,
+  QuizHeader,
+  QuizLogos,
+  Link,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -17,17 +24,31 @@ const GrowthAudit = () => {
 
       <QuizLogos />
 
-      <Container>
-        <Row>
-          <Col lg={{ span: 10, offset: 1 }} className="text-center">
-            <h2 className="my-6">
-              Tell us how your startup’s doing - we’ll create a
-              hyper-personalised roadmap that’ll show you exactly how to unlock
-              growth
-            </h2>
+      <div className={styles.footer} id="audit">
+        <Container>
+          <Col
+            xl={{ span: 8, offset: 2 }}
+            lg={{ span: 10, offset: 1 }}
+            md="12"
+            className="text-center"
+          >
+            <h2 className="mb-lg-5 mb-4">Growth Audit</h2>
+            <h3 className="mb-4">
+              Answer 20 questions about your startup - we’ll create a
+              personalised roadmap that’ll show you exactly how to unlock growth
+            </h3>
+            <Widget
+              id="UrIQURa8"
+              style={{ width: "100%", height: "600px" }}
+              hideFooter
+              hideHeaders
+              onSubmit={() => {
+                navigate("/growthaudit/thankyou");
+              }}
+            />
           </Col>
-        </Row>
-      </Container>
+        </Container>
+      </div>
 
       <div className={styles.result}>
         <Container>
@@ -137,7 +158,7 @@ const GrowthAudit = () => {
         </div>
       </div>
 
-      <div className={styles.footer} id="audit">
+      <div className={styles.footer}>
         <Container>
           <Col
             xl={{ span: 8, offset: 2 }}
@@ -145,20 +166,18 @@ const GrowthAudit = () => {
             md="12"
             className="text-center"
           >
-            <h2 className="mb-lg-5 mb-4">Growth Audit</h2>
-            <h3 className="mb-4">
-              Answer 20 questions about your startup - we’ll create a
-              personalised roadmap that’ll show you exactly how to unlock growth
-            </h3>
-            <Widget
-              id="UrIQURa8"
-              style={{ width: "100%", height: "600px" }}
-              hideFooter
-              hideHeaders
-              onSubmit={() => {
-                navigate("/growthaudit/thankyou");
-              }}
-            />
+            <h2>
+              Discover what’s blocking growth, get unstuck and start winning.
+            </h2>
+            <h3>P.S. It only takes 1 minute</h3>
+            <Button
+              as={Link}
+              to="#audit"
+              variant="primary"
+              className="mt-lg-6 mt-4 text-white"
+            >
+              Start Now
+            </Button>
           </Col>
         </Container>
       </div>
