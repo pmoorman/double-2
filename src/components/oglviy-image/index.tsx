@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const OgilvyImage = () => {
   return (
-    <div className="pt-lg-7 pb-9  pt-4">
+    <div className="pt-lg-7 pb-lg-9 py-5">
       <Container className="position-relative">
         <div className={styles.imageIcon}></div>
         <StaticImage src="./laws_38.jpeg" alt="28 laws" className="mx-lg-4" />

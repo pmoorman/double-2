@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Widget } from "@typeform/embed-react";
 
-import { SEO, ImageRow, Image, QuizHeader } from "@app/components";
+import { SEO, ImageRow, Image, QuizHeader, QuizLogos } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -15,7 +15,19 @@ const GrowthAudit = () => {
 
       <QuizHeader />
 
-      <div id="audit"></div>
+      <QuizLogos />
+
+      <Container>
+        <Row>
+          <Col lg={{ span: 10, offset: 1 }} className="text-center">
+            <h2 className="my-6">
+              Tell us how your startup’s doing - we’ll create a
+              hyper-personalised roadmap that’ll show you exactly how to unlock
+              growth
+            </h2>
+          </Col>
+        </Row>
+      </Container>
 
       <div className={styles.result}>
         <Container>
@@ -125,7 +137,7 @@ const GrowthAudit = () => {
         </div>
       </div>
 
-      <div className={styles.footer}>
+      <div className={styles.footer} id="audit">
         <Container>
           <Col
             xl={{ span: 8, offset: 2 }}
@@ -133,6 +145,11 @@ const GrowthAudit = () => {
             md="12"
             className="text-center"
           >
+            <h2 className="mb-lg-5 mb-4">Growth Audit</h2>
+            <h3 className="mb-4">
+              Answer 20 questions about your startup - we’ll create a
+              personalised roadmap that’ll show you exactly how to unlock growth
+            </h3>
             <Widget
               id="UrIQURa8"
               style={{ width: "100%", height: "600px" }}

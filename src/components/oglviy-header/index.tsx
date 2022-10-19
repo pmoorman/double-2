@@ -13,11 +13,9 @@ export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
     <div>
       <Container>
         <div className={styles.heading}>
-          <h1>
+          <h1 className="text-md-center">
             Master the 38 <div>immutable</div>
-            <div>
-              laws of growth <span>Interested?</span>
-            </div>
+            <div>laws of growth</div>
           </h1>
         </div>
       </Container>
@@ -25,8 +23,8 @@ export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
         <div className={styles.blueSection}>
           <Container className="d-block d-lg-none">
             <div>
-              <h1 className="mb-5">
-                Master the 38 immutable laws of growth Interested?
+              <h1 className="mb-6 mt-4 mt-lg-0 mb-lg-5">
+                Master the 38 immutable laws of growth
               </h1>
             </div>
           </Container>
@@ -35,6 +33,7 @@ export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
         </div>
         <div className={styles.greySection}>
           <Row className="px-3 px-md-0">
+            <h2>Download your free copy</h2>
             <Col md={6}>
               <OgilvyForm
                 dripId={dripId}
