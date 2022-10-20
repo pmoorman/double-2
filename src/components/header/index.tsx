@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import cn from "classnames";
+import { useMediaQuery } from "react-responsive";
 
 import { Link, DoubleLogo, MobileMenu } from "@app/components";
 import * as styles from "./index.module.scss";
-import { useMediaQuery } from "react-responsive";
 
 const ID = "main-nav";
 const LINKS = [
@@ -16,7 +15,11 @@ const LINKS = [
   { label: "Contact us", to: "/contact" },
 ];
 
-export const Header = () => {
+export interface HeaderProps {
+  hideNav?: boolean;
+}
+
+export const Header: FC<HeaderProps> = ({ hideNav }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isMdDevice = useMediaQuery({ query: "(min-width: 992px)" });
@@ -24,25 +27,33 @@ export const Header = () => {
   return (
     <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
-        {!isMdDevice && <MobileMenu></MobileMenu>}
-        <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>
-          <DoubleLogo />
-        </Navbar.Brand>
+        {!isMdDevice && !hideNav && <MobileMenu />}
 
-        <Nav className={styles.navbarNav}>
-          {LINKS.map((link) => (
-            <Nav.Link
-              key={link.to}
-              className={styles.navLink}
-              activeClassName={styles.navLinkActive}
-              onClick={() => setIsOpen(false)}
-              as={Link}
-              to={link.to}
-            >
-              {link.label}
-            </Nav.Link>
-          ))}
-        </Nav>
+        {!hideNav ? (
+          <>
+            <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>
+              <DoubleLogo />
+            </Navbar.Brand>
+            <Nav className={styles.navbarNav}>
+              {LINKS.map((link) => (
+                <Nav.Link
+                  key={link.to}
+                  className={styles.navLink}
+                  activeClassName={styles.navLinkActive}
+                  onClick={() => setIsOpen(false)}
+                  as={Link}
+                  to={link.to}
+                >
+                  {link.label}
+                </Nav.Link>
+              ))}
+            </Nav>
+          </>
+        ) : (
+          <Navbar.Brand className={styles.navbarLogo}>
+            <DoubleLogo />
+          </Navbar.Brand>
+        )}
       </div>
     </Navbar>
   );
