@@ -37,7 +37,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     <>
       <ParallaxProvider>
         <SEO {...pageContext} />
-        <Header hideNav={hideNav} />
+        <Header />
         <MDXProvider components={mdxComponents}>
           <main>{children}</main>
         </MDXProvider>
