@@ -34,14 +34,16 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   const hideFooter = ["/contact"].includes(pathname);
 
   return (
-    <ParallaxProvider>
-      <SEO {...pageContext} />
-      <Header />
-      <MDXProvider components={mdxComponents}>
-        <main>{children}</main>
-      </MDXProvider>
-      {!hideFooter && <Footer />}
-    </ParallaxProvider>
+    <>
+      <ParallaxProvider>
+        <SEO {...pageContext} />
+        <Header />
+        <MDXProvider components={mdxComponents}>
+          <main>{children}</main>
+        </MDXProvider>
+        {!hideFooter && <Footer />}
+      </ParallaxProvider>
+    </>
   );
 };
 
