@@ -38,20 +38,13 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     "/growthaudit",
   ].some((p) => pathname.includes(p));
 
-  console.log({ pathname });
-
   const hideFooter = [
-    "/contact",
-    "/freeguide",
-    "/freeguide/thankyou",
-    "/download/thankyou",
-    "/download",
+    "/contact/",
+    "/freeguide/",
+    "/download/",
     "/growthroadmap/",
-    "/growthroadmap/thankyou",
-    "/growthroadmap/#audit",
     "/growthaudit",
-    "/growthaudit/thankyou",
-  ].includes(pathname);
+  ].some((p) => pathname.includes(p));
 
   return (
     <ParallaxProvider>
