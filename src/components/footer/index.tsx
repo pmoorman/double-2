@@ -41,6 +41,9 @@ export const Footer = () => {
             <Button to="/legal/privacy-policy" as={Link} variant="text">
               Privacy Policy
             </Button>
+            <Button to="/legal/cookie-policy" as={Link} variant="text">
+              Cookie Policy
+            </Button>
           </div>
         </div>
       </Container>
