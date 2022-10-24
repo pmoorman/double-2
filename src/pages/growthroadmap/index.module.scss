@@ -1,0 +1,55 @@
+.result {
+  background-color: $gray;
+  padding: 7rem 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 4rem 0;
+  }
+
+  & > div > div > div:last-child {
+    justify-content: flex-end;
+  }
+
+  p {
+    opacity: 0.7;
+  }
+}
+
+.iconStrategy {
+  background-image: url(./strategy.svg);
+}
+.iconCreative {
+  background-image: url(./creative.svg);
+}
+.iconInfrastructure {
+  background-image: url(./Infrastructure.svg);
+}
+.iconPerformance {
+  background-image: url(./performance.svg);
+}
+
+.borderContainer {
+  border-bottom: 1px solid $secondary;
+
+  @include media-breakpoint-down(md) {
+    border-bottom: none;
+  }
+}
+
+.mobileImage {
+  --g: #000, #0000 1deg 179deg, #000 180deg;
+  --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /100%
+    100% no-repeat;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.footer {
+  background-color: $secondary;
+  color: white;
+  padding: 8rem 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 5rem 0;
+  }
+}

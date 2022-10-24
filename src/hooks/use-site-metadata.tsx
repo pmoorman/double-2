@@ -6,6 +6,7 @@ export interface SiteMetadata {
   siteUrl: string;
   title: string;
   description: string;
+  recaptchaKey: string;
 
   contact_email: string;
   contact_phone: string;
@@ -19,6 +20,7 @@ export const useSiteMetadata = () => {
           siteUrl
           title
           description
+          recaptchaKey
         }
       }
     }

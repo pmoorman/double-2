@@ -31,9 +31,31 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideFooter = ["/contact"].includes(pathname);
+  const hideNav = [
+    "/freeguide/",
+    "/download/",
+    "/growthroadmap/",
+    "/growthaudit",
+  ].some((p) => pathname.includes(p));
+
+  const hideFooter = [
+    "/contact/",
+    "/freeguide/",
+    "/download/",
+    "/growthroadmap/",
+    "/growthaudit",
+  ].some((p) => pathname.includes(p));
 
   return (
+<
+    <ParallaxProvider>
+      <SEO {...pageContext} />
+      <Header hideNav={hideNav} />
+      <MDXProvider components={mdxComponents}>
+        <main>{children}</main>
+      </MDXProvider>
+      {!hideFooter && <Footer />}
+    </ParallaxProvider>
     <>
       <ParallaxProvider>
         <SEO {...pageContext} />
