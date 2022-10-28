@@ -47,7 +47,6 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   ].some((p) => pathname.includes(p));
 
   return (
-<
     <ParallaxProvider>
       <SEO {...pageContext} />
       <Header hideNav={hideNav} />
@@ -56,16 +55,6 @@ export const Layout = ({ children, pageContext }: PageProps) => {
       </MDXProvider>
       {!hideFooter && <Footer />}
     </ParallaxProvider>
-    <>
-      <ParallaxProvider>
-        <SEO {...pageContext} />
-        <Header />
-        <MDXProvider components={mdxComponents}>
-          <main>{children}</main>
-        </MDXProvider>
-        {!hideFooter && <Footer />}
-      </ParallaxProvider>
-    </>
   );
 };
 
