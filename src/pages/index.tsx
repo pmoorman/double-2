@@ -184,7 +184,7 @@ const HomePage = () => {
         ))}
       </div>
 
-      <Container>
+      {/* <Container>
         <Row className={`mt-lg-7 mt-4 + ${styles.teamSection}`}>
           <Col lg="9">
             <h2 className="mb-2">Our people</h2>
@@ -216,7 +216,7 @@ const HomePage = () => {
             </Slider>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </>
   );
 };
