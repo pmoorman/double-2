@@ -1,4 +1,5 @@
 export * from "./footer";
+export * from "./footer-policy";
 export * from "./header";
 export * from "./seo";
 export * from "./double-logo";
