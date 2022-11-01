@@ -40,8 +40,8 @@ export const Layout = ({ children, pageContext }: PageProps) => {
 
   const hideFooter = [
     "/contact/",
-    "/freeguide/",
-    "/download/",
+    "/freeguide",
+    "/download",
     "/growthroadmap/",
     "/growthaudit",
   ].some((p) => pathname.includes(p));

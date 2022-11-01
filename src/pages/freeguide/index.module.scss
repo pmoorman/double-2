@@ -1,91 +1,104 @@
-.collectionSection {
-  background-color: $gray;
-  padding-bottom: 600px;
-  padding-top: 100px;
+.heading {
+  position: absolute;
+  top: 146px;
+  bottom: 0;
+  width: 37%;
+  color: white;
+  z-index: 3;
 
-  @include media-breakpoint-down(xl) {
-    padding-top: 2px;
-  }
   @include media-breakpoint-down(lg) {
-    padding-top: 80px;
-  }
-  @include media-breakpoint-down(md) {
-    padding-bottom: 5rem;
-  }
-  .sliderSection {
-    position: absolute;
-    width: calc(50vw + 50% - 70px);
-
-    @include media-breakpoint-down(md) {
-      position: relative;
-      width: 100%;
-    }
+    display: none;
   }
 
-  .blogSlider {
-    margin-top: 1.4rem;
-
-    & > ul {
-      bottom: -50px;
-
-      & > li {
-        width: 250px;
-        margin: 0;
-
-        @include media-breakpoint-down(lg) {
-          width: 120px;
-        }
-
-        button {
-          width: 250px;
-
-          @include media-breakpoint-down(lg) {
-            width: 120px;
-          }
-
-          &:before {
-            content: "";
-            background-image: url(./sliderTrack.svg);
-            height: 6px;
-            width: 250px;
-            border-radius: 20px;
-
-            @include media-breakpoint-down(lg) {
-              width: 120px;
-            }
-          }
-        }
-      }
-    }
-
-    & > div > div > div {
-      padding-right: 1.4rem;
+  span {
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: inline-block;
     }
   }
 }
-.cardSlider {
+
+.blueSection {
   background-color: $secondary;
-  padding: 24px;
-  min-height: 379px;
+  width: 50%;
   color: white;
+  position: relative;
+  min-height: 105vh;
 
   @include media-breakpoint-down(xl) {
-    min-height: 485px;
+    min-height: 120vh;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
+    padding: 24px 0;
+    width: 100%;
     min-height: auto;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
   }
 
-  & > div:first-child {
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .lines {
+    background: url(./line.svg) no-repeat;
+    width: 70%;
+    height: 188px;
+    bottom: 120px;
+    transform: translateY(95px);
+    margin-top: 3px;
+    z-index: 2;
+    position: absolute;
 
-    img {
+    @include media-breakpoint-down(lg) {
+      background: url(./line-mobile.svg) no-repeat;
+      height: 230px;
+      background-size: contain;
+      position: relative;
       width: 100%;
+      transform: none;
+      bottom: auto;
     }
+
+    & + div {
+      height: 2px;
+      width: 50%;
+      background-color: $white;
+      position: absolute;
+      bottom: 120px;
+      margin-top: 1px;
+      right: 20px;
+
+      @include media-breakpoint-down(xl) {
+        margin-top: 28px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
+      &:after {
+        content: "";
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        position: absolute;
+        right: 0;
+        top: -5px;
+      }
+    }
+  }
+}
+
+.greySection {
+  background-color: $gray;
+  width: 50%;
+  padding: 88px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 24px 0;
+    width: 100%;
   }
 }

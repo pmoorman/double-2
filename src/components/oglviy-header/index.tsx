@@ -13,7 +13,7 @@ export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
     <div>
       <Container>
         <div className={styles.heading}>
-          <h1 className="text-md-center">
+          <h1>
             Master the 38 <div>immutable</div>
             <div>laws of growth</div>
           </h1>

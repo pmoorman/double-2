@@ -25,7 +25,7 @@ export const QuizHeader = () => {
               <StaticImage
                 src="./union.svg"
                 alt="hero"
-                className="my-5 my-lg-0"
+                className="my-5 mx-5 mx-lg-0 my-lg-0"
               />
             </Col>
           </Row>
