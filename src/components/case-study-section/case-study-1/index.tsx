@@ -31,7 +31,11 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
               <Col lg={{ span: 10, offset: 1 }}>
                 <Row>
                   <Col lg={6} md={6} className="mt-0 mb-lg-0 mb-md-5 mb-8">
-                    <GatsbyImage image={item.logo} alt={item.title} />
+                    <GatsbyImage
+                      image={item.logo}
+                      alt={item.title}
+                      className={styles.logoImage}
+                    />
                     {!isHomepage && item.categories && (
                       <small className="mb-2">
                         {item.categories.join(" | ")}
