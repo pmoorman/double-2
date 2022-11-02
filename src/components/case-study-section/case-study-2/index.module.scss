@@ -62,16 +62,9 @@ $line-height: 50px;
 }
 
 .tiktokImage {
-  padding: 8.43rem 0;
-  background-color: #000;
   display: inline-block;
 
-  @include media-breakpoint-down(lg) {
-    padding: 2rem 0;
-  }
-
   @include media-breakpoint-down(sm) {
-    padding: 0;
     margin: 0 -12px;
   }
 }

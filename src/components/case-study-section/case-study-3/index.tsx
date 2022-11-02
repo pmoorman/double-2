@@ -41,18 +41,21 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
               >
                 <Col lg={{ span: 10, offset: 1 }} md={12}>
                   <Row>
-                    <Col lg={6}>
+                    <Col lg={7}>
                       <GatsbyImage
                         image={item.logo}
                         alt={item.title}
                         className={styles.growforge_logo}
                       />
-                      <small className="mb-2 mt-lg-4 mt-2">
-                        {item.categories.join(" | ")}
-                      </small>
+                      {!isHomepage && (
+                        <small className="mb-2 mt-lg-4 mt-2">
+                          {item.categories.join(" | ")}
+                        </small>
+                      )}
+
                       <h2 className="mb-2">{item.title}</h2>
                       <h3 className="mb-3">{item.subtitle}</h3>
-                      <p>{item.excerpt}</p>
+                      {isHomepage && <p>{item.excerpt}</p>}
                     </Col>
                   </Row>
                 </Col>
@@ -60,22 +63,6 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             </Row>
           </Container>
         </div>
-        {section.quote && (
-          <Container>
-            <Row>
-              <Col lg={{ span: 6, offset: 6 }} md={12}>
-                <div className={styles.blockquote}>
-                  <BlockQuote
-                    name={section.quote.name}
-                    title={section.quote.title}
-                  >
-                    {section.quote.content}
-                  </BlockQuote>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        )}
 
         {section.body && (
           <Container>

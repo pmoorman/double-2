@@ -36,10 +36,12 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
           </Col>
           <Col lg={6} md={6}>
             <GatsbyImage image={item.logo} alt={item.title} />
-            <small className="my-2">{item.categories.join(" | ")}</small>
+            {!isHomepage && item.categories && (
+              <small className="mb-2">{item.categories.join(" | ")}</small>
+            )}
             <h2>{item.title}</h2>
             <h3>{item.subtitle}</h3>
-            <p>{item.excerpt}</p>
+            {isHomepage && <p>{item.excerpt}</p>}
             {!isMdDevice && item.stats && <Statistics stats={item.stats} />}
             {/* <Button
               as={Link}
