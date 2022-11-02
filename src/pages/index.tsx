@@ -1,6 +1,6 @@
 import * as React from "react";
+import ReactPlayer from "react-player";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import { StaticImage } from "gatsby-plugin-image";
 
 import { Link, ImageRow, CaseStudySection, Image } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
@@ -8,13 +8,24 @@ import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
 
+import heroVideo from "./index-assets/hero.mp4";
+
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
   const caseStudies = getHomepageCaseStudies(_caseStudies);
 
   return (
     <>
-      <div className={styles.hero}></div>
+      <div className={styles.hero}>
+        <ReactPlayer
+          url={heroVideo}
+          playing
+          loop
+          muted
+          width="100%"
+          height="100%"
+        />
+      </div>
       <div className="pt-5 pb-lg-9 pb-5">
         <Container>
           <Row>

@@ -1,7 +1,10 @@
 .hero {
-  background: url(./hero.jpeg) no-repeat center;
   height: 90vh;
-  background-size: cover;
+  width: 100%;
+
+  video {
+    object-fit: cover;
+  }
 
   @include media-breakpoint-down(md) {
     height: 80vh;
