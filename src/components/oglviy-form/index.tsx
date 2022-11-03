@@ -36,6 +36,7 @@ export const OgilvyForm: FC<OgilvyFormProps> = ({
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
             required
+            type="email"
             placeholder="Enter your email"
             aria-describedby="email"
             name="fields[email]"
