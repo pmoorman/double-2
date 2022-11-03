@@ -168,7 +168,7 @@ const CareersPage = () => {
             </Col>
             <Col lg="6" md="5" sm="10" xs="10">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim.Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit, sed do eiusmod tempor incididunt ut labore et dolore magna
