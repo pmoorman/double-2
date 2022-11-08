@@ -1,55 +1,68 @@
 .hero {
-  margin: 0;
+  height: 90vh;
+  width: 100%;
 
-  h1 {
-    font-size: 5rem;
-
-    @include media-breakpoint-down(lg) {
-      font-size: 2.875rem;
-    }
+  video {
+    object-fit: cover;
   }
 
-  .heroImage {
-    height: 318px;
+  @include media-breakpoint-down(md) {
+    height: 80vh;
+  }
+}
+.arrowDown {
+  background: url(./arrow-down.svg) no-repeat center;
+  display: inline-block;
+  width: 42px;
+  height: 21px;
+  margin-bottom: 3.25rem;
+  margin-top: 1rem;
 
-    @include media-breakpoint-down(lg) {
-      width: 100%;
-    }
-
-    @include media-breakpoint-down(md) {
-      padding: 12px;
-      height: 200px;
-      width: 100%;
-    }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
   }
 }
 
+.arrowLongDown {
+  background: url(./arrow-long-down.svg) no-repeat center;
+  display: inline-block;
+  width: 54px;
+  height: 145px;
+  margin-top: 3.25rem;
+
+  @include media-breakpoint-down(md) {
+    background: url(./arrow-down.svg) no-repeat center;
+    width: 42px;
+    height: 21px;
+    margin-top: 2rem;
+  }
+}
 p > strong {
   display: block;
 }
 
-.leftVector {
-  position: absolute;
-  left: 0;
-  background-color: white;
-}
+// .leftVector {
+//   position: absolute;
+//   left: 0;
+//   background-color: white;
+// }
 
-.rightVector {
-  position: absolute;
-  right: 0;
-  bottom: -3.5px;
-}
+// .rightVector {
+//   position: absolute;
+//   right: 0;
+//   bottom: -3.5px;
+// }
 
-.vectorLine {
-  height: 2px;
-  background-color: #387cd3;
-  width: 200%;
-  display: block;
-  position: absolute;
-  top: 1px;
-  right: 0;
-  z-index: -1;
-}
+// .vectorLine {
+//   height: 2px;
+//   background-color: #387cd3;
+//   width: 200%;
+//   display: block;
+//   position: absolute;
+//   top: 1px;
+//   right: 0;
+//   z-index: -1;
+// }
 
 small {
   font-weight: 600;

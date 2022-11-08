@@ -14,6 +14,17 @@
   }
 }
 
+.logoImage {
+  @include media-breakpoint-down(lg) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 151px !important;
+  }
+}
+
 .rombik {
   text-align: center;
   display: inline-block;

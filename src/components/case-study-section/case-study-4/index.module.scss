@@ -64,9 +64,9 @@ $arrowHeight: 255px;
     left: -7px;
 
     @include media-breakpoint-down(md) {
-      bottom: -31px;
+      bottom: -28px;
       left: auto;
-      right: 264px;
+      right: 262px;
       z-index: 100;
     }
   }
@@ -81,7 +81,7 @@ $arrowHeight: 255px;
     z-index: 3;
 
     @include media-breakpoint-down(lg) {
-      left: 55.5px;
+      left: 26px;
     }
 
     @include media-breakpoint-down(md) {

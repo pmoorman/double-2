@@ -45,6 +45,10 @@
 }
 
 .growforge_logo {
+  @include media-breakpoint-down(lg) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
   @include media-breakpoint-down(md) {
     width: 123px;
   }
