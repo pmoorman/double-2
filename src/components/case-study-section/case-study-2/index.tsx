@@ -17,7 +17,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const hideLine = section.hide_arrow;
 
   return (
-    <div className="pt-lg-9 pt-5 pt-md-6 mb-7">
+    <div className="pt-lg-9 pt-5 pt-md-6 mb-5">
       <Container className="position-relative">
         <Row className="align-items-lg-end position-relative">
           {/* LIne 1 */}
@@ -27,14 +27,15 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
-            sm={{ span: 12, order: "last" }}
-            xs={{ span: 12, order: "last" }}
+            sm={{ span: 12, order: "first" }}
+            xs={{ span: 12, order: "first" }}
+            className="mt-6 mt-lg-0"
           >
             <div className={styles.tiktokImage}>
               <GatsbyImage image={section.image} alt={item.title} />
             </div>
           </Col>
-          <Col lg={6} md={6}>
+          <Col lg={6} md={6} className="mt-5 mt-lg-0">
             <GatsbyImage image={item.logo} alt={item.title} />
             {!isHomepage && item.categories && (
               <small className="mb-2">{item.categories.join(" | ")}</small>
@@ -65,7 +66,7 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
       <div className="position-relative"></div>
 
       {!isHomepage && (
-        <Container className="pt-6 pt-lg-0 mb-lg-0 mb-5">
+        <Container className=" mb-lg-0 mb-5">
           <TwoColumnSection title="Situation">
             {item.situation}
           </TwoColumnSection>

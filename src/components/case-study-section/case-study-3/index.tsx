@@ -13,7 +13,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
 
   return (
     <>
-      <div>
+      <div className="mb-lg-0 mb-5">
         <Container>
           <div className={styles.line}></div>
           <div className="position-relative">

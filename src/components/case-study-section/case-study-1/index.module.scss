@@ -14,8 +14,15 @@
   }
 }
 
-.logoImage img {
-  max-height: 53px;
+.logoImage {
+  @include media-breakpoint-down(lg) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-height: 53px;
+  }
 }
 
 .rombik {
