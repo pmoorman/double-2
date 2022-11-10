@@ -10,7 +10,7 @@ export const QuizHeader = () => {
       <div className="mt-lg-8 mb-lg-9 my-5">
         <Container>
           <Row>
-            <Col lg="8">
+            <Col lg="7">
               <h1>What’s stopping you from growing faster?</h1>
               <Button
                 as={Link}
@@ -18,12 +18,12 @@ export const QuizHeader = () => {
                 variant="secondary"
                 className="mt-lg-6 mt-4"
               >
-                Get Free Audit
+                Get Free Report
               </Button>
             </Col>
-            <Col lg="4">
+            <Col lg="5">
               <StaticImage
-                src="./union.svg"
+                src="./hero.jpg"
                 alt="hero"
                 className="my-5 mx-5 mx-lg-0 my-lg-0"
               />
