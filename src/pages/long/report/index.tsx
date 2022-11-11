@@ -18,7 +18,7 @@ import * as styles from "./index.module.scss";
 const GrowthAudit = () => {
   return (
     <>
-      <SEO title="Growth audit" />
+      <SEO title="Funnel Report" />
 
       <QuizHeader />
 
@@ -32,10 +32,10 @@ const GrowthAudit = () => {
             md="12"
             className="text-center"
           >
-            <h2 className="mb-lg-5 mb-4">Growth Audit</h2>
+            <h2 className="mb-lg-5 mb-4">Funnel Report</h2>
             <h3 className="mb-4">
               Answer a few questions about your startup - we’ll create a
-              personalised roadmap that’ll show you exactly how to unlock growth
+              personalised report that’ll show you exactly how to unlock growth
             </h3>
             <Widget
               id="Xx8iTVFh"
@@ -43,7 +43,7 @@ const GrowthAudit = () => {
               hideFooter
               hideHeaders
               onSubmit={() => {
-                navigate("/growthaudit/thankyou");
+                navigate("/long/report/thankyou");
               }}
             />
           </Col>

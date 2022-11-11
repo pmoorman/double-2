@@ -32,20 +32,13 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideNav = [
-    "/freeguide/",
-    "/download/",
-    "/growthroadmap/",
-    "/growthaudit",
-  ].some((p) => pathname.includes(p));
+  const hideNav = ["/short", "/long"].some((p) => pathname.includes(p));
 
-  const hideFooter = [
-    "/contact/",
-    "/freeguide",
-    "/download",
-    "/growthroadmap/",
-    "/growthaudit",
-  ].some((p) => pathname.includes(p));
+  console.log({ pathname });
+
+  const hideFooter = ["/contact", "/short", "/long"].some((p) =>
+    pathname.includes(p)
+  );
 
   return (
     <ParallaxProvider>

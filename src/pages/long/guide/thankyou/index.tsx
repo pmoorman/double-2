@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import React from "react";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+
 import { Link, SEO } from "@app/components";
 
 import * as styles from "./index.module.scss";
