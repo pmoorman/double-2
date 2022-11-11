@@ -43,7 +43,7 @@ const GrowthAudit = () => {
               hideFooter
               hideHeaders
               onSubmit={() => {
-                navigate("/report/thankyou");
+                navigate("/long/report/thankyou");
               }}
             />
           </Col>

@@ -33,7 +33,7 @@ const GrowthRoadMap = () => {
               hideFooter
               hideHeaders
               onSubmit={() => {
-                navigate("/freereport/thankyou");
+                navigate("/short/report/thankyou");
               }}
             />
           </Col>
