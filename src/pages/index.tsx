@@ -1,5 +1,5 @@
-import * as React from "react";
-import ReactPlayer from "react-player";
+import React from "react";
+import ReactPlayer from "react-player/youtube";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
 import { Link, ImageRow, CaseStudySection, Image } from "@app/components";
@@ -17,13 +17,18 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.hero}>
+        <div className={styles.heroOverlay} />
         <ReactPlayer
-          url={heroVideo}
+          url="https://www.youtube.com/watch?v=euYxH3a5otk"
           playing
           loop
           muted
           width="100%"
           height="100%"
+          playsinline
+          youtube={{
+            playerVars: { modestbranding: 1, showinfo: 0, controls: 0 },
+          }}
         />
       </div>
       <div className="pt-5 pb-lg-9 pb-5">
