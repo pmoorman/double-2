@@ -157,11 +157,11 @@ const BlogPage = () => {
             }
           >
             <h2 className="mb-lg-3 mb-4">See our growth marketing in action</h2>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim.Lorem ipsum dolor sit.
-            </p>
+            </p> */}
             <Button
               as={Link}
               to="/case-studies"
