@@ -2,5 +2,8 @@
 command = "npm run build"
 publish = "public/"
 
+[functions]
+  included_files = ["!.cache/page-ssr/routes/static/*.mp4","!.cache/page-ssr/routes/static/*"]
+
 [[plugins]]
 package = "@netlify/plugin-gatsby"

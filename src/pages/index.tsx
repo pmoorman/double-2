@@ -1,8 +1,14 @@
-import * as React from "react";
-import ReactPlayer from "react-player";
+import React from "react";
+import ReactPlayer from "react-player/youtube";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
-import { Link, ImageRow, CaseStudySection, Image } from "@app/components";
+import {
+  Link,
+  ImageRow,
+  CaseStudySection,
+  Image,
+  VideoBackground,
+} from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
@@ -17,14 +23,8 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.hero}>
-        <ReactPlayer
-          url={heroVideo}
-          playing
-          loop
-          muted
-          width="100%"
-          height="100%"
-        />
+        <VideoBackground src="https://www.youtube.com/watch?v=euYxH3a5otk" />
+        <div className={styles.heroOverlay} />
       </div>
       <div className="pt-5 pb-lg-9 pb-5">
         <Container>

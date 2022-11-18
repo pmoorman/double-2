@@ -34,8 +34,6 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
   const hideNav = ["/short", "/long"].some((p) => pathname.includes(p));
 
-  console.log({ pathname });
-
   const hideFooter = ["/contact", "/short", "/long"].some((p) =>
     pathname.includes(p)
   );
