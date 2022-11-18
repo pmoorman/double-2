@@ -29,3 +29,4 @@ export * from "./oglviy-image";
 export * from "./oglviy-form";
 export * from "./quiz-header";
 export * from "./quiz-logos";
+export * from "./video-background";
