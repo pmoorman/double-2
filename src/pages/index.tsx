@@ -1,12 +1,9 @@
 import React from "react";
-import ReactPlayer from "react-player/youtube";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
 import {
   Link,
-  ImageRow,
   CaseStudySection,
-  Image,
   VideoBackground,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
@@ -23,7 +20,7 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.hero}>
-        <VideoBackground src="https://www.youtube.com/watch?v=euYxH3a5otk" />
+        <VideoBackground src="https://fast.wistia.net/embed/iframe/om5kcdfisb" />
         <div className={styles.heroOverlay} />
       </div>
       <div className="pt-5 pb-lg-9 pb-5">
