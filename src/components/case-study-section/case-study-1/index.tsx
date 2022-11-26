@@ -14,7 +14,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   return (
     <>
       <div
-        className="caseStudyBgMobile mt-lg-7 mt-3 mb-6"
+        className="caseStudyBgMobile mt-lg-7 mt-5 mb-5"
         style={{
           backgroundImage: `url(${section.image_url})`,
         }}

@@ -12,7 +12,7 @@ export const CaseStudy4: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
 
   return (
     <>
-      <div className="pt-lg-8 pt-xl-9 py-4">
+      <div className="my-5">
         <div
           className="caseStudyBgMobile"
           style={{

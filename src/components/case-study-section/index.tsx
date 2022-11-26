@@ -25,6 +25,8 @@ export const CaseStudySection: FC<CaseStudySectionProps> = (props) => {
       return <CaseStudy3 {...props} />;
     case 4:
       return <CaseStudy4 {...props} />;
+    case 5:
+      return <CaseStudy5 {...props} />;
     default:
       return null;
   }

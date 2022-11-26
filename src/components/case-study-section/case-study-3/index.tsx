@@ -30,6 +30,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             }}
           ></div>
           <Container className="mt-lg-6 mt-0 position-relative">
+            {!isHomepage && <div className={styles.marginTop}></div>}
             <div
               className="bg_image"
               style={{
@@ -43,7 +44,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
               >
                 <Col lg={{ span: 10, offset: 1 }} md={12}>
                   <Row>
-                    <Col lg={7}>
+                    <Col lg={6}>
                       <GatsbyImage
                         image={item.logo}
                         alt={item.title}
