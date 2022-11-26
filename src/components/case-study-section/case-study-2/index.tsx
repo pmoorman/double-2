@@ -14,16 +14,11 @@ import * as styles from "./index.module.scss";
 export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   const { section } = item;
   const isMdDevice = useMediaQuery({ query: "(min-width: 768px)" });
-  const hideLine = section.hide_arrow;
 
   return (
     <div className="pt-lg-9 pt-5 pt-md-6 mb-5">
       <Container className="position-relative">
         <Row className="align-items-lg-end position-relative">
-          {/* LIne 1 */}
-          {!hideLine && <div className={styles.line}></div>}
-          {!hideLine && <div className={styles.lineRight}></div>}
-
           <Col
             lg={{ span: 6, order: "first" }}
             md={{ span: 6, order: "first" }}
@@ -36,7 +31,11 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             </div>
           </Col>
           <Col lg={6} md={6} className="mt-5 mt-lg-0">
-            <GatsbyImage image={item.logo} alt={item.title} />
+            <GatsbyImage
+              image={item.logo}
+              alt={item.title}
+              className={styles.greyLogo}
+            />
             {!isHomepage && item.categories && (
               <small className="mb-2">{item.categories.join(" | ")}</small>
             )}
@@ -44,35 +43,20 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             <h3>{item.subtitle}</h3>
             {isHomepage && <p>{item.excerpt}</p>}
             {!isMdDevice && item.stats && <Statistics stats={item.stats} />}
-            {/* <Button
+            <Button
               as={Link}
               to={item.slug}
               variant="secondary"
               className="mb-lg-0 mb-5"
             >
               Full case study
-            </Button> */}
+            </Button>
           </Col>
         </Row>
         <div className="position-relative">
-          {/* Line 2 */}
-          {!hideLine && <div className={styles.lineRight2}></div>}
-
           {isMdDevice && item.stats && <Statistics stats={item.stats} />}
-          {/* Line 3  */}
-          {!hideLine && <div className={styles.bgArrow}></div>}
         </div>
       </Container>
-      <div className="position-relative"></div>
-
-      {!isHomepage && (
-        <Container className=" mb-lg-0 mb-5">
-          <TwoColumnSection title="Situation">
-            {item.situation}
-          </TwoColumnSection>
-          <TwoColumnSection title="Strategy">{item.strategy}</TwoColumnSection>
-        </Container>
-      )}
 
       {section.body && (
         <Container>

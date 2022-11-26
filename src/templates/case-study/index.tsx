@@ -21,20 +21,25 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const { frontmatter } = props.data.file.childMdx;
   const {
     title,
-    subtitle,
     excerpt,
     hero_image,
+    process_subtitle,
+    process_graph,
+    body_image,
     logo,
     stats,
     how_we_did_it,
     results,
     milestones,
+    pageSubtitle,
   } = frontmatter;
 
+  const bodyImage = getImage(body_image);
+  const processGraph = getImage(process_graph);
   const heroImage = getImage(hero_image);
   const logoImage = getImage(logo);
   const resultsImage = getImage(results.image);
-
+  ``;
   return (
     <div>
       <Container>
@@ -50,10 +55,18 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 )
               }
             >
-              {logoImage && <GatsbyImage image={logoImage} alt="" />}
-              <h2 className="mb-3">{title}</h2>
-              <h3 className="mb-3">{subtitle}</h3>
-              <p>{excerpt}</p>
+              {logoImage && (
+                <GatsbyImage
+                  image={logoImage}
+                  alt=""
+                  className={styles.logoImage}
+                />
+              )}
+              <div className={styles.heroText}>
+                <h1 className="mb-3">{title}</h1>
+                <h3 className="mb-3">{pageSubtitle}</h3>
+                <p>{excerpt}</p>
+              </div>
             </ImageRow>
           </div>
         </Row>
@@ -75,21 +88,22 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
       )}
 
       <HeadingRow>
-        <h2>Strategy</h2>
+        <h2>Situation</h2>
       </HeadingRow>
       <Container>
         {how_we_did_it && (
           <Row>
-            <Col md="6">
-              <h3>How we did it</h3>
-            </Col>
+            <Col md="6"></Col>
             <Col md="6">
               <ReactMarkdown>{how_we_did_it}</ReactMarkdown>
             </Col>
           </Row>
         )}
+        <Image className="mt-lg-8  mt-5">
+          <GatsbyImage image={bodyImage} alt="Cover Image" />
+        </Image>
         {results && (
-          <div className="mt-lg-7 mb-lg-7 mb-6 mt-5">
+          <div className="mt-lg-8 mb-lg-7 mb-6 mt-5">
             <ImageRow
               imageOrder="last"
               image={
@@ -100,7 +114,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 )
               }
             >
-              <h3 className="mb-3">Results</h3>
+              <h3 className="mb-3">Strategy</h3>
               <ReactMarkdown>{results.body}</ReactMarkdown>
             </ImageRow>
           </div>
@@ -110,21 +124,20 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
       <div className={styles.processSection}>
         <Container>
           <div className={styles.processes}>
-            <h2>Our process</h2>
-            <div className="subtitle">
-              Since there was a strong foundation we could start implementing
-              right away and learn faster.
-            </div>
+            <h2 className="mb-4">Our process</h2>
+            <div className="subtitle mb-6">{process_subtitle}</div>
           </div>
           <div>
-            <StaticImage src="./graph.svg" alt="Process" />
+            <Image>
+              <GatsbyImage image={processGraph} alt="Process" />
+            </Image>
           </div>
         </Container>
       </div>
 
       <Container>
         <div className="mt-lg-7 mt-5">
-          <h2 className="mb-5 d-flex justify-content-center">Key milestones</h2>
+          <h2 className="mb-5 d-flex justify-content-center">Milestones</h2>
         </div>
       </Container>
 
@@ -173,10 +186,22 @@ export const pageQuery = graphql`
         frontmatter {
           title
           subtitle
+          pageSubtitle
           excerpt
+          process_subtitle
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 650)
+            }
+          }
+          process_graph {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          body_image {
+            childImageSharp {
+              gatsbyImageData
             }
           }
           stats {

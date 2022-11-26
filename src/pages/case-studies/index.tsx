@@ -8,6 +8,7 @@ import {
   CaseStudySection,
   FeaturedCaseStudies,
   SEO,
+  LogoSlider,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 
@@ -31,45 +32,40 @@ const CaseStudiesPage = () => {
       <SEO title="Case Studies" />
       <div>
         <Container>
-          <div className="pt-lg-7 pb-lg-8 py-4 position-relative">
+          <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row>
-              <Col lg="7">
-                <h1>All of these brands were once where you are now</h1>
-                <div className="subtitle mb-5 mt-4">
-                  On our website, looking for a Growth Marketing agency.
-                </div>
-                <Button
-                  as={Link}
-                  to="/contact"
-                  variant="outline-secondary"
-                  className="mb-lg-0 mb-4"
-                >
-                  How can we help you?
-                </Button>
+              <Col lg="7" md="8">
+                <h1>All of these brands were once where you are now.</h1>
               </Col>
-              <div className={styles.heroBg}></div>
-              <div className="d-lg-none d-flex justify-content-center">
-                <StaticImage src="./hero_bg_mobile.svg" alt="Brands" />
-              </div>
+              <Col lg="5" md="4">
+                <div className="d-flex justify-content-center">
+                  <StaticImage src="./hero_bg.svg" alt="Brands" />
+                </div>
+              </Col>
             </Row>
           </div>
+        </Container>
+        <div>
+          <LogoSlider />
+        </div>
 
-          {/* <div className="mb-lg-8">
+        <Container>
+          <div className="mb-lg-8 mt-6">
             <div className={styles.blueBg}>
               <h3>Featured case studies</h3>
             </div>
             <div className={styles.cardSection}>
               <FeaturedCaseStudies />
             </div>
-          </div> */}
+          </div>
         </Container>
 
-        <div className={styles.filtersSection}>
+        <div>
           <Container>
             <h2>Explore our case studies</h2>
 
             {/* Filters */}
-            <div className={styles.filters}>
+            {/* <div className={styles.filters}>
               <div className={styles.title}>
                 <small>Filter by:</small>
               </div>
@@ -88,7 +84,7 @@ const CaseStudiesPage = () => {
                   <small>{c}</small>
                 </div>
               ))}
-            </div>
+            </div> */}
           </Container>
         </div>
 

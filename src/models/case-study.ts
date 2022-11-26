@@ -7,8 +7,6 @@ export interface CaseStudy {
   // Common (both page and section)
   title: string;
   subtitle: string;
-  situation: string;
-  strategy: string;
   excerpt: string;
   logo: any;
   weight?: number;
@@ -19,7 +17,11 @@ export interface CaseStudy {
 
   // page
   hero_image: any;
+  body_image: any;
+  process_graph: any;
+  process_subtitle: string;
   how_we_did_it: string;
+  pageSubtitle: string;
   results: {
     body: string;
     image: any;
@@ -34,7 +36,6 @@ export interface CaseStudy {
     image_url: string;
     on_homepage?: boolean;
     body?: any;
-    hide_arrow?: boolean;
     quote?: {
       content: string;
       name: string;
@@ -45,4 +46,6 @@ export interface CaseStudy {
   // Is featured?
   featured?: boolean;
   featured_thumbnail?: any;
+  featured_title: string;
+  featured_subtitle: string;
 }

@@ -7,6 +7,22 @@
     color: white;
   }
 }
+.heroText {
+  padding-right: 1rem;
+
+  @include media-breakpoint-down(xl) {
+    padding-right: 0;
+  }
+}
+
+.logoImage {
+  margin-bottom: 1.3rem;
+
+  img {
+    filter: invert(17%) brightness(88%) contrast(60%);
+    max-height: 90px;
+  }
+}
 
 .processSection {
   background-color: $secondary;

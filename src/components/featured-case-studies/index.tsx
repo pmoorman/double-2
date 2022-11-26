@@ -23,8 +23,8 @@ export const FeaturedCaseStudies = () => {
             />
 
             <small className="mt-2">{caseStudy.categories.join(" | ")}</small>
-            <h3 className="my-2">{caseStudy.title}</h3>
-            <p className="subtitle">{caseStudy.subtitle}</p>
+            <h3 className="my-2">{caseStudy.featured_title}</h3>
+            <p className="subtitle">{caseStudy.featured_subtitle}</p>
           </Link>
         </Col>
       ))}
