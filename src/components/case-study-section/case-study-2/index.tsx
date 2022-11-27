@@ -71,7 +71,8 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
       )}
 
       {!isHomepage && (
-        <div className="my-5">
+        <div className="mb-5">
+          <div className={styles.marginTop}></div>
           <div className="position-relative">
             <div
               className={`caseStudyBgMobile + ${styles.mobileBackground}`}
@@ -102,6 +103,14 @@ export const CaseStudy2: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
                         <h2 className="mb-2">{item.title}</h2>
                         <h3 className="mb-4">{item.subtitle}</h3>
                         <p>{item.excerpt}</p>
+                        <Button
+                          as={Link}
+                          to={item.slug}
+                          variant="secondary"
+                          className="mb-lg-0 mb-5"
+                        >
+                          Full case study
+                        </Button>
                       </Col>
                     </Row>
                   </Col>

@@ -30,7 +30,7 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             <Row className="py-lg-6 py-0 mb-9 mb-lg-0 mb-md-0">
               <Col lg={{ span: 10, offset: 1 }}>
                 <Row>
-                  <Col lg={6} md={6} className="mt-0 mb-lg-0 mb-md-5 mb-8">
+                  <Col lg={6} md={6} className="mt-0 mb-lg-0 mb-md-5 mb-5">
                     <GatsbyImage
                       image={item.logo}
                       alt={item.title}

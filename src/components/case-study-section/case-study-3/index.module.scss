@@ -56,6 +56,10 @@
 
 .marginTop {
   margin-top: -3rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
 }
 
 .mobileBackground {
