@@ -41,7 +41,7 @@ $line-height: 50px;
 
 .greyLogo img {
   filter: invert(17%) brightness(88%) contrast(60%);
-  height: 90px;
+  max-height: 90px;
 }
 
 .line {
