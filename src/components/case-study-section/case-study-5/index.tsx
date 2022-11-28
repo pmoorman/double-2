@@ -25,7 +25,7 @@ export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
                 backgroundImage: `url(${section.image_url})`,
               }}
             ></div>
-            <Row className="pb-lg-8 pt-lg-6 pt-2 pb-9">
+            <Row className="pb-lg-8 pt-lg-6 pt-5 pb-9">
               <div className="text-white position-relative">
                 <Col lg={{ span: 10, offset: 1 }} md={12}>
                   <Row>

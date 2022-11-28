@@ -42,9 +42,12 @@ $arrowHeight: 255px;
   }
 }
 
-.lely_logo img {
-  max-height: 83px;
-  margin-bottom: 2rem;
+.lely_logo {
+  img {
+    max-height: 83px;
+    margin-bottom: 2rem;
+    width: auto;
+  }
 }
 .arrowDown {
   width: calc(100% - 617px);
