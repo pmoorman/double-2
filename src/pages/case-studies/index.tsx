@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import cn from "classnames";
+import hero from "./hero_bg.svg";
 
 import {
   Link,
@@ -39,7 +39,9 @@ const CaseStudiesPage = () => {
               </Col>
               <Col lg="5" md="4">
                 <div className="d-flex justify-content-center">
-                  <StaticImage src="./hero_bg.svg" alt="Brands" />
+                  <Link to="/">
+                    <img src={hero} />
+                  </Link>
                 </div>
               </Col>
             </Row>

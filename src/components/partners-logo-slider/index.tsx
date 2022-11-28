@@ -6,8 +6,6 @@ import Slider, { Settings } from "react-slick";
 import * as styles from "./index.module.scss";
 
 const settings: Settings = {
-  autoplay: true,
-  autoplaySpeed: 4000,
   arrows: false,
   dots: false,
   infinite: true,
@@ -16,6 +14,11 @@ const settings: Settings = {
   adaptiveHeight: true,
   centerMode: true,
   centerPadding: "100px",
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 8000,
+  pauseOnHover: false,
+  cssEase: "linear",
   responsive: [
     {
       breakpoint: 1024,
