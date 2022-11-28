@@ -1,0 +1,36 @@
+.growforge {
+  background-size: cover;
+  position: absolute;
+  width: calc(50vw + 50%);
+  height: 100%;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.logoImage img {
+  max-height: 90px;
+  width: auto;
+}
+
+.growforge_logo {
+  @include media-breakpoint-down(lg) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  @include media-breakpoint-down(md) {
+    width: 123px;
+  }
+}
+.mobileBackground {
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+  }
+}

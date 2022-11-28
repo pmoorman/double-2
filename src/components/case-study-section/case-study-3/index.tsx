@@ -14,12 +14,14 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   return (
     <>
       <div className="mb-lg-0 mb-5">
-        <Container>
-          <div className={styles.line}></div>
-          <div className="position-relative">
-            <div className={styles.polygonRightIcon}></div>
-          </div>
-        </Container>
+        {isHomepage && (
+          <Container>
+            <div className={styles.line}></div>
+            <div className="position-relative">
+              <div className={styles.polygonRightIcon}></div>
+            </div>
+          </Container>
+        )}
         <div className="position-relative">
           <div
             className={`caseStudyBgMobile + ${styles.mobileBackground}`}
@@ -28,6 +30,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             }}
           ></div>
           <Container className="mt-lg-6 mt-0 position-relative">
+            {!isHomepage && <div className={styles.marginTop}></div>}
             <div
               className="bg_image"
               style={{
@@ -35,13 +38,13 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
               }}
             ></div>
             <Row className="pb-lg-8 pt-lg-6 pt-2 pb-9">
-              <div className={styles.rightLine}></div>
+              {isHomepage && <div className={styles.rightLine}></div>}
               <div
                 className={`text-white position-relative + ${styles.growforgeRight}`}
               >
                 <Col lg={{ span: 10, offset: 1 }} md={12}>
                   <Row>
-                    <Col lg={7}>
+                    <Col lg={6}>
                       <GatsbyImage
                         image={item.logo}
                         alt={item.title}
@@ -54,8 +57,16 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
                       )}
 
                       <h2 className="mb-2">{item.title}</h2>
-                      <h3 className="mb-3">{item.subtitle}</h3>
-                      {isHomepage && <p>{item.excerpt}</p>}
+                      <h3 className="mb-4">{item.subtitle}</h3>
+                      <p>{item.excerpt}</p>
+                      <Button
+                        as={Link}
+                        to={item.slug}
+                        variant="light"
+                        className="mb-lg-0 mb-6 mb-md-4 mt-4"
+                      >
+                        Full case study
+                      </Button>
                     </Col>
                   </Row>
                 </Col>
@@ -69,17 +80,6 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             <MDXRenderer images={item.embeddedImages}>
               {section.body}
             </MDXRenderer>
-          </Container>
-        )}
-
-        {!isHomepage && (
-          <Container>
-            <TwoColumnSection title="Situation">
-              {item.situation}
-            </TwoColumnSection>
-            <TwoColumnSection title="Strategy">
-              {item.strategy}
-            </TwoColumnSection>
           </Container>
         )}
       </div>

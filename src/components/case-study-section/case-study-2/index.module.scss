@@ -14,6 +14,38 @@ $line-height: 50px;
   }
 }
 
+.logoImage img {
+  max-height: 90px;
+  width: auto;
+}
+
+.marginTop {
+  display: none;
+  @include media-breakpoint-down(lg) {
+    margin-top: -7rem;
+    display: block;
+  }
+}
+
+.mobileBackground {
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.greyLogo img {
+  filter: invert(17%) brightness(88%) contrast(60%);
+  max-height: 90px;
+  width: auto;
+}
+
 .line {
   height: 2px;
   background-color: $secondary;

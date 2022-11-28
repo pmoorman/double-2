@@ -53,6 +53,15 @@
     width: 123px;
   }
 }
+
+.marginTop {
+  margin-top: -3rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
+}
+
 .mobileBackground {
   position: relative;
   @include media-breakpoint-down(lg) {

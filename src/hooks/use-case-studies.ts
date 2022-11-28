@@ -45,8 +45,6 @@ export const useCaseStudies = () => {
               frontmatter {
                 title
                 subtitle
-                situation
-                strategy
                 excerpt
                 logo {
                   childImageSharp {
@@ -63,7 +61,6 @@ export const useCaseStudies = () => {
                 section {
                   type
                   on_homepage
-                  hide_arrow
                   quote {
                     content
                     name
@@ -77,6 +74,8 @@ export const useCaseStudies = () => {
                   }
                 }
                 featured
+                featured_subtitle
+                featured_title
                 featured_thumbnail {
                   childImageSharp {
                     gatsbyImageData(
@@ -100,8 +99,6 @@ export const useCaseStudies = () => {
     const {
       title,
       subtitle,
-      situation,
-      strategy,
       excerpt,
       logo,
       weight,
@@ -111,6 +108,8 @@ export const useCaseStudies = () => {
       section = {},
       featured,
       featured_thumbnail,
+      featured_subtitle,
+      featured_title,
     } = childMdx.frontmatter;
 
     const sectionNode = sections.edges.find(
@@ -125,8 +124,6 @@ export const useCaseStudies = () => {
       slug: `/case-studies/${relativeDirectory}`,
       title: title || "",
       subtitle: subtitle || "",
-      situation: situation || "",
-      strategy: strategy || "",
       excerpt: excerpt || "",
       logo: getImage(logo),
       weight,
@@ -140,10 +137,15 @@ export const useCaseStudies = () => {
         image_url: section.image.publicURL,
       },
       featured: !!featured,
+      featured_subtitle: featured_subtitle || "",
+      featured_title: featured_title || "",
       featured_thumbnail: featured_thumbnail
         ? getImage(featured_thumbnail)
         : undefined,
       hero_image: "",
+      body_image: "",
+      process_graph: "",
+      process_subtitle: "",
       how_we_did_it: "",
       results: {
         body: "",
