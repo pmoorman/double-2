@@ -38,7 +38,7 @@ members:
   - name: Dominik Kondziela
     title: Mr Critical
     location: Amsterdam
-    image: ./dominik_kondziela.png
+    image: ./dominik.png
 
   - name: Reka Szendi
     title: Reking machine
@@ -48,7 +48,7 @@ members:
   - name: Zbyszek Trzeciak
     title: Zee-dog
     location: Gdynia
-    image: ./zbyszek.jpeg
+    image: ./zbyszek.png
 
   - name: Dennis Amoey
     title: The Hair God
