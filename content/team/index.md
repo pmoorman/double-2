@@ -3,47 +3,47 @@ members:
   - name: Pieter Moorman
     title: El Captain
     location: Sailing
-    image: ./pieter_moorman.jpg
+    image: ./pieter_moorman.png
 
   - name: Caspar Lusink
     title: Señor Pragmatic
     location: Indonesia
-    image: ./caspar.jpeg
+    image: ./caspar.png
 
   - name: Louise de Sadeleer
     title: Philosophical Debater
     location: Amsterdam
-    image: ./louise_de_sadeleer.jpg
+    image: ./louise_de_sadeleer.png
 
   - name: Willem Hoogslag
     title: Witty Wordsmith
     location: Utrecht
-    image: ./willem.jpeg
+    image: ./willem.png
 
   - name: Tracey Halloran
     title: Poetic Painter
     location: Porto
-    image: ./tracey.jpeg
+    image: ./tracey.png
 
   - name: Carine Engbers
     title: Cycling Singer
     location: Amsterdam
-    image: ./carine_engbers.jpg
+    image: ./carine.png
 
   - name: Naveed Tariq
     title: Straight Talker
     location: Pakistan
-    image: ./naveed_tariq.jpg
+    image: ./naveed_tariq.png
 
   - name: Dominik Kondziela
     title: Mr Critical
     location: Amsterdam
-    image: ./dominik_kondziela.jpg
+    image: ./dominik_kondziela.png
 
   - name: Reka Szendi
     title: Reking machine
     location: Bali
-    image: ./reka.jpeg
+    image: ./reka.png
 
   - name: Zbyszek Trzeciak
     title: Zee-dog
@@ -53,5 +53,5 @@ members:
   - name: Dennis Amoey
     title: The Hair God
     location: Amsterdam
-    image: ./dennis.jpeg
+    image: ./dennis.png
 ---
