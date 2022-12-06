@@ -2,6 +2,7 @@ import * as React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
+import hero from "./hero.svg";
 import cn from "classnames";
 
 import { useTeam } from "@app/hooks";
@@ -45,7 +46,7 @@ const AboutPage = () => {
               </Button> */}
             </Col>
             <Col md={4} className="text-lg-end d-none d-lg-block d-md-block">
-              <StaticImage src="./hero.svg" alt="Growth" />
+              <img src={hero} alt="Growth" />
             </Col>
           </Row>
         </Container>
@@ -71,20 +72,32 @@ const AboutPage = () => {
             className="d-flex justify-content-lg-center justify-content-end mb-lg-0 mb-4"
           >
             <svg
-              width="136"
-              height="101"
-              viewBox="0 0 136 101"
+              width="96"
+              height="96"
+              viewBox="0 0 96 96"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M61.2307 86.2599C61.2307 86.2599 81.5139 67.2547 87.4857 52.005C95.0062 32.8002 87.4857 7.33719e-06 87.4857 7.33719e-06L3.34326 -1.87765e-08C3.34326 -1.87765e-08 -4.17732 32.8002 3.34325 52.005C9.31504 67.2547 29.5983 86.2599 29.5983 86.2599L29.5983 101L61.2307 101L61.2307 86.2599Z"
+                d="M13.3728 13.2024L47.9445 47.7765L35.2915 95.0044L0.719712 60.4304L13.3728 13.2024Z"
                 fill="#387CD3"
+                stroke="#2A2F45"
+                stroke-width="0.666667"
+                stroke-linejoin="round"
               />
               <path
-                d="M106.282 86.2599L105.598 85.5302L105.282 85.8265L105.282 86.2599L105.282 100L75.649 100L75.649 86.2599L75.649 85.8265L75.3328 85.5302L74.649 86.2599L75.3327 85.5302L75.3322 85.5297L75.3298 85.5274L75.3195 85.5177L75.2774 85.478C75.2635 85.4649 75.247 85.4493 75.2281 85.4314C75.1958 85.4007 75.1562 85.3632 75.1096 85.3187C74.9617 85.1778 74.7431 84.9683 74.4622 84.6958C73.9005 84.1508 73.0899 83.3538 72.098 82.3494C70.1136 80.34 67.4061 77.503 64.514 74.1931C58.7053 67.5454 52.2433 59.0922 49.3252 51.6403C45.6548 42.2676 45.6319 29.4659 46.5699 18.889C47.0369 13.6231 47.7376 8.95152 48.3216 5.5966C48.6136 3.91966 48.8761 2.57301 49.0653 1.64712C49.1156 1.40112 49.1607 1.18485 49.1998 1L131.731 1.00001C131.77 1.18485 131.815 1.40112 131.865 1.64712C132.054 2.57302 132.317 3.91967 132.609 5.59661C133.193 8.95152 133.894 13.6231 134.361 18.889C135.299 29.4659 135.276 42.2676 131.605 51.6403C128.687 59.0922 122.225 67.5454 116.417 74.1931C113.524 77.5029 110.817 80.34 108.833 82.3494C107.841 83.3538 107.03 84.1507 106.468 84.6958C106.188 84.9683 105.969 85.1778 105.821 85.3187C105.747 85.3892 105.691 85.4425 105.653 85.478L105.611 85.5177L105.601 85.5274L105.598 85.5296L105.598 85.5301L106.282 86.2599Z"
-                stroke="#1C2328"
-                strokeWidth="2"
+                d="M47.9466 47.7765L95.1736 35.1205L82.5175 82.3475L35.2904 95.0036L47.9466 47.7765Z"
+                fill="#2A2F45"
+                stroke="#2A2F45"
+                stroke-width="0.666667"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.3713 13.2078L60.5992 0.554719L95.1733 35.1265L47.9453 47.7796L13.3713 13.2078Z"
+                fill="#F4F4F4"
+                stroke="#2A2F45"
+                stroke-width="0.666667"
+                stroke-linejoin="round"
               />
             </svg>
           </Col>
@@ -113,14 +126,14 @@ const AboutPage = () => {
       </Container>
 
       {/* Images */}
-      <div className={cn(styles.images, "bg-secondary")}>
+      <div className={cn(styles.images)}>
         <Container className="pt-lg-8 py-4 pb-lg-6">
           <Row>
             {/* Image 1 */}
             <Col md={12}>
-              <Parallax scale={[1, 1.3, "easeInQuad"]}>
+              <Parallax scale={[1, 1.2, "easeInQuad"]}>
                 <Image>
-                  <StaticImage src="./about_img_1.jpg" alt="TODO" />
+                  <StaticImage src="./about_img_1.jpeg" alt="TODO" />
                 </Image>
               </Parallax>
 
@@ -131,29 +144,21 @@ const AboutPage = () => {
                     "d-flex justify-content-center text-white"
                   )}
                 >
-                  <h2 className="text-end">
-                    We’re keen explorers.
-                    <div className="mt-lg-3 mt-2">
-                      We’re Double.
-                      <StaticImage
-                        className="ms-4"
-                        src="./about_img_overlay.svg"
-                        alt="TODO"
-                      />
-                    </div>
-                  </h2>
+                  <h2 className="text-end">Growth experts</h2>
                 </div>
               </div>
             </Col>
           </Row>
           <div className="d-flex justify-content-between">
             <div className={styles.img_2}>
-              <StaticImage src="./about_img_2.jpg" alt="Idea generators" />
-              <h3 className="mt-3 text-white">Idea generators</h3>
+              <Parallax speed={-10}>
+                <StaticImage src="./about_img_2.jpeg" alt="Smiling savants" />
+                <h3 className="mt-3 text-white">Smiling savants</h3>
+              </Parallax>
             </div>
             <div className={styles.img_3}>
               <Parallax speed={10}>
-                <StaticImage src="./about_img_3.jpg" alt="Curious ponderers" />
+                <StaticImage src="./about_img_3.jpeg" alt="Curious ponderers" />
                 <h3 className="mt-3 text-white">Curious ponderers</h3>
               </Parallax>
             </div>
@@ -161,36 +166,25 @@ const AboutPage = () => {
           <div className="d-flex justify-content-between">
             <div className={styles.img_4}>
               <Parallax speed={20}>
-                <StaticImage
-                  src="./about_img_4.jpg"
-                  alt="Caring collaborators"
-                />
-                <h3 className="mt-3 text-white">Caring collaborators</h3>
+                <StaticImage src="./about_img_4.jpeg" alt="Model movers" />
+                <h3 className="mt-3 text-white">Model movers</h3>
               </Parallax>
             </div>
             <div className={styles.img_5}>
               <Parallax speed={30}>
-                <StaticImage src="./about_img_5.jpg" alt="Part-time jokers" />
+                <StaticImage src="./about_img_5.jpeg" alt="Part-time jokers" />
                 <h3 className="mt-3 text-white">Part-time jokers</h3>
               </Parallax>
             </div>
           </div>
           <div className={styles.img_6}>
-            <Parallax speed={0}>
-              <StaticImage src="./about_img_6.jpg" alt="Solid supporters" />
-              <h3 className="mt-3 text-white">Solid supporters</h3>
+            <Parallax speed={-10}>
+              <StaticImage
+                src="./about_img_6.jpeg"
+                alt="Curious collaborators"
+              />
+              <h3 className="mt-3 text-white">Curious collaborators</h3>
             </Parallax>
-          </div>
-          <div className={styles.img_7}>
-            <div>
-              <Parallax speed={-10}>
-                <StaticImage
-                  src="./about_img_7.jpg"
-                  alt="Passionate team players"
-                />
-                <h3 className="mt-3 text-white">Passionate team players</h3>
-              </Parallax>
-            </div>
           </div>
         </Container>
       </div>
