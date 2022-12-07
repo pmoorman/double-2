@@ -64,7 +64,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
           <Container>
             <div className="d-flex justify-content-center align-items-center">
               <Parallax scale={[0.7, 1, "easeInQuad"]}>
-                <GatsbyImage image={heroImage} alt="" />
+                <GatsbyImage image={heroImage} alt={title} />
               </Parallax>
             </div>
           </Container>

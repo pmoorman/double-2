@@ -50,7 +50,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               image={
                 heroImage && (
                   <Image>
-                    <GatsbyImage image={heroImage} alt="" />
+                    <GatsbyImage image={heroImage} alt={title} />
                   </Image>
                 )
               }
@@ -58,7 +58,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               {logoImage && (
                 <GatsbyImage
                   image={logoImage}
-                  alt=""
+                  alt={title}
                   className={styles.logoImage}
                 />
               )}
