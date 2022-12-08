@@ -109,12 +109,12 @@ small {
 
 .polygonIcon {
   background: url(./polygon.svg) no-repeat;
-  width: 128px;
+  width: 80px;
   height: 108px;
 
   @include media-breakpoint-down(lg) {
     background-size: contain;
-    width: 94px;
+    width: 80px;
     height: 98px;
   }
 }

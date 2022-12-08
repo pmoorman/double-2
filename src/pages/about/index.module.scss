@@ -59,9 +59,9 @@
 
 .img_6 {
   top: -60px;
-  width: 65%;
+  width: 50%;
   @include media-breakpoint-down(lg) {
-    width: 55%;
+    width: 50%;
   }
   @include media-breakpoint-down(md) {
     width: 50%;

@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
 import hero from "./hero.svg";
+import icon from "./intro.svg";
 import cn from "classnames";
 
 import { useTeam } from "@app/hooks";
@@ -71,35 +72,7 @@ const AboutPage = () => {
             lg={2}
             className="d-flex justify-content-lg-center justify-content-end mb-lg-0 mb-4"
           >
-            <svg
-              width="96"
-              height="96"
-              viewBox="0 0 96 96"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.3728 13.2024L47.9445 47.7765L35.2915 95.0044L0.719712 60.4304L13.3728 13.2024Z"
-                fill="#387CD3"
-                stroke="#2A2F45"
-                stroke-width="0.666667"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M47.9466 47.7765L95.1736 35.1205L82.5175 82.3475L35.2904 95.0036L47.9466 47.7765Z"
-                fill="#2A2F45"
-                stroke="#2A2F45"
-                stroke-width="0.666667"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M13.3713 13.2078L60.5992 0.554719L95.1733 35.1265L47.9453 47.7796L13.3713 13.2078Z"
-                fill="#F4F4F4"
-                stroke="#2A2F45"
-                stroke-width="0.666667"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <img src={icon} className="pt-2" />
           </Col>
         </Row>
         <Row>
