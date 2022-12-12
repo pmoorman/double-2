@@ -13,7 +13,7 @@ members:
   - name: Louise de Sadeleer
     title: Philosophical Debater
     location: Amsterdam
-    image: ./louise_de_sadeleer.jpeg
+    image: ./louise_de_sadeleer.png
 
   - name: Willem Hoogslag
     title: Witty Wordsmith
@@ -26,7 +26,7 @@ members:
     image: ./tracey.jpeg
 
   - name: Carine Engbers
-    title: Cycling Singer
+    title: The Golden Boot
     location: Amsterdam
     image: ./carine.jpeg
 
