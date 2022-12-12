@@ -25,7 +25,7 @@ export const SEO: FC<SEOProps> = ({
   } = useSiteMetadata();
   const { pathname } = useLocation();
   const currentUrl = siteUrl + pathname;
-  const featuredImageUrl = siteUrl + "/images/double_logo.png";
+  const featuredImageUrl = siteUrl + "/images/logo.png";
   const _title = title || siteTitle;
   const _description = description || siteDescription;
 
