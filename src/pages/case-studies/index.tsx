@@ -39,9 +39,7 @@ const CaseStudiesPage = () => {
               </Col>
               <Col lg="5" md="4">
                 <div className="d-flex justify-content-center">
-                  <Link to="/">
-                    <img src={hero} />
-                  </Link>
+                  <img src={hero} />
                 </div>
               </Col>
             </Row>

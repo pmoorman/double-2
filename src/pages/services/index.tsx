@@ -3,6 +3,7 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { Hero, Image, Link, SEO } from "@app/components";
+import hero from "./union.svg";
 
 import * as styles from "./index.module.scss";
 
@@ -18,7 +19,7 @@ const ServicesPage = () => {
               ads expert, a sales funnel architect, or a product marketer."
           buttonText="Get in touch"
           buttonLink="/contact"
-          image={<StaticImage src="./union.svg" alt="Union" />}
+          image={<img src={hero} alt="Union" />}
         />
 
         <div>

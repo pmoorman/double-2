@@ -1,11 +1,7 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
-import {
-  Link,
-  CaseStudySection,
-  VideoBackground,
-} from "@app/components";
+import { Link, CaseStudySection, VideoBackground } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
@@ -78,7 +74,11 @@ const HomePage = () => {
                     build the systems to tell their stories
                   </h2>
                 </Col>
-                <Col lg={2} md={2} className="d-lg-block d-md-block d-none">
+                <Col
+                  lg={2}
+                  md={2}
+                  className="d-lg-flex d-md-flex d-none justify-content-center"
+                >
                   <div className={`mt-4 + ${styles.polygonIcon}`}></div>
                 </Col>
                 <Col lg={5} md={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">

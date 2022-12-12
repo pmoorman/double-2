@@ -25,15 +25,14 @@
   .lines {
     background: url(./line.svg) no-repeat;
     width: 70%;
-    height: 188px;
-    top: 50%;
+    height: 180px;
+    top: 59%;
     transform: translateY(-50%);
-    margin-top: 3px;
     z-index: 2;
     position: absolute;
 
     @include media-breakpoint-down(xl) {
-      margin-top: 30px;
+      margin-top: 27.5px;
     }
 
     @include media-breakpoint-down(lg) {
@@ -43,6 +42,9 @@
       position: relative;
       width: 100%;
       transform: none;
+      @include media-breakpoint-down(md) {
+        height: 150px;
+      }
     }
 
     & + div {
