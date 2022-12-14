@@ -135,11 +135,13 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </Container>
       </div>
 
-      <Container>
-        <div className="mt-lg-7 mt-5">
-          <h2 className="mb-5 d-flex justify-content-center">Milestones</h2>
-        </div>
-      </Container>
+      {milestones && (
+        <Container>
+          <div className="mt-lg-7 mt-5">
+            <h2 className="mb-5 d-flex justify-content-center">Milestones</h2>
+          </div>
+        </Container>
+      )}
 
       {milestones?.map((m, i) => {
         const image = getImage(m.image);
