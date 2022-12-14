@@ -26,7 +26,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     process_subtitle,
     process_graph,
     body_image,
-    logo,
+    page_logo_image,
     stats,
     how_we_did_it,
     results,
@@ -37,7 +37,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const bodyImage = getImage(body_image);
   const processGraph = getImage(process_graph);
   const heroImage = getImage(hero_image);
-  const logoImage = getImage(logo);
+  const pageLogo = getImage(page_logo_image);
   const resultsImage = getImage(results.image);
   ``;
   return (
@@ -55,9 +55,9 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 )
               }
             >
-              {logoImage && (
+              {pageLogo && (
                 <GatsbyImage
-                  image={logoImage}
+                  image={pageLogo}
                   alt={title}
                   className={styles.logoImage}
                 />
@@ -204,14 +204,14 @@ export const pageQuery = graphql`
               gatsbyImageData
             }
           }
+          page_logo_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           stats {
             title
             value
-          }
-          logo {
-            childImageSharp {
-              gatsbyImageData(height: 128)
-            }
           }
           results {
             body

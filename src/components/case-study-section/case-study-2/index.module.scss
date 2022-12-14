@@ -17,6 +17,7 @@ $line-height: 50px;
 .logoImage img {
   max-height: 90px;
   width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .marginTop {

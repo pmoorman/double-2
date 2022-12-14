@@ -19,7 +19,14 @@
   margin-bottom: 1.3rem;
 
   img {
-    filter: invert(17%) brightness(88%) contrast(60%);
+    max-height: 90px;
+  }
+}
+
+.logoImageColored {
+  margin-bottom: 1.3rem;
+
+  img {
     max-height: 90px;
   }
 }

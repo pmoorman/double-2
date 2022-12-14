@@ -18,6 +18,7 @@ export interface CaseStudy {
   // page
   hero_image: any;
   body_image: any;
+  page_logo_image: any;
   process_graph: any;
   process_subtitle: string;
   how_we_did_it: string;

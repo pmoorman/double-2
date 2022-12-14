@@ -144,6 +144,7 @@ export const useCaseStudies = () => {
         : undefined,
       hero_image: "",
       body_image: "",
+      page_logo_image: "",
       process_graph: "",
       process_subtitle: "",
       how_we_did_it: "",
