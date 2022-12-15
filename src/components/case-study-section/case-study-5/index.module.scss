@@ -12,17 +12,13 @@
 .logoImage img {
   max-height: 90px;
   width: auto;
+  margin-bottom: 0.5rem;
+
+  @include media-breakpoint-down(md) {
+    max-height: 60px;
+  }
 }
 
-.growforge_logo {
-  @include media-breakpoint-down(lg) {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  @include media-breakpoint-down(md) {
-    width: 123px;
-  }
-}
 .mobileBackground {
   position: relative;
   @include media-breakpoint-down(lg) {
