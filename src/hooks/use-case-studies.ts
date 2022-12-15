@@ -36,7 +36,7 @@ export const useCaseStudies = () => {
           relativePath: { glob: "**/*/index.mdx" }
           extension: { eq: "mdx" }
         }
-        sort: { fields: childMdx___frontmatter___weight }
+        sort: { fields: [childMdx___frontmatter___weight] }
       ) {
         edges {
           node {
@@ -52,6 +52,7 @@ export const useCaseStudies = () => {
                   }
                 }
                 weight
+                homepageweight
                 has_single_page
                 categories
                 stats {
@@ -102,6 +103,7 @@ export const useCaseStudies = () => {
       excerpt,
       logo,
       weight,
+      homepageweight,
       has_single_page,
       categories,
       stats,
@@ -127,6 +129,7 @@ export const useCaseStudies = () => {
       excerpt: excerpt || "",
       logo: getImage(logo),
       weight,
+      homepageweight,
       categories: categories || [],
       has_single_page: has_single_page || false,
       stats: stats || [],
@@ -144,6 +147,7 @@ export const useCaseStudies = () => {
         : undefined,
       hero_image: "",
       body_image: "",
+      page_logo_image: "",
       process_graph: "",
       process_subtitle: "",
       how_we_did_it: "",

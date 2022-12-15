@@ -1,9 +1,8 @@
 import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Link, TwoColumnSection } from "@app/components";
+import { Link } from "@app/components";
 
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
@@ -54,32 +53,30 @@ export const CaseStudy1: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
                     </Button>
                   </Col>
 
-                  {isHomepage && (
-                    <Col lg={6} md={6} className="mt-9  flex relative">
-                      <div className={styles.rombik}>
-                        <div className={styles.parent}>
-                          <svg viewBox="0 0 300 300">
-                            <g
-                              transform="translate(0,300) scale(0.1,-0.1)"
-                              fill="#387CD3"
-                            >
-                              <path d="M745 2250 l-750 -750 753 -753 752 -752 752 752 753 753 -750 750 c-412 412 -752 750 -755 750 -3 0 -343 -338 -755 -750z" />
-                            </g>
-                          </svg>
-                        </div>
-                        {item.stats && (
-                          <div className={styles.numberStat}>
-                            {item.stats.map((s) => (
-                              <div className="mb-5" key={s.title}>
-                                <div>{s.value}</div>
-                                <span>{s.title}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
+                  <Col lg={6} md={6} className="mt-9  flex relative">
+                    <div className={styles.rombik}>
+                      <div className={styles.parent}>
+                        <svg viewBox="0 0 300 300">
+                          <g
+                            transform="translate(0,300) scale(0.1,-0.1)"
+                            fill="#387CD3"
+                          >
+                            <path d="M745 2250 l-750 -750 753 -753 752 -752 752 752 753 753 -750 750 c-412 412 -752 750 -755 750 -3 0 -343 -338 -755 -750z" />
+                          </g>
+                        </svg>
                       </div>
-                    </Col>
-                  )}
+                      {item.stats && (
+                        <div className={styles.numberStat}>
+                          {item.stats.map((s) => (
+                            <div className="mb-5" key={s.title}>
+                              <div>{s.value}</div>
+                              <span>{s.title}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </Col>
                 </Row>
               </Col>
             </Row>

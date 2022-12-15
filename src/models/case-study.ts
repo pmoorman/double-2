@@ -10,6 +10,7 @@ export interface CaseStudy {
   excerpt: string;
   logo: any;
   weight?: number;
+  homepageweight?: number;
   has_single_page?: boolean;
   categories: string[];
   stats?: CaseStudyStats[];
@@ -18,6 +19,7 @@ export interface CaseStudy {
   // page
   hero_image: any;
   body_image: any;
+  page_logo_image: any;
   process_graph: any;
   process_subtitle: string;
   how_we_did_it: string;

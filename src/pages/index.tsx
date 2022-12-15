@@ -11,7 +11,9 @@ import heroVideo from "./index-assets/hero.mp4";
 
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
-  const caseStudies = getHomepageCaseStudies(_caseStudies);
+  const caseStudies = getHomepageCaseStudies(_caseStudies).sort(
+    (a, b) => (b.homepageweight || 0) - (a.homepageweight || 0)
+  );
 
   return (
     <>
