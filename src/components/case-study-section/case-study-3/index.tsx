@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Link, BlockQuote, TwoColumnSection } from "@app/components";
+import { Link } from "@app/components";
 
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
@@ -14,14 +14,12 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
   return (
     <>
       <div className="mb-lg-0 mb-5">
-        {isHomepage && (
-          <Container>
-            <div className={styles.line}></div>
-            <div className="position-relative">
-              <div className={styles.polygonRightIcon}></div>
-            </div>
-          </Container>
-        )}
+        <Container>
+          <div className={styles.line}></div>
+          <div className="position-relative">
+            <div className={styles.polygonRightIcon}></div>
+          </div>
+        </Container>
         <div className="position-relative">
           <div
             className={`caseStudyBgMobile + ${styles.mobileBackground}`}
@@ -30,7 +28,6 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             }}
           ></div>
           <Container className="mt-lg-6 mt-0 position-relative">
-            {!isHomepage && <div className={styles.marginTop}></div>}
             <div
               className="bg_image"
               style={{
@@ -38,7 +35,7 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
               }}
             ></div>
             <Row className="pb-lg-8 pt-lg-6 pt-2 pb-9">
-              {isHomepage && <div className={styles.rightLine}></div>}
+              <div className={styles.rightLine}></div>
               <div
                 className={`text-white position-relative + ${styles.growforgeRight}`}
               >
@@ -74,14 +71,6 @@ export const CaseStudy3: FC<CaseStudySectionProps> = ({ item, isHomepage }) => {
             </Row>
           </Container>
         </div>
-
-        {section.body && (
-          <Container>
-            <MDXRenderer images={item.embeddedImages}>
-              {section.body}
-            </MDXRenderer>
-          </Container>
-        )}
       </div>
     </>
   );
