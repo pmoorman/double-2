@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
+import { Link } from "@app/components";
+
 import { CaseStudySectionProps } from "..";
 import * as styles from "./index.module.scss";
 
@@ -41,6 +43,16 @@ export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
                       <h2 className="mb-2">{item.title}</h2>
                       <h3 className="mb-4">{item.subtitle}</h3>
                       <p>{item.excerpt}</p>
+                      {item.has_single_page && (
+                        <Button
+                          as={Link}
+                          to={item.slug}
+                          variant="light"
+                          className="mb-lg-0 mb-6 mb-md-4 mt-4"
+                        >
+                          Full case study
+                        </Button>
+                      )}
                     </Col>
                   </Row>
                 </Col>
