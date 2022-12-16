@@ -33,7 +33,7 @@ const OglviyConcept2 = () => {
             <Container className="d-block d-lg-none">
               <div>
                 <h1 className="mb-6 mt-4 mt-lg-0 mb-lg-5">
-                  Master the 40 immutable laws of growth
+                  Master the 38 immutable laws of growth
                 </h1>
                 <p>
                   As a growth agency, we have worked with some of the
