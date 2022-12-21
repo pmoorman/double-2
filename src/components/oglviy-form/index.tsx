@@ -33,7 +33,7 @@ export const OgilvyForm: FC<OgilvyFormProps> = ({
       </Row> */}
       <Row>
         <Col md="12" className="mt-5">
-          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Label htmlFor="email">Business Email</Form.Label>
           <Form.Control
             required
             type="email"
