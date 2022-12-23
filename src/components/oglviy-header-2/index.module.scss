@@ -1,0 +1,65 @@
+.heading {
+  position: absolute;
+  top: 146px;
+  bottom: 0;
+  width: 37%;
+  color: white;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: inline-block;
+    }
+  }
+}
+
+.blueSection {
+  background-color: $secondary;
+  width: 50%;
+  color: white;
+  position: relative;
+  min-height: 90vh;
+
+  @include media-breakpoint-down(xl) {
+    min-height: 120vh;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 24px 0;
+    width: 100%;
+    min-height: auto;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+
+  ::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  label {
+    color: white;
+    text-align: left;
+    display: inherit;
+  }
+
+  input {
+    color: rgba(255, 255, 255, 0.5);
+
+    &:focus {
+      color: rgba(255, 255, 255, 0.8);
+      box-shadow: none;
+    }
+  }
+}
