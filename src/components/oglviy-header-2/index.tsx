@@ -26,9 +26,9 @@ export const OgilvyHeader2: FC<OgilvyHeader2Props> = ({ dripId }) => {
         </Col>
         <Col md={6} className={cn(styles.blueSection, "ps-0")}>
           <Container>
-            <Row className="p-md-7 text-white">
+            <Row className="px-md-7 py-md-5 text-white">
               <Col md={12}>
-                <h1 className="mb-3 mt-4 mt-lg-0 mb-lg-5">
+                <h1 className="mb-5 mt-4 mt-lg-0 mb-lg-5">
                   38 laws to avoid startup disaster
                 </h1>
               </Col>
@@ -41,7 +41,7 @@ export const OgilvyHeader2: FC<OgilvyHeader2Props> = ({ dripId }) => {
                   }}
                   recaptchaProps={{
                     theme: "dark",
-                    className: "mt-5",
+                    className: "mt-3 mt-md-5",
                   }}
                 />
               </Col>

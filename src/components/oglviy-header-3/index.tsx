@@ -15,7 +15,10 @@ export const OgilvyHeader3: FC<OgilvyHeader3Props> = ({ dripId }) => {
   return (
     <div>
       <Row>
-        <Col md={4} className={cn(styles.blueSection, "pe-0")}>
+        <Col
+          md={4}
+          className={cn(styles.blueSection, "pe-0 order-2 order-md-1")}
+        >
           <Container>
             <Row className="p-md-7 text-white">
               <Col md={12}>
@@ -39,7 +42,7 @@ export const OgilvyHeader3: FC<OgilvyHeader3Props> = ({ dripId }) => {
             </Row>
           </Container>
         </Col>
-        <Col md={8} className="ps-0">
+        <Col md={8} className="ps-0 order-1 order-md-2">
           <StaticImage
             src="./ogl-image-2.jpg"
             alt="hero image"
