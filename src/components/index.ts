@@ -24,6 +24,8 @@ export * from "./block-quote";
 export * from "./blog-post-grid-item";
 export * from "./image";
 export * from "./oglviy-header";
+export * from "./oglviy-header-2";
+export * from "./oglviy-header-3";
 export * from "./oglviy-footer";
 export * from "./oglviy-image";
 export * from "./oglviy-form";
