@@ -15,16 +15,23 @@ export const OgilvyHeader2: FC<OgilvyHeader2Props> = ({ dripId }) => {
   return (
     <div>
       <Row>
-        <Col md={6} className="pe-0">
+        <Col lg={6} className="pe-0">
           <StaticImage
             src="./ogl-image.jpg"
             alt="hero image"
             objectFit="cover"
             objectPosition={"50% 50%"}
-            className="h-100"
+            className="h-100 d-none d-md-block"
+          />
+          <StaticImage
+            src="./ogl-image-mobile.jpg"
+            alt="hero image"
+            objectFit="cover"
+            objectPosition={"50% 50%"}
+            className="h-100 d-md-none"
           />
         </Col>
-        <Col md={6} className={cn(styles.blueSection, "ps-0")}>
+        <Col lg={6} className={cn(styles.blueSection, "ps-0")}>
           <Container>
             <Row className="px-md-7 py-md-5 text-white">
               <Col md={12}>
