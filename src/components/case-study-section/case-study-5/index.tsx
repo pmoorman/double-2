@@ -37,7 +37,7 @@ export const CaseStudy5: FC<CaseStudySectionProps> = ({ item }) => {
                         alt={item.title}
                         className={styles.logoImage}
                       />
-                      <small className="mb-2 mt-lg-4 mt-2">
+                      <small className="mb-2 mt-lg-3 mt-2">
                         {item.categories.join(" | ")}
                       </small>
                       <h2 className="mb-2">{item.title}</h2>
