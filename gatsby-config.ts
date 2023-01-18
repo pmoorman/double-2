@@ -1,6 +1,7 @@
+import { addTrailingSlash } from "@app/utils";
 import type { GatsbyConfig } from "gatsby";
 
-const siteUrl = "https://www.double-agency.com";
+const siteUrl = "https://double-agency.com";
 
 const config: GatsbyConfig = {
   siteMetadata: {
