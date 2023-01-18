@@ -37,7 +37,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-layout",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        exclude: ["/short/signup"],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

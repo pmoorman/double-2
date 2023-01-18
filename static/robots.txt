@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /elite-course
+Disallow: /short/signup
+Disallow: /academy
