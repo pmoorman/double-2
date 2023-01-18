@@ -106,7 +106,11 @@ const AboutPage = () => {
             <Col md={12}>
               <Parallax scale={[1, 1.2, "easeInQuad"]}>
                 <Image>
-                  <StaticImage src="./about_img_1.jpeg" alt="TODO" />
+                  <StaticImage
+                    width={1300}
+                    src="./about_img_1.jpeg"
+                    alt="About image 1"
+                  />
                 </Image>
               </Parallax>
 
@@ -125,13 +129,21 @@ const AboutPage = () => {
           <div className="d-flex justify-content-between">
             <div className={styles.img_2}>
               <Parallax speed={-10}>
-                <StaticImage src="./about_img_2.jpeg" alt="Smiling savants" />
+                <StaticImage
+                  width={460}
+                  src="./about_img_2.jpeg"
+                  alt="Smiling savants"
+                />
                 <h3 className="mt-3 text-white">Smiling savants</h3>
               </Parallax>
             </div>
             <div className={styles.img_3}>
               <Parallax speed={10}>
-                <StaticImage src="./about_img_3.jpeg" alt="Curious ponderers" />
+                <StaticImage
+                  width={460}
+                  src="./about_img_3.jpeg"
+                  alt="Curious ponderers"
+                />
                 <h3 className="mt-3 text-white">Curious ponderers</h3>
               </Parallax>
             </div>
@@ -139,13 +151,21 @@ const AboutPage = () => {
           <div className="d-flex justify-content-between">
             <div className={styles.img_4}>
               <Parallax speed={20}>
-                <StaticImage src="./about_img_4.jpeg" alt="Model movers" />
+                <StaticImage
+                  width={400}
+                  src="./about_img_4.jpeg"
+                  alt="Model movers"
+                />
                 <h3 className="mt-3 text-white">Model movers</h3>
               </Parallax>
             </div>
             <div className={styles.img_5}>
               <Parallax speed={30}>
-                <StaticImage src="./about_img_5.jpeg" alt="Part-time jokers" />
+                <StaticImage
+                  width={460}
+                  src="./about_img_5.jpeg"
+                  alt="Part-time jokers"
+                />
                 <h3 className="mt-3 text-white">Part-time jokers</h3>
               </Parallax>
             </div>
@@ -153,6 +173,7 @@ const AboutPage = () => {
           <div className={styles.img_6}>
             <Parallax speed={-10}>
               <StaticImage
+                width={650}
                 src="./about_img_6.jpeg"
                 alt="Curious collaborators"
               />
