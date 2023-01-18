@@ -1,9 +1,14 @@
 import React, { FC } from "react";
 import { GatsbyLinkProps, Link as GatsbyLink } from "gatsby";
 
+import { addTrailingSlash } from "@app/utils";
+
 export interface LinkProps extends GatsbyLinkProps<any> {}
 
-export const Link: FC<LinkProps> = ({ to, children, ref, ...rest }) => {
+export const Link: FC<LinkProps> = ({ to: _to, children, ref, ...rest }) => {
+  let to =
+    _to.includes("#") || _to.startsWith("http") ? _to : addTrailingSlash(_to);
+
   // External link
   if (
     to?.startsWith("http") ||
