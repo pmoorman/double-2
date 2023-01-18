@@ -35,7 +35,9 @@ export const SectionFeaturedArticles: FC<SectionFeaturedArticlesProps> = ({
         {posts.map((post) => (
           <Row className="py-4" key={post.title}>
             <Col lg="3" md="6" sm="6" xs="4">
-              {post.thumbnail && <GatsbyImage image={post.thumbnail} alt="" />}
+              {post.thumbnail && (
+                <GatsbyImage image={post.thumbnail} alt={post.title} />
+              )}
             </Col>
             <Col lg="9" md="6" sm="6" xs="8">
               <div className={styles.date}>
