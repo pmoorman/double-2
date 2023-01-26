@@ -57,13 +57,6 @@ export const OgilvyForm: FC<OgilvyFormProps> = ({
           value=""
         />
       </div>
-      <input
-        type="hidden"
-        name="tags[]"
-        id="tags_"
-        value="Ogilvy Q4 2022"
-        tabIndex={-1}
-      ></input>
 
       <ReCAPTCHA
         {...recaptchaProps}
