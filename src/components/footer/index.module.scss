@@ -1,37 +1,85 @@
 .footer {
+  background-color: $secondary;
+  color: #fff;
+  padding: 4.6rem 0 0 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 2.3rem 0 1.5rem 0;
+  }
+
+  .headerLogo {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2.68rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 1.5rem;
+    }
+
+    img {
+      height: 32px;
+    }
+
+    .linkedinIcon {
+      background: url(./linkedin.svg) no-repeat center;
+      height: 36px;
+      width: 36px;
+    }
+  }
+
   h4 {
     font-weight: 600;
   }
-}
-.footerLogo {
-  padding-top: 1rem;
-  padding-bottom: 1.25rem;
-
-  @include media-breakpoint-down(lg) {
-    text-align: right;
+  .roundedButton {
+    border-radius: 60px;
   }
 
-  & > * {
-    font-family: $font-family-monospace;
-    color: #000;
-    opacity: 0.5;
-    font-weight: 400;
-    font-size: 0.85;
+  .mapIcon {
+    background: url(./map.svg) no-repeat center;
+    height: 22px;
+    width: 17px;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
   }
-  & > a {
-    @include media-breakpoint-down(lg) {
-      padding: 0.5rem;
-      text-align: right;
+
+  h5 {
+    font-size: 0.85rem;
+  }
+
+  .partnersLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div > img {
+      max-width: 100%;
     }
-  }
-}
 
-@include media-breakpoint-down(lg) {
-  .mobileImage {
-    --g: #000, #0000 1deg 179deg, #000 180deg;
-    --mask: conic-gradient(from -135deg at top 20px left 20px, var(--g)) 0 0 /100%
-      100% no-repeat;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+    & > div:nth-child(1) {
+      margin-right: 3.5rem;
+      @include media-breakpoint-down(md) {
+        margin-right: 1rem;
+      }
+
+      img {
+        height: 27px;
+      }
+    }
+    & > div:nth-child(2) {
+      margin-right: 3rem;
+      @include media-breakpoint-down(md) {
+        margin-right: 1rem;
+      }
+
+      img {
+        height: 59px;
+      }
+    }
+
+    & > div:nth-child(3) img {
+      height: 33px;
+    }
   }
 }

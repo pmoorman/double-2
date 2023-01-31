@@ -3,13 +3,19 @@
     font-weight: 600;
   }
 }
-.footerLogo {
-  padding: 0.8rem 0;
-  & > * {
-    font-family: $font-family-monospace;
-    color: #000;
-    opacity: 0.5;
-    font-weight: 400;
-    font-size: 0.85;
+.FooterPolicy {
+  background-color: $secondary;
+  padding: 2rem 0;
+
+  a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 3rem;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
   }
 }
