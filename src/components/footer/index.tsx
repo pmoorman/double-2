@@ -55,13 +55,25 @@ export const Footer = () => {
             <h5 className="mb-1">Partners</h5>
             <div className={styles.partnersLogo}>
               <div>
-                <StaticImage src="./netlify.png" alt="Netlify logo" />
+                <StaticImage
+                  src="./netlify.png"
+                  objectFit="contain"
+                  alt="Netlify logo"
+                />
               </div>
               <div>
-                <StaticImage src="./google.png" alt="Google partner logo" />
+                <StaticImage
+                  src="./google.png"
+                  objectFit="contain"
+                  alt="Google partner logo"
+                />
               </div>
               <div>
-                <StaticImage src="./drip.png" alt="Drip logo" />
+                <StaticImage
+                  src="./drip.png"
+                  objectFit="contain"
+                  alt="Drip logo"
+                />
               </div>
             </div>
           </div>
