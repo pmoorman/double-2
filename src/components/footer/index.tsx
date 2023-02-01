@@ -58,7 +58,7 @@ export const Footer = () => {
                 <StaticImage src="./netlify.png" alt="Netlify logo" />
               </div>
               <div>
-                <StaticImage src="./Google.png" alt="Google partner logo" />
+                <StaticImage src="./google.png" alt="Google partner logo" />
               </div>
               <div>
                 <StaticImage src="./drip.png" alt="Drip logo" />
