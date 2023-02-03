@@ -11,7 +11,7 @@ const ServicesPage = () => {
   return (
     <>
       <SEO title="Services" />
-      <div>
+      <div className="mb-5">
         <Hero
           type={1}
           title="We’re a full-stack Growth Marketing agency"

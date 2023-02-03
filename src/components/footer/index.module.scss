@@ -23,9 +23,11 @@
     }
 
     .linkedinIcon {
-      background: url(./linkedin.svg) no-repeat center;
+      background: url(./linkedin.png) no-repeat center;
       height: 36px;
       width: 36px;
+      object-fit: contain;
+      background-size: contain;
     }
   }
 

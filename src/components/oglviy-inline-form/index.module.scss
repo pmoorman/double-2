@@ -1,0 +1,38 @@
+.inputGroup {
+  input {
+    background-color: #fff;
+    padding: 0.9rem;
+    border-bottom: none !important;
+    color: #626060;
+
+    @include media-breakpoint-down(md) {
+      width: auto !important;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: #fff;
+    }
+  }
+
+  button {
+    @include media-breakpoint-down(md) {
+      margin-top: 1rem;
+      border-radius: 0;
+    }
+  }
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+
+  img {
+    height: 24px;
+    padding-right: 1.3rem;
+  }
+}

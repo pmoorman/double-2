@@ -10,7 +10,6 @@ export const FooterPolicy = () => {
         <div className="d-flex flex-lg-row flex-md-row flex-column align-items-lg-center justify-content-end">
           <Link to="/legal/terms">Terms & Conditions</Link>
           <Link to="/legal/privacy-policy">Privacy Policy</Link>
-          <Link to="/legal/academy">The Academy</Link>
         </div>
       </Container>
     </div>

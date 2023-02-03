@@ -1,0 +1,42 @@
+.learnSection {
+  display: flex;
+  align-content: baseline;
+
+  @include media-breakpoint-down(md) {
+    overflow: auto;
+    flex-wrap: nowrap;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    min-width: 33%;
+
+    @include media-breakpoint-down(md) {
+      width: 340px;
+    }
+
+    & > div {
+      padding: 1.5rem;
+      background-color: $gray;
+      height: 100%;
+    }
+    &:last-child > div {
+      background-color: $secondary;
+      color: #fff;
+    }
+  }
+  input {
+    background-color: #fff !important;
+    padding: 0.5rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  label {
+    display: none;
+  }
+}

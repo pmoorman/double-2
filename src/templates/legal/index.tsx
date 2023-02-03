@@ -35,7 +35,7 @@ export const LegalDetailsPage: FC<PageProps<LegalDetailsPageProps>> = ({
 
       {/* Content */}
       <section className={styles.content}>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center mb-6">
           <Col md={10}>
             <MDXRenderer>{body}</MDXRenderer>
           </Col>
