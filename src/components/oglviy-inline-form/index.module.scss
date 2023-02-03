@@ -1,12 +1,16 @@
 .inputGroup {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
   input {
     background-color: #fff;
     padding: 0.9rem;
     border-bottom: none !important;
     color: #626060;
 
-    @include media-breakpoint-down(md) {
-      width: auto !important;
+    @include media-breakpoint-down(sm) {
+      width: 100% !important;
+      margin-bottom: 1rem;
     }
 
     &:focus {
@@ -18,7 +22,6 @@
 
   button {
     @include media-breakpoint-down(md) {
-      margin-top: 1rem;
       border-radius: 0;
     }
   }

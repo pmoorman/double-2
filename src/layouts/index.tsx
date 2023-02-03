@@ -46,7 +46,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
         <main>{children}</main>
       </MDXProvider>
       {!hideFooter && <Footer />}
-      <FooterPolicy />
+      {hideFooter && <FooterPolicy />}
     </ParallaxProvider>
   );
 };

@@ -1,0 +1,33 @@
+.pageHero {
+  background-color: #faf5ed;
+  padding: 3rem 0 5rem 0;
+  position: relative;
+
+  h1 {
+    color: $secondary;
+
+    & + div {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $secondary;
+
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
+
+      & + div {
+        font-size: 0.75rem;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.mobileImage {
+  img {
+    width: 100px;
+  }
+}

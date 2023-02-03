@@ -24,8 +24,8 @@
 
     .linkedinIcon {
       background: url(./linkedin.png) no-repeat center;
-      height: 36px;
-      width: 36px;
+      height: 24px;
+      width: 24px;
       object-fit: contain;
       background-size: contain;
     }
@@ -83,6 +83,23 @@
 
     & > div:nth-child(3) img {
       height: 33px;
+    }
+  }
+}
+
+.footerPolicy {
+  background-color: $secondary;
+  padding: 2rem 0;
+
+  a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 3rem;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      margin-bottom: 1rem;
     }
   }
 }

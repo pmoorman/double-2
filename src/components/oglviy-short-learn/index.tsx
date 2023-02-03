@@ -66,7 +66,7 @@ export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
                 <Form name="form" method="POST" action={action}>
                   <Row>
                     <Col md="12" className="mt-3">
-                      <Form.Label htmlFor="email">Business Email</Form.Label>
+                      <Form.Label htmlFor="email">Work email</Form.Label>
                       <Form.Control
                         required
                         type="email"
