@@ -76,7 +76,7 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
               objectFit="contain"
               className="d-flex d-lg-none"
             />
-            <div>15,233+ people loved the guide</div>
+            <p>15,233+ people loved the guide</p>
           </div>
         </Col>
       </Row>

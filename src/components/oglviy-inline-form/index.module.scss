@@ -36,6 +36,9 @@
 
   img {
     height: 24px;
-    padding-right: 1.3rem;
+  }
+  & > p {
+    margin-left: 1.3rem;
+    margin-bottom: 0;
   }
 }
