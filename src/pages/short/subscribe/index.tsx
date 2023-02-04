@@ -53,6 +53,7 @@ const OglviyConcept4 = () => {
             src="./phone_mobile.png"
             alt="Phone image"
             objectFit="contain"
+            width={100}
           />
         </div>
       </div>
