@@ -50,7 +50,7 @@ export const Header: FC<HeaderProps> = ({ hideNav }) => {
             </Nav>
           </>
         ) : (
-          <Navbar.Brand className={styles.navbarLogo}>
+          <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>
             <DoubleLogo />
           </Navbar.Brand>
         )}
