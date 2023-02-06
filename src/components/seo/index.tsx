@@ -8,6 +8,7 @@ type MetaItem = { name: string; content: string };
 export interface SEOProps {
   title?: string;
   description?: string;
+  keywords?: string;
   isArticle?: boolean;
   meta?: MetaItem[];
 }
@@ -15,6 +16,7 @@ export interface SEOProps {
 export const SEO: FC<SEOProps> = ({
   title,
   description,
+  keywords,
   isArticle,
   meta = [],
 }) => {
@@ -22,18 +24,21 @@ export const SEO: FC<SEOProps> = ({
     siteUrl,
     title: siteTitle,
     description: siteDescription,
+    keywords: siteKeywords,
   } = useSiteMetadata();
   const { pathname } = useLocation();
   const currentUrl = siteUrl + pathname;
   const featuredImageUrl = siteUrl + "/images/logo.png";
   const _title = title || siteTitle;
   const _description = description || siteDescription;
+  const _keywords = keywords || siteKeywords;
 
   const getOpenGraph = (): MetaItem[] => {
     return [
       { name: "og:type", content: isArticle ? "article" : "website" },
       { name: "og:title", content: _title },
       { name: "og:description", content: _description },
+      { name: "og:keywords", content: _keywords },
       { name: "og:url", content: currentUrl },
       { name: "og:site_name", content: siteTitle },
       { name: "og:image", content: featuredImageUrl },
@@ -61,6 +66,7 @@ export const SEO: FC<SEOProps> = ({
   return (
     <Helmet
       title={title}
+      description={description}
       defaultTitle={siteTitle}
       titleTemplate={`%s - ${siteTitle}`}
       meta={metaItems}

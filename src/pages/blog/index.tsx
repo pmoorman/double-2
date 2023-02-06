@@ -41,7 +41,11 @@ const BlogPage = () => {
 
   return (
     <>
-      <SEO title="Blog" />
+      <SEO
+        title="The Expert Growth Marketing Toolbox - Double Blog"
+        keywords="Expert Growth Marketing Toolbox, From Good to Great Marketeer,Expert Growth Marketing Toolbox"
+        description="In our Double blog we provide growth marketing advice and tools to take you and your business from good to great. Explore and learn from our experts."
+      />
       <div className={styles.heroSection}>
         <Container>
           <Row>

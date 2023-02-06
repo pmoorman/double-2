@@ -7,13 +7,19 @@ import {
   HeadingRow,
   FeaturedCaseStudies,
   Hero,
+  SEO,
   TwoColumnSection,
   Image,
 } from "@app/components";
 
 const ServicePerformance = () => {
   return (
-    <div>
+    <>
+      <SEO
+        title="Performance Marketing Services - Double Agency"
+        keywords="Performance Marketing Services"
+        description="Our approach is to find the winning channel that suits your business goals. Measure what works and optimise for traffic, lead generation, and conversions."
+      />
       <Hero
         type={1}
         title="Performance"
@@ -205,7 +211,7 @@ const ServicePerformance = () => {
           <FeaturedCaseStudies />
         </div> */}
       </Container>
-    </div>
+    </>
   );
 };
 

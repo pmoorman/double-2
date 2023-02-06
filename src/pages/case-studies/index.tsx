@@ -29,7 +29,11 @@ const CaseStudiesPage = () => {
 
   return (
     <>
-      <SEO title="Case Studies" />
+      <SEO
+        title="Growth Marketing Case Studies | Explore Strategies & Tactics"
+        keywords="Growth Marketing Case Studies, Growth Marketing Strategies, Growth Marketing Tactics"
+        description="Looking to drive growth in your business? Our case studies explore a variety of growth marketing and customer acquisition strategies and tactics."
+      />
       <div>
         <Container>
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">

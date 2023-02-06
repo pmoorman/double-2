@@ -29,21 +29,21 @@ const ContactPage = () => {
 
   return (
     <>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact Double - The Growth Marketing Agency"
+        keywords="Contact Double Agency, Contact Growth Marketing Agency"
+        description="Looking for a growth marketing agency? Contact us today for a free consultation! Let us explore how we can help you grow your business with growth marketing."
+      />
       <Container>
         <div className={styles.heading}>
-          <h1>
-            Interested? <div>We’d love to </div>
-            <div>hear from you.</div>
-          </h1>
+          <h1>Get in touch</h1>
         </div>
       </Container>
       <div className="d-lg-flex">
         <div className={styles.blueSection}>
           <Container className="d-block d-lg-none">
             <div>
-              <h1>Interested? </h1>
-              <h1>We’d love to hear from you.</h1>
+              <h1>Get in touch</h1>
             </div>
           </Container>
           <div className={styles.lines}></div>
@@ -59,7 +59,8 @@ const ContactPage = () => {
         >
           <input type="hidden" name="form-name" value="contact" />
           <Container>
-            <h2>Get in touch</h2>
+            <h2>Interested? </h2>
+            <h2>We’d love to hear from you.</h2>
             <Row>
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="first-name">First name</Form.Label>

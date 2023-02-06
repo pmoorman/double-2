@@ -23,7 +23,11 @@ const AboutPage = () => {
 
   return (
     <>
-      <SEO title="About" />
+      <SEO
+        title="Our team of growth marketing experts - Double Agency"
+        keywords="team of growth marketing experts, growth marketing experts, Growth Marketing Team, Team of Growth Experts"
+        description="We're a growth marketing team with double the drive. We combine psychology with data and design to create systems that drive growth on autopilot. Meet the team."
+      />
       {/* Hero */}
       <div>
         <Container className="pt-lg-6 pb-lg-8 py-4">

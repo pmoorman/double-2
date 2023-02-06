@@ -5,6 +5,7 @@ import data from "../../content/data.json";
 export interface SiteMetadata {
   siteUrl: string;
   title: string;
+  keywords: string;
   description: string;
   recaptchaKey: string;
 
@@ -19,6 +20,7 @@ export const useSiteMetadata = () => {
         siteMetadata {
           siteUrl
           title
+          keywords
           description
           recaptchaKey
         }
