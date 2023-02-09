@@ -4,18 +4,17 @@ import { SEO, OgilvyForm } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "840550220";
+const dripId = "853957270";
 
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="38 laws of growth marketing" />
+      <SEO title="38 laws to grow startups" />
       <div>
         <Container>
           <div className={styles.heading}>
             <h1>
-              Master the 38 <div>immutable </div>
-              <div> laws of growth</div>
+              38 immutable laws <div>to grow startups </div>
             </h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the
@@ -33,7 +32,7 @@ const OglviyConcept2 = () => {
             <Container className="d-block d-lg-none">
               <div>
                 <h1 className="mb-6 mt-4 mt-lg-0 mb-lg-5">
-                  Master the 38 immutable laws of growth
+                  38 immutable laws to grow startups
                 </h1>
                 <p>
                   As a growth agency, we have worked with some of the
