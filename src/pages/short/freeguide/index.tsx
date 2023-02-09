@@ -13,7 +13,7 @@ const OglviyConcept2 = () => {
       <div>
         <Container>
           <div className={styles.heading}>
-            <h1>
+            <h1 style={{ fontSize: "440%" }}>
               38 rules of explosive startup growth
             </h1>
             <p className="mt-5">
