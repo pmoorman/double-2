@@ -14,7 +14,7 @@ const OglviyConcept2 = () => {
         <Container>
           <div className={styles.heading}>
             <h1>
-              38 rules of <div>explosive startup growth </div>
+              38 rules of explosive startup growth
             </h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the

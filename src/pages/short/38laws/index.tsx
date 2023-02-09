@@ -14,7 +14,7 @@ const OglviyConcept2 = () => {
         <Container>
           <div className={styles.heading}>
             <h1>
-              38 immutable laws <div>to grow startups </div>
+              38 immutable laws to grow startups
             </h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the
