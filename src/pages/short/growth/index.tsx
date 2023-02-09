@@ -16,7 +16,7 @@ const OglviyConcept7 = () => {
           <Row className="align-center">
             <Col xs={{ span: 12, order: 0 }} md={{ span: 6, order: 1 }}>
               <h1 className="mb-3">
-                38 <u>unexpected</u> laws to avoid a startup disaster
+                38 <u>unexpected</u> laws to avoid startup disaster
               </h1>
               <div className="mb-4">Download your free guide 👇</div>
               <div>Leave your details below: </div>

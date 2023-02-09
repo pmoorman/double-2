@@ -13,12 +13,11 @@ const OglviyConcept8 = () => {
       <SEO title="38 laws to avoid startup disaster" />
       <div className={styles.pageHero}>
         <Container>
-          <Row className="align-center">
+          <Row className="align-center justify-content-between">
             <Col xs={{ span: 12, order: 0 }} md={{ span: 6, order: 1 }}>
               <h1 className="mb-3">38 laws to avoid startup disaster</h1>
-              <div className="mb-5">
-                An expert guide on the key elements to make your startup
-                unstoppable. What you’ll find inside:
+              <div className="mb-5 d-none d-md-block d-lg-block">
+                What you’ll find inside:
               </div>
               <div className="d-none d-lg-block d-md-block">
                 <div className="d-flex align-items-center mb-3">
@@ -47,6 +46,7 @@ const OglviyConcept8 = () => {
               </div>
             </Col>
             <Col
+              lg={{ span: 5, order: 2 }}
               md={{ span: 6, order: 2 }}
               className="d-flex justify-content-end align-items-baseline flex-column flex-lg-row"
             >

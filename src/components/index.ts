@@ -35,3 +35,6 @@ export * from "./quiz-header";
 export * from "./quiz-logos";
 export * from "./video-background";
 export * from "./partners-logo-slider";
+export * from "./blog-post-link-title-grid";
+export * from "./thank-you";
+export * from "./gif";

@@ -28,7 +28,7 @@ const OglviyConcept6 = () => {
             </Col>
             <Col xs={{ span: 12, order: 0 }} md={{ span: 6, order: 1 }}>
               <h1 className="mb-3">38 laws to avoid startup disaster</h1>
-              <div className="mb-3">Download your free guide 👇</div>
+              <div className="mb-3">Download your free guide</div>
               <div>Leave your details below: </div>
               <OgilvyInlineForm
                 dripId={dripId}

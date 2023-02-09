@@ -33,8 +33,8 @@ const OglviyConcept4 = () => {
                 <br />
                 disaster
               </h1>
-              <div className="mb-3">Download your free pdf 👇</div>
-              <div>Leave your details below: </div>
+              <div className="mb-3">Download your free pdf</div>
+              <div>Leave your details below:</div>
               <OgilvyInlineForm
                 dripId={dripId}
                 buttonProps={{

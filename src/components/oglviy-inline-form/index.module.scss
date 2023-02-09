@@ -42,3 +42,12 @@
     margin-bottom: 0;
   }
 }
+
+button {
+  border-radius: 0 !important;
+
+  @include media-breakpoint-down(md) {
+    height: 58px;
+    width: 100%;
+  }
+}

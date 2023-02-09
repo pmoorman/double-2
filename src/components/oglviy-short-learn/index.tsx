@@ -31,7 +31,7 @@ export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
     <>
       <div className="my-6">
         <Container>
-          <h2>What you’ll learn 👀</h2>
+          <h2>What you’ll learn</h2>
           <Row className={`mt-4 + ${styles.learnSection}`}>
             <div>
               <div>
@@ -61,7 +61,7 @@ export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
                 <h3>Unlock all 38 laws</h3>
                 <div>
                   Uncover all 38 laws of growth. Sign up with your email and
-                  we’ll send them over
+                  we’ll send them over.
                 </div>
                 <Form name="form" method="POST" action={action}>
                   <Row>
@@ -70,7 +70,7 @@ export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
                       <Form.Control
                         required
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Work email"
                         aria-describedby="email"
                         name="fields[email]"
                       />

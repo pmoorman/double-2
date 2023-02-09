@@ -13,30 +13,6 @@ export const FooterPolicy = () => {
           <Link to="/">
             <img src={logo} alt="Double logo" />
           </Link>
-
-          <div className={styles.partnersLogo}>
-            <div>
-              <StaticImage
-                src="./netlify.png"
-                objectFit="contain"
-                alt="Netlify logo"
-              />
-            </div>
-            <div>
-              <StaticImage
-                src="./google.png"
-                objectFit="contain"
-                alt="Google partner logo"
-              />
-            </div>
-            <div>
-              <StaticImage
-                src="./drip.png"
-                objectFit="contain"
-                alt="Drip logo"
-              />
-            </div>
-          </div>
         </div>
         <div className="d-flex my-5">
           <Link to="https://www.linkedin.com/company/double-agency/">
