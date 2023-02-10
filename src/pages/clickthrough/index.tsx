@@ -41,7 +41,7 @@ const ClickThrough = () => {
   return (
     <>
       <Container>
-        <div className=" my-lg-6 my-5 text-center">
+        <div className=" mt-lg-5 mb-lg-6 my-5 text-center">
           <GifSection />
           <h1>Thanks for clicking!</h1>
           <div className="subtitile">We'll be sure to remember that..</div>

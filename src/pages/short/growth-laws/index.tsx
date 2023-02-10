@@ -23,7 +23,7 @@ const OglviyConcept6 = () => {
                 src="./hero.png"
                 alt="Girl's image"
                 objectFit="contain"
-                width={476}
+                className={styles.girlImage}
               />
             </Col>
             <Col xs={{ span: 12, order: 0 }} md={{ span: 6, order: 1 }}>

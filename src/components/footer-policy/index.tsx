@@ -13,12 +13,12 @@ export const FooterPolicy = () => {
           <Link to="/">
             <img src={logo} alt="Double logo" />
           </Link>
-        </div>
-        <div className="d-flex my-5">
           <Link to="https://www.linkedin.com/company/double-agency/">
             <div className={styles.linkedinIcon}></div>
           </Link>
-          <Link to="/legal/terms">Terms & Conditions</Link>
+        </div>
+        <div className="d-flex my-5">
+          {/* <Link to="/legal/terms">Terms & Conditions</Link> */}
           <Link to="/legal/privacy-policy">Privacy Policy</Link>
         </div>
       </Container>

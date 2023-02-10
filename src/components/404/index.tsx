@@ -4,7 +4,7 @@ import { Link, SEO } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const NotFoundPage = () => {
+export const NotFoundPage = () => {
   return (
     <>
       <SEO title="Not found" />
@@ -16,8 +16,8 @@ const NotFoundPage = () => {
             not found
           </h1>
           <div className="mb-4">
-            The page you’re looking for has either moved or your URL has an
-            error.
+            The page you're looking for has either been moved or there's an
+            error in your URL.
           </div>
           <Button as={Link} to="/" variant="secondary">
             Home
@@ -27,5 +27,3 @@ const NotFoundPage = () => {
     </>
   );
 };
-
-export default NotFoundPage;

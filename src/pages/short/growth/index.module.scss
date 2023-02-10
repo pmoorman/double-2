@@ -40,6 +40,12 @@
     width: 100%;
   }
 
+  img {
+    @include media-breakpoint-down(md) {
+      width: 100px !important;
+    }
+  }
+
   h3 + div {
     color: #d5d2d2;
   }

@@ -39,6 +39,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-layout",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-htaccess",
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
@@ -169,6 +170,14 @@ const config: GatsbyConfig = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: ["UA-157579030-1", "AW-10961821835"],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        ErrorDocument: `
+          ErrorDocument 404 /404.html
+        `,
       },
     },
   ],

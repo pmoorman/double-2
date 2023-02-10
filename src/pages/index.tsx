@@ -33,13 +33,10 @@ const HomePage = () => {
               className="text-center"
             >
               <div className={styles.arrowDown}></div>
-              <h1 className="mb-5">
-                Experts in exponential growth. Double is a growth marketing
-                agency.
-              </h1>
+              <h1 className="mb-5">Experts in exponential growth.</h1>
               <p>
-                We help tech companies do better marketing, and drive explosive
-                user growth.
+                Double is a growth marketing agency. We help tech companies do
+                better marketing, and drive explosive user growth.
               </p>
               <div className={styles.arrowLongDown}></div>
             </Col>

@@ -7,6 +7,7 @@
     padding: 0.9rem;
     border-bottom: none !important;
     color: #626060;
+    height: 58px;
 
     @include media-breakpoint-down(sm) {
       width: 100% !important;
@@ -21,8 +22,11 @@
   }
 
   button {
+    border-radius: 0 !important;
+    height: 58px;
+
     @include media-breakpoint-down(md) {
-      border-radius: 0;
+      width: 100%;
     }
   }
 }
@@ -40,14 +44,5 @@
   & > p {
     margin-left: 1.3rem;
     margin-bottom: 0;
-  }
-}
-
-button {
-  border-radius: 0 !important;
-
-  @include media-breakpoint-down(md) {
-    height: 58px;
-    width: 100%;
   }
 }

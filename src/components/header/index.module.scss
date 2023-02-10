@@ -42,11 +42,12 @@
     transform: scale3d(0, 1, 1);
     transition: transform 0.3s;
     position: absolute;
-    width: 85%;
+    width: calc(100% - 20px);
     height: 2px;
     background: $primary;
     top: 100%;
     right: 0;
+    left: 11px;
     pointer-events: none;
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
@@ -61,11 +62,12 @@
 
 .navLinkActive:after {
   position: absolute;
-  width: 85%;
+  width: calc(100% - 20px);
   height: 2px;
-  background: $primary;
+  background: #387cd3;
   top: 100%;
   right: 0;
+  left: 11px;
   pointer-events: none;
   content: "";
 }

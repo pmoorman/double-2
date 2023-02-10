@@ -26,6 +26,13 @@
   }
 }
 
+.girlImage img {
+  width: 600px !important;
+  @include media-breakpoint-down(lg) {
+    width: 100% !important;
+  }
+}
+
 .mobileImage {
   img {
     width: 100px;
