@@ -56,8 +56,8 @@ const ClickThrough = () => {
 
           <Slider {...settings} className={styles.blogSlider}>
             {allArticles.map((post, i) => (
-              <div className={styles.sliderItems}>
-                <BlogPostTitleGridItem key={post.title + i} post={post} />
+              <div key={post.title + i} className={styles.sliderItems}>
+                <BlogPostTitleGridItem post={post} />
               </div>
             ))}
           </Slider>
