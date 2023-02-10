@@ -14,7 +14,7 @@ const OglviyConcept2 = () => {
         <Container>
           <div className={styles.heading}>
             <h1 style={{ fontSize: "440%" }}>
-              38 rules of explosive startup growth
+              The 38 new rules of startup growth
             </h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the
@@ -32,7 +32,7 @@ const OglviyConcept2 = () => {
             <Container className="d-block d-lg-none">
               <div>
                 <h1 className="mb-6 mt-4 mt-lg-0 mb-lg-5">
-                  38 rules of explosive startup growth
+                  The 38 new rules of startup growth
                 </h1>
                 <p>
                   As a growth agency, we have worked with some of the
