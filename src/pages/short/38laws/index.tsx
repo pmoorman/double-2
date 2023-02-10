@@ -14,7 +14,7 @@ const OglviyConcept2 = () => {
         <Container>
           <div className={styles.heading}>
             <h1>
-              38 immutable laws to grow startups
+              The 38 laws to grow startups
             </h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the
@@ -32,7 +32,7 @@ const OglviyConcept2 = () => {
             <Container className="d-block d-lg-none">
               <div>
                 <h1 className="mb-6 mt-4 mt-lg-0 mb-lg-5">
-                  38 immutable laws to grow startups
+                  The 38 laws to grow startups
                 </h1>
                 <p>
                   As a growth agency, we have worked with some of the
