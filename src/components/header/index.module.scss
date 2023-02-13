@@ -16,6 +16,12 @@
 
   .navbarLogo {
     padding: 0;
+
+    @include media-breakpoint-down(md) {
+      img {
+        width: 100% !important;
+      }
+    }
   }
 }
 
