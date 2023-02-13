@@ -1,15 +1,74 @@
-.footer {
-  h4 {
-    font-weight: 600;
+.footerPolicy {
+  background-color: $secondary;
+  padding: 2rem 0;
+
+  a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 3rem;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 }
-.footerLogo {
-  padding: 0.8rem 0;
-  & > * {
-    font-family: $font-family-monospace;
-    color: #000;
-    opacity: 0.5;
-    font-weight: 400;
-    font-size: 0.85;
+
+.headerLogo {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2.68rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 1.5rem;
+  }
+
+  img {
+    height: 32px;
+  }
+}
+
+.linkedinIcon {
+  background: url(./linkedin.png) no-repeat center;
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  background-size: contain;
+}
+
+.partnersLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  div > img {
+    max-width: 100%;
+    width: auto;
+  }
+
+  & > div:nth-child(1) {
+    margin-right: 3.5rem;
+
+    img {
+      height: 27px;
+    }
+  }
+  & > div:nth-child(2) {
+    margin-right: 3rem;
+
+    img {
+      height: 59px;
+    }
+  }
+
+  & > div:nth-child(3) img {
+    height: 33px;
   }
 }

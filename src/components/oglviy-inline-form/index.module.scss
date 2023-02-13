@@ -1,0 +1,48 @@
+.inputGroup {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+  input {
+    background-color: #fff;
+    padding: 0.9rem;
+    border-bottom: none !important;
+    color: #626060;
+    height: 58px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100% !important;
+      margin-bottom: 1rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: #fff;
+    }
+  }
+
+  button {
+    border-radius: 0 !important;
+    height: 58px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+
+  img {
+    height: 24px;
+  }
+  & > p {
+    margin-left: 1.3rem;
+    margin-bottom: 0;
+  }
+}

@@ -6,6 +6,7 @@ import {
   Link,
   HeadingRow,
   FeaturedCaseStudies,
+  SEO,
   Hero,
   TwoColumnSection,
   Image,
@@ -13,7 +14,12 @@ import {
 
 const ServiceInfrastructure = () => {
   return (
-    <div>
+    <>
+      <SEO
+        title="Marketing Infrastructure Services - Double Agency"
+        keywords="Marketing Infrastructure Services"
+        description="The technology behind marketing success. From data integration, analytics, technical marketing like website health to marketing automation and dashboarding."
+      />
       <Hero
         type={1}
         title="Infrastructure"
@@ -174,7 +180,7 @@ const ServiceInfrastructure = () => {
           <FeaturedCaseStudies />
         </div> */}
       </Container>
-    </div>
+    </>
   );
 };
 

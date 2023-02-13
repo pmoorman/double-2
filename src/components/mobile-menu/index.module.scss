@@ -17,6 +17,11 @@
   width: 40px;
   height: 40px;
   background: url(../../components/header/icon_bar.svg) no-repeat;
+  display: none;
+
+  @include media-breakpoint-down(lg) {
+    display: inherit;
+  }
 }
 
 .mobileBarCrossButton {

@@ -10,8 +10,12 @@ import * as styles from "./index.module.scss";
 const ServicesPage = () => {
   return (
     <>
-      <SEO title="Services" />
-      <div>
+      <SEO
+        title="Full-Stack Growth Marketing Services | Get Expert Help Today"
+        keywords="Get Expert Help, Growth Marketing Services, full-stack Growth Marketing agency"
+        description="From strategy and infrastructure to creative and performance. We can help you with everything from building engaged audiences to designing growth loops."
+      />
+      <div className="mb-5">
         <Hero
           type={1}
           title="We’re a full-stack Growth Marketing agency"
@@ -24,7 +28,9 @@ const ServicesPage = () => {
 
         <div>
           <Container>
-            <h2 className="mb-5">Find out more about our services</h2>
+            <h2 className="mb-5">
+              Find out more about our growth marketing services
+            </h2>
           </Container>
           <div className="hoverAnimation blue">
             <Link to="strategy" className="text-decoration-none">

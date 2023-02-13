@@ -1,19 +1,27 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
-import { DoubleLogo, Link } from "@app/components";
+import { Container } from "react-bootstrap";
+import { Link } from "@app/components";
+import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.scss";
+import logo from "./logo.svg";
 
 export const FooterPolicy = () => {
   return (
-    <Container>
-      <div className="d-flex align-items-center justify-content-between py-4">
-        <DoubleLogo />
-        <div className={styles.footerLogo}>
-          <Button to="/legal/privacy-policy" as={Link} variant="text">
-            Privacy Policy
-          </Button>
+    <div className={styles.footerPolicy}>
+      <Container>
+        <div className={styles.headerLogo}>
+          <Link to="/">
+            <img src={logo} alt="Double logo" />
+          </Link>
+          <Link to="https://www.linkedin.com/company/double-agency/">
+            <div className={styles.linkedinIcon}></div>
+          </Link>
         </div>
-      </div>
-    </Container>
+        <div className="d-flex my-5">
+          {/* <Link to="/legal/terms">Terms & Conditions</Link> */}
+          <Link to="/legal/privacy-policy">Privacy Policy</Link>
+        </div>
+      </Container>
+    </div>
   );
 };

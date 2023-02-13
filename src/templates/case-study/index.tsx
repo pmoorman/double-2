@@ -60,6 +60,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                   image={pageLogo}
                   alt={title}
                   className={styles.logoImage}
+                  objectFit="contain"
                 />
               )}
               <div className={styles.heroText}>

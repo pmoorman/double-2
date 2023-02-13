@@ -1,13 +1,11 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
-import { Link, CaseStudySection, VideoBackground } from "@app/components";
+import { Link, CaseStudySection, VideoBackground, SEO } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
-
-import heroVideo from "./index-assets/hero.mp4";
 
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
@@ -17,6 +15,11 @@ const HomePage = () => {
 
   return (
     <>
+      <SEO
+        title="Growth Marketing Agency - Double"
+        keywords="Growth Marketing Agency, Double Agency, Experts in exponential growth"
+        description="Looking for a growth marketing agency that will help you do better marketing, and drive explosive user growth? It's not a coincidence that you've found us."
+      />
       <div className={styles.hero}>
         <VideoBackground src="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4" />
         <div className={styles.heroOverlay} />
@@ -25,12 +28,12 @@ const HomePage = () => {
         <Container>
           <Row>
             <Col
-              lg={{ span: 6, offset: 3 }}
+              lg={{ span: 8, offset: 2 }}
               md={{ span: 8, offset: 2 }}
               className="text-center"
             >
               <div className={styles.arrowDown}></div>
-              <h1 className="mb-5">Experts in exponential growth</h1>
+              <h1 className="mb-5">Experts in exponential growth.</h1>
               <p>
                 Double is a growth marketing agency. We help tech companies do
                 better marketing, and drive explosive user growth.

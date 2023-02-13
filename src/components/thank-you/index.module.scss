@@ -1,0 +1,25 @@
+.thankYouHero {
+  background-color: $secondary;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem 0;
+  }
+}
+
+.spacing {
+  margin-right: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  @include media-breakpoint-down(md) {
+    width: 150px !important;
+  }
+}
+
+a {
+  border-radius: 0 !important;
+}

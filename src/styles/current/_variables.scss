@@ -20,18 +20,18 @@ $h3-font-size: 2rem;
 $h4-font-size: 1.5rem;
 $paragraph-margin-bottom: 1.25rem !default;
 
-$border-radius: 0;
-
 // Buttons
 $btn-padding-y: 0.875rem;
 $btn-padding-x: 1rem;
 $btn-font-size: 1.125rem;
 $btn-line-height: 1;
 $btn-font-weight: $font-weight-bolder;
-$btn-padding-y-lg: 0.875rem;
-$btn-padding-x-lg: 1.78rem;
+$btn-padding-y: 0.875rem;
+$btn-padding-x: 2rem;
 $btn-font-size-lg: 1.125rem;
-$border-radius-lg: 0;
+$btn-border-radius: 10rem;
+$btn-box-shadow: inset 0 0 0 0 $primary;
+$btn-transition: ease-out 0.4s;
 
 // Colors
 $primary: #387cd3;

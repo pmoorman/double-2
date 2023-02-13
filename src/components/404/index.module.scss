@@ -1,0 +1,22 @@
+.bg_image {
+  background: url(./bg_image.png) no-repeat center;
+  height: 586px;
+  width: 575px;
+  position: absolute;
+  background-size: contain;
+  opacity: 0.4;
+  top: 0;
+  right: 4rem;
+  z-index: -1;
+
+  @include media-breakpoint-down(lg) {
+    height: 350px;
+    width: 350px;
+    right: 1rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 250px;
+    width: 250px;
+  }
+}
