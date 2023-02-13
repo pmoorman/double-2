@@ -71,11 +71,12 @@
     max-width: 100%;
   }
 
-  img {
-    max-width: 100%;
-  }
-
   & > div {
     margin: 1rem 0.5rem;
+  }
+}
+img {
+  @include media-breakpoint-down(md) {
+    max-width: 100% !important;
   }
 }

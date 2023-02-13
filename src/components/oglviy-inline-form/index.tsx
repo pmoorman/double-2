@@ -73,8 +73,10 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
             <StaticImage
               src="./people_mobile.png"
               alt="People avatars"
+              quality={50}
               objectFit="contain"
               className="d-flex d-lg-none"
+              width={75}
             />
             <p>15,233+ people loved the guide</p>
           </div>

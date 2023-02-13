@@ -40,11 +40,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-htaccess",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
         exclude: [
-          "/short/signup", "/short/signup/thankyou", "/short/38laws", "/short/38laws/thankyou", "/short/laws-of-growth", "/short/laws-of-growth/thankyou", "/short/freeguide", "/short/freeguide/thankyou", "/short/download", "/short/download/thankyou", "/short/7lessons", "/short/7lessons/thankyou", "/short/subscribe", "/short/subscribe/thankyou", "/short/growth-laws",  "/short/growth-laws/thankyou", "/short/growth", "/short/growth/thankyou", "/short/email-course", "/short/email-course/thankyou", "/short/startup-laws", "/short/startup-laws/thankyou", "/long/guide", "/long/guide/thankyou", "/long/38laws", "/long/38laws/thankyou", "/long/download", "/long/download/thankyou", "/long/freeguide", "/long/freeguide/thankyou", "/long/report", "/long/report/thankyou", "/short/report", "/short/report/thankyou",
+          "/short/signup/", "/short/signup/thankyou", "/short/38laws/", "/short/38laws/thankyou", "/short/laws-of-growth", "/short/laws-of-growth/thankyou", "/short/freeguide", "/short/freeguide/thankyou", "/short/download", "/short/download/thankyou", "/short/7lessons", "/short/7lessons/thankyou", "/short/subscribe", "/short/subscribe/thankyou", "/short/growth-laws",  "/short/growth-laws/thankyou", "/short/growth", "/short/growth/thankyou", "/short/email-course", "/short/email-course/thankyou", "/short/startup-laws", "/short/startup-laws/thankyou", "/long/guide", "/long/guide/thankyou", "/long/38laws", "/long/38laws/thankyou", "/long/download", "/long/download/thankyou", "/long/freeguide", "/long/freeguide/thankyou", "/long/report", "/long/report/thankyou", "/short/report", "/short/report/thankyou",
        ]
       },
     },

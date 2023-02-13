@@ -13,12 +13,8 @@ const OglviyConcept8 = () => {
       <SEO title="38 laws to avoid startup disaster" />
       <div className={styles.pageHero}>
         <Container>
-          <Row className="align-center justify-content-between">
-            <Col
-              xs={{ span: 12, order: 0 }}
-              lg={{ span: 5, order: 2 }}
-              md={{ span: 6, order: 1 }}
-            >
+          <Row className="align-center">
+            <Col xs={{ span: 12, order: 0 }} md={{ span: 6, order: 1 }}>
               <h1 className="mb-lg-6 mb-5 mt-4">
                 38 laws to avoid startup disaster
               </h1>
@@ -64,7 +60,7 @@ const OglviyConcept8 = () => {
               src="./lely.png"
               alt="lely logo"
               width={91}
-              objectFit="contain"
+              objectFit="cover"
             />
             <StaticImage
               src="./klooker.png"
