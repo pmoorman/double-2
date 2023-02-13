@@ -12,14 +12,15 @@
 .spacing {
   margin-right: 2rem;
   margin-bottom: 2.5rem;
+  border-radius: 0 !important;
+
+  & + a {
+    border-radius: 0 !important;
+  }
 }
 
 img {
   @include media-breakpoint-down(md) {
     width: 150px !important;
   }
-}
-
-a {
-  border-radius: 0 !important;
 }
