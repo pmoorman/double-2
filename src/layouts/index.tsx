@@ -32,9 +32,9 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideNav = ["/short", "/long"].some((p) => pathname.includes(p));
+  const hideNav = ["/academy", "/long"].some((p) => pathname.includes(p));
 
-  const hideFooter = ["/contact", "/short", "/long"].some((p) =>
+  const hideFooter = ["/contact", "/academy", "/long"].some((p) =>
     pathname.includes(p)
   );
 
