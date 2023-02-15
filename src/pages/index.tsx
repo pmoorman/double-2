@@ -22,7 +22,6 @@ const HomePage = () => {
       />
       <div className={styles.hero}>
         <VideoBackground src="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4" />
-        <div className={styles.heroOverlay} />
       </div>
       <div className="pt-5 pb-lg-9 pb-5">
         <Container>

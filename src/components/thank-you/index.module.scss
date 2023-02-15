@@ -19,7 +19,7 @@
   }
 }
 
-img {
+.imageStyles img {
   @include media-breakpoint-down(md) {
     width: 150px !important;
   }
