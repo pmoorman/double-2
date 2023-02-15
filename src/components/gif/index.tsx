@@ -47,8 +47,7 @@ export const GifSection = () => {
           width="250"
           height="250"
           autoPlay
-          loop
-          muted={true}
+          muted
           className={styles.videoStyles}
         >
           {videoUrl.length && <source src={videoUrl} type="video/mp4" />}

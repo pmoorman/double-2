@@ -18,7 +18,7 @@ const OglviyConcept7 = () => {
               <h1 className="mb-3">
                 38 <u>unexpected</u> laws to avoid startup disaster
               </h1>
-              <div className="mb-4">Download your free guide 👇</div>
+              <div className="mb-4">Download your free guide</div>
               <div>Leave your details below: </div>
               <OgilvyInlineForm
                 dripId={dripId}
