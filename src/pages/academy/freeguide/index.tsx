@@ -9,7 +9,11 @@ const dripId = "315500770";
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="38 rules of startup growth" />
+      <SEO
+        title="38 laws of growth marketing to avoid startup disaster"
+        keywords="laws of growth marketing avoid startup disaster"
+        description="We've worked with some of the fastest-growing tech companies like TikTok, Alpian, Glowforge & more. 38 most important lessons we've learned along the way."
+      />
       <div>
         <Container>
           <div className={styles.heading}>

@@ -9,7 +9,11 @@ const dripId = "501415057";
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="38 laws of growth marketing" />
+      <SEO
+        title="7 Strategic Lessons for CMOs from the Growth Agency"
+        keywords="strategic lessons for CMOs, Growth Agency"
+        description="Looking to up your marketing game? Check out these seven strategic lessons from some of the fastest-growing tech companies. Start learning from the best now."
+      />
       <div>
         <Container>
           <div className={styles.heading}>
@@ -22,7 +26,8 @@ const OglviyConcept2 = () => {
               more.
             </p>
             <p className="mb-5 mb-lg-0">
-              We collected the 7 most important lessons that a CMO should follow to succeed.
+              We collected the 7 most important lessons that a CMO should follow
+              to succeed.
             </p>
           </div>
         </Container>
@@ -39,7 +44,8 @@ const OglviyConcept2 = () => {
                   and more.
                 </p>
                 <p className="mb-5 mb-lg-0">
-                  We collected the 7 most important lessons that a CMO should follow to succeed.
+                  We collected the 7 most important lessons that a CMO should
+                  follow to succeed.
                 </p>
               </div>
             </Container>

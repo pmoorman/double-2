@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import MainFront1 from "./gif1.mp4";
 import MainFront2 from "./gif2.mp4";
@@ -40,20 +40,49 @@ export const GifSection = () => {
     setVideoUrl(url);
   }, []);
 
+  const videoParentRef = useRef();
+  const [shouldUseImage, setShouldUseImage] = useState(false);
+  useEffect(() => {
+    // check if user agent is safari and we have the ref to the container <div />
+    if (isSafari() && videoParentRef.current) {
+      // obtain reference to the video element
+      const player = videoParentRef.current.children[0];
+
+      // if the reference to video player has been obtained
+      if (player) {
+        // set the video attributes using javascript as per the
+        // webkit Policy
+        player.controls = false;
+        player.playsinline = true;
+        player.muted = true;
+        player.setAttribute("muted", ""); // leave no stones unturned :)
+        player.autoplay = true;
+
+        // Let's wait for an event loop tick and be async.
+        setTimeout(() => {
+          // player.play() might return a promise but it's not guaranteed crossbrowser.
+          const promise = player.play();
+        }, 0);
+      }
+    }
+  }, []);
+
   return (
     <>
       <div className="align-items-center d-flex flex-column">
+        dangerouslySetInnerHTML=
+        {{
+          __html: `
         <video
-          width="250"
-          height="250"
-          muted
-          autoPlay={true}
-          preload="auto"
           loop
-          className={styles.videoStyles}
+          muted
+          autoplay
+          playsinline
+          preload="metadata"
         >
-          {videoUrl.length && <source src={videoUrl} type="video/mp4" />}
-        </video>
+         {videoUrl.length && <source src={videoUrl} type="video/mp4" />}
+        </video>`,
+        }}
       </div>
     </>
   );
