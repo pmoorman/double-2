@@ -56,7 +56,7 @@ export const ThankYou = () => {
               <StaticImage
                 src="./Union.svg"
                 alt="UNion"
-                className="mt-lg-0 mt-5"
+                className={`mt-lg-0 mt-5 + ${styles.imageStyles}`}
               />
             </Col>
           </Row>
