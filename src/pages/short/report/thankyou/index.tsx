@@ -1,10 +1,9 @@
 import React from "react";
-import { ThankYou, SEO } from "@app/components";
+import { ThankYou } from "@app/components";
 
 const OglviyThankYou = () => {
   return (
     <>
-      <SEO title="Thank you" />
       <ThankYou />
     </>
   );
