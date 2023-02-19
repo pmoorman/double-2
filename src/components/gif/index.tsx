@@ -43,17 +43,10 @@ export const GifSection = () => {
   return (
     <>
       <div className="align-items-center d-flex flex-column">
-        <video
-          width="250"
-          height="250"
-          muted
-          autoPlay={true}
-          preload="auto"
-          loop
-          className={styles.videoStyles}
-        >
+        <video loop muted autoPlay playsInline preload="metadata">
           {videoUrl.length && <source src={videoUrl} type="video/mp4" />}
         </video>
+        `
       </div>
     </>
   );

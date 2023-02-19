@@ -1,4 +1,7 @@
 export interface BlogPost {
+  seoTitle: string;
+  seoKeywords: string;
+  seoDescription: string;
   title: string;
   subtitle: string;
   date: string;

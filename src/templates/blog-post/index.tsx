@@ -10,7 +10,7 @@ import { useBlogPosts, useSocialShareLinks } from "@app/hooks";
 import { BlogPost } from "@app/models";
 
 import * as styles from "./index.module.scss";
-import { SectionFeaturedArticles } from "@app/components";
+import { SectionFeaturedArticles, SEO } from "@app/components";
 
 export interface BlogPostTemplateProps {
   file: {
@@ -25,6 +25,9 @@ export interface BlogPostTemplateProps {
 const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
   const { slug, body, frontmatter } = props.data.file.childMdx;
   const {
+    seoTitle,
+    seoKeywords,
+    seoDescription,
     title,
     subtitle,
     date,
@@ -45,6 +48,11 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
 
   return (
     <>
+      <SEO
+        title={seoTitle}
+        keywords={seoKeywords}
+        description={seoDescription}
+      />
       <div className={styles.hero}>
         <Container>
           <Row>
@@ -126,6 +134,9 @@ export const pageQuery = graphql`
         body
         slug
         frontmatter {
+          seoTitle
+          seoKeywords
+          seoDescription
           title
           subtitle
           date

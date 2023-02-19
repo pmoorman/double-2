@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, SEO, GifSection } from "@app/components";

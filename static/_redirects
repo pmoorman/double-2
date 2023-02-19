@@ -1,9 +1,21 @@
-/signup /short/signup 301
-/subscribe /short/signup 301
-/email-course /short/signup 301
-/academy /short/signup 301
-/free-course /short/signup 301
+/signup /academy/signup 301
+/subscribe /academy/signup 301
+/email-course /academy/signup 301
+/academy /academy/signup 301
+/free-course /academy/signup 301
+/emailcourse /academy/signup 301
 
+/short/7lessons /academy/7lessons 308
+/short/38laws /academy/38laws 308
+/short/download /academy/download 308
+/short/email-course /academy/email-course 308
+/short/freeguide /academy/freeguide 308
+/short/growth /academy/growth 308
+/short/growth-laws /academy/growth-laws 308
+/short/laws-of-growth /academy/laws-of-growth 308
+/short/signup /academy/signup 308
+/short/startup-laws /academy/startup-laws 308
+/short/subscribe /academy/subscribe 308
 
 /*  https://double-agency-old.netlify.app/:splat  200
 
