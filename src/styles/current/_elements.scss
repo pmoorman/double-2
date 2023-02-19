@@ -31,6 +31,10 @@ button {
     border: 1px solid $primary;
   }
 
+  &.btn-outline-light {
+    border: 1px solid $light;
+  }
+
   &:active {
     box-shadow: none !important;
   }

@@ -32,11 +32,17 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideNav = ["/academy", "/long"].some((p) => pathname.includes(p));
-
-  const hideFooter = ["/contact", "/academy", "/long"].some((p) =>
+  const hideNav = ["/academy", "/long", "/38-laws-of-growth"].some((p) =>
     pathname.includes(p)
   );
+
+  const hideFooter = [
+    "/contact",
+    "/academy",
+    "/long",
+    "/38-laws-of-growth",
+  ].some((p) => pathname.includes(p));
+  const noFooter = ["/38-laws-of-growth"].some((p) => pathname.includes(p));
 
   return (
     <ParallaxProvider>
@@ -46,7 +52,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
         <main>{children}</main>
       </MDXProvider>
       {!hideFooter && <Footer />}
-      {hideFooter && <FooterPolicy />}
+      {hideFooter && !noFooter && <FooterPolicy />}
     </ParallaxProvider>
   );
 };
