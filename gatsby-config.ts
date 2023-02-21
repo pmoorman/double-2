@@ -44,8 +44,27 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: [
-          "/short/signup/", "/short/signup/thankyou", "/short/38laws/", "/short/38laws/thankyou", "/short/laws-of-growth", "/short/laws-of-growth/thankyou", "/short/freeguide", "/short/freeguide/thankyou", "/short/download", "/short/download/thankyou", "/short/7lessons", "/short/7lessons/thankyou", "/short/subscribe", "/short/subscribe/thankyou", "/short/growth-laws",  "/short/growth-laws/thankyou", "/short/growth", "/short/growth/thankyou", "/short/email-course", "/short/email-course/thankyou", "/short/startup-laws", "/short/startup-laws/thankyou", "/long/guide", "/long/guide/thankyou", "/long/38laws", "/long/38laws/thankyou", "/long/download", "/long/download/thankyou", "/long/freeguide", "/long/freeguide/thankyou", "/long/report", "/long/report/thankyou", "/short/report", "/short/report/thankyou",
+        excludes: [
+          "/38-laws-of-growth",
+          "/academy/signup/", "/academy/signup/thankyou", 
+          "/academy/38laws/", "/academy/38laws/thankyou", 
+          "/academy/laws-of-growth", "/academy/laws-of-growth/thankyou", 
+          "/academy/freeguide", "/academy/freeguide/thankyou", 
+          "/academy/download", "/academy/download/thankyou", 
+          "/academy/7lessons", "/academy/7lessons/thankyou", 
+          "/academy/subscribe", "/academy/subscribe/thankyou", 
+          "/academy/growth-laws",  "/academy/growth-laws/thankyou", 
+          "/academy/growth", "/academy/growth/thankyou", 
+          "/academy/email-course", "/academy/email-course/thankyou", 
+          "/academy/avoid-startup-disaster", "/academy/avoid-startup-disaster/thankyou/",
+          "/academy/startup-laws", "/academy/startup-laws/thankyou", 
+          "/long/guide", "/long/guide/thankyou", 
+          "/long/38laws", "/long/38laws/thankyou", 
+          "/long/download", "/long/download/thankyou", 
+          "/long/freeguide", "/long/freeguide/thankyou", 
+          "/long/report", "/long/report/thankyou", 
+          "/short/report", "/short/report/thankyou",
+          "/short/guide/thankyou",
        ]
       },
     },
