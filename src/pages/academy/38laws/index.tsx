@@ -13,7 +13,7 @@ const OglviyConcept2 = () => {
       <div>
         <Container>
           <div className={styles.heading}>
-            <h1>The 38 laws to grow startups</h1>
+            <h1>38 laws to avoid startup disaster</h1>
             <p className="mt-5">
               As a growth agency, we have worked with some of the
               fastest-growing tech companies like TikTok, Alpian, Glowforge and
@@ -30,7 +30,7 @@ const OglviyConcept2 = () => {
             <Container className="d-block d-lg-none">
               <div>
                 <h1 className="mb-0 mb-md-5 mt-4 mt-lg-0 mb-lg-5">
-                  The 38 laws to grow startups
+                  38 laws to avoid startup disaster
                 </h1>
               </div>
             </Container>

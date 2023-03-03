@@ -2,9 +2,13 @@
   position: absolute;
   top: 146px;
   bottom: 0;
-  width: 37%;
+  width: 23%;
   color: white;
   z-index: 3;
+
+  @media (max-width: 2000px) {
+    width: 35%;
+  }
 
   @include media-breakpoint-down(lg) {
     display: none;
@@ -23,7 +27,11 @@
   width: 50%;
   color: white;
   position: relative;
-  min-height: 105vh;
+  min-height: 80vh;
+
+  @media (max-width: 2000px) {
+    min-height: 105vh;
+  }
 
   @include media-breakpoint-down(xl) {
     min-height: 120vh;
@@ -113,9 +121,15 @@
     color: $white;
   }
 
-  h2 + div {
+  h2 {
     @include media-breakpoint-down(md) {
-      display: none;
+      font-size: 1.3rem;
+    }
+
+    & + div {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
