@@ -2,9 +2,13 @@
   position: absolute;
   top: 146px;
   bottom: 0;
-  width: 37%;
+  width: 23%;
   color: white;
   z-index: 3;
+
+  @media (max-width: 2000px) {
+    width: 35%;
+  }
 
   @include media-breakpoint-down(lg) {
     display: none;
@@ -23,7 +27,11 @@
   width: 50%;
   color: white;
   position: relative;
-  min-height: 105vh;
+  min-height: 80vh;
+
+  @media (max-width: 2000px) {
+    min-height: 105vh;
+  }
 
   @include media-breakpoint-down(xl) {
     min-height: 120vh;
@@ -36,6 +44,9 @@
     flex-direction: column;
     h1 {
       text-align: center;
+      @include media-breakpoint-down(md) {
+        font-size: 2.5rem;
+      }
     }
   }
 
@@ -57,6 +68,10 @@
       width: 100%;
       transform: none;
       bottom: auto;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
     }
 
     & + div {
@@ -100,5 +115,30 @@
   @include media-breakpoint-down(lg) {
     padding: 24px 0;
     width: 100%;
+  }
+  @include media-breakpoint-down(md) {
+    background-color: $secondary;
+    color: $white;
+  }
+
+  h2 {
+    @include media-breakpoint-down(md) {
+      font-size: 1.3rem;
+    }
+
+    & + div {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+  }
+  img {
+    height: 35px !important;
   }
 }
