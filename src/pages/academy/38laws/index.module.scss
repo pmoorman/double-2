@@ -43,10 +43,7 @@
     min-height: auto;
     flex-direction: column;
     h1 {
-      text-align: center;
-      @include media-breakpoint-down(md) {
-        font-size: 2.5rem;
-      }
+      text-align: left;
     }
   }
 
