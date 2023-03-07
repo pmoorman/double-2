@@ -1,4 +1,5 @@
 /signup /academy/signup 301
+/sign-up /academy/signup 301
 /subscribe /academy/signup 301
 /email-course /academy/signup 301
 /academy /academy/signup 301

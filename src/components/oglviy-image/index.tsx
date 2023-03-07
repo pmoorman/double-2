@@ -8,7 +8,7 @@ export const OgilvyImage = () => {
     <div className="pt-lg-7 pb-lg-9 py-5">
       <Container className="position-relative">
         <div className={styles.imageIcon}></div>
-        <StaticImage src="./laws_38.jpeg" alt="28 laws" className="mx-lg-4" />
+        <StaticImage src="./laws_38.jpeg" alt="38 laws" className="mx-lg-4" />
       </Container>
     </div>
   );

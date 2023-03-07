@@ -84,7 +84,6 @@ export const Footer = () => {
       <div className={styles.footerPolicy}>
         <Container>
           <div className="d-flex flex-lg-row flex-md-row flex-column align-items-lg-center justify-content-end">
-            <Link to="/legal/terms">Terms & Conditions</Link>
             <Link to="/legal/privacy-policy">Privacy Policy</Link>
           </div>
         </Container>
