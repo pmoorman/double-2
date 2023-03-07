@@ -18,7 +18,7 @@ export const CareersGridList = () => {
         <div className={styles.itemContent}>
           <h3>{career.title}</h3>
           <div className="d-flex align-items-center mb-3">
-            <StaticImage alt="" src="./pin_icon.svg" />
+            <StaticImage alt="Map pin icon" src="./pin_icon.svg" />
             <p className="mb-0 ms-2">{career.location}</p>
           </div>
           <p>{career.excerpt}</p>

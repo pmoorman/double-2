@@ -70,6 +70,9 @@ export const SEO: FC<SEOProps> = ({
       defaultTitle={siteTitle}
       titleTemplate={`%s - ${siteTitle}`}
       meta={metaItems}
+      htmlAttributes={{
+        lang: "en",
+      }}
     />
   );
 };

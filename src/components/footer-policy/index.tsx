@@ -18,7 +18,6 @@ export const FooterPolicy = () => {
           </Link>
         </div>
         <div className="d-flex my-5">
-          {/* <Link to="/legal/terms">Terms & Conditions</Link> */}
           <Link to="/legal/privacy-policy">Privacy Policy</Link>
         </div>
       </Container>
