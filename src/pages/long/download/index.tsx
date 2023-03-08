@@ -5,13 +5,13 @@ import { SEO, OgilvyHeader2, OgilvyImage, OgilvyFooter } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "690674436";
+const formId = "690674436";
 
 const OglviyConcept = () => {
   return (
     <>
       <SEO title="This is how growth marketing works" />
-      <OgilvyHeader2 dripId={dripId} />
+      <OgilvyHeader2 formId={formId} />
 
       <div className={styles.lightBlueSection}>
         <Container>
@@ -57,7 +57,7 @@ const OglviyConcept = () => {
       </div>
 
       <OgilvyImage />
-      <OgilvyFooter dripId={dripId} />
+      <OgilvyFooter formId={formId} />
     </>
   );
 };

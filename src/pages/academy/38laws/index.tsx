@@ -4,7 +4,7 @@ import { SEO, OgilvyInlineForm } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "806391750";
+const formId = "806391750";
 
 const OglviyConcept2 = () => {
   return (
@@ -43,7 +43,7 @@ const OglviyConcept2 = () => {
               <div className="mb-2">Leave your details below: </div>
               <Col>
                 <OgilvyInlineForm
-                  dripId={dripId}
+                  formId={formId}
                   buttonProps={{
                     variant: "primary",
                   }}

@@ -6,7 +6,7 @@ import { OgilvBlueForm } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "374607761";
+const formId = "374607761";
 
 const OglviyConcept10 = () => {
   return (
@@ -168,7 +168,7 @@ const OglviyConcept10 = () => {
 
               <div className={styles.OgilvyForm}>
                 <OgilvBlueForm
-                  dripId={dripId}
+                  formId={formId}
                   buttonProps={{
                     variant: "primary",
                   }}

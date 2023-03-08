@@ -4,19 +4,19 @@ import { Col, Row, Form, Button, ButtonProps } from "react-bootstrap";
 import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
 
 export interface OgilvyFormProps {
-  dripId: string;
+  formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
 }
 
 export const OgilvyForm: FC<OgilvyFormProps> = ({
-  dripId,
+  formId,
   recaptchaProps,
   buttonProps,
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://www.getdrip.com/forms/${dripId}/submissions`;
+  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
 
   return (
     <Form name="form" method="POST" action={action}>
@@ -39,24 +39,10 @@ export const OgilvyForm: FC<OgilvyFormProps> = ({
             type="email"
             placeholder="Enter your email"
             aria-describedby="email"
-            name="fields[email]"
+            name="email_address"
           />
         </Col>
       </Row>
-
-      {/* used by drip */}
-      <div style={{ display: "none" }} aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <br />
-        <input
-          type="text"
-          id="website"
-          name="website"
-          tabIndex={-1}
-          autoComplete="false"
-          value=""
-        />
-      </div>
 
       <ReCAPTCHA
         {...recaptchaProps}

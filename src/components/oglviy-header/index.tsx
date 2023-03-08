@@ -5,10 +5,10 @@ import { OgilvyForm } from "@app/components";
 
 import * as styles from "./index.module.scss";
 export interface OgilvyHeaderProps {
-  dripId: string;
+  formId: string;
 }
 
-export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
+export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ formId }) => {
   return (
     <div>
       <Container>
@@ -36,7 +36,7 @@ export const OgilvyHeader: FC<OgilvyHeaderProps> = ({ dripId }) => {
             <h2>Download your free copy</h2>
             <Col md={6}>
               <OgilvyForm
-                dripId={dripId}
+                formId={formId}
                 buttonProps={{
                   variant: "secondary",
                 }}

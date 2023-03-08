@@ -11,13 +11,13 @@ import {
 
 import * as styles from "./index.module.scss";
 
-const dripId = "105558293";
+const formId = "105558293";
 
 const OglviyConcept = () => {
   return (
     <>
       <SEO title="This is how growth marketing works" />
-      <OgilvyHeader dripId={dripId} />
+      <OgilvyHeader formId={formId} />
 
       <div className={styles.lightBlueSection}>
         <Container>
@@ -63,7 +63,7 @@ const OglviyConcept = () => {
       </div>
 
       <OgilvyImage />
-      <OgilvyFooter dripId={dripId} />
+      <OgilvyFooter formId={formId} />
     </>
   );
 };

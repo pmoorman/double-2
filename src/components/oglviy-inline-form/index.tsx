@@ -15,19 +15,19 @@ import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
 import { StaticImage } from "gatsby-plugin-image";
 
 export interface OgilvyFormProps {
-  dripId: string;
+  formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
 }
 
 export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
-  dripId,
+  formId,
   recaptchaProps,
   buttonProps,
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://www.getdrip.com/forms/${dripId}/submissions`;
+  const action = `https://www.getdrip.com/forms/${formId}/submissions`;
 
   return (
     <Form name="form" method="POST" action={action}>
