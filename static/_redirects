@@ -18,5 +18,6 @@
 /short/startup-laws /academy/startup-laws 308
 /short/subscribe /academy/subscribe 308
 
-/*  https://double-agency-old.netlify.app/:splat  200
+/38-laws-of-growth.pdf /38-laws-of-growth/ 301
 
+/* https://double-agency-old.netlify.app/:splat 200
