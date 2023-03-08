@@ -17,7 +17,7 @@ const LawsOfGrowth = () => {
       />
       <div className="App">
         <iframe
-          src={`${lawsOfGrowth}#view=fitH`}
+          src={`${lawsOfGrowth}`}
           title="38 Laws Of Growth"
           height="100%"
           width="100%"
