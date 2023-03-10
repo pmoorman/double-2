@@ -25,7 +25,7 @@ export const OgilvBlueForm: FC<OgilvBlueFormProps> = ({
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://www.getdrip.com/forms/${formId}/submissions`;
+  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
 
   return (
     <>
