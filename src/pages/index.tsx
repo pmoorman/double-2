@@ -9,6 +9,7 @@ import CountUp from "react-countup";
 
 import * as styles from "./index-assets/index.module.scss";
 import WhiteLogo from "./index-assets/whiteLogo.svg";
+import BlackLogo from "./index-assets/blackLogo.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 const HomePage = () => {
@@ -29,7 +30,7 @@ const HomePage = () => {
         animation="fade-down"
         background={"#2a2f45"}
         color={"#fff"}
-        time={5400}
+        time={5300}
         className={styles.preLoader}
       >
         <CountUp end={99} className={styles.loading} duration={3.2} />
@@ -44,7 +45,10 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className={styles.circle}></div>
+        <div className={styles.halfCircle}></div>
+        <div className={styles.blacklogoImage}>
+          <img src={BlackLogo} />
+        </div>
       </CustomPreloader>
 
       <div className={styles.hero}>
