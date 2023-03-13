@@ -30,10 +30,10 @@ const HomePage = () => {
         animation="fade-down"
         background={"#2a2f45"}
         color={"#fff"}
-        time={5300}
+        time={3600}
         className={styles.preLoader}
       >
-        <CountUp end={99} className={styles.loading} duration={3.2} />
+        <CountUp end={99} className={styles.loading} duration={2} />
 
         <svg width="200" height="200" className={styles.loadingPie}>
           <circle r="50" cx="100" cy="100" className={styles.loadingCircle} />
@@ -46,9 +46,6 @@ const HomePage = () => {
         </div>
 
         <div className={styles.halfCircle}></div>
-        <div className={styles.blacklogoImage}>
-          <img src={BlackLogo} />
-        </div>
       </CustomPreloader>
 
       <div className={styles.hero}>

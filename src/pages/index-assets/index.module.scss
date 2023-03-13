@@ -12,6 +12,10 @@
   }
 }
 
+.preLoader {
+  display: none !important;
+}
+
 .preLogo {
   background-color: $secondary;
   position: absolute;
@@ -23,18 +27,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-}
-
-.logoImage {
-  z-index: 3;
+  z-index: 5;
   opacity: 0;
-  animation: show-hide-show 13s linear;
+  animation: show-hide-show 1.5s linear;
+  animation-delay: 1.7s;
+
+  .logoImage {
+    z-index: 5;
+    opacity: 1;
+  }
 }
 
 @keyframes show-hide-show {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   25% {
     opacity: 0;
@@ -44,22 +51,6 @@
   }
   100% {
     opacity: 0;
-  }
-}
-
-.blacklogoImage {
-  z-index: 3;
-  opacity: 0;
-  animation: show-hide-show 7s linear;
-  animation-delay: 2.8s;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  img {
-    top: 50%;
-    left: 50%;
-    z-index: 3;
   }
 }
 
@@ -73,9 +64,9 @@
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%) scale(2);
-  animation: zoom 2s ease;
+  animation: zoom 1.5s ease;
   z-index: 3;
-  animation-delay: 3.7s;
+  animation-delay: 2.5s;
 
   @keyframes zoom {
     0% {
@@ -117,7 +108,7 @@
   position: absolute;
   z-index: 10;
   opacity: 0;
-  animation: show-hide-spinner 6s;
+  animation: show-hide-spinner 2.1s ease-out;
 }
 
 .loadingPie {
@@ -125,15 +116,16 @@
   background: transparent;
   border-radius: 50%;
   z-index: 5;
-  animation: show-hide-spinner 7s;
+  animation: show-hide-spinner 6s;
 }
+
 .loadingCircle {
   opacity: 0;
   fill: rgba(255, 255, 255, 0);
   stroke: rgb(255, 255, 255);
   stroke-width: 100;
   stroke-dasharray: 0 314; /* PI * 174 ~= 314 */
-  animation: fillup 3.5s linear, show-hide-spinner 7s;
+  animation: fillup 2s linear, show-hide-spinner 6s;
   z-index: 6;
 }
 
@@ -148,7 +140,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
