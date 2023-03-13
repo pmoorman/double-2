@@ -12,6 +12,139 @@
   }
 }
 
+.preLogo {
+  background-color: $secondary;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.logoImage {
+  z-index: 3;
+  opacity: 0;
+  animation: show-hide-show 13s linear;
+}
+
+@keyframes show-hide-show {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  animation-name: zoom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 3;
+  animation-delay: 3.2s;
+}
+
+@keyframes zoom {
+  from {
+    width: 100px;
+    height: 100px;
+    border-radius: 150%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0%, -50%);
+  }
+
+  to {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 150%;
+    bottom: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s ease-in-out;
+  z-index: 4;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  font-size: 3rem;
+  color: $primary;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  animation: show-hide-spinner 6s;
+}
+
+.loadingPie {
+  transform: rotate(-90deg);
+  background: transparent;
+  border-radius: 50%;
+  z-index: 5;
+  animation: show-hide-spinner 7s;
+}
+.loadingCircle {
+  opacity: 0;
+  fill: rgba(255, 255, 255, 0);
+  stroke: rgb(255, 255, 255);
+  stroke-width: 100;
+  stroke-dasharray: 0 314; /* PI * 174 ~= 314 */
+  animation: fillup 3.5s linear, show-hide-spinner 7s;
+  z-index: 6;
+}
+
+@keyframes show-hide-spinner {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fillup {
+  to {
+    stroke-dasharray: 314 314;
+  }
+}
+
 .arrowDown {
   background: url(./arrow-down.svg) no-repeat center;
   display: inline-block;
