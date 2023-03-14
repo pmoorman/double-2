@@ -1,4 +1,4 @@
-import { CreatePagesArgs, CreateSchemaCustomizationArgs } from "gatsby";
+import { CreatePagesArgs, CreateSchemaCustomizationArgs, CreateWebpackConfigArgs } from "gatsby";
 import path from "path";
 
 exports.createSchemaCustomization = ({
@@ -12,6 +12,21 @@ exports.createSchemaCustomization = ({
     }
   `);
 };
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }: CreateWebpackConfigArgs) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-preloaders/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
 
 export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
