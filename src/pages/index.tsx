@@ -1,16 +1,17 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
-import { Link, CaseStudySection, VideoBackground, SEO } from "@app/components";
+import {
+  Link,
+  CaseStudySection,
+  VideoBackground,
+  SEO,
+  LoadingComponent,
+} from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
-import CountUp from "react-countup";
 
 import * as styles from "./index-assets/index.module.scss";
-import WhiteLogo from "./index-assets/whiteLogo.svg";
-
-import loadable from "@loadable/component";
-const Preloader = loadable(() => import("@app/components/preloader"));
 
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
@@ -26,28 +27,7 @@ const HomePage = () => {
         description="Looking for a growth marketing agency that will help you do better marketing, and drive explosive user growth? It's not a coincidence that you've found us."
       />
 
-      <Preloader
-        animation="fade-down"
-        background={"#2a2f45"}
-        color={"#fff"}
-        time={3600}
-      >
-        <>
-          <CountUp end={99} className={styles.loading} duration={2} />
-
-          <svg width="200" height="200" className={styles.loadingPie}>
-            <circle r="50" cx="100" cy="100" className={styles.loadingCircle} />
-          </svg>
-
-          <div className={styles.preLogo}>
-            <div>
-              <img src={WhiteLogo} className={styles.logoImage} />
-            </div>
-          </div>
-
-          <div className={styles.halfCircle}></div>
-        </>
-      </Preloader>
+      <LoadingComponent />
 
       <div className={styles.hero}>
         <VideoBackground src="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4" />
