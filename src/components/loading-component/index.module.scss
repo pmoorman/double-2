@@ -1,3 +1,22 @@
+.customLoading {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s linear 0s, visibility 0.2s linear 0.3s;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  background: rgb(42, 47, 69);
+}
+
 .preLogo {
   background-color: $secondary;
   position: absolute;
