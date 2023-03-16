@@ -57,6 +57,13 @@ export const Footer = () => {
               <div className={styles.partnersLogo}>
                 <div>
                   <StaticImage
+                    src="./quora.png"
+                    objectFit="contain"
+                    alt="Quora Marketing Partner's logo"
+                  />
+                </div>
+                <div>
+                  <StaticImage
                     src="./netlify.png"
                     objectFit="contain"
                     alt="Netlify logo"
