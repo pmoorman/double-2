@@ -20,15 +20,18 @@ const HomePage = () => {
     (a, b) => (b.homepageweight || 0) - (a.homepageweight || 0)
   );
 
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3800);
+    // Simulate page load time
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3600);
 
     document.body.classList.add("overflow-hidden");
     const timeoutId = setTimeout(() => {
       document.body.classList.remove("overflow-hidden");
-    }, 3800);
+    }, 3600);
     return () => clearTimeout(timeoutId);
   }, []);
 
@@ -39,8 +42,7 @@ const HomePage = () => {
         keywords="Growth Marketing Agency, Double Agency, Experts in exponential growth"
         description="Looking for a growth marketing agency that will help you do better marketing, and drive explosive user growth? It's not a coincidence that you've found us."
       />
-
-      {loading == true ? (
+      {isLoading ? (
         <LoadingComponent />
       ) : (
         <div>
