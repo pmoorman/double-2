@@ -23,22 +23,21 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     title,
     excerpt,
     hero_image,
-    process_subtitle,
-    process_graph,
     body_image,
     page_logo_image,
     stats,
     how_we_did_it,
     results,
     milestones,
+    process,
     pageSubtitle,
   } = frontmatter;
 
   const bodyImage = getImage(body_image);
-  const processGraph = getImage(process_graph);
   const heroImage = getImage(hero_image);
   const pageLogo = getImage(page_logo_image);
   const resultsImage = getImage(results.image);
+  const processImage = getImage(process?.image);
   ``;
   return (
     <div>
@@ -121,24 +120,25 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
           </div>
         )}
       </Container>
-
-      <div className={styles.processSection}>
-        <Container>
-          <div className={styles.processes}>
-            <h2 className="mb-4">Our process</h2>
-            <div className="subtitle mb-6">{process_subtitle}</div>
-          </div>
-          <div>
-            <Image>
-              <GatsbyImage image={processGraph} alt="Process" />
-            </Image>
-          </div>
-        </Container>
-      </div>
+      {process && (
+        <div className={styles.processSection}>
+          <Container>
+            <div className={styles.processes}>
+              <h2 className="mb-4">Our process</h2>
+              <div className="subtitle mb-6">{process.process_subtitle}</div>
+            </div>
+            <div>
+              <Image>
+                <GatsbyImage image={processImage} alt="Process" />
+              </Image>
+            </div>
+          </Container>
+        </div>
+      )}
 
       {milestones && (
         <Container>
-          <div className="mt-lg-7 mt-5">
+          <div className="mt-lg-7 mb-lg-6 mt-5">
             <h2 className="mb-5 d-flex justify-content-center">Milestones</h2>
           </div>
         </Container>
@@ -191,15 +191,9 @@ export const pageQuery = graphql`
           subtitle
           pageSubtitle
           excerpt
-          process_subtitle
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 650)
-            }
-          }
-          process_graph {
-            childImageSharp {
-              gatsbyImageData
             }
           }
           body_image {
@@ -228,6 +222,14 @@ export const pageQuery = graphql`
           milestones {
             title
             body
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          process {
+            process_subtitle
             image {
               childImageSharp {
                 gatsbyImageData

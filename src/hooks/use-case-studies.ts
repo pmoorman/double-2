@@ -150,6 +150,7 @@ export const useCaseStudies = () => {
       page_logo_image: "",
       process_graph: "",
       process_subtitle: "",
+      process: "",
       how_we_did_it: "",
       results: {
         body: "",

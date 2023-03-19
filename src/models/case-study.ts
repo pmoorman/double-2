@@ -20,13 +20,15 @@ export interface CaseStudy {
   hero_image: any;
   body_image: any;
   page_logo_image: any;
-  process_graph: any;
-  process_subtitle: string;
   how_we_did_it: string;
   pageSubtitle: string;
   results: {
     body: string;
     image: any;
+  };
+  process: { 
+    image: any;
+    process_subtitle: string;
   };
   milestones?: { title: string; image: any; body: string }[];
 
