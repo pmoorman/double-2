@@ -50,7 +50,7 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
               type="email"
               placeholder="Work email"
               aria-describedby="email"
-              name="fields[email]"
+              name="email_address"
             />
             <Button
               disabled={submitIsDisabled}
@@ -82,20 +82,6 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
           </div>
         </Col>
       </Row>
-
-      {/* used by drip */}
-      <div style={{ display: "none" }} aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <br />
-        <input
-          type="text"
-          id="website"
-          name="website"
-          tabIndex={-1}
-          autoComplete="false"
-          value=""
-        />
-      </div>
 
       <ReCAPTCHA
         {...recaptchaProps}

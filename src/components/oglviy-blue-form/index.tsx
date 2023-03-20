@@ -44,26 +44,10 @@ export const OgilvBlueForm: FC<OgilvBlueFormProps> = ({
                 type="email"
                 placeholder="Work email"
                 aria-describedby="email"
-                name="fields[email]"
+                name="email_address"
               />
             </Col>
           </Row>
-
-          {/* used by drip */}
-          <div
-            style={{ display: "none" }}
-            aria-hidden="true"
-            className={styles.space}
-          >
-            <input
-              type="text"
-              id="website"
-              name="website"
-              tabIndex={-1}
-              autoComplete="false"
-              value=""
-            />
-          </div>
 
           <ReCAPTCHA
             {...recaptchaProps}
