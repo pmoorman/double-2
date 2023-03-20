@@ -13,21 +13,6 @@ exports.createSchemaCustomization = ({
   `);
 };
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }: CreateWebpackConfigArgs) => {
-  if (stage === "build-html" || stage === "develop-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /react-preloaders/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
-}
-
 export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
 

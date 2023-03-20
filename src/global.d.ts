@@ -1,3 +1,6 @@
+import { FC } from "react";
+import { Link, LinkProps } from "./components";
+
 declare module "*.scss" {
   const content: { [className: string]: string };
   export = content;

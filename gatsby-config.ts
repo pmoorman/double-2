@@ -4,6 +4,9 @@ import type { GatsbyConfig } from "gatsby";
 const siteUrl = "https://double-agency.com";
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     siteUrl,
     recaptchaKey: "6LcftHoiAAAAAPZBvS2LJjb3w_BkHJlX5YiQNUhy",

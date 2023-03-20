@@ -175,3 +175,11 @@ img {
 .gray-bg {
   background-color: $gray;
 }
+.customLoading {
+  display: none;
+}
+.myAnimation {
+  &.customLoading {
+    display: block;
+  }
+}
