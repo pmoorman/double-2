@@ -5,7 +5,7 @@ import { SEO, OgilvyInlineForm, OgilvyLearnForm } from "@app/components";
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
-const dripId = "140790081";
+const formId = "4880134";
 
 const OglviyConcept4 = () => {
   return (
@@ -36,7 +36,7 @@ const OglviyConcept4 = () => {
               <div className="mb-3">Download your free pdf</div>
               <div>Leave your details below:</div>
               <OgilvyInlineForm
-                dripId={dripId}
+                formId={formId}
                 buttonProps={{
                   variant: "primary",
                 }}
@@ -59,7 +59,7 @@ const OglviyConcept4 = () => {
         </div>
       </div>
       <OgilvyLearnForm
-        dripId={dripId}
+        formId={formId}
         buttonProps={{
           variant: "primary",
         }}

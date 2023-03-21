@@ -13,19 +13,19 @@ import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
 import * as styles from "./index.module.scss";
 
 export interface OgilvyLearnFormProps {
-  dripId: string;
+  formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
 }
 
 export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
-  dripId,
+  formId,
   recaptchaProps,
   buttonProps,
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://www.getdrip.com/forms/${dripId}/submissions`;
+  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
 
   return (
     <>
@@ -72,24 +72,10 @@ export const OgilvyLearnForm: FC<OgilvyLearnFormProps> = ({
                         type="email"
                         placeholder="Work email"
                         aria-describedby="email"
-                        name="fields[email]"
+                        name="email_address"
                       />
                     </Col>
                   </Row>
-
-                  {/* used by drip */}
-                  <div style={{ display: "none" }} aria-hidden="true">
-                    <label htmlFor="website">Website</label>
-                    <br />
-                    <input
-                      type="text"
-                      id="website"
-                      name="website"
-                      tabIndex={-1}
-                      autoComplete="false"
-                      value=""
-                    />
-                  </div>
 
                   <ReCAPTCHA
                     {...recaptchaProps}
