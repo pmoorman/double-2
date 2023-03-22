@@ -32,16 +32,23 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const { pathname } = useLocation();
-  const hideNav = ["/academy", "/long", "/38-laws-of-growth"].some((p) =>
-    pathname.includes(p)
-  );
+  console.log({ pathname });
+  const hideNav = [
+    pathname.startsWith("/academy") &&
+      pathname !== "/academy/" &&
+      pathname !== "/academy",
+    pathname.startsWith("/long"),
+    pathname.startsWith("/38-laws-of-growth"),
+  ].some((p) => p);
 
   const hideFooter = [
-    "/contact",
-    "/academy",
-    "/long",
-    "/38-laws-of-growth",
-  ].some((p) => pathname.includes(p));
+    pathname.startsWith("/academy") &&
+      pathname !== "/academy/" &&
+      pathname !== "/academy",
+    pathname.startsWith("/long"),
+    pathname.startsWith("/contact"),
+    pathname.startsWith("/38-laws-of-growth"),
+  ].some((p) => p);
   const noFooter = ["/38-laws-of-growth"].some((p) => pathname.includes(p));
 
   return (
