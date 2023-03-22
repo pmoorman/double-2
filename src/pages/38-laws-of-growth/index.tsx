@@ -11,14 +11,14 @@ const LawsOfGrowth = () => {
   return (
     <>
       <SEO
-        title="38 Laws Of Growth - The Growth Marketing Agency"
+        title="38 Laws Of Growth Marketing - Double Agency"
         keywords="Laws Of Growth"
         description="Looking for a growth marketing agency? Contact us today for a free consultation! Let us explore how we can help you grow your business with growth marketing."
       />
       <div className="App">
         <iframe
           src={`${lawsOfGrowth}`}
-          title="38 Laws Of Growth"
+          title="38 Laws Of Growth Marketing"
           height="100%"
           width="100%"
           className={styles.pdfFile}

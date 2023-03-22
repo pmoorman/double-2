@@ -5,12 +5,12 @@ import { SEO, OgilvyInlineForm, OgilvyLearnForm } from "@app/components";
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
-const formId = "4880134";
+const formId = "4973748";
 
 const AcademyPage = () => {
   return (
     <>
-      <SEO title="38 laws of growth marketing" />
+      <SEO title="The 38 laws of growth marketing" />
       <div className={styles.pageHero}>
         <Container>
           <Row className="align-center">
@@ -19,7 +19,7 @@ const AcademyPage = () => {
               className="justify-content-center	d-none d-lg-flex d-md-flex"
             >
               <StaticImage
-                src="./phone.png"
+                src="./new_iphone_mockup_desktop.png"
                 alt="Phone image"
                 objectFit="contain"
                 width={476}
@@ -27,14 +27,12 @@ const AcademyPage = () => {
             </Col>
             <Col md="6" xs="8">
               <h1 className="mb-3">
-                38 laws to
+                The 38 laws of
                 <br />
-                avoid startup
-                <br />
-                disaster
+                growth marketing
               </h1>
-              <div className="mb-3">Download your free pdf</div>
-              <div>Leave your details below:</div>
+              <div className="mb-3">As a growth agency, Double has executed campaigns for some of the fastest growing tech companies in the world.</div>
+              <div>Leave your details and get access to the free PDF.</div>
               <OgilvyInlineForm
                 formId={formId}
                 buttonProps={{
@@ -50,7 +48,7 @@ const AcademyPage = () => {
         </Container>
         <div className={styles.mobileImage}>
           <StaticImage
-            src="./phone_mobile.png"
+            src="./new_iphone_mockup_mobile.png"
             alt="Phone image"
             objectFit="contain"
             width={120}
