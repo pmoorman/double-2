@@ -26,12 +26,12 @@ const AcademyPage = () => {
               />
             </Col>
             <Col md="6" xs="8">
-              <h1 className="mb-3">
+              <h1 style={{ fontSize: "80%" }} className="mb-3">
                 The 38 laws of
                 <br />
                 growth marketing
               </h1>
-              <div className="mb-3">As a growth agency, Double has executed campaigns for some of the fastest growing tech companies in the world.</div>
+              <div style={{ fontSize: "14px" }} className="mb-3">As a growth agency, Double has executed campaigns for some of the fastest growing tech companies in the world.</div>
               <div>Leave your details and get access to the free PDF.</div>
               <OgilvyInlineForm
                 formId={formId}
