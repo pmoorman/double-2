@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import { SEO } from "@app/components";
 
-import pdf from "./The-38-laws-to-avoid-startup-marketing.pdf";
+import pdf from "./the-38-laws-of-growth-marketing.pdf";
 
 import * as styles from "./index.module.scss";
 
