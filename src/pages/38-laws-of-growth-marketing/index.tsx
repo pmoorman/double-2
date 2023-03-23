@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import { SEO } from "@app/components";
 
-import lawsOfGrowth from "./The-38-laws-to-avoid-startup-disaster.pdf";
+import pdf from "./The-38-laws-to-avoid-startup-marketing.pdf";
 
 import * as styles from "./index.module.scss";
 
@@ -17,7 +17,7 @@ const LawsOfGrowth = () => {
       />
       <div className="App">
         <iframe
-          src={`${lawsOfGrowth}`}
+          src={`${pdf}`}
           title="38 Laws Of Growth Marketing"
           height="100%"
           width="100%"
