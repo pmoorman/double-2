@@ -11,7 +11,7 @@ const LawsOfGrowth = () => {
   return (
     <>
       <SEO
-        title="38 Laws To Avoid Startup Disaster - Double Agency"
+        title="38 Laws Of Growth Marketing - Double Agency"
         keywords="Avoid Startup Disaster"
         description="Looking for a growth marketing agency? Contact us today for a free consultation! Let us explore how we can help you grow your business with growth marketing."
       />
