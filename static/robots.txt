@@ -4,3 +4,5 @@ Allow: /academy/$
 Disallow: /elite-course
 Disallow: /short/signup
 Disallow: /academy/*
+Disallow: /38-laws-of-growth-marketing/
+Disallow: /38-laws-to-avoid-startup-disaster/
