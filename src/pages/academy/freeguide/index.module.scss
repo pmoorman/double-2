@@ -1,104 +1,42 @@
-.heading {
-  position: absolute;
-  top: 146px;
-  bottom: 0;
-  width: 37%;
-  color: white;
-  z-index: 3;
-
-  @include media-breakpoint-down(lg) {
-    display: none;
-  }
-
-  span {
-    display: block;
-    @include media-breakpoint-down(lg) {
-      display: inline-block;
-    }
-  }
-}
-
-.blueSection {
-  background-color: $secondary;
-  width: 50%;
-  color: white;
+.pageHero {
+  background-color: #faf5ed;
+  padding: 3rem 0 5rem 0;
   position: relative;
-  min-height: 105vh;
 
-  @include media-breakpoint-down(xl) {
-    min-height: 120vh;
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding: 24px 0;
-    width: 100%;
-    min-height: auto;
-    flex-direction: column;
-    h1 {
-      text-align: center;
-    }
-  }
-
-  .lines {
-    background: url(./line.svg) no-repeat;
-    width: 70%;
-    height: 188px;
-    bottom: 120px;
-    transform: translateY(95px);
-    margin-top: 3px;
-    z-index: 2;
-    position: absolute;
-
-    @include media-breakpoint-down(lg) {
-      background: url(./line-mobile.svg) no-repeat;
-      height: 230px;
-      background-size: contain;
-      position: relative;
-      width: 100%;
-      transform: none;
-      bottom: auto;
-    }
+  h1 {
+    color: $secondary;
 
     & + div {
-      height: 2px;
-      width: 50%;
-      background-color: $white;
-      position: absolute;
-      bottom: 120px;
-      margin-top: 1px;
-      right: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: $secondary;
 
-      @include media-breakpoint-down(xl) {
-        margin-top: 28px;
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
       }
 
-      @include media-breakpoint-down(lg) {
-        display: none;
-      }
+      & + div {
+        font-size: 0.75rem;
 
-      &:after {
-        content: "";
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        position: absolute;
-        right: 0;
-        top: -5px;
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
     }
   }
 }
 
-.greySection {
-  background-color: $gray;
-  width: 50%;
-  padding: 88px;
+.mobileImage {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  display: none;
 
-  @include media-breakpoint-down(lg) {
-    padding: 24px 0;
-    width: 100%;
+  @include media-breakpoint-down(md) {
+    display: flex;
+  }
+
+  img {
+    width: 100px;
   }
 }
