@@ -10,7 +10,7 @@ const formId = "4880134";
 const OglviyConcept4 = () => {
   return (
     <>
-      <SEO title="38 laws of growth marketing" />
+      <SEO title="38 laws to avoid startup disaster" />
       <div className={styles.pageHero}>
         <Container>
           <Row className="align-center">
@@ -54,7 +54,7 @@ const OglviyConcept4 = () => {
             alt="Phone image"
             objectFit="contain"
             width={120}
-            quality={50}
+            quality={100}
           />
         </div>
       </div>

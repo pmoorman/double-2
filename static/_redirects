@@ -1,9 +1,9 @@
-/signup /academy/signup 301
-/sign-up /academy/signup 301
-/subscribe /academy/signup 301
-/email-course /academy/signup 301
-/free-course /academy/signup 301
-/emailcourse /academy/signup 301
+/signup /academy/ 301
+/sign-up /academy/ 301
+/subscribe /academy/ 301
+/email-course /academy/ 301
+/free-course /academy/ 301
+/emailcourse /academy/ 301
 
 /short/7lessons /academy/7lessons 308
 /short/38laws /academy/38laws 308
@@ -17,5 +17,6 @@
 /short/startup-laws /academy/startup-laws 308
 /short/subscribe /academy/subscribe 308
 
-/38-laws-of-growth.pdf /38-laws-of-growth/ 301
+/38-laws-of-growth.pdf /38-laws-of-growth-marketing/ 301
+/38-laws-of-growth/ /38-laws-of-growth-marketing/ 301
 
