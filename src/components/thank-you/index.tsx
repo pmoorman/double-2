@@ -1,14 +1,13 @@
 import React from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, SEO, GifSection } from "@app/components";
+import { Link, SEO, GifSection, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
 export const ThankYou = () => {
   return (
     <>
-      <SEO title="Thank you" />
       <div className={styles.thankYouHero}>
         <Container>
           <GifSection />
@@ -62,6 +61,15 @@ export const ThankYou = () => {
           </Row>
         </Container>
       </div>
+    </>
+  );
+};
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Thank you" />
     </>
   );
 };

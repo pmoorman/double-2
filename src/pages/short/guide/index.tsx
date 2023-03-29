@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyForm } from "@app/components";
+import { SEO, OgilvyForm, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -9,7 +9,6 @@ const formId = "4880160";
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="38 laws of growth marketing" />
       <div>
         <Container>
           <div className={styles.heading}>
@@ -73,3 +72,12 @@ const OglviyConcept2 = () => {
 };
 
 export default OglviyConcept2;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="38 laws of growth marketing" />
+    </>
+  );
+};

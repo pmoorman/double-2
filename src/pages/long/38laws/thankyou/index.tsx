@@ -2,14 +2,13 @@ import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Link, SEO } from "@app/components";
+import { Link, SEO, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
 const OglviyThankYou = () => {
   return (
     <>
-      <SEO title="Thank you" />
       <div className={styles.thankYouHero}>
         <Container>
           <h1 className="mb-lg-6 mb-4">Your PDF is on its way!</h1>
@@ -67,3 +66,12 @@ const OglviyThankYou = () => {
 };
 
 export default OglviyThankYou;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Thank you" />
+    </>
+  );
+};

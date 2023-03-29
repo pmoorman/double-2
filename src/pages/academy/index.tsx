@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyInlineForm, OgilvyLearnForm } from "@app/components";
+import {
+  SEO,
+  OgilvyInlineForm,
+  OgilvyLearnForm,
+  AppHead,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
@@ -10,7 +15,6 @@ const formId = "4973748";
 const AcademyPage = () => {
   return (
     <>
-      <SEO title="The 38 laws of growth marketing" />
       <div className={styles.pageHero}>
         <Container>
           <Row className="align-center">
@@ -31,7 +35,10 @@ const AcademyPage = () => {
                 <br />
                 growth marketing
               </h1>
-              <div style={{ fontSize: "20px" }} className="mb-3">As a growth agency, Double has executed campaigns for some of the fastest growing tech companies in the world.</div>
+              <div style={{ fontSize: "20px" }} className="mb-3">
+                As a growth agency, Double has executed campaigns for some of
+                the fastest growing tech companies in the world.
+              </div>
               <div>Leave your details and get access to the free PDF.</div>
               <OgilvyInlineForm
                 formId={formId}
@@ -71,3 +78,12 @@ const AcademyPage = () => {
 };
 
 export default AcademyPage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="The 38 laws of growth marketing" />
+    </>
+  );
+};

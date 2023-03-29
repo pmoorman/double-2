@@ -1,13 +1,17 @@
 import React from "react";
-import { ThankYou, SEO } from "@app/components";
+import { ThankYou, SEO, AppHead } from "@app/components";
 
 const OglviyThankYou = () => {
-  return (
-    <>
-      <SEO title="Thank you" />
-      <ThankYou />
-    </>
-  );
+  return <ThankYou />;
 };
 
 export default OglviyThankYou;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Thank you" />
+    </>
+  );
+};

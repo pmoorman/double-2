@@ -1,7 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { SEO, OgilvyHeader2, OgilvyImage, OgilvyFooter } from "@app/components";
+import {
+  SEO,
+  OgilvyHeader2,
+  OgilvyImage,
+  OgilvyFooter,
+  AppHead,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -10,7 +16,6 @@ const formId = "690674436";
 const OglviyConcept = () => {
   return (
     <>
-      <SEO title="This is how growth marketing works" />
       <OgilvyHeader2 formId={formId} />
 
       <div className={styles.lightBlueSection}>
@@ -63,3 +68,12 @@ const OglviyConcept = () => {
 };
 
 export default OglviyConcept;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="This is how growth marketing works" />
+    </>
+  );
+};
