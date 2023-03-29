@@ -10,16 +10,12 @@ import {
   Hero,
   TwoColumnSection,
   Image,
+  AppHead,
 } from "@app/components";
 
 const ServiceCreative = () => {
   return (
     <>
-      <SEO
-        title="Creative & Content Marketing Services - Double Agency"
-        keywords="Creative Services, Content Marketing Services"
-        description="Looking to hire a paid ads expert, a sales funnel architect, or a product marketer? Look no further! Start getting the most out of your marketing channels"
-      />
       <Hero
         type={1}
         title="Creative"
@@ -194,3 +190,16 @@ const ServiceCreative = () => {
 };
 
 export default ServiceCreative;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Creative & Content Marketing Services - Double Agency"
+        keywords="Creative Services, Content Marketing Services"
+        description="Looking to hire a paid ads expert, a sales funnel architect, or a product marketer? Look no further! Start getting the most out of your marketing channels"
+      />
+    </>
+  );
+};

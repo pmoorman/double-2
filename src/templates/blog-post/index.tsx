@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { graphql, PageProps } from "gatsby";
+import { graphql, HeadFC, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
@@ -10,7 +10,7 @@ import { useBlogPosts, useSocialShareLinks } from "@app/hooks";
 import { BlogPost } from "@app/models";
 
 import * as styles from "./index.module.scss";
-import { SectionFeaturedArticles, SEO } from "@app/components";
+import { AppHead, SectionFeaturedArticles, SEO } from "@app/components";
 
 export interface BlogPostTemplateProps {
   file: {
@@ -25,14 +25,9 @@ export interface BlogPostTemplateProps {
 const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
   const { slug, body, frontmatter } = props.data.file.childMdx;
   const {
-    seoTitle,
-    seoKeywords,
-    seoDescription,
     title,
     subtitle,
     date,
-    featured,
-    excerpt,
     author,
     categories,
     summary_items,
@@ -48,11 +43,6 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
 
   return (
     <>
-      <SEO
-        title={seoTitle}
-        keywords={seoKeywords}
-        description={seoDescription}
-      />
       <div className={styles.hero}>
         <Container>
           <Row>
@@ -155,3 +145,19 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head: HeadFC<BlogPostTemplateProps> = ({ data }) => {
+  const { frontmatter } = data.file.childMdx;
+  const { seoTitle, seoKeywords, seoDescription } = frontmatter;
+
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title={seoTitle}
+        keywords={seoKeywords}
+        description={seoDescription}
+      />
+    </>
+  );
+};

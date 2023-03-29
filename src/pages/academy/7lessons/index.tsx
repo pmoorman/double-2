@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyForm } from "@app/components";
+import { SEO, OgilvyForm, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -9,11 +9,6 @@ const formId = "501415057";
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO
-        title="7 Strategic Lessons for CMOs from the Growth Agency"
-        keywords="strategic lessons for CMOs, Growth Agency"
-        description="Looking to up your marketing game? Check out these seven strategic lessons from some of the fastest-growing tech companies. Start learning from the best now."
-      />
       <div>
         <Container>
           <div className={styles.heading}>
@@ -76,3 +71,16 @@ const OglviyConcept2 = () => {
 };
 
 export default OglviyConcept2;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="7 Strategic Lessons for CMOs from the Growth Agency"
+        keywords="strategic lessons for CMOs, Growth Agency"
+        description="Looking to up your marketing game? Check out these seven strategic lessons from some of the fastest-growing tech companies. Start learning from the best now."
+      />
+    </>
+  );
+};

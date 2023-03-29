@@ -1,13 +1,12 @@
 import * as React from "react";
 import { Container, Button } from "react-bootstrap";
-import { Link, SEO } from "@app/components";
+import { AppHead, Link, SEO } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
 export const NotFoundPage = () => {
   return (
     <>
-      <SEO title="Not found" />
       <Container>
         <div className="text-center py-lg-8 py-5 position-relative">
           <div className={styles.bg_image}></div>
@@ -24,6 +23,15 @@ export const NotFoundPage = () => {
           </Button>
         </div>
       </Container>
+    </>
+  );
+};
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Not found" />
     </>
   );
 };

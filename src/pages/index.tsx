@@ -1,7 +1,13 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
-import { Link, CaseStudySection, VideoBackground, SEO } from "@app/components";
+import {
+  Link,
+  CaseStudySection,
+  VideoBackground,
+  SEO,
+  AppHead,
+} from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
@@ -15,11 +21,6 @@ const HomePage = () => {
 
   return (
     <>
-      <SEO
-        title="Growth Marketing Agency - Double"
-        keywords="Growth Marketing Agency, Double Agency, Experts in exponential growth"
-        description="Looking for a growth marketing agency that will help you do better marketing, and drive explosive user growth? It's not a coincidence that you've found us."
-      />
       <div className={styles.hero}>
         <VideoBackground src="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4" />
       </div>
@@ -109,3 +110,16 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Growth Marketing Agency - Double"
+        keywords="Growth Marketing Agency, Double Agency, Experts in exponential growth"
+        description="Looking for a growth marketing agency that will help you do better marketing, and drive explosive user growth? It's not a coincidence that you've found us."
+      />
+    </>
+  );
+};

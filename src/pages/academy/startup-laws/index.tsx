@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyInlineForm, OgilvyLearnForm } from "@app/components";
+import {
+  SEO,
+  OgilvyInlineForm,
+  OgilvyLearnForm,
+  AppHead,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
@@ -10,7 +15,6 @@ const formId = "901711681";
 const OglviyConcept8 = () => {
   return (
     <>
-      <SEO title="38 laws to avoid startup disaster" />
       <div className={styles.pageHero}>
         <Container>
           <Row className="align-center">
@@ -118,3 +122,12 @@ const OglviyConcept8 = () => {
 };
 
 export default OglviyConcept8;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="38 laws to avoid startup disaster" />
+    </>
+  );
+};

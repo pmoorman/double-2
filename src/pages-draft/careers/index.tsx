@@ -11,6 +11,7 @@ import {
   Link,
   SEO,
   VideoSection,
+  AppHead,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
@@ -18,7 +19,6 @@ import * as styles from "./index.module.scss";
 const CareersPage = () => {
   return (
     <>
-      <SEO title="Careers" />
       <div className={styles.heroBg}>
         <Container>
           <Row className={styles.heroContent}>
@@ -212,3 +212,12 @@ const CareersPage = () => {
 };
 
 export default CareersPage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Careers" />
+    </>
+  );
+};
