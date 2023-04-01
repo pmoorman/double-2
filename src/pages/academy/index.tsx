@@ -83,7 +83,7 @@ export const Head = () => {
   return (
     <>
       <AppHead />
-      <SEO title="The 38 laws of growth marketing" />
+      <SEO title="The 38 laws of growth marketing" SEO description="We collected the 38 most important lessons that we learned working with some of the fastest-growing tech companies like TikTok, Alpian, Glowforge and more." keywords="lessons for growth, laws of growth, laws of growth marketing"/>
     </>
   );
 };
