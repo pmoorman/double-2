@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /academy/$
+Allow: /academy/38-laws-to-avoid-startup-disaster
 Disallow: /elite-course
 Disallow: /short/signup
 Disallow: /academy/*
