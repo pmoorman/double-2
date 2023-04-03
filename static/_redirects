@@ -22,3 +22,7 @@
 /38-laws-of-growth/ /38-laws-of-growth-marketing/ 301
 
 /elite-course https://shiny-platypus-01aaa1.netlify.app/elite-course 200
+/assets/new-main.css https://shiny-platypus-01aaa1.netlify.app/assets/new-main.css 200
+/assets/elite-course.css https://shiny-platypus-01aaa1.netlify.app/assets/elite-course.css 200
+/assets/js/drip.js https://shiny-platypus-01aaa1.netlify.app/assets/js/drip.js 200
+/assets/images/* https://shiny-platypus-01aaa1.netlify.app/assets/images/:splat 200
