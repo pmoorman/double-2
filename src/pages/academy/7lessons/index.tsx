@@ -31,7 +31,7 @@ const OglviyConcept4 = () => {
             </Col>
             <Col md="6" xs="8">
               <h1 className="mb-3">
-                7 essential 
+                7 essential
                 <br />
                 lessons on how
                 <br />
@@ -63,6 +63,14 @@ const OglviyConcept4 = () => {
         </div>
       </div>
       <OgilvyLearnForm
+        sectionTitle="What you’ll learn"
+        block1Title="#1 — Make growth your obsession"
+        block1Body="Growth and distribution should be your top priority, because getting users is harder than it seems. It is poor distribution— not product—that is the number one cause of startup failure. Prioritise accordingly."
+        block2Title="#2 — Systems, not hacks"
+        block2Body="Not all growth is created equal. Some growth is temporary, while other growth lasts.  Growth marketing is about unlocking structural, compounding growth. To acquire millions of users, marketing needs to become predictable, systematic, automated and repeatable. "
+        formTitle="Unlock all 38 laws"
+        formBody="Uncover all 38 laws of growth. Sign up with your email and we’ll send them over."
+        formButton="Download PDF"
         formId={formId}
         buttonProps={{
           variant: "primary",
