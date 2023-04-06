@@ -46,7 +46,6 @@ export const GifSection = () => {
         <video loop muted autoPlay playsInline preload="metadata">
           {videoUrl.length && <source src={videoUrl} type="video/mp4" />}
         </video>
-        `
       </div>
     </>
   );
