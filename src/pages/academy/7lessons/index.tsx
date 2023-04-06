@@ -40,6 +40,7 @@ const OglviyConcept4 = () => {
               <div className="mb-3">Get the free email course</div>
               <div>Leave your details below:</div>
               <OgilvyInlineForm
+              formButton="Start learning"
                 formId={formId}
                 buttonProps={{
                   variant: "primary",
@@ -64,13 +65,13 @@ const OglviyConcept4 = () => {
       </div>
       <OgilvyLearnForm
         sectionTitle="What you’ll learn"
-        block1Title="#1 — Make growth your obsession"
-        block1Body="Growth and distribution should be your top priority, because getting users is harder than it seems. It is poor distribution— not product—that is the number one cause of startup failure. Prioritise accordingly."
-        block2Title="#2 — Systems, not hacks"
+        block1Title="Lesson #1  — The Wartime CMO"
+        block1Body="Who is the Wartime CMO? What growth levers do they pull? Why should you see yourself as one? Wartime CMOs are ruthless, and willing to go down to the tactical level to get every last issue resolved. It’s a spirit of hustle, grit and elbow grease."
+        block2Title="Lesson #2  — Systems, not hacks"
         block2Body="Not all growth is created equal. Some growth is temporary, while other growth lasts.  Growth marketing is about unlocking structural, compounding growth. To acquire millions of users, marketing needs to become predictable, systematic, automated and repeatable. "
-        formTitle="Unlock all 38 laws"
-        formBody="Uncover all 38 laws of growth. Sign up with your email and we’ll send them over."
-        formButton="Download PDF"
+        formTitle="Unlock all 7 lessons"
+        formBody="Uncover all the 7 lessons and their full content. Sign up with your email and we’ll send them over."
+        formButton="Start learning"
         formId={formId}
         buttonProps={{
           variant: "primary",
