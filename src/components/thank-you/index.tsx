@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, SEO, GifSection, AppHead } from "@app/components";
@@ -6,8 +6,8 @@ import { Link, SEO, GifSection, AppHead } from "@app/components";
 import * as styles from "./index.module.scss";
 
 export type ThankYouProps = {
-  title?: string;
-  subtitle?: string;
+  title?: string | ReactNode;
+  subtitle?: string | ReactNode;
 };
 
 export const ThankYou: FC<ThankYouProps> = ({
