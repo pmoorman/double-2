@@ -6,8 +6,8 @@ import { Link, SEO, GifSection, AppHead } from "@app/components";
 import * as styles from "./index.module.scss";
 
 export type ThankYouProps = {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
 };
 
 export const ThankYou: FC<ThankYouProps> = ({
