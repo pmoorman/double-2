@@ -91,7 +91,7 @@ export const Head = () => {
   return (
     <>
       <AppHead />
-      <SEO title="38 laws to avoid startup disaster" />
+      <SEO title="7 lessons to grow startups" />
     </>
   );
 };
