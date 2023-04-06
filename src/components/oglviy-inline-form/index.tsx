@@ -18,12 +18,14 @@ export interface OgilvyFormProps {
   formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
+  formButton?: string;
 }
 
 export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
   formId,
   recaptchaProps,
   buttonProps,
+  formButton = "Download PDF",
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
@@ -59,7 +61,7 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
               className="text-white"
               {...buttonProps}
             >
-              Download PDF
+              {formButton}
             </Button>
           </InputGroup>
           <div className={styles.avatars}>
