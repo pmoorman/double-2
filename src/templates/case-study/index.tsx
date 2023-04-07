@@ -152,6 +152,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               quoteImage && <GatsbyImage image={quoteImage} alt="Process" />
             }
             quoteStyle={{ color: "#1288FF" }}
+            quoteLineStyle={{ borderColor: "#1288FF" }}
           >
             <span>{quote.content}</span>
           </BlockQuote>

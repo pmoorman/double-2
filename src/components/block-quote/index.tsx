@@ -10,6 +10,7 @@ export interface BlockQuoteProps {
   location?: string | ReactNode;
   image?: ReactNode;
   quoteStyle?: React.CSSProperties;
+  quoteLineStyle?: React.CSSProperties;
 }
 
 export const BlockQuote: FC<BlockQuoteProps> = ({
@@ -20,12 +21,13 @@ export const BlockQuote: FC<BlockQuoteProps> = ({
   location,
   image,
   quoteStyle,
+  quoteLineStyle,
 }) => {
   const hasFooter = !!(name || title || location);
 
   const renderQuote = () => (
     <div className={styles.blockquoteInner}>
-      <div className={styles.quoteLine}></div>
+      <div style={quoteLineStyle} className={styles.quoteLine}></div>
       <p style={quoteStyle}>“{children}”</p>
       {hasFooter && (
         <footer>
