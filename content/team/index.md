@@ -43,7 +43,7 @@ members:
   - name: Reka Szendi
     title: Reking machine
     location: Bali
-    image: ./reka.png
+    image: ./reka.jpg
 
   - name: Zbyszek Trzeciak
     title: Zee-dog
