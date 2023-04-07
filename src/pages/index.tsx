@@ -1,19 +1,38 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import ReactPlayer from "react-player";
+import { StaticImage } from "gatsby-plugin-image";
 
 import {
   Link,
   CaseStudySection,
-  VideoBackground,
   SEO,
   AppHead,
+  AppAccordion,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
-import ReactPlayer from "react-player";
-import { StaticImage } from "gatsby-plugin-image";
+
+const services = [
+  {
+    title: "Strategy",
+    body: "From building engaged audiences to designing growth loops, we build strategy with exponential growth in mind.",
+  },
+  {
+    title: "Performance",
+    body: "We find the winning channel that suits your business goals. We measure what works and optimise for traffic, lead generation, and conversion.",
+  },
+  {
+    title: "Infrastructure",
+    body: "The underlying technology that ensures everything works smoothly, from data collection to automations. ",
+  },
+  {
+    title: "Creative",
+    body: "Get the most out of your marketing channels with clear and creative deliverables. We create websites, blogposts, emails, animations and much more.",
+  },
+];
 
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
@@ -41,6 +60,19 @@ const HomePage = () => {
       <Container>
         <HomeVideo />
       </Container>
+
+      <div id="services" className="my-4 my-md-6">
+        <Container>
+          <Row className="justify-content-between">
+            <Col md={3} className="mb-3 mb-md-0">
+              <h4>We offer a range of marketing services</h4>
+            </Col>
+            <Col md={5}>
+              <AppAccordion items={services} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
       <div id="caseStudies">
         <Container>

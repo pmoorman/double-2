@@ -26,12 +26,3 @@ export const NotFoundPage = () => {
     </>
   );
 };
-
-export const Head = () => {
-  return (
-    <>
-      <AppHead />
-      <SEO title="Not found" />
-    </>
-  );
-};
