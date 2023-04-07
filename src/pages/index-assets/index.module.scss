@@ -159,3 +159,12 @@ h2 {
   bottom: 25px;
   right: 25px;
 }
+
+.features {
+  > div:not(:first-child) > div {
+    border-left: 1px solid black;
+    @include media-breakpoint-down(md) {
+      border: 0;
+    }
+  }
+}

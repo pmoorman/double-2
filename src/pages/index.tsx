@@ -56,6 +56,43 @@ const HomePage = () => {
         ))}
       </div>
 
+      <div id="features" className="pt-md-8">
+        <Container>
+          <Row className={styles.features}>
+            <Col md={4}>
+              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+                <StaticImage
+                  className="me-3"
+                  src="./index-assets/star.svg"
+                  alt="star"
+                />
+                <h3 className="mb-0">60k+ Academy subscribers </h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+                <StaticImage
+                  className="me-3"
+                  src="./index-assets/pyra.svg"
+                  alt="pyra"
+                />
+                <h3 className="mb-0">Experienced start-up founders</h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+                <StaticImage
+                  className="me-3"
+                  src="./index-assets/diamond.svg"
+                  alt="diamond"
+                />
+                <h3 className="mb-0">Worked with 50+ tech companies </h3>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
       <Container className="pt-lg-8 py-4 pb-lg-6">
         <Row>
           <div className={styles.mobileLines}>
