@@ -12,6 +12,8 @@ import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
+import ReactPlayer from "react-player";
+import { StaticImage } from "gatsby-plugin-image";
 
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
@@ -21,18 +23,10 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={styles.hero}>
-        <VideoBackground src="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4" />
-      </div>
-      <div className="pt-5 pb-lg-9 pb-5">
+      <div className="pt-5 pb-lg-5 pb-5">
         <Container>
-          <Row>
-            <Col
-              lg={{ span: 8, offset: 2 }}
-              md={{ span: 8, offset: 2 }}
-              className="text-center"
-            >
-              <div className={styles.arrowDown}></div>
+          <Row className="justify-content-center">
+            <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
               <h1 className="mb-5">Experts in exponential growth.</h1>
               <p>
                 Double is a growth marketing agency. We help tech companies do
@@ -43,6 +37,10 @@ const HomePage = () => {
           </Row>
         </Container>
       </div>
+
+      <Container>
+        <HomeVideo />
+      </Container>
 
       <div id="caseStudies">
         <Container>
@@ -106,6 +104,34 @@ const HomePage = () => {
         </Row>
       </Container>
     </>
+  );
+};
+
+const HomeVideo = () => {
+  const [playing, setPlaying] = React.useState(true);
+
+  return (
+    <div className={styles.videoContainer}>
+      <ReactPlayer
+        url="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4"
+        width="100%"
+        height="100%"
+        playing={playing}
+        muted
+        loop
+        playsinline
+      />
+      <div className={styles.playButton}>
+        <div role="button" onClick={() => setPlaying((v) => !v)}>
+          <StaticImage
+            src="./index-assets/play.svg"
+            alt="Play"
+            width={65}
+            height={67}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
