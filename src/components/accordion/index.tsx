@@ -11,11 +11,15 @@ import * as styles from "./index.module.scss";
 
 export type AppAccordionProps = {
   items: { title: string; body: string }[];
+  defaultOpenTitle?: string;
 };
 
-export const AppAccordion: FC<AppAccordionProps> = ({ items }) => {
+export const AppAccordion: FC<AppAccordionProps> = ({
+  items,
+  defaultOpenTitle,
+}) => {
   return (
-    <Accordion defaultActiveKey={items[0].title}>
+    <Accordion defaultActiveKey={defaultOpenTitle}>
       {items.map((item, index) => (
         <div key={item.title + index} className="mb-3">
           <AppAccordionHeader eventKey={item.title}>
