@@ -83,40 +83,43 @@ const HomePage = () => {
         ))}
       </div>
 
-      <div id="features" className="pt-md-8">
+      <div id="features" className="pt-lg-8">
         <Container>
-          <Row className={styles.features}>
-            <Col md={4}>
-              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+          <div className={`d-flex flex-column flex-lg-row ` + styles.features}>
+            <div>
+              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
-                  className="me-3"
+                  className="me-3 flex-shrink-0"
                   src="./index-assets/star.svg"
                   alt="star"
+                  width={84}
                 />
                 <h3 className="mb-0">60k+ Academy subscribers </h3>
               </div>
-            </Col>
-            <Col md={4}>
-              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+            </div>
+            <div>
+              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
-                  className="me-3"
+                  className="me-3 flex-shrink-0"
                   src="./index-assets/pyra.svg"
                   alt="pyra"
+                  width={86}
                 />
                 <h3 className="mb-0">Experienced start-up founders</h3>
               </div>
-            </Col>
-            <Col md={4}>
-              <div className="d-flex align-items-center px-4 mb-4 mb-md-0">
+            </div>
+            <div>
+              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
-                  className="me-3"
+                  className="me-3 flex-shrink-0"
                   src="./index-assets/diamond.svg"
                   alt="diamond"
+                  width={88}
                 />
                 <h3 className="mb-0">Worked with 50+ tech companies </h3>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Container>
       </div>
 
