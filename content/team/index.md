@@ -42,7 +42,7 @@ members:
 
   - name: Reka Szendi
     title: Reking machine
-    location: Bali
+    location: Asia
     image: ./reka.jpg
 
   - name: Zbyszek Trzeciak
