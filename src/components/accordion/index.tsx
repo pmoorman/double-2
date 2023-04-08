@@ -23,7 +23,7 @@ export const AppAccordion: FC<AppAccordionProps> = ({
       {items.map((item, index) => (
         <div key={item.title + index} className="mb-3">
           <AppAccordionHeader eventKey={item.title}>
-            <h4 className="mb-0">{item.title}</h4>
+            <h3 className="mb-0">{item.title}</h3>
           </AppAccordionHeader>
           <Accordion.Collapse eventKey={item.title}>
             <>{item.body}</>
