@@ -47,11 +47,6 @@ const HomePage = () => {
           <Row className="justify-content-center">
             <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
               <h1 className="mb-5">Experts in exponential growth.</h1>
-              <p>
-                Double is a growth marketing agency. We help tech companies do
-                better marketing, and drive explosive user growth.
-              </p>
-              <div className={styles.arrowLongDown}></div>
             </Col>
           </Row>
         </Container>
