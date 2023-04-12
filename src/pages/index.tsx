@@ -177,6 +177,30 @@ const HomePage = () => {
 const HomeVideo = () => {
   const [playing, setPlaying] = React.useState(true);
 
+  const renderButtonIcon = () => {
+    if (playing) {
+      return (
+        <StaticImage
+          src="./index-assets/pause.svg"
+          alt="Pause"
+          width={65}
+          height={65}
+          placeholder="none"
+        />
+      );
+    }
+
+    return (
+      <StaticImage
+        src="./index-assets/play.svg"
+        alt="Play"
+        width={65}
+        height={65}
+        placeholder="none"
+      />
+    );
+  };
+
   return (
     <div className={styles.videoContainer}>
       <ReactPlayer
@@ -190,12 +214,7 @@ const HomeVideo = () => {
       />
       <div className={styles.playButton}>
         <div role="button" onClick={() => setPlaying((v) => !v)}>
-          <StaticImage
-            src="./index-assets/play.svg"
-            alt="Play"
-            width={65}
-            height={67}
-          />
+          {renderButtonIcon()}
         </div>
       </div>
     </div>
