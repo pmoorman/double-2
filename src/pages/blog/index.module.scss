@@ -78,10 +78,6 @@
             height: 143px;
             width: 112px;
           }
-
-          @include media-breakpoint-down(xs) {
-            height: 200px;
-          }
         }
 
         &:last-child {
@@ -109,6 +105,7 @@
 
   .featuredArticle {
     transition: 0.5s all;
+    height: 100%;
 
     &:hover {
       transform: scale(1.03);

@@ -14,14 +14,14 @@ import * as styles from "./index.module.scss";
 import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
 import { StaticImage } from "gatsby-plugin-image";
 
-export interface OgilvyFormProps {
+export interface OgilvyInlineFormProps {
   formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
   formButton?: string;
 }
 
-export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
+export const OgilvyInlineForm: FC<OgilvyInlineFormProps> = ({
   formId,
   recaptchaProps,
   buttonProps,

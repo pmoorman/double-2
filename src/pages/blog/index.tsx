@@ -66,9 +66,12 @@ const BlogPage = () => {
               {featuredArticles.map((post) => (
                 <Col lg="12" xl="4">
                   <Link to={post.slug} className={styles.featuredArticle}>
-                    <div>
-                      <GatsbyImage image={post.thumbnail} alt="featured" />
-                    </div>
+                    <GatsbyImage
+                      image={post.thumbnail}
+                      alt="featured"
+                      objectPosition={post.thumbnail_position}
+                      style={{ height: "100%" }}
+                    />
                     <div>
                       <small>
                         {format(new Date(post.date), "dd MMM yyyy")} |{" "}

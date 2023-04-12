@@ -26,7 +26,7 @@ export interface CaseStudy {
     body: string;
     image: any;
   };
-  process: { 
+  process: {
     image: any;
     process_subtitle: string;
   };
@@ -45,6 +45,15 @@ export interface CaseStudy {
       name: string;
       title: string;
     };
+  };
+
+  // quote
+  quote?: {
+    content: string;
+    name: string;
+    title: string;
+    subtitle: string;
+    image?: any;
   };
 
   // Is featured?
