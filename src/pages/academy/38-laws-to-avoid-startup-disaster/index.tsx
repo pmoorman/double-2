@@ -39,7 +39,7 @@ const OglviyConcept4 = () => {
               </h1>
               <div style={{ fontSize: "18px" }} className="mb-3">
               As a growth agency, Double has worked with some of the fastest-growing tech companies like TikTok, Alpian, Glowforge and more. 
-              <br />We collected the 38 most important lessons that we’ve learned along the way.
+              <br />We collected the 38 most important lessons that we’ve learned along the way.<br />
               </div>
               <div>Leave your details and get access to the free PDF.</div>
               <OgilvyInlineForm
