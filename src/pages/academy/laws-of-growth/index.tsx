@@ -55,7 +55,7 @@ const OglviyConcept4 = () => {
         </Container>
         <div className={styles.mobileImage}>
           <StaticImage
-            src="./38laws_phone_mobile.png"
+            src="./38laws_iphone_mobile.png"
             alt="Phone image"
             objectFit="contain"
             width={120}
