@@ -168,3 +168,8 @@ h2 {
     }
   }
 }
+
+.ourWork {
+  max-width: calc((100% + (100vw - 1320px) / 2));
+  margin-left: calc((100vw - 1320px) / 2);
+}

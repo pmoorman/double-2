@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
+
 import {
   SEO,
   OgilvyInlineForm,
@@ -8,7 +10,6 @@ import {
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
 
 const formId = "5019059";
 
@@ -40,7 +41,7 @@ const OglviyConcept4 = () => {
               <div className="mb-3">Get the free email course</div>
               <div>Leave your details below:</div>
               <OgilvyInlineForm
-              formButton="Start learning"
+                formButton="Start learning"
                 formId={formId}
                 buttonProps={{
                   variant: "primary",
