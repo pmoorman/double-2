@@ -39,21 +39,26 @@ export const CaseStudyCarousel = () => {
   };
   return (
     <>
-      <div role="button" onClick={handleClickLeft}>
-        <StaticImage
-          objectFit="contain"
-          src="./left-arrow.svg"
-          alt=""
-          width={39}
-        />
-      </div>
-      <div role="button" onClick={handleClickRight}>
-        <StaticImage
-          objectFit="contain"
-          src="./right-arrow.svg"
-          alt=""
-          width={39}
-        />
+      <div className="d-flex justify-content-between">
+        <h2>Our work</h2>
+        <div className="d-flex">
+          <div role="button" onClick={handleClickLeft}>
+            <StaticImage
+              objectFit="contain"
+              src="./left-arrow.svg"
+              alt=""
+              width={39}
+            />
+          </div>
+          <div role="button" onClick={handleClickRight}>
+            <StaticImage
+              objectFit="contain"
+              src="./right-arrow.svg"
+              alt=""
+              width={39}
+            />
+          </div>
+        </div>
       </div>
       <ScrollContainer ref={container}>
         <div className="d-flex flex-nowrap gap-3">

@@ -72,7 +72,6 @@ const HomePage = () => {
 
       <div id="caseStudies">
         <div className={styles.ourWork}>
-          <h2>Our work</h2>
           <CaseStudyCarousel />
         </div>
 
