@@ -47,6 +47,11 @@ export interface CaseStudy {
     };
   };
 
+  // thumbnail on homepage
+  thumbnail?: {
+    image: any;
+  };
+
   // quote
   quote?: {
     content: string;

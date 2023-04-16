@@ -71,9 +71,7 @@ const HomePage = () => {
       </div>
 
       <div id="caseStudies">
-        <div className={styles.ourWork}>
-          <CaseStudyCarousel />
-        </div>
+        <CaseStudyCarousel />
 
         {caseStudies.map((item) => (
           <CaseStudySection
