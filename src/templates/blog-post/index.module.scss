@@ -1,15 +1,13 @@
 .hero {
-  background-color: $gray;
   padding: 88px 0;
 
   small {
     font-weight: 400;
   }
-}
 
-.imageSection {
-  background-color: $primary;
-  padding-top: 144px;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+  }
 }
 
 .fbIcon {

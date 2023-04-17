@@ -14,6 +14,7 @@ import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
+import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 const services = [
   {
@@ -70,17 +71,7 @@ const HomePage = () => {
       </div>
 
       <div id="caseStudies">
-        <Container>
-          <h2>Our work</h2>
-        </Container>
-        {caseStudies.map((item) => (
-          <CaseStudySection
-            isHomepage={true}
-            type={item.section.type}
-            item={item}
-            key={item.slug}
-          />
-        ))}
+        <CaseStudyCarousel />
       </div>
 
       <div id="features" className="pt-lg-8">

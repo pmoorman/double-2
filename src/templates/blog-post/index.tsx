@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import { graphql, HeadFC, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import { Parallax } from "react-scroll-parallax";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { format } from "date-fns";
 
@@ -58,12 +57,10 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateProps>> = (props) => {
       </div>
 
       {heroImage && (
-        <div className={styles.imageSection}>
+        <div>
           <Container>
             <div className="d-flex justify-content-center align-items-center">
-              <Parallax scale={[0.7, 1, "easeInQuad"]}>
-                <GatsbyImage image={heroImage} alt={title} />
-              </Parallax>
+              <GatsbyImage image={heroImage} alt={title} />
             </div>
           </Container>
         </div>
@@ -137,7 +134,7 @@ export const pageQuery = graphql`
           summary_items
           hero_image {
             childImageSharp {
-              gatsbyImageData(width: 700)
+              gatsbyImageData(width: 1000)
             }
           }
         }
