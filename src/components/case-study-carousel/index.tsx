@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { useMediaQuery } from "react-responsive";
+import cn from "classnames";
 
 import { useCaseStudies } from "@app/hooks";
 import { CaseStudy } from "@app/models";
@@ -54,20 +55,31 @@ export const CaseStudyCarousel = () => {
         <div className="d-flex justify-content-between align-items-center mb-5">
           <h2 className="mb-0">Our work</h2>
           <div className="d-flex gap-5">
-            <div role="button" onClick={handleClickArrow("left")}>
+            <div
+              role="button"
+              className={cn(styles.arrowBtn, "d-none d-md-flex")}
+              onClick={handleClickArrow("left")}
+            >
               <StaticImage
+                imgClassName={styles.arrowImg}
                 objectFit="contain"
                 src="./left-arrow.svg"
                 alt=""
-                width={39}
+                width={18}
+                height={13.6}
               />
             </div>
-            <div role="button" onClick={handleClickArrow("right")}>
+            <div
+              role="button"
+              className={styles.arrowBtn}
+              onClick={handleClickArrow("right")}
+            >
               <StaticImage
                 objectFit="contain"
                 src="./right-arrow.svg"
                 alt=""
-                width={39}
+                width={16}
+                height={12}
               />
             </div>
           </div>

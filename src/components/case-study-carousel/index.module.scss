@@ -20,3 +20,26 @@
     margin-bottom: 50px;
   }
 }
+
+.arrowBtn {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #2a2f44;
+  @include media-breakpoint-down(lg) {
+    width: 44.22px;
+    height: 44.22px;
+  }
+}
+
+.arrowImg {
+  width: 16px;
+  height: 12px;
+  @include media-breakpoint-down(lg) {
+    width: 18.14px;
+    height: 13.61px;
+  }
+}
