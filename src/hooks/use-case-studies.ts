@@ -74,6 +74,14 @@ export const useCaseStudies = () => {
                     }
                   }
                 }
+                carousel {
+                  weight
+                  image {
+                    childImageSharp {
+                      gatsbyImageData(width: 420)
+                    }
+                  }
+                }
                 featured
                 featured_subtitle
                 featured_title
@@ -99,6 +107,7 @@ export const useCaseStudies = () => {
     const { relativeDirectory, childMdx } = edge.node;
     const {
       title,
+      pageSubtitle,
       subtitle,
       excerpt,
       logo,
@@ -108,6 +117,7 @@ export const useCaseStudies = () => {
       categories,
       stats,
       section = {},
+      carousel = {},
       featured,
       featured_thumbnail,
       featured_subtitle,
@@ -123,6 +133,7 @@ export const useCaseStudies = () => {
 
     const item: CaseStudy = {
       embeddedImages,
+      pageSubtitle,
       slug: `/case-studies/${relativeDirectory}`,
       title: title || "",
       subtitle: subtitle || "",
@@ -136,8 +147,12 @@ export const useCaseStudies = () => {
       section: {
         ...section,
         body: sectionBody,
-        image: getImage(section.image),
-        image_url: section.image.publicURL,
+        image: getImage(section?.image),
+        image_url: section?.image?.publicURL,
+      },
+      carousel: {
+        ...carousel,
+        image: carousel?.image ? getImage(carousel.image) : undefined,
       },
       featured: !!featured,
       featured_subtitle: featured_subtitle || "",
@@ -148,9 +163,7 @@ export const useCaseStudies = () => {
       hero_image: "",
       body_image: "",
       page_logo_image: "",
-      process_graph: "",
-      process_subtitle: "",
-      process: "",
+      process: childMdx.frontmatter.process,
       how_we_did_it: "",
       results: {
         body: "",

@@ -72,15 +72,6 @@ const HomePage = () => {
 
       <div id="caseStudies">
         <CaseStudyCarousel />
-
-        {caseStudies.map((item) => (
-          <CaseStudySection
-            isHomepage={true}
-            type={item.section.type}
-            item={item}
-            key={item.slug}
-          />
-        ))}
       </div>
 
       <div id="features" className="pt-lg-8">

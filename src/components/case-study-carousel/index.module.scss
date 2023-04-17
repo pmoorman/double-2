@@ -6,9 +6,17 @@
   &:hover {
     transform: scale(1.03);
   }
+
+  @include media-breakpoint-down(lg) {
+    max-width: 90%;
+  }
 }
 
 .ourWork {
-  max-width: calc((100% + (100vw - 1320px) / 2));
   margin-left: calc((100vw - 1320px) / 2);
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
 }
