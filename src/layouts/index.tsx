@@ -19,6 +19,7 @@ import {
   BlockQuote,
   FooterPolicy,
 } from "@app/components";
+import { Preloader } from "@app/components/preloader";
 
 const mdxComponents = {
   DoubleLogo,
@@ -54,6 +55,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
 
   return (
     <ParallaxProvider>
+      <Preloader />
       <SEO {...pageContext} />
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>

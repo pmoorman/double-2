@@ -1,0 +1,149 @@
+.preloader {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  bottom: 0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: rgb(42, 47, 69);
+  z-index: 99999999;
+}
+
+.preLogo {
+  background-color: $secondary;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  opacity: 0;
+  animation: show-hide-show 1.5s linear;
+  animation-delay: 1.7s;
+
+  .logoImage {
+    z-index: 5;
+    opacity: 1;
+  }
+}
+
+.halfCircle {
+  width: max(100vh, 100vw);
+  height: max(100vh, 100vw);
+  border-radius: 100%;
+  background-color: $secondary;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(2);
+  animation: zoom 1.5s ease;
+  z-index: 3;
+  animation-delay: 2.5s;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s ease-in-out;
+  z-index: 4;
+}
+
+.loading {
+  font-size: 3rem;
+  color: $primary;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  animation: show-hide-spinner 2.1s ease-out;
+}
+
+.loadingPie {
+  transform: rotate(-90deg);
+  background: transparent;
+  border-radius: 50%;
+  z-index: 5;
+  animation: show-hide-spinner 6s;
+}
+
+.loadingCircle {
+  opacity: 0;
+  fill: rgba(255, 255, 255, 0);
+  stroke: rgb(255, 255, 255);
+  stroke-width: 100;
+  stroke-dasharray: 0 314; /* PI * 174 ~= 314 */
+  animation: fillup 2s linear, show-hide-spinner 6s;
+  z-index: 6;
+}
+
+@keyframes fillup {
+  to {
+    stroke-dasharray: 314 314;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, 0) scale(1);
+    background-color: #fff;
+  }
+
+  100% {
+    width: max(100vh, 100vw);
+    height: max(100vh, 100vw);
+    transform: translate(-50%, -50%) scale(2);
+    background-color: #fff;
+  }
+}
+
+@keyframes show-hide-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes show-hide-spinner {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
