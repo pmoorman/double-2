@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { SEO } from "@app/components";
+import { AppHead, SEO } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -24,11 +24,6 @@ export const LegalDetailsPage: FC<PageProps<LegalDetailsPageProps>> = ({
   const { title } = frontmatter;
   return (
     <>
-      <SEO
-        title="Privacy Policy - Double Agency"
-        keywords="Double Agency Privacy Policy"
-        description="This privacy notice for Double LLC describes how and why we might collect, store, use, and/or share your information when you use our services."
-      />
       <Container>
         {/* Hero */}
         <section className="my-5">
@@ -70,3 +65,16 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Privacy Policy - Double Agency"
+        keywords="Double Agency Privacy Policy"
+        description="This privacy notice for Double LLC describes how and why we might collect, store, use, and/or share your information when you use our services."
+      />
+    </>
+  );
+};

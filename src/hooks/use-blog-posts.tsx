@@ -39,6 +39,7 @@ export const useBlogPosts = (props?: UseBlogPostsProps) => {
                     gatsbyImageData(width: 420, layout: FULL_WIDTH)
                   }
                 }
+                thumbnail_position
                 hero_image {
                   childImageSharp {
                     gatsbyImageData(width: 700)

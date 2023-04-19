@@ -2,7 +2,7 @@ import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Hero, Image, Link, SEO } from "@app/components";
+import { AppHead, Hero, Image, Link, SEO } from "@app/components";
 import hero from "./union.svg";
 
 import * as styles from "./index.module.scss";
@@ -10,11 +10,6 @@ import * as styles from "./index.module.scss";
 const ServicesPage = () => {
   return (
     <>
-      <SEO
-        title="Full-Stack Growth Marketing Services | Get Expert Help Today"
-        keywords="Get Expert Help, Growth Marketing Services, full-stack Growth Marketing agency"
-        description="From strategy and infrastructure to creative and performance. We can help you with everything from building engaged audiences to designing growth loops."
-      />
       <div className="mb-5">
         <Hero
           type={1}
@@ -300,3 +295,16 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Full-Stack Growth Marketing Services | Get Expert Help Today"
+        keywords="Get Expert Help, Growth Marketing Services, full-stack Growth Marketing agency"
+        description="From strategy and infrastructure to creative and performance. We can help you with everything from building engaged audiences to designing growth loops."
+      />
+    </>
+  );
+};

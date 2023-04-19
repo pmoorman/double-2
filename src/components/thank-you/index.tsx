@@ -1,19 +1,26 @@
-import React from "react";
-import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import React, { FC, ReactNode } from "react";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, SEO, GifSection } from "@app/components";
+import { Link, SEO, GifSection, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-export const ThankYou = () => {
+export type ThankYouProps = {
+  title?: string | ReactNode;
+  subtitle?: string | ReactNode;
+};
+
+export const ThankYou: FC<ThankYouProps> = ({
+  title = "Success! Your PDF is on its way!",
+  subtitle = "Please check your email for the guide.",
+}) => {
   return (
     <>
-      <SEO title="Thank you" />
       <div className={styles.thankYouHero}>
         <Container>
           <GifSection />
-          <h1 className="mb-4">Success! Your PDF is on its way!</h1>
-          <h3>Please check your email for the guide.</h3>
+          <h1 className="mb-4">{title}</h1>
+          <h3>{subtitle}</h3>
         </Container>
       </div>
 
@@ -62,6 +69,15 @@ export const ThankYou = () => {
           </Row>
         </Container>
       </div>
+    </>
+  );
+};
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Thank you" />
     </>
   );
 };

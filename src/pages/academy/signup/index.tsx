@@ -1,19 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyForm } from "@app/components";
+import { SEO, OgilvyForm, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "204852236";
+const formId = "4880153";
 
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO
-        title="38 lessons for growth | Download your free copy now"
-        keywords="lessons for growth, laws of growth"
-        description="We collected the 38 most important lessons that we learned working with some of the fastest-growing tech companies like TikTok, Alpian, Glowforge and more."
-      />
       <div>
         <Container>
           <div className={styles.heading}>
@@ -58,7 +53,7 @@ const OglviyConcept2 = () => {
               <h2>Download your free copy</h2>
               <Col md={6}>
                 <OgilvyForm
-                  dripId={dripId}
+                  formId={formId}
                   buttonProps={{
                     variant: "secondary",
                   }}
@@ -77,3 +72,16 @@ const OglviyConcept2 = () => {
 };
 
 export default OglviyConcept2;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="38 lessons for growth | Download your free copy now"
+        keywords="lessons for growth, laws of growth"
+        description="We collected the 38 most important lessons that we learned working with some of the fastest-growing tech companies like TikTok, Alpian, Glowforge and more."
+      />
+    </>
+  );
+};

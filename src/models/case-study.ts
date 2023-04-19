@@ -20,13 +20,15 @@ export interface CaseStudy {
   hero_image: any;
   body_image: any;
   page_logo_image: any;
-  process_graph: any;
-  process_subtitle: string;
   how_we_did_it: string;
   pageSubtitle: string;
   results: {
     body: string;
     image: any;
+  };
+  process: {
+    image: any;
+    process_subtitle: string;
   };
   milestones?: { title: string; image: any; body: string }[];
 
@@ -43,6 +45,21 @@ export interface CaseStudy {
       name: string;
       title: string;
     };
+  };
+
+  // carousel on homepage
+  carousel?: {
+    image?: any;
+    weight: number;
+  };
+
+  // quote
+  quote?: {
+    content: string;
+    name: string;
+    title: string;
+    subtitle: string;
+    image?: any;
   };
 
   // Is featured?

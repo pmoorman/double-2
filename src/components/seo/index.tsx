@@ -28,7 +28,7 @@ export const SEO: FC<SEOProps> = ({
   } = useSiteMetadata();
   const { pathname } = useLocation();
   const currentUrl = siteUrl + pathname;
-  const featuredImageUrl = siteUrl + "/images/logo.png";
+  const featuredImageUrl = siteUrl + "/images/double-agency-logo.png";
   const _title = title || siteTitle;
   const _description = description || siteDescription;
   const _keywords = keywords || siteKeywords;
@@ -48,7 +48,7 @@ export const SEO: FC<SEOProps> = ({
 
   const getTwitterCard = (): MetaItem[] => {
     const result: MetaItem[] = [
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: _title },
       { name: "twitter:description", content: _description },
       { name: "twitter:image", content: featuredImageUrl },

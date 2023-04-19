@@ -7,17 +7,17 @@ import {
   OgilvyHeader,
   OgilvyImage,
   OgilvyFooter,
+  AppHead,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "995530400";
+const formId = "995530400";
 
 const OglviyConcept = () => {
   return (
     <>
-      <SEO title="This is how growth marketing works" />
-      <OgilvyHeader dripId={dripId} />
+      <OgilvyHeader formId={formId} />
 
       <div className={styles.lightBlueSection}>
         <Container>
@@ -63,9 +63,18 @@ const OglviyConcept = () => {
       </div>
 
       <OgilvyImage />
-      <OgilvyFooter dripId={dripId} />
+      <OgilvyFooter formId={formId} />
     </>
   );
 };
 
 export default OglviyConcept;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="This is how growth marketing works" />
+    </>
+  );
+};

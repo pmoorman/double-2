@@ -1,15 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { SEO, OgilvyInlineForm } from "@app/components";
+import { SEO, OgilvyInlineForm, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
-const dripId = "806391750";
+const formId = "4880148";
 
 const OglviyConcept2 = () => {
   return (
     <>
-      <SEO title="38 laws to grow startups" />
       <div>
         <Container>
           <div className={styles.heading}>
@@ -43,7 +42,7 @@ const OglviyConcept2 = () => {
               <div className="mb-2">Leave your details below: </div>
               <Col>
                 <OgilvyInlineForm
-                  dripId={dripId}
+                  formId={formId}
                   buttonProps={{
                     variant: "primary",
                   }}
@@ -62,3 +61,12 @@ const OglviyConcept2 = () => {
 };
 
 export default OglviyConcept2;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="38 laws to grow startups" />
+    </>
+  );
+};

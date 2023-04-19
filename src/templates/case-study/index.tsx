@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 
-import { ImageRow, HeadingRow, Image } from "@app/components";
+import { ImageRow, HeadingRow, Image, BlockQuote } from "@app/components";
 import { CaseStudy } from "@app/models";
 
 import * as styles from "./index.module.scss";
@@ -23,23 +23,24 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     title,
     excerpt,
     hero_image,
-    process_subtitle,
-    process_graph,
     body_image,
     page_logo_image,
     stats,
     how_we_did_it,
     results,
     milestones,
+    process,
     pageSubtitle,
+    quote,
   } = frontmatter;
 
   const bodyImage = getImage(body_image);
-  const processGraph = getImage(process_graph);
   const heroImage = getImage(hero_image);
   const pageLogo = getImage(page_logo_image);
   const resultsImage = getImage(results.image);
-  ``;
+  const processImage = getImage(process?.image);
+  const quoteImage = getImage(quote?.image);
+
   return (
     <div>
       <Container>
@@ -100,9 +101,11 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
             </Col>
           </Row>
         )}
-        <Image className="mt-lg-8  mt-5">
-          <GatsbyImage image={bodyImage} alt="Cover Image" />
-        </Image>
+        {bodyImage && (
+          <Image className="mt-lg-8  mt-5">
+            <GatsbyImage image={bodyImage} alt="Cover Image" />
+          </Image>
+        )}
         {results && (
           <div className="mt-lg-8 mb-lg-7 mb-6 mt-5">
             <ImageRow
@@ -121,24 +124,44 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
           </div>
         )}
       </Container>
+      {process && (
+        <div className={styles.processSection}>
+          <Container>
+            <div className={styles.processes}>
+              <h2 className="mb-4">Our process</h2>
+              <div className="subtitle mb-6">{process.process_subtitle}</div>
+            </div>
+            <div>
+              {processImage && (
+                <Image>
+                  <GatsbyImage image={processImage} alt="Process" />
+                </Image>
+              )}
+            </div>
+          </Container>
+        </div>
+      )}
 
-      <div className={styles.processSection}>
+      {quote && (
         <Container>
-          <div className={styles.processes}>
-            <h2 className="mb-4">Our process</h2>
-            <div className="subtitle mb-6">{process_subtitle}</div>
-          </div>
-          <div>
-            <Image>
-              <GatsbyImage image={processGraph} alt="Process" />
-            </Image>
-          </div>
+          <BlockQuote
+            name={<h4>{quote.name}</h4>}
+            title={<strong>{quote.title}</strong>}
+            subtitle={quote.subtitle}
+            image={
+              quoteImage && <GatsbyImage image={quoteImage} alt="Process" />
+            }
+            quoteStyle={{ color: "#1288FF", fontSize: "24px" }}
+            quoteLineStyle={{ borderColor: "#1288FF" }}
+          >
+            <span>{quote.content}</span>
+          </BlockQuote>
         </Container>
-      </div>
+      )}
 
       {milestones && (
         <Container>
-          <div className="mt-lg-7 mt-5">
+          <div className="mt-lg-7 mb-lg-6 mt-5">
             <h2 className="mb-5 d-flex justify-content-center">Milestones</h2>
           </div>
         </Container>
@@ -191,15 +214,9 @@ export const pageQuery = graphql`
           subtitle
           pageSubtitle
           excerpt
-          process_subtitle
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 650)
-            }
-          }
-          process_graph {
-            childImageSharp {
-              gatsbyImageData
             }
           }
           body_image {
@@ -231,6 +248,25 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 gatsbyImageData
+              }
+            }
+          }
+          process {
+            process_subtitle
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          quote {
+            content
+            name
+            title
+            subtitle
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 400)
               }
             }
           }

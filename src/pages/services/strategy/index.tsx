@@ -10,16 +10,12 @@ import {
   SEO,
   TwoColumnSection,
   Image,
+  AppHead,
 } from "@app/components";
 
 const ServiceStrategy = () => {
   return (
     <>
-      <SEO
-        title="Growth Marketing Strategy - Double Agency"
-        keywords="Growth Marketing Strategy"
-        description="In systems thinking, every part of the funnel plays a role in growth. Explore what strategy would work best to unlock exponential growth for your business."
-      />
       <Hero
         type={1}
         title="Strategy"
@@ -210,3 +206,16 @@ const ServiceStrategy = () => {
 };
 
 export default ServiceStrategy;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Growth Marketing Strategy - Double Agency"
+        keywords="Growth Marketing Strategy"
+        description="In systems thinking, every part of the funnel plays a role in growth. Explore what strategy would work best to unlock exponential growth for your business."
+      />
+    </>
+  );
+};

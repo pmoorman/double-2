@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
 
-import { SEO } from "@app/components";
+import { AppHead, SEO } from "@app/components";
 import { submitNetlifyForm } from "@app/helpers";
 import { useSiteMetadata } from "@app/hooks";
 
@@ -29,11 +29,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <SEO
-        title="Contact Double - The Growth Marketing Agency"
-        keywords="Contact Double Agency, Contact Growth Marketing Agency"
-        description="Looking for a growth marketing agency? Contact us today for a free consultation! Let us explore how we can help you grow your business with growth marketing."
-      />
       <Container>
         <div className={styles.heading}>
           <h1>Get in touch</h1>
@@ -138,3 +133,16 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="Contact Double - The Growth Marketing Agency"
+        keywords="Contact Double Agency, Contact Growth Marketing Agency"
+        description="Looking for a growth marketing agency? Contact us today for a free consultation! Let us explore how we can help you grow your business with growth marketing."
+      />
+    </>
+  );
+};

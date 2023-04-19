@@ -8,10 +8,10 @@ import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
 export interface OgilvyHeader3Props {
-  dripId: string;
+  formId: string;
 }
 
-export const OgilvyHeader3: FC<OgilvyHeader3Props> = ({ dripId }) => {
+export const OgilvyHeader3: FC<OgilvyHeader3Props> = ({ formId }) => {
   return (
     <div>
       <Row>
@@ -29,7 +29,7 @@ export const OgilvyHeader3: FC<OgilvyHeader3Props> = ({ dripId }) => {
 
               <Col md={12}>
                 <OgilvyForm
-                  dripId={dripId}
+                  formId={formId}
                   buttonProps={{
                     variant: "primary",
                   }}

@@ -11,6 +11,7 @@ import {
   BlogPostGridItem,
   Image,
   SEO,
+  AppHead,
 } from "@app/components";
 import { useBlogPosts } from "@app/hooks";
 
@@ -41,11 +42,6 @@ const BlogPage = () => {
 
   return (
     <>
-      <SEO
-        title="The Expert Growth Marketing Toolbox - Double Blog"
-        keywords="Expert Growth Marketing Toolbox, From Good to Great Marketeer,Expert Growth Marketing Toolbox"
-        description="In our Double blog we provide growth marketing advice and tools to take you and your business from good to great. Explore and learn from our experts."
-      />
       <div className={styles.heroSection}>
         <Container>
           <Row>
@@ -70,9 +66,12 @@ const BlogPage = () => {
               {featuredArticles.map((post) => (
                 <Col lg="12" xl="4">
                   <Link to={post.slug} className={styles.featuredArticle}>
-                    <div>
-                      <GatsbyImage image={post.thumbnail} alt="featured" />
-                    </div>
+                    <GatsbyImage
+                      image={post.thumbnail}
+                      alt="featured"
+                      objectPosition={post.thumbnail_position}
+                      style={{ height: "100%" }}
+                    />
                     <div>
                       <small>
                         {format(new Date(post.date), "dd MMM yyyy")} |{" "}
@@ -182,3 +181,16 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO
+        title="The Expert Growth Marketing Toolbox - Double Blog"
+        keywords="Expert Growth Marketing Toolbox, From Good to Great Marketeer,Expert Growth Marketing Toolbox"
+        description="In our Double blog we provide growth marketing advice and tools to take you and your business from good to great. Explore and learn from our experts."
+      />
+    </>
+  );
+};

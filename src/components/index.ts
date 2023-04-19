@@ -40,3 +40,5 @@ export * from "./blog-post-link-title-grid";
 export * from "./thank-you";
 export * from "./gif";
 export * from "./404";
+export * from "./head";
+export * from "./accordion";

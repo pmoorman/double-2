@@ -12,5 +12,6 @@ export interface BlogPost {
   summary_items: string[];
   hero_image: any;
   thumbnail?: any;
+  thumbnail_position?: string;
   slug: string;
 }

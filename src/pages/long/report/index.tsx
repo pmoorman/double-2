@@ -11,6 +11,7 @@ import {
   QuizHeader,
   QuizLogos,
   Link,
+  AppHead,
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
@@ -18,8 +19,6 @@ import * as styles from "./index.module.scss";
 const GrowthAudit = () => {
   return (
     <>
-      <SEO title="Funnel Report" />
-
       <QuizHeader />
 
       <QuizLogos />
@@ -186,3 +185,12 @@ const GrowthAudit = () => {
 };
 
 export default GrowthAudit;
+
+export const Head = () => {
+  return (
+    <>
+      <AppHead />
+      <SEO title="Funnel Report" />
+    </>
+  );
+};

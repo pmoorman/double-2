@@ -5,10 +5,10 @@ import { OgilvyForm } from "../oglviy-form";
 import * as styles from "./index.module.scss";
 
 export interface OgilvyFooterProps {
-  dripId: string;
+  formId: string;
 }
 
-export const OgilvyFooter: FC<OgilvyFooterProps> = ({ dripId }) => {
+export const OgilvyFooter: FC<OgilvyFooterProps> = ({ formId }) => {
   return (
     <div className={styles.footer}>
       <Container>
@@ -21,7 +21,7 @@ export const OgilvyFooter: FC<OgilvyFooterProps> = ({ dripId }) => {
           <h2>Unlock all the 38 laws of growth for free</h2>
           <div className="d-flex justify-content-center">
             <OgilvyForm
-              dripId={dripId}
+              formId={formId}
               buttonProps={{
                 variant: "primary",
               }}
