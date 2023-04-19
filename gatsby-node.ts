@@ -1,4 +1,4 @@
-import { CreatePagesArgs, CreateSchemaCustomizationArgs } from "gatsby";
+import { CreatePagesArgs, CreateSchemaCustomizationArgs, CreateWebpackConfigArgs } from "gatsby";
 import path from "path";
 
 exports.createSchemaCustomization = ({
