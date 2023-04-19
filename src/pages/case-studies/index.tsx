@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import hero from "./hero_bg.svg";
 
 import {
   Link,
@@ -21,7 +20,6 @@ import {
 
 const CaseStudiesPage = () => {
   const caseStudies = useCaseStudies();
-  const categories = getCaseStudyCategories(caseStudies);
   const [category, setCategory] = React.useState("");
   const filteredCaseStudies = filterCaseStudiesByCategory(
     caseStudies,
@@ -33,14 +31,19 @@ const CaseStudiesPage = () => {
       <div>
         <Container>
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
-            <Row>
-              <Col lg="7" md="8">
-                <h1>All of these brands were once where you are now.</h1>
-              </Col>
-              <Col lg="5" md="4">
-                <div className="d-flex justify-content-center">
-                  <img src={hero} />
-                </div>
+            <Row className="justify-content-center">
+              <div className={styles.heroBg}>
+                <StaticImage
+                  src="./cshero.png"
+                  alt="Case Studies"
+                  height={500}
+                  placeholder="none"
+                />
+              </div>
+              <Col md="7">
+                <h1 className="d-headline text-center py-6">
+                  Clients you want to <span>emulate</span>
+                </h1>
               </Col>
             </Row>
           </div>
@@ -49,7 +52,7 @@ const CaseStudiesPage = () => {
           <LogoSlider />
         </div>
 
-        <Container>
+        {/* <Container>
           <div className="mb-lg-8 mt-6">
             <div className={styles.blueBg}>
               <h3>Featured case studies</h3>
@@ -58,11 +61,11 @@ const CaseStudiesPage = () => {
               <FeaturedCaseStudies />
             </div>
           </div>
-        </Container>
+        </Container> */}
 
         <div>
           <Container>
-            <h2>Explore our case studies</h2>
+            {/* <h2>Explore our case studies</h2> */}
 
             {/* Filters */}
             {/* <div className={styles.filters}>
