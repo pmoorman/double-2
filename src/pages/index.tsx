@@ -43,7 +43,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="pt-5 pb-lg-5 pb-5">
+      <div className="pt-5 pb-lg-6 pb-5">
         <Container>
           <Row className="justify-content-center">
             <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
@@ -55,15 +55,15 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <Container>
+      <Container className="pb-5">
         <HomeVideo />
       </Container>
 
-      <div id="services" className="my-4 my-md-6">
+      <div id="services" className="pb-5 my-md-6">
         <Container>
           <Row className="justify-content-between">
             <Col md={3} className="mb-3 mb-md-0">
-              <h4>We offer a range of marketing services</h4>
+              <h3>We offer a range of marketing services</h3>
             </Col>
             <Col md={5}>
               <AppAccordion items={services} />
@@ -72,11 +72,11 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <div id="caseStudies">
+      <div id="caseStudies" className="pb-5">
         <CaseStudyCarousel />
       </div>
 
-      <div id="features" className="pt-lg-8">
+      <div id="features" className="pb-6 pt-lg-8">
         <Container>
           <div className={`d-flex flex-column flex-lg-row ` + styles.features}>
             <div>
@@ -116,7 +116,7 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <Container className="pt-lg-8 py-4 pb-lg-6">
+      <Container className="pt-lg-8 py-4 pb-9">
         <Row>
           <div className={styles.mobileLines}>
             <Col

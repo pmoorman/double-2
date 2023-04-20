@@ -12,8 +12,15 @@
   }
 }
 
+.firstItem {
+  width: calc((100vw - 1360px) / 2);
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
 .ourWork {
-  margin-left: calc((100vw - 1320px) / 2);
   @include media-breakpoint-down(lg) {
     max-width: 100%;
     margin-left: 0;
