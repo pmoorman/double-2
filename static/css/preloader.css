@@ -159,3 +159,9 @@ body .loadingCircle {
     opacity: 1;
   }
 }
+
+body.preloader_ready {
+  #preloader {
+    display: none;
+  }
+}
