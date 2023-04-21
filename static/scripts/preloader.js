@@ -2,19 +2,11 @@ const preloadEvent = new CustomEvent("preload:complete");
 const preloader = document.getElementById("preloader");
 
 startTimer(2000, () => {
-  // preloader.classList.add("active");
-  //   document.body.classList.remove("preloader_active");
-  //   document.body.classList.remove("preloader_ready");
   setTimeout(() => {
     document.dispatchEvent(preloadEvent);
     document.body.classList.add("preloader_ready");
   }, 1500);
 });
-
-// document.onreadystatechange = function () {
-//   if (document.readyState === "complete") {
-//   }
-// };
 
 function startTimer(duration, finishCallback) {
   const initial = Date.now();

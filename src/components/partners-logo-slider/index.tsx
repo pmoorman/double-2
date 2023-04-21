@@ -87,7 +87,7 @@ export const LogoSlider = () => {
             />
           </div>
           <div>
-            <StaticImage src="./stryber-logo-gray.png" alt="Vacuumlabs logo" />
+            <StaticImage src="./stryber-logo-gray.png" alt="stryber logo" />
           </div>
 
           <div>
