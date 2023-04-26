@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["Manrope:400,600,700", "EB+Garamond:ital,wght@1,500"],
+        fonts: ["Manrope:400,600,700", "EB+Garamond:ital,wght@1,600"],
         display: "swap",
       },
     },
