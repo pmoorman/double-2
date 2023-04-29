@@ -47,7 +47,9 @@ const HomePage = () => {
         <Container>
           <Row className="justify-content-center">
             <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
-              <h1 className="mb-5">Experts in exponential growth.</h1>
+              <h1 className="mb-5 d-headline">
+                Experts in exponential <span>growth</span>
+              </h1>
             </Col>
           </Row>
         </Container>

@@ -48,52 +48,56 @@ export const LogoSlider = () => {
       <div className={styles.slider}>
         <Slider {...settings} className={styles.logoSlider}>
           <div>
-            <StaticImage src="./crobox-logo-white.png" alt="Crobox logo" />
-          </div>
-          <div>
-            <StaticImage src="./lely-logo-white.png" alt="Lely logo" />
-          </div>
-          <div>
-            <StaticImage src="./alpian-logo-white.png" alt="Alpian logo" />
-          </div>
-          <div>
-            <StaticImage src="./diesel-logo-white.png" alt="Diesel logo" />
-          </div>
-          <div>
-            <StaticImage src="./tiktok-logo-white.png" alt="Tiktok logo" />
+            <StaticImage src="./alpian-logo-gray.png" alt="alpian logo" />
           </div>
           <div>
             <StaticImage
-              src="./glowforge-logo-white.png"
-              alt="Glowforge logo"
+              src="./insidetracker-logo-gray.png"
+              alt="insidetracker logo"
             />
           </div>
           <div>
-            <StaticImage src="./anomalie-logo-white.png" alt="Anomalie logo" />
+            <StaticImage src="./glowforge-logo-gray.png" alt="glowforge logo" />
+          </div>
+          <div>
+            <StaticImage src="./deloitte-logo-gray.png" alt="deloitte logo" />
+          </div>
+          <div>
+            <StaticImage src="./diesel-logo-gray.png" alt="diesel logo" />
+          </div>
+          <div>
+            <StaticImage src="./ryder-logo-gray.png" alt="ryder logo" />
+          </div>
+          <div>
+            <StaticImage src="./sendcloud-logo-gray.png" alt="sendcloud logo" />
+          </div>
+          <div>
+            <StaticImage src="./lely-logo-gray.png" alt="lely logo" />
+          </div>
+          <div>
+            <StaticImage src="./tiktok-logo-gray.png" alt="tiktok logo" />
+          </div>
+          <div>
+            <StaticImage alt="crobox logo" src="./crobox-logo-gray.png" />
           </div>
           <div>
             <StaticImage
-              src="./sendcloud-logo-white.png"
-              alt="Sendcloud logo"
+              src="./vacuumlabs-logo-gray.png"
+              alt="vacuumlabs logo"
             />
           </div>
           <div>
-            <StaticImage src="./sencyr-logo-white.png" alt="Sencyr logo" />
+            <StaticImage src="./stryber-logo-gray.png" alt="stryber logo" />
+          </div>
+
+          <div>
+            <StaticImage src="./anomalie-logo-gray.png" alt="anomalie logo" />
           </div>
           <div>
-            <StaticImage
-              alt="Nasacademy logo"
-              src="./nasacademy-logo-white.png"
-            />
+            <StaticImage src="./klooker-logo-gray.png" alt="klooker logo" />
           </div>
           <div>
-            <StaticImage src="./exceedme-logo-white.png" alt="Exceedme logo" />
-          </div>
-          <div>
-            <StaticImage
-              src="./vacuumlabs-logo-white.png"
-              alt="Vacuumlabs logo"
-            />
+            <StaticImage src="./sencyr-logo-gray.png" alt="sencyr logo" />
           </div>
         </Slider>
       </div>

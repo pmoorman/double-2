@@ -7,7 +7,7 @@ import * as styles from "./index.module.scss";
 
 const ID = "main-nav";
 const LINKS = [
-  { label: "Case studies", to: "/case-studies" },
+  { label: "Clients", to: "/case-studies" },
   { label: "Services", to: "/services" },
   { label: "About", to: "/about" },
   // { label: "Careers", to: "/careers" },

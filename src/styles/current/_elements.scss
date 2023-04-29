@@ -175,3 +175,13 @@ img {
 .gray-bg {
   background-color: $gray;
 }
+
+.d-headline {
+  span {
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    font-size: 120%;
+    font-weight: 600;
+    line-height: 0;
+  }
+}

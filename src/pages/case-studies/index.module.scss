@@ -1,9 +1,14 @@
-h1 {
-  padding-right: 1rem;
-
-  @include media-breakpoint-down(lg) {
-    padding-right: 0;
-  }
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
 }
 
 .blueBg {
