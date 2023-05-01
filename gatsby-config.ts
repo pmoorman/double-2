@@ -113,7 +113,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-sharp",
       options: {
-        defaultQuality: 90,
+        defaultQuality: 100,
       },
     },
     "gatsby-transformer-sharp",
