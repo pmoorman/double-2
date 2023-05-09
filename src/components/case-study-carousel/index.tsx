@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { ScrollContainer } from "react-indiana-drag-scroll";
 import "react-indiana-drag-scroll/dist/style.css";
 import { Container } from "react-bootstrap";
@@ -9,16 +9,30 @@ import cn from "classnames";
 
 import { useCaseStudies } from "@app/hooks";
 import { CaseStudy } from "@app/models";
+import { isBrowser } from "@app/utils";
 
 import * as styles from "./index.module.scss";
 
 export const CaseStudyCarousel = () => {
+  const initialized = useRef(false);
   const studies = useCaseStudies().sort(
     (a, b) => (a.carousel?.weight || 0) - (b.carousel?.weight || 0)
   );
   const container = useRef<HTMLDivElement>(null);
   const isSmallDevice = useMediaQuery({ query: "(max-width: 992px)" });
+  const isXLDevice = useMediaQuery({ query: "(min-width: 1400px)" });
   const moveAmount = isSmallDevice ? 300 : 420;
+
+  useEffect(() => {
+    // margin-left: calc((100vw - 1320px) / 2);
+    if (!initialized?.current && container?.current && isBrowser()) {
+      initialized.current = true;
+      container.current.scrollTo({
+        left: -(window.innerWidth - 1320) / 2,
+        behavior: "smooth",
+      });
+    }
+  }, [container, isXLDevice]);
 
   const handleClickArrow = (direction: "left" | "right") => () => {
     if (!container.current) return;
@@ -87,7 +101,8 @@ export const CaseStudyCarousel = () => {
       </Container>
       <div className={styles.ourWork}>
         <ScrollContainer ref={container}>
-          <div className="d-flex flex-nowrap gap-3">
+          <div className={cn("d-flex flex-nowrap gap-4", styles.items)}>
+            <div className={cn(styles.item, styles.firstItem)} />
             {studies.map(renderItem)}
           </div>
         </ScrollContainer>

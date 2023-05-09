@@ -78,7 +78,7 @@ export const useCaseStudies = () => {
                   weight
                   image {
                     childImageSharp {
-                      gatsbyImageData(width: 420)
+                      gatsbyImageData(width: 420, quality: 100)
                     }
                   }
                 }
