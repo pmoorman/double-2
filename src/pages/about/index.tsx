@@ -1,29 +1,12 @@
 import * as React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import { Parallax } from "react-scroll-parallax";
-import hero from "./hero.svg";
-import icon from "./intro.svg";
-import cn from "classnames";
 
-import { useTeam } from "@app/hooks";
-import {
-  TeamMember,
-  Link,
-  SectionFeaturedArticles,
-  SectionOpenRoles,
-  SEO,
-  Image,
-  AppHead,
-  Carousel,
-  TeamSection,
-} from "@app/components";
+import { Link, SEO, AppHead, Carousel, TeamSection } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
 const AboutPage = () => {
-  const team = useTeam();
-
   return (
     <>
       {/* Hero */}
@@ -49,7 +32,7 @@ const AboutPage = () => {
 
       <Container className="py-4 pb-lg-6">
         <Row>
-          <Col md={6}>
+          <Col md={6} className="mb-6 mb-md-0">
             <StaticImage src="./DOUBLEAGENCY-33-1.jpg" alt="" />
           </Col>
           <Col md={1} />
@@ -114,7 +97,7 @@ const AboutPage = () => {
         </div>
       </Carousel>
 
-      <Container className="py-8 pb-lg-6">
+      <Container className="py-lg-8 pt-4 pb-6">
         <TeamSection />
       </Container>
 

@@ -15,7 +15,7 @@ export const TeamSection = () => {
 
   return (
     <Row>
-      <Col md={4}>
+      <Col md={4} className="mb-4 mb-md-0">
         <h2 className="mb-5">The team</h2>
         <GatsbyImage image={active.image} alt={active.name} />
       </Col>

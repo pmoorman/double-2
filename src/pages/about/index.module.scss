@@ -16,6 +16,12 @@
   flex-shrink: 0;
 
   @include media-breakpoint-down(lg) {
-    max-width: 90%;
+    // max-width: 90%;
+    // height: 247px;
+    border-radius: 10px;
+
+    img {
+      height: 247px;
+    }
   }
 }
