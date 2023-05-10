@@ -290,7 +290,7 @@ export const Head: HeadFC<CaseStudyTemplateProps> = ({ data }) => {
   return (
     <>
       <AppHead />
-      <SEO title={`${title} - Double Agency`} description={excerpt} />
+      <SEO title={title} description={excerpt} />
     </>
   );
 };
