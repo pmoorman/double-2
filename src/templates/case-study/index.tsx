@@ -1,10 +1,17 @@
 import React, { FC } from "react";
-import { graphql, PageProps } from "gatsby";
+import { graphql, HeadFC, PageProps } from "gatsby";
 import { Col, Container, Row } from "react-bootstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ReactMarkdown from "react-markdown";
 
-import { ImageRow, HeadingRow, Image, BlockQuote } from "@app/components";
+import {
+  ImageRow,
+  HeadingRow,
+  Image,
+  BlockQuote,
+  AppHead,
+  SEO,
+} from "@app/components";
 import { CaseStudy } from "@app/models";
 
 import * as styles from "./index.module.scss";
@@ -275,3 +282,15 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head: HeadFC<CaseStudyTemplateProps> = ({ data }) => {
+  const { frontmatter } = data.file.childMdx;
+  const { title, excerpt } = frontmatter;
+
+  return (
+    <>
+      <AppHead />
+      <SEO title={`${title} - Double Agency`} description={excerpt} />
+    </>
+  );
+};
