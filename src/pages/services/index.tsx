@@ -1,295 +1,135 @@
 import * as React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import cn from "classnames";
 
-import { AppHead, Hero, Image, Link, SEO } from "@app/components";
-import hero from "./union.svg";
+import {
+  AppHead,
+  ContactSection,
+  Hero,
+  Image,
+  Link,
+  SEO,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 
 const ServicesPage = () => {
   return (
     <>
-      <div className="mb-5">
-        <Hero
-          type={1}
-          title="We’re a full-stack Growth Marketing agency"
-          body="You’re in the right place whether you’re looking to hire a paid
-              ads expert, a sales funnel architect, or a product marketer."
-          buttonText="Get in touch"
-          buttonLink="/contact"
-          image={<img src={hero} alt="Union" />}
-        />
-
-        <div>
-          <Container>
-            <h2 className="mb-5">
-              Find out more about our growth marketing services
-            </h2>
-          </Container>
-          <div className="hoverAnimation blue">
-            <Link to="strategy" className="text-decoration-none">
-              <Container>
-                <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col
-                    lg="4"
-                    md="5"
-                    className="d-flex align-items-center mb-lg-0 mb-4"
-                  >
-                    <div
-                      className={`title-icon + ${styles.iconStrategy}`}
-                    ></div>
-                    <h3 className="mb-0">Strategy</h3>
-                  </Col>
-                  <Col lg="8" md="7">
-                    <p>
-                      Growth rests on systems thinking. Marketing isn’t just
-                      about acquisition, but every part of the funnel has a role
-                      in growth. From building engaged audiences to designing
-                      growth loops, we build funnels with exponential growth in
-                      mind.
-                    </p>
-                    <Button
-                      as={Link}
-                      to="strategy"
-                      variant="outline-secondary"
-                      className="d-lg-none d-md-none d-block mt-3"
-                    >
-                      More about strategy
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </Link>
-          </div>
-          <div className="hoverAnimation blue">
-            <Link to="infrastructure" className="text-decoration-none">
-              <Container>
-                <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col
-                    lg="4"
-                    md="5"
-                    className="d-flex align-items-center mb-lg-0 mb-4"
-                  >
-                    <div
-                      className={`title-icon + ${styles.iconInfrastructure}`}
-                    ></div>
-                    <h3 className="mb-0">Infrastructure</h3>
-                  </Col>
-                  <Col lg="8" md="7">
-                    <p>
-                      The behind-the-scenes. The underlying technology that
-                      ensures everything works smoothly (from data collection to
-                      automations).
-                    </p>
-                    <Button
-                      as={Link}
-                      to="infrastructure"
-                      variant="outline-secondary"
-                      className="d-lg-none d-md-none d-block mt-3"
-                    >
-                      More about Infrastructure
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </Link>
-          </div>
-          <div className="hoverAnimation blue">
-            <Link to="creative" className="text-decoration-none">
-              <Container>
-                <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col
-                    lg="4"
-                    md="5"
-                    className="d-flex align-items-center mb-lg-0 mb-4"
-                  >
-                    <div
-                      className={`title-icon + ${styles.iconCreative}`}
-                    ></div>
-                    <h3 className="mb-0">Creative</h3>
-                  </Col>
-                  <Col lg="8" md="7">
-                    <p>
-                      Get the most out of marketing channels by creating quality
-                      content. Clear deliverables (website design, blogpost,
-                      emails).
-                    </p>
-                    <Button
-                      as={Link}
-                      to="creative"
-                      variant="outline-secondary"
-                      className="d-lg-none d-md-none d-block mt-3"
-                    >
-                      More about creative
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </Link>
-          </div>
-          <div className="hoverAnimation blue">
-            <Link to="performance" className="text-decoration-none">
-              <Container>
-                <Row className={`py-lg-7 py-5 + ${styles.borderContainer}`}>
-                  <Col
-                    lg="4"
-                    md="5"
-                    className="d-flex align-items-center mb-lg-0 mb-4"
-                  >
-                    <div
-                      className={`title-icon + ${styles.iconPerformance}`}
-                    ></div>
-                    <h3 className="mb-0">Performance</h3>
-                  </Col>
-                  <Col lg="8" md="7">
-                    <p>
-                      Find the winning channel that suits business goals.
-                      Measure what works and optimise for traffic, lead
-                      generation, and conversions.
-                    </p>
-                    <Button
-                      as={Link}
-                      to="performance"
-                      variant="outline-secondary"
-                      className="d-lg-none d-md-none d-block mt-3"
-                    >
-                      More about performance
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </Link>
-          </div>
-        </div>
-
-        {/* <Container>
-          <Row className="my-lg-7 my-5">
-            <Col xl="5" lg="6" md="6">
-              <h2 className="mb-4">
-                See our services in action with our client case studies
-              </h2>
-              <Image double className="d-lg-none d-block mb-3">
-                <StaticImage src="./services.jpeg" alt="services" />
-              </Image>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim.
-              </p>
-              <Button as={Link} to="/case-study" variant="outline-secondary">
-                See all case studies
-              </Button>
-            </Col>
-            <Col lg="1" className="d-none d-xl-flex"></Col>
-            <Col lg="6" md="6" className="d-none d-lg-flex">
-              <Image>
-                <StaticImage src="./services.jpeg" alt="services" />
-              </Image>
+      {/* Hero */}
+      <Container>
+        <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
+          <Row className="justify-content-center">
+            <div className={styles.heroBg}>
+              <StaticImage
+                src="./serviceshero.svg"
+                alt="Services"
+                objectFit="contain"
+                placeholder="none"
+              />
+            </div>
+            <Col md={7}>
+              <h1 className="d-headline text-center py-6">
+                Full-stack growth <span>marketing</span>
+              </h1>
             </Col>
           </Row>
-        </Container> */}
+          <Row className="justify-content-center text-center">
+            <Col md={6}>
+              <p>
+                You’re in the right place whether you’re looking to hire a paid
+                ads expert, a sales funnel architect, or a product marketer.
+              </p>
+            </Col>
+          </Row>
+        </div>
+      </Container>
 
-        {/* <div className="mt-lg-7 mt-5">
-          <Container>
-            <h2 className="d-flex justify-content-center my-5">Our approach</h2>
-          </Container>
+      <Container className="mb-6">
+        <Row>
+          <Col md={8} className="mb-3 mt-2">
+            <Link
+              to="strategy"
+              className={cn(styles.item, styles.strategyItem)}
+            >
+              <Button className={styles.button} variant="secondary">
+                Strategy{" "}
+                <StaticImage
+                  className="ms-2"
+                  src="./right-arrow.svg"
+                  height={12}
+                  alt=""
+                />
+              </Button>
+              <div className={styles.content}>
+                <p>Find your audience and create a compelling reason to buy.</p>
+              </div>
+            </Link>
+          </Col>
+          <Col md={4} className="mb-3 mt-2">
+            <Link
+              to="infrastructure"
+              className={cn(styles.item, styles.infrastructureItem)}
+            >
+              <Button className={styles.button} variant="secondary">
+                Infrastructure{" "}
+                <StaticImage
+                  className="ms-2"
+                  src="./right-arrow.svg"
+                  height={12}
+                  alt=""
+                />
+              </Button>
+              <div className={styles.content}>
+                <p>
+                  Reach people in a measurable way, optimised for conversion.
+                </p>
+              </div>
+            </Link>
+          </Col>
+          <Col md={4} className="mb-3 mt-2">
+            <Link
+              to="performance"
+              className={cn(styles.item, styles.performanceItem)}
+            >
+              <Button className={styles.button} variant="secondary">
+                Performance{" "}
+                <StaticImage
+                  className="ms-2"
+                  src="./right-arrow.svg"
+                  height={12}
+                  alt=""
+                />
+              </Button>
+              <div className={styles.content}>
+                <p>Tell your story with a medium that brings it to life.</p>
+              </div>
+            </Link>
+          </Col>
+          <Col md={8} className="mb-3 mt-2">
+            <Link
+              to="creative"
+              className={cn(styles.item, styles.creativeItem)}
+            >
+              <Button className={styles.button} variant="secondary">
+                Infrastructure{" "}
+                <StaticImage
+                  className="ms-2"
+                  src="./right-arrow.svg"
+                  height={12}
+                  alt=""
+                />
+              </Button>
+              <div className={styles.content}>
+                <p>Build a seamless front-end with a stable back-end.</p>
+              </div>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
 
-          <div>
-            <Container>
-              <Row className="pt-lg-7 pb-lg-7 py-5">
-                <Col lg="4" md="5" sm="12">
-                  <h3 className="mb-5">Hypothesize</h3>
-                  <Image className="d-none d-lg-block d-md-block">
-                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
-                  </Image>
-                </Col>
-                <Col
-                  lg="2"
-                  md="1"
-                  sm="2"
-                  xs="2"
-                  className="d-flex justify-content-lg-end my-3 my-lg-0"
-                >
-                  <div className="number">01</div>
-                </Col>
-                <Col lg="6" md="5" sm="10" xs="10">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim.
-                  </p>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="gray-bg">
-            <Container>
-              <Row className="pt-lg-7 pb-lg-7 py-5">
-                <Col lg="4" md="5" sm="12">
-                  <h3 className="mb-5">Test</h3>
-                  <Image className="d-none d-lg-block d-md-block">
-                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
-                  </Image>
-                </Col>
-                <Col
-                  lg="2"
-                  md="1"
-                  sm="2"
-                  xs="2"
-                  className="d-flex justify-content-lg-end my-3 my-lg-0"
-                >
-                  <div className="number">02</div>
-                </Col>
-                <Col lg="6" md="5" sm="10" xs="10">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim.
-                  </p>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div>
-            <Container>
-              <Row className="pt-lg-7 pb-lg-7 py-5">
-                <Col lg="4" md="5" sm="12">
-                  <h3 className="mb-5">Learn</h3>
-                  <Image className="d-none d-lg-block d-md-block">
-                    <StaticImage src="./milestone1.jpeg" alt="Milestone 1" />
-                  </Image>
-                </Col>
-                <Col
-                  lg="2"
-                  md="1"
-                  sm="2"
-                  xs="2"
-                  className="d-flex justify-content-lg-end my-3 my-lg-0"
-                >
-                  <div className="number">03</div>
-                </Col>
-                <Col lg="6" md="5" sm="10" xs="10">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim.Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim.
-                  </p>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </div> */}
-      </div>
+      <ContactSection />
     </>
   );
 };

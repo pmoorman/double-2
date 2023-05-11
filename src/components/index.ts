@@ -44,3 +44,4 @@ export * from "./head";
 export * from "./accordion";
 export * from "./carousel";
 export * from "./team-section";
+export * from "./contact-section";

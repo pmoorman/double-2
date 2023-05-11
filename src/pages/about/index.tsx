@@ -1,8 +1,14 @@
 import * as React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Link, SEO, AppHead, Carousel, TeamSection } from "@app/components";
+import {
+  SEO,
+  AppHead,
+  Carousel,
+  TeamSection,
+  ContactSection,
+} from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -101,27 +107,7 @@ const AboutPage = () => {
         <TeamSection />
       </Container>
 
-      <section className="bg-primary">
-        <Container className="py-7">
-          <Row className="justify-content-center text-center text-white">
-            <Col md={8}>
-              <h2 className="mb-4">
-                We’re a growth marketing agency with double the drive
-              </h2>
-            </Col>
-            <Col md={6}>
-              <p className="mb-4">
-                Double is a close-knit team of experts from around the world,
-                who are obsessed with building systems that drive growth on
-                autopilot.
-              </p>
-              <Button as={Link} to="/contact" variant="secondary" type="submit">
-                Contact us
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <ContactSection />
 
       {/* Our open roles */}
       {/* <Container className="py-4 pb-lg-6">
