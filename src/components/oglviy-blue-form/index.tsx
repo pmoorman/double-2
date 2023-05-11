@@ -25,7 +25,7 @@ export const OgilvBlueForm: FC<OgilvBlueFormProps> = ({
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
+  const action = `https://www.getdrip.com/forms/${formId}/submissions`;
 
   return (
     <>
@@ -44,10 +44,26 @@ export const OgilvBlueForm: FC<OgilvBlueFormProps> = ({
                 type="email"
                 placeholder="Work email"
                 aria-describedby="email"
-                name="email_address"
+                name="fields[email]"
               />
             </Col>
           </Row>
+
+          {/* used by drip */}
+          <div
+            style={{ display: "none" }}
+            aria-hidden="true"
+            className={styles.space}
+          >
+            <input
+              type="text"
+              id="website"
+              name="website"
+              tabIndex={-1}
+              autoComplete="false"
+              value=""
+            />
+          </div>
 
           <ReCAPTCHA
             {...recaptchaProps}
