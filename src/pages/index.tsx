@@ -3,19 +3,12 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import { StaticImage } from "gatsby-plugin-image";
 
-import {
-  Link,
-  CaseStudySection,
-  SEO,
-  AppHead,
-  AppAccordion,
-  ContactSection,
-} from "@app/components";
+import { SEO, AppHead, AppAccordion, ContactSection } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
+import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 import * as styles from "./index-assets/index.module.scss";
-import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 const services = [
   {
