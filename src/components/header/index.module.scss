@@ -70,7 +70,7 @@
   position: absolute;
   width: calc(100% - 20px);
   height: 2px;
-  background: #387cd3;
+  background: var(--bs-primary);
   top: 100%;
   right: 0;
   left: 11px;
