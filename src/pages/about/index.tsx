@@ -39,7 +39,11 @@ const AboutPage = () => {
       <Container className="py-4 pb-lg-6">
         <Row>
           <Col md={6} className="mb-6 mb-md-0">
-            <StaticImage src="./DOUBLEAGENCY-33-1.jpg" alt="" />
+            <StaticImage
+              className={styles.image}
+              src="./DOUBLEAGENCY-33-1.jpg"
+              alt=""
+            />
           </Col>
           <Col md={1} />
           <Col md={4}>
