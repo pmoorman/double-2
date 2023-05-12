@@ -3,6 +3,9 @@
   width: 394px;
   height: 517px;
   flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+
   &:hover {
     transform: scale(1.03);
   }
@@ -10,4 +13,9 @@
   @include media-breakpoint-down(lg) {
     max-width: 90%;
   }
+}
+
+.itemOuter {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

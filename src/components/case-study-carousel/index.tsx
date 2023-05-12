@@ -17,14 +17,16 @@ export const CaseStudyCarousel = () => {
     if (!study.carousel?.image) return null;
     const link = study.has_single_page ? study.slug : `/case-studies/`;
     return (
-      <div key={study.title} className={styles.item}>
-        <Link to={link}>
-          <GatsbyImage
-            objectFit="cover"
-            image={study.carousel?.image}
-            alt={study.title}
-          />
-        </Link>
+      <div key={study.title} className={styles.itemOuter}>
+        <div className={styles.item}>
+          <Link to={link}>
+            <GatsbyImage
+              objectFit="cover"
+              image={study.carousel?.image}
+              alt={study.title}
+            />
+          </Link>
+        </div>
       </div>
     );
   };
