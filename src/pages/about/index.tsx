@@ -47,7 +47,7 @@ const AboutPage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/pyra.svg"
+                  src="./pyra.png"
                   alt="pyra"
                   width={86}
                 />
@@ -56,7 +56,7 @@ const AboutPage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./diamond.svg"
+                  src="./diamond.png"
                   alt="diamond"
                   width={88}
                 />

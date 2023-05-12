@@ -83,7 +83,7 @@ const HomePage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/star.svg"
+                  src="./index-assets/star.png"
                   alt="star"
                   width={84}
                 />
@@ -94,7 +94,7 @@ const HomePage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/pyra.svg"
+                  src="./index-assets/pyra.png"
                   alt="pyra"
                   width={86}
                 />
@@ -105,7 +105,7 @@ const HomePage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/diamond.svg"
+                  src="./index-assets/diamond.png"
                   alt="diamond"
                   width={88}
                 />
