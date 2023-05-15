@@ -31,5 +31,9 @@ export const CaseStudyCarousel = () => {
     );
   };
 
-  return <Carousel title="Our Work">{studies.map(renderItem)}</Carousel>;
+  return (
+    <Carousel autoScroll title="Our Work">
+      {studies.map(renderItem)}
+    </Carousel>
+  );
 };

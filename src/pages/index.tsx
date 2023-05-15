@@ -66,11 +66,11 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <div id="caseStudies" className="pb-5">
+      <div id="caseStudies">
         <CaseStudyCarousel />
       </div>
 
-      <div id="features" className="pb-8 pt-lg-8">
+      <div id="features" className="pb-8 pt-lg-6">
         <Container>
           <div className={`d-flex flex-column flex-lg-row ` + styles.features}>
             <div>

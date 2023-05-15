@@ -113,7 +113,7 @@ const ServicesPage = () => {
               className={cn(styles.item, styles.creativeItem)}
             >
               <Button className={styles.button} variant="secondary">
-                Infrastructure{" "}
+                Creative{" "}
                 <StaticImage
                   className="ms-2"
                   src="./right-arrow.svg"

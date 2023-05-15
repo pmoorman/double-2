@@ -13,18 +13,30 @@ import * as styles from "./index.module.scss";
 export type CarouselProps = {
   title?: string;
   hideArrows?: boolean;
+  autoScroll?: boolean;
 };
 
 export const Carousel: FC<CarouselProps> = ({
   hideArrows,
   title,
+  autoScroll,
   children,
 }) => {
   const initialized = useRef(false);
   const container = useRef<HTMLDivElement>(null);
+  const [arrowClicked, setArrowClicked] = React.useState(false);
   const isSmallDevice = useMediaQuery({ query: "(max-width: 992px)" });
   const isXLDevice = useMediaQuery({ query: "(min-width: 1400px)" });
   const moveAmount = isSmallDevice ? 300 : 420;
+
+  // Auto scroll
+  useEffect(() => {
+    if (!autoScroll || arrowClicked) return;
+    const interval = setInterval(() => {
+      handleClickArrow("right", true)();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [autoScroll, arrowClicked]);
 
   useEffect(() => {
     // margin-left: calc((100vw - 1320px) / 2);
@@ -37,18 +49,23 @@ export const Carousel: FC<CarouselProps> = ({
     }
   }, [container, isXLDevice]);
 
-  const handleClickArrow = (direction: "left" | "right") => () => {
-    if (!container.current) return;
-    const currentLeft = container.current.scrollLeft;
-    const newLeft =
-      direction === "left"
-        ? currentLeft - moveAmount
-        : currentLeft + moveAmount;
-    container.current.scrollTo({
-      left: newLeft,
-      behavior: "smooth",
-    });
-  };
+  const handleClickArrow =
+    (direction: "left" | "right", isAuto?: boolean) => () => {
+      if (!container.current) return;
+      const currentLeft = container.current.scrollLeft;
+      const newLeft =
+        direction === "left"
+          ? currentLeft - moveAmount
+          : currentLeft + moveAmount;
+      container.current.scrollTo({
+        left: newLeft,
+        behavior: "smooth",
+      });
+
+      if (!isAuto) {
+        setArrowClicked(true);
+      }
+    };
 
   return (
     <>
