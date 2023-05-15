@@ -8,20 +8,19 @@ import {
   Button,
   ButtonProps,
 } from "react-bootstrap";
-
-import * as styles from "./index.module.scss";
-
 import ReCAPTCHA, { ReCAPTCHAProps } from "react-google-recaptcha";
 import { StaticImage } from "gatsby-plugin-image";
 
-export interface OgilvyInlineFormProps {
+import * as styles from "./index.module.scss";
+
+export interface OgilvyFormProps {
   formId: string;
   recaptchaProps?: Omit<ReCAPTCHAProps, "sitekey">;
   buttonProps?: ButtonProps;
   formButton?: string;
 }
 
-export const OgilvyInlineForm: FC<OgilvyInlineFormProps> = ({
+export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
   formId,
   recaptchaProps,
   buttonProps,
@@ -29,7 +28,7 @@ export const OgilvyInlineForm: FC<OgilvyInlineFormProps> = ({
 }) => {
   const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
   const { recaptchaKey } = useSiteMetadata();
-  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
+  const action = `https://www.getdrip.com/forms/${formId}/submissions`;
 
   return (
     <Form name="form" method="POST" action={action}>
@@ -52,7 +51,7 @@ export const OgilvyInlineForm: FC<OgilvyInlineFormProps> = ({
               type="email"
               placeholder="Work email"
               aria-describedby="email"
-              name="email_address"
+              name="fields[email]"
             />
             <Button
               disabled={submitIsDisabled}
@@ -84,6 +83,20 @@ export const OgilvyInlineForm: FC<OgilvyInlineFormProps> = ({
           </div>
         </Col>
       </Row>
+
+      {/* used by drip */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <br />
+        <input
+          type="text"
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="false"
+          value=""
+        />
+      </div>
 
       <ReCAPTCHA
         {...recaptchaProps}

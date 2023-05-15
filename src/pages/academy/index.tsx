@@ -10,7 +10,7 @@ import {
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
-const formId = "4973748";
+const formId = "342198018";
 
 const AcademyPage = () => {
   return (

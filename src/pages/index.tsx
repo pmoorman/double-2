@@ -3,18 +3,12 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import { StaticImage } from "gatsby-plugin-image";
 
-import {
-  Link,
-  CaseStudySection,
-  SEO,
-  AppHead,
-  AppAccordion,
-} from "@app/components";
+import { SEO, AppHead, AppAccordion, ContactSection } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
+import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 import * as styles from "./index-assets/index.module.scss";
-import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 const services = [
   {
@@ -72,18 +66,18 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <div id="caseStudies" className="pb-5">
+      <div id="caseStudies">
         <CaseStudyCarousel />
       </div>
 
-      <div id="features" className="pb-6 pt-lg-8">
+      <div id="features" className="pb-8 pt-lg-6">
         <Container>
           <div className={`d-flex flex-column flex-lg-row ` + styles.features}>
             <div>
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/star.svg"
+                  src="./index-assets/star.png"
                   alt="star"
                   width={84}
                 />
@@ -94,7 +88,7 @@ const HomePage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/pyra.svg"
+                  src="./index-assets/pyra.png"
                   alt="pyra"
                   width={86}
                 />
@@ -105,7 +99,7 @@ const HomePage = () => {
               <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
-                  src="./index-assets/diamond.svg"
+                  src="./index-assets/diamond.png"
                   alt="diamond"
                   width={88}
                 />
@@ -116,53 +110,7 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <Container className="pt-lg-8 py-4 pb-9">
-        <Row>
-          <div className={styles.mobileLines}>
-            <Col
-              lg={{ span: 10, offset: 1 }}
-              md={12}
-              className={styles.aboutUs}
-            >
-              <Row>
-                <Col lg={{ span: 11, offset: 1 }} md={{ span: 11, offset: 1 }}>
-                  <h2 className={styles.headingStyle}>
-                    We help the world's most ambitious teams
-                  </h2>
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={5} md={5}>
-                  <h2 className={styles.subHeadingStyle}>
-                    build the systems to tell their stories
-                  </h2>
-                </Col>
-                <Col
-                  lg={2}
-                  md={2}
-                  className="d-lg-flex d-md-flex d-none justify-content-center"
-                >
-                  <div className={`mt-4 + ${styles.polygonIcon}`}></div>
-                </Col>
-                <Col lg={5} md={5} className="mt-lg-5 pt-lg-3 mt-3 pt-0">
-                  <p>
-                    Sustained, compounding growth always comes from an
-                    engineered, systematic approach to user acquisition,
-                    activation and retention.
-                  </p>
-                  <p>
-                    Building such systems — and crafting the content within it —
-                    is what we specialise in.
-                  </p>
-                  <Button as={Link} to="/services" variant="outline-secondary">
-                    Our services
-                  </Button>
-                </Col>
-              </Row>
-            </Col>
-          </div>
-        </Row>
-      </Container>
+      <ContactSection />
     </>
   );
 };

@@ -18,6 +18,7 @@ import {
   TwoColumnSectionWithImage,
   BlockQuote,
   FooterPolicy,
+  Preloader,
 } from "@app/components";
 
 const mdxComponents = {
@@ -61,6 +62,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
       </MDXProvider>
       {!hideFooter && <Footer />}
       {hideFooter && !noFooter && <FooterPolicy />}
+      <Preloader />
     </ParallaxProvider>
   );
 };

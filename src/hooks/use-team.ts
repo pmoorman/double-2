@@ -3,7 +3,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import { TeamMemberData } from "@app/models";
 import { getImage } from "gatsby-plugin-image";
 
-export const useTeam = () => {
+export type UseTeamProps = {
+  sortByName?: boolean;
+};
+
+export const useTeam = (props?: UseTeamProps) => {
   const { file } = useStaticQuery(graphql`
     {
       file(
@@ -39,6 +43,10 @@ export const useTeam = () => {
         image: getImage(image),
       };
     });
+
+  if (props?.sortByName) {
+    return items.sort((a, b) => a.name.localeCompare(b.name));
+  }
 
   return items;
 };
