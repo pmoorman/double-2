@@ -3,6 +3,15 @@ export interface CaseStudyStats {
   value: string;
 }
 
+export interface CaseStudyQuote {
+  below_milestones?: boolean;
+  content: string;
+  name: string;
+  title: string;
+  subtitle: string;
+  image?: any;
+}
+
 export interface CaseStudy {
   // Common (both page and section)
   title: string;
@@ -54,13 +63,7 @@ export interface CaseStudy {
   };
 
   // quote
-  quote?: {
-    content: string;
-    name: string;
-    title: string;
-    subtitle: string;
-    image?: any;
-  };
+  quote?: CaseStudyQuote;
 
   // Is featured?
   featured?: boolean;

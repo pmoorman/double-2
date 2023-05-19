@@ -12,7 +12,7 @@ import {
   AppHead,
   SEO,
 } from "@app/components";
-import { CaseStudy } from "@app/models";
+import { CaseStudy, CaseStudyQuote } from "@app/models";
 
 import * as styles from "./index.module.scss";
 
@@ -47,6 +47,21 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
   const resultsImage = getImage(results.image);
   const processImage = getImage(process?.image);
   const quoteImage = getImage(quote?.image);
+
+  const renderQuote = (quote: CaseStudyQuote) => (
+    <Container>
+      <BlockQuote
+        name={<h4>{quote.name}</h4>}
+        title={<strong>{quote.title}</strong>}
+        subtitle={quote.subtitle}
+        image={quoteImage && <GatsbyImage image={quoteImage} alt="Process" />}
+        quoteStyle={{ color: "#1288FF", fontSize: "24px" }}
+        quoteLineStyle={{ borderColor: "#1288FF" }}
+      >
+        <span dangerouslySetInnerHTML={{ __html: quote.content }} />
+      </BlockQuote>
+    </Container>
+  );
 
   return (
     <div>
@@ -149,22 +164,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </div>
       )}
 
-      {quote && (
-        <Container>
-          <BlockQuote
-            name={<h4>{quote.name}</h4>}
-            title={<strong>{quote.title}</strong>}
-            subtitle={quote.subtitle}
-            image={
-              quoteImage && <GatsbyImage image={quoteImage} alt="Process" />
-            }
-            quoteStyle={{ color: "#1288FF", fontSize: "24px" }}
-            quoteLineStyle={{ borderColor: "#1288FF" }}
-          >
-            <span>{quote.content}</span>
-          </BlockQuote>
-        </Container>
-      )}
+      {quote && !quote.below_milestones && renderQuote(quote)}
 
       {milestones && (
         <Container>
@@ -203,6 +203,8 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
           </div>
         );
       })}
+
+      {quote && quote.below_milestones && renderQuote(quote)}
     </div>
   );
 };
@@ -267,6 +269,7 @@ export const pageQuery = graphql`
             }
           }
           quote {
+            below_milestones
             content
             name
             title
