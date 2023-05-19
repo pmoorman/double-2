@@ -11,6 +11,7 @@ import {
   BlockQuote,
   AppHead,
   SEO,
+  ContactSection,
 } from "@app/components";
 import { CaseStudy, CaseStudyQuote } from "@app/models";
 
@@ -32,6 +33,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     hero_image,
     body_image,
     page_logo_image,
+    has_short_page,
     stats,
     how_we_did_it,
     results,
@@ -41,30 +43,11 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     quote,
   } = frontmatter;
 
-  const bodyImage = getImage(body_image);
-  const heroImage = getImage(hero_image);
-  const pageLogo = getImage(page_logo_image);
-  const resultsImage = getImage(results.image);
-  const processImage = getImage(process?.image);
-  const quoteImage = getImage(quote?.image);
+  const renderHeroLong = () => {
+    const heroImage = getImage(hero_image);
+    const pageLogo = getImage(page_logo_image);
 
-  const renderQuote = (quote: CaseStudyQuote) => (
-    <Container>
-      <BlockQuote
-        name={<h4>{quote.name}</h4>}
-        title={<strong>{quote.title}</strong>}
-        subtitle={quote.subtitle}
-        image={quoteImage && <GatsbyImage image={quoteImage} alt="Process" />}
-        quoteStyle={{ color: "#1288FF", fontSize: "24px" }}
-        quoteLineStyle={{ borderColor: "#1288FF" }}
-      >
-        <span dangerouslySetInnerHTML={{ __html: quote.content }} />
-      </BlockQuote>
-    </Container>
-  );
-
-  return (
-    <div>
+    return (
       <Container>
         <Row>
           <div className="pt-lg-7 pb-lg-8 py-4">
@@ -88,13 +71,94 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               )}
               <div className={styles.heroText}>
                 <h1 className="mb-3">{title}</h1>
-                <h3 className="mb-3">{pageSubtitle}</h3>
+                <h3 className={`mb-3`}>{pageSubtitle}</h3>
                 <p>{excerpt}</p>
               </div>
             </ImageRow>
           </div>
         </Row>
       </Container>
+    );
+  };
+
+  const renderHeroShort = () => {
+    const heroImage = getImage(hero_image);
+    const pageLogo = getImage(page_logo_image);
+
+    return (
+      <Container>
+        <Row>
+          <div className="pt-lg-7 pb-lg-8 py-4">
+            <ImageRow
+              imageOrder="last"
+              alignItemsCenter
+              image={
+                heroImage && (
+                  <div className="d-flex align-items-center">
+                    <Image>
+                      <GatsbyImage image={heroImage} alt={title} />
+                    </Image>
+                  </div>
+                )
+              }
+            >
+              {pageLogo && (
+                <GatsbyImage
+                  image={pageLogo}
+                  alt={title}
+                  className={styles.logoImage}
+                  objectFit="contain"
+                />
+              )}
+              <div className={styles.heroText}>
+                <h2 className="mb-3">{title}</h2>
+                <h3 className={`mb-3 fw-bold`}>{pageSubtitle}</h3>
+                <p className="lead">{excerpt}</p>
+              </div>
+            </ImageRow>
+          </div>
+        </Row>
+      </Container>
+    );
+  };
+
+  const renderQuote = (quote: CaseStudyQuote) => {
+    const quoteImage = getImage(quote?.image);
+    return (
+      <Container>
+        <BlockQuote
+          name={<h4>{quote.name}</h4>}
+          title={<strong>{quote.title}</strong>}
+          subtitle={quote.subtitle}
+          image={quoteImage && <GatsbyImage image={quoteImage} alt="Process" />}
+          quoteStyle={{ color: "#1288FF", fontSize: "24px" }}
+          quoteLineStyle={{ borderColor: "#1288FF" }}
+        >
+          <span dangerouslySetInnerHTML={{ __html: quote.content }} />
+        </BlockQuote>
+      </Container>
+    );
+  };
+
+  if (has_short_page) {
+    return (
+      <>
+        {renderHeroShort()}
+        <ContactSection
+          title="Looking for more?"
+          body="Let’s jump on a call to talk about this project."
+        />
+      </>
+    );
+  }
+
+  const bodyImage = getImage(body_image);
+  const resultsImage = getImage(results.image);
+  const processImage = getImage(process?.image);
+
+  return (
+    <div>
+      {renderHeroLong()}
 
       {stats && (
         <div className={`py-lg-7 py-5 + ${styles.blueBg}`}>
@@ -222,6 +286,7 @@ export const pageQuery = graphql`
           title
           subtitle
           pageSubtitle
+          has_short_page
           excerpt
           hero_image {
             childImageSharp {

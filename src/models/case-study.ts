@@ -21,6 +21,7 @@ export interface CaseStudy {
   weight?: number;
   homepageweight?: number;
   has_single_page?: boolean;
+  has_short_page?: boolean;
   categories: string[];
   stats?: CaseStudyStats[];
   slug: string;
