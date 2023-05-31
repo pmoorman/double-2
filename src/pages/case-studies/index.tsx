@@ -32,14 +32,6 @@ const CaseStudiesPage = () => {
         <Container>
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
-              <div className={styles.heroBg}>
-                <StaticImage
-                  src="./cshero.png"
-                  alt="Case Studies"
-                  height={500}
-                  placeholder="none"
-                />
-              </div>
               <Col md="7">
                 <h1 className="d-headline text-center py-6">
                   Clients you want to <span>emulate</span>
