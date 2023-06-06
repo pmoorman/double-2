@@ -85,6 +85,7 @@ const config: GatsbyConfig = {
           "/short/guide/thankyou",
           "/38-laws-of-growth-marketing",
           "/38-laws-to-avoid-startup-disaster",
+          "/double-plus-closed",
         ],
       },
     },
