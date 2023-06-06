@@ -7,3 +7,4 @@ Disallow: /short/signup
 Disallow: /academy/*
 Disallow: /38-laws-of-growth-marketing/
 Disallow: /38-laws-to-avoid-startup-disaster/
+Disallow: /double-plus-closed
