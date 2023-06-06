@@ -40,6 +40,32 @@ const CaseStudiesPage = () => {
             </Row>
           </div>
         </Container>
+        <Container>
+          <Row className="justify-content-center">
+            <Col md="6">
+              <StaticImage src="./hero_2.png" alt="hero" />
+            </Col>
+            <Col md="6">
+              <StaticImage src="./hero_1.png" alt="hero" />
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">50+</h2>
+              <h3 className="fw-bold">tech companies</h3>
+            </Col>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">13</h2>
+              <h3 className="fw-bold">active countries</h3>
+            </Col>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">80,000</h2>
+              <h3 className="fw-bold">leads generated</h3>
+            </Col>
+          </Row>
+        </Container>
         <div>
           <LogoSlider />
         </div>
