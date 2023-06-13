@@ -64,7 +64,7 @@ const AboutPage = () => {
                   alt="diamond"
                   width={88}
                 />
-                <h3 className="mb-0">Worked with 50+ tech companies </h3>
+                <h3 className="mb-0">Worked with 100+ tech companies </h3>
               </div>
             </div>
           </Col>
