@@ -11,6 +11,7 @@ import {
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import heroImg from "./oval.svg";
 
 const AboutPage = () => {
   return (
@@ -20,12 +21,7 @@ const AboutPage = () => {
         <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
           <Row className="justify-content-center">
             <div className={styles.heroBg}>
-              <StaticImage
-                src="./oval.svg"
-                alt="About"
-                objectFit="contain"
-                placeholder="none"
-              />
+              <img src={heroImg} alt="About" className="img-fluid" />
             </div>
             <Col md={5}>
               <h1 className="d-headline text-center py-6">
