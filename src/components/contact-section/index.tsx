@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { Link } from "gatsby";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
+import * as styles from "./index.module.scss";
+
 export type ContactSectionProps = {
   title?: string;
   body?: string;
@@ -20,7 +22,13 @@ export const ContactSection: FC<ContactSectionProps> = ({
           </Col>
           <Col md={6}>
             <p className="mb-4">{body}</p>
-            <Button as={Link} to="/contact" variant="secondary" type="submit">
+            <Button
+              className={styles.button}
+              as={Link}
+              to="/contact"
+              variant="secondary"
+              type="submit"
+            >
               Contact us
             </Button>
           </Col>
