@@ -72,13 +72,6 @@ const ServiceStrategy = () => {
             channels. Then, we optimise every step of the funnel for maximum
             performance.
           </p>
-          <h4 className="my-3"> Deliverables</h4>
-          <p>
-            {" "}
-            Generated over 50k leads for clients across portfolio Increased lead
-            to conversion rate by …% through lead nurturing materials Average
-            conversion rate improvement of …% after 6 months
-          </p>
         </TwoColumnSection>
 
         <TwoColumnSection title="Product-driven growth" leftWidth={6}>
