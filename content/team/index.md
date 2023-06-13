@@ -20,15 +20,15 @@ members:
   #   location: Utrecht
   #   image: ./willem.jpeg
 
-  - name: Tracey Halloran
-    title: Copywriter
-    location: Porto
-    image: ./tracey.jpeg
+  # - name: Tracey Halloran
+  #   title: Copywriter
+  #   location: Porto
+  #   image: ./tracey.jpeg
 
-  - name: Carine Engbers
-    title: Growth Marketing Consultant
-    location: Amsterdam
-    image: ./carine.jpeg
+  # - name: Carine Engbers
+  #   title: Growth Marketing Consultant
+  #   location: Amsterdam
+  #   image: ./carine.jpeg
 
   - name: Naveed Tariq
     title: Growth Marketing Consultant
