@@ -13,20 +13,21 @@ import {
 } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import heroImg from "./serviceshero.svg";
 
 const ServicesPage = () => {
   return (
     <>
       {/* Hero */}
       <Container>
-        <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
-          <Row className="justify-content-center">
+        <div className="pt-lg-7 pb-lg-5 py-4 ">
+          <Row className="justify-content-center position-relative">
             <div className={styles.heroBg}>
-              <StaticImage
-                src="./serviceshero.svg"
+              <img
+                src={heroImg}
                 alt="Services"
-                objectFit="contain"
-                placeholder="none"
+                className="img-fluid"
+                style={{ maxWidth: 360 }}
               />
             </div>
             <Col md={7}>
