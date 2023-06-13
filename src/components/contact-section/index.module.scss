@@ -1,0 +1,10 @@
+.button {
+  &:hover {
+    border-color: #fff !important;
+    background: #fff !important;
+    color: var(--bs-secondary) !important;
+    &:before {
+      background: #fff !important;
+    }
+  }
+}

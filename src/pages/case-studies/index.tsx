@@ -18,6 +18,8 @@ import {
   getCaseStudyCategories,
 } from "@app/helpers";
 
+import heroImg from "./hero_bg.svg";
+
 const CaseStudiesPage = () => {
   const caseStudies = useCaseStudies();
   const [category, setCategory] = React.useState("");
@@ -33,12 +35,7 @@ const CaseStudiesPage = () => {
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
               <div className={styles.heroBg}>
-                <StaticImage
-                  src="./cshero.png"
-                  alt="Case Studies"
-                  height={500}
-                  placeholder="none"
-                />
+                <img src={heroImg} alt="Case Studies" className="img-fluid" />
               </div>
               <Col md="7">
                 <h1 className="d-headline text-center py-6">
