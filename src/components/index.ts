@@ -38,6 +38,7 @@ export * from "./video-background";
 export * from "./partners-logo-slider";
 export * from "./blog-post-link-title-grid";
 export * from "./thank-you";
+export * from "./thank-you2";
 export * from "./gif";
 export * from "./404";
 export * from "./head";

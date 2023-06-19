@@ -40,6 +40,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     pathname.startsWith("/long"),
     pathname.startsWith("/38-laws-of-growth"),
     pathname.startsWith("/38-laws-to-avoid-startup-disaster"),
+    pathname.startsWith("/double-plus-closed"),
   ].some((p) => p);
 
   const hideFooter = [
@@ -50,6 +51,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     pathname.startsWith("/contact"),
     pathname.startsWith("/38-laws-of-growth"),
     pathname.startsWith("/38-laws-to-avoid-startup-disaster"),
+    pathname.startsWith("/double-plus-closed"),
   ].some((p) => p);
   const noFooter = ["/38-laws-of-growth"].some((p) => pathname.includes(p));
 
