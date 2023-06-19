@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link, SEO, GifSection, AppHead } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import hero from "./giphy.gif";
 
 export type ThankYou2Props = {
   subtitle?: string | ReactNode;
@@ -18,7 +19,7 @@ export const ThankYou2: FC<ThankYou2Props> = ({
         <Container>
           <Row className="justify-content-center">
             <Col md={5} className="mb-4">
-              <StaticImage src="./giphy-1.jpg" alt="" className="img-fluid" />
+              <img src={hero} alt="" className="img-fluid" />
             </Col>
             <Col md={9}>
               <h3 className="mb-4">
