@@ -9,6 +9,7 @@ import {
   SEO,
   LogoSlider,
   AppHead,
+  CaseStudyGridItem,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 
@@ -66,9 +67,109 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <div>
-          <LogoSlider />
-        </div>
+        <Container>
+          <Row>
+            <Col>
+              <h2>Meet the players</h2>
+              <p className="lead">
+                We’ve helped 50+ companies with their growth challenges
+              </p>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <CaseStudyGridItem
+              size="square"
+              title="TikTok"
+              subtitle="Social media platform"
+              image={
+                <StaticImage
+                  src="./man-working-out-using-insidetracker.jpg"
+                  alt="tiktok"
+                />
+              }
+            />
+
+            <CaseStudyGridItem
+              size="high"
+              title="Glowforge"
+              subtitle="World class 3D laser cutters"
+              image={<StaticImage src="./glowforge.jpg" alt="tiktok" />}
+            />
+
+            <CaseStudyGridItem
+              size="square"
+              title="TikTok"
+              subtitle="Social media platform"
+              image={
+                <StaticImage
+                  src="./man-working-out-using-insidetracker.jpg"
+                  alt="tiktok"
+                />
+              }
+            />
+
+            <Col md={4} className="d-flex align-items-end">
+              <div>
+                <div
+                  className="p-4 bg-primary text-white d-flex align-items-end"
+                  style={{
+                    height: "537px",
+                    width: "100%",
+                    borderRadius: "18px",
+                  }}
+                >
+                  <div>
+                    <h3>
+                      “Very reliable, reactive and diligent. Strategic growth
+                      hackers understanding the craft.”{" "}
+                    </h3>
+                    <p className="lead">Roman Balzan, CMO at Alpian</p>
+                  </div>
+                </div>
+                <div style={{ height: "50px" }} />
+              </div>
+            </Col>
+            <CaseStudyGridItem
+              size="square"
+              title="TikTok"
+              subtitle="Social media platform"
+              className="d-flex align-items-end"
+              image={
+                <StaticImage
+                  src="./man-working-out-using-insidetracker.jpg"
+                  alt="tiktok"
+                />
+              }
+            />
+
+            <CaseStudyGridItem
+              size="high"
+              title="Glowforge"
+              subtitle="World class 3D laser cutters"
+              className="d-flex align-items-end"
+              image={<StaticImage src="./glowforge.jpg" alt="tiktok" />}
+            />
+            <CaseStudyGridItem
+              size="square"
+              title="TikTok"
+              subtitle="Social media platform"
+              image={
+                <StaticImage
+                  src="./man-working-out-using-insidetracker.jpg"
+                  alt="tiktok"
+                />
+              }
+            />
+            <CaseStudyGridItem
+              size="wide"
+              title="TikTok"
+              subtitle="Social media platform"
+              image={<StaticImage src="./wide.png" alt="tiktok" />}
+            />
+          </Row>
+        </Container>
 
         {/* <Container>
           <div className="mb-lg-8 mt-6">
