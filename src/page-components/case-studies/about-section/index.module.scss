@@ -1,0 +1,15 @@
+.block {
+  background: #faf5ed;
+  border-radius: 20px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.buttons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

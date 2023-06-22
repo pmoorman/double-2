@@ -20,42 +20,12 @@
   }
 }
 
-// .filters {
-//   display: flex;
-//   flex-direction: row;
-
-//   @include media-breakpoint-down(md) {
-//     overflow-x: auto;
-//   }
-
-//   div {
-//     opacity: 0.5;
-//     margin: 2.5rem 1rem;
-//     cursor: pointer;
-
-//     small {
-//       @include media-breakpoint-down(md) {
-//         white-space: nowrap;
-//       }
-//     }
-
-//     &.active {
-//       color: $secondary;
-//       border-bottom: 2px solid $primary;
-//       opacity: 1;
-//     }
-//   }
-
-//   .title {
-//     margin-left: 0;
-//     opacity: 1;
-//     cursor: inherit;
-
-//     small {
-//       font-weight: 400;
-//     }
-//   }
-// }
+.category {
+  background: #f4f4f4;
+  padding: 15px 50px;
+  white-space: nowrap;
+  border-radius: 35px;
+}
 
 .line {
   height: 2px;

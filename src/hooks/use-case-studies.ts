@@ -63,6 +63,10 @@ export const useCaseStudies = () => {
                   title
                   subtitle
                   size
+                  weight
+                  align
+                  tags
+                  hover_tags
                   image {
                     childImageSharp {
                       gatsbyImageData

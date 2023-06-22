@@ -78,5 +78,9 @@ export interface CaseStudy {
     subtitle: string;
     image: any;
     size: "square" | "high" | "wide";
+    weight: number;
+    align: "start" | "center" | "end";
+    tags: string[];
+    hover_tags: string[];
   };
 }
