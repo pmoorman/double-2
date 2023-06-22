@@ -71,4 +71,12 @@ export interface CaseStudy {
   featured_thumbnail?: any;
   featured_title: string;
   featured_subtitle: string;
+
+  // grid item
+  grid_item?: {
+    title: string;
+    subtitle: string;
+    image: any;
+    size: "square" | "high" | "wide";
+  };
 }

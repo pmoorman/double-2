@@ -59,6 +59,16 @@ export const useCaseStudies = () => {
                   title
                   value
                 }
+                grid_item {
+                  title
+                  subtitle
+                  size
+                  image {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
                 section {
                   type
                   on_homepage
@@ -122,6 +132,7 @@ export const useCaseStudies = () => {
       featured_thumbnail,
       featured_subtitle,
       featured_title,
+      grid_item,
     } = childMdx.frontmatter;
 
     const sectionNode = sections.edges.find(
@@ -130,6 +141,9 @@ export const useCaseStudies = () => {
     const sectionBody = sectionNode?.node?.childMdx?.body;
     const embeddedImages =
       sectionNode?.node.childMdx.frontmatter.embeddedImages;
+
+    const gridItem =
+      grid_item || grid_item?.sort((a: any, b: any) => a.weight - b.weight);
 
     const item: CaseStudy = {
       embeddedImages,
@@ -168,6 +182,10 @@ export const useCaseStudies = () => {
       results: {
         body: "",
         image: "",
+      },
+      grid_item: {
+        ...gridItem,
+        image: getImage(gridItem?.image),
       },
     };
 

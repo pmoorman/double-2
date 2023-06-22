@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 import {
   Link,
@@ -26,6 +26,8 @@ const CaseStudiesPage = () => {
     caseStudies,
     category
   );
+
+  console.log({ caseStudies });
 
   return (
     <>
@@ -79,36 +81,25 @@ const CaseStudiesPage = () => {
         </Container>
         <Container>
           <Row>
-            <CaseStudyGridItem
-              size="square"
-              title="TikTok"
-              subtitle="Social media platform"
-              image={
-                <StaticImage
-                  src="./man-working-out-using-insidetracker.jpg"
-                  alt="tiktok"
-                />
-              }
-            />
+            {filteredCaseStudies.map((c) => {
+              console.log(c.grid_item);
+              if (!c.grid_item || !c.grid_item?.image) return null;
 
-            <CaseStudyGridItem
-              size="high"
-              title="Glowforge"
-              subtitle="World class 3D laser cutters"
-              image={<StaticImage src="./glowforge.jpg" alt="tiktok" />}
-            />
-
-            <CaseStudyGridItem
-              size="square"
-              title="TikTok"
-              subtitle="Social media platform"
-              image={
-                <StaticImage
-                  src="./man-working-out-using-insidetracker.jpg"
-                  alt="tiktok"
+              return (
+                <CaseStudyGridItem
+                  key={c.slug}
+                  size={c.grid_item.size}
+                  title={c.grid_item.title}
+                  subtitle={c.grid_item.subtitle}
+                  image={
+                    <GatsbyImage
+                      image={c.grid_item.image}
+                      alt={c.grid_item.title}
+                    />
+                  }
                 />
-              }
-            />
+              );
+            })}
 
             <Col md={4} className="d-flex align-items-end">
               <div>
@@ -131,43 +122,6 @@ const CaseStudiesPage = () => {
                 <div style={{ height: "50px" }} />
               </div>
             </Col>
-            <CaseStudyGridItem
-              size="square"
-              title="TikTok"
-              subtitle="Social media platform"
-              className="d-flex align-items-end"
-              image={
-                <StaticImage
-                  src="./man-working-out-using-insidetracker.jpg"
-                  alt="tiktok"
-                />
-              }
-            />
-
-            <CaseStudyGridItem
-              size="high"
-              title="Glowforge"
-              subtitle="World class 3D laser cutters"
-              className="d-flex align-items-end"
-              image={<StaticImage src="./glowforge.jpg" alt="tiktok" />}
-            />
-            <CaseStudyGridItem
-              size="square"
-              title="TikTok"
-              subtitle="Social media platform"
-              image={
-                <StaticImage
-                  src="./man-working-out-using-insidetracker.jpg"
-                  alt="tiktok"
-                />
-              }
-            />
-            <CaseStudyGridItem
-              size="wide"
-              title="TikTok"
-              subtitle="Social media platform"
-              image={<StaticImage src="./wide.png" alt="tiktok" />}
-            />
           </Row>
         </Container>
 
