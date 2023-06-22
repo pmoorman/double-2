@@ -10,40 +10,35 @@ import {
   LogoSlider,
   AppHead,
   CaseStudyGridItem,
+  Carousel,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
 import {
-  filterCaseStudiesByCategory,
+  filterCaseStudiesByCategories,
   getCaseStudyCategories,
 } from "@app/helpers";
+import classNames from "classnames";
+
+import { AboutSection } from "@app/page-components/case-studies";
 
 const CaseStudiesPage = () => {
-  const caseStudies = useCaseStudies();
-  const [category, setCategory] = React.useState("");
-  const filteredCaseStudies = filterCaseStudiesByCategory(
-    caseStudies,
-    category
-  );
-
-  console.log({ caseStudies });
-
   return (
     <>
       <div>
         <Container>
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
-              <Col md="7">
+              <Col md="9">
                 <h1 className="d-headline text-center py-6">
-                  Clients you want to <span>emulate</span>
+                  The game of explosive <br /> <span>user growth</span>
                 </h1>
               </Col>
             </Row>
           </div>
         </Container>
-        <Container>
+        <Container className="mb-6">
           <Row className="justify-content-center">
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
@@ -53,7 +48,7 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container>
+        <Container className="mb-6">
           <Row>
             <Col md="4">
               <h2 className="fw-bold mb-0">50+</h2>
@@ -69,109 +64,8 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container>
-          <Row>
-            <Col>
-              <h2>Meet the players</h2>
-              <p className="lead">
-                We’ve helped 50+ companies with their growth challenges
-              </p>
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row>
-            {filteredCaseStudies.map((c) => {
-              console.log(c.grid_item);
-              if (!c.grid_item || !c.grid_item?.image) return null;
 
-              return (
-                <CaseStudyGridItem
-                  key={c.slug}
-                  size={c.grid_item.size}
-                  title={c.grid_item.title}
-                  subtitle={c.grid_item.subtitle}
-                  image={
-                    <GatsbyImage
-                      image={c.grid_item.image}
-                      alt={c.grid_item.title}
-                    />
-                  }
-                />
-              );
-            })}
-
-            <Col md={4} className="d-flex align-items-end">
-              <div>
-                <div
-                  className="p-4 bg-primary text-white d-flex align-items-end"
-                  style={{
-                    height: "537px",
-                    width: "100%",
-                    borderRadius: "18px",
-                  }}
-                >
-                  <div>
-                    <h3>
-                      “Very reliable, reactive and diligent. Strategic growth
-                      hackers understanding the craft.”{" "}
-                    </h3>
-                    <p className="lead">Roman Balzan, CMO at Alpian</p>
-                  </div>
-                </div>
-                <div style={{ height: "50px" }} />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-
-        {/* <Container>
-          <div className="mb-lg-8 mt-6">
-            <div className={styles.blueBg}>
-              <h3>Featured case studies</h3>
-            </div>
-            <div className={styles.cardSection}>
-              <FeaturedCaseStudies />
-            </div>
-          </div>
-        </Container> */}
-
-        <div>
-          <Container>
-            {/* <h2>Explore our case studies</h2> */}
-
-            {/* Filters */}
-            {/* <div className={styles.filters}>
-              <div className={styles.title}>
-                <small>Filter by:</small>
-              </div>
-              <div
-                className={cn({ [styles.active]: category === "" })}
-                onClick={() => setCategory("")}
-              >
-                <small>All</small>
-              </div>
-              {categories.map((c) => (
-                <div
-                  key={c}
-                  className={cn({ [styles.active]: category === c })}
-                  onClick={() => setCategory(c)}
-                >
-                  <small>{c}</small>
-                </div>
-              ))}
-            </div> */}
-          </Container>
-        </div>
-
-        {filteredCaseStudies.map((item) => (
-          <CaseStudySection
-            isIndexPage={true}
-            type={5}
-            item={item}
-            key={item.slug}
-          />
-        ))}
+        <AboutSection />
       </div>
     </>
   );
