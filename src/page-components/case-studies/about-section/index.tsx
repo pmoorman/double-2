@@ -31,7 +31,7 @@ export const AboutSection = () => {
 
   return (
     <>
-      <Container>
+      <Container className="mb-7">
         <Row>
           <Col>
             <h2>About our clients</h2>
@@ -49,6 +49,7 @@ export const AboutSection = () => {
                   src="./about-1.png"
                   alt="about 1"
                   loading="eager"
+                  placeholder="none"
                 />
               )}
               {selected === 1 && (
@@ -56,6 +57,7 @@ export const AboutSection = () => {
                   src="./about-2.png"
                   alt="about 2"
                   loading="eager"
+                  placeholder="none"
                 />
               )}
               {selected === 2 && (
@@ -63,6 +65,7 @@ export const AboutSection = () => {
                   src="./about-3.png"
                   alt="about 3"
                   loading="eager"
+                  placeholder="none"
                 />
               )}
             </div>

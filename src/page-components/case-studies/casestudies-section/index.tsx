@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import cn from "classnames";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import { Carousel } from "@app/components";
+import { Carousel, CaseStudyGridItem, Link } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import {
   filterCaseStudiesByCategories,
@@ -28,15 +29,21 @@ const quotes: any = {
 
 export const CasestudiesSection = () => {
   const caseStudies = useCaseStudies();
+  const [more, setMore] = useState(false);
   const [selectedCategories, setSelectedCategories] = React.useState<string[]>(
     []
   );
-  const filteredCaseStudies = filterCaseStudiesByCategories(
-    caseStudies,
-    selectedCategories
-  )
-    ?.sort((a, b) => (b?.grid_item?.weight || 0) - (a?.grid_item?.weight || 0))
-    ?.filter((i) => i?.grid_item?.image);
+  const filteredCaseStudies = useMemo(() => {
+    const items = filterCaseStudiesByCategories(caseStudies, selectedCategories)
+      ?.sort(
+        (a, b) => (b?.grid_item?.weight || 0) - (a?.grid_item?.weight || 0)
+      )
+      ?.filter((i) => i?.grid_item?.image);
+
+    // Only show first 7 items if not "more" clicked
+    return more ? items : items?.slice(0, 7);
+  }, [caseStudies, selectedCategories, more]);
+
   const categories = getCaseStudyCategories(caseStudies);
 
   const handleCategoryClick = (category: string) => (e: any) => {
@@ -52,13 +59,8 @@ export const CasestudiesSection = () => {
     <Col md={4} className="d-flex align-items-end mb-9">
       <div>
         <div
-          className="p-4 text-white d-flex align-items-end"
-          style={{
-            height: "537px",
-            width: "100%",
-            borderRadius: "18px",
-            background: q.background,
-          }}
+          className={cn(styles.quote, "p-4 text-white d-flex align-items-end")}
+          style={{ background: q.background }}
         >
           <div>
             <h3>{q.quote}</h3>
@@ -80,7 +82,7 @@ export const CasestudiesSection = () => {
           </Col>
         </Row>
       </Container>
-      <div className="mb-9">
+      <div className="mb-7">
         <Carousel hideArrows>
           {categories.map((t) => (
             <div
@@ -105,8 +107,10 @@ export const CasestudiesSection = () => {
             return (
               <>
                 {quotes[`${i}`] && renderQuote(quotes[`${i}`])}
+
                 <CaseStudyGridItem
                   key={c.slug}
+                  slug={c.slug}
                   size={c.grid_item.size}
                   title={c.grid_item.title}
                   subtitle={c.grid_item.subtitle}
@@ -114,9 +118,10 @@ export const CasestudiesSection = () => {
                   align={c.grid_item.align}
                   image={
                     <GatsbyImage
-                      className="w-100"
+                      className="w-100 h-100"
                       image={c.grid_item.image}
                       alt={c.grid_item.title}
+                      quality={100}
                     />
                   }
                 />
@@ -124,6 +129,15 @@ export const CasestudiesSection = () => {
             );
           })}
         </Row>
+        {!more && (
+          <Row>
+            <Col>
+              <h3 role="button" onClick={() => setMore(true)}>
+                See more work →
+              </h3>
+            </Col>
+          </Row>
+        )}
       </Container>
     </>
   );

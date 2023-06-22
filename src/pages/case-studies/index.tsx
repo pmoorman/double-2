@@ -1,27 +1,13 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
+
+import { SEO, AppHead, ContactSection } from "@app/components";
 
 import {
-  Link,
-  CaseStudySection,
-  FeaturedCaseStudies,
-  SEO,
-  LogoSlider,
-  AppHead,
-  CaseStudyGridItem,
-  Carousel,
-} from "@app/components";
-import { useCaseStudies } from "@app/hooks";
-
-import * as styles from "./index.module.scss";
-import {
-  filterCaseStudiesByCategories,
-  getCaseStudyCategories,
-} from "@app/helpers";
-import classNames from "classnames";
-
-import { AboutSection } from "@app/page-components/case-studies";
+  AboutSection,
+  CasestudiesSection,
+} from "@app/page-components/case-studies";
 
 const CaseStudiesPage = () => {
   return (
@@ -65,7 +51,13 @@ const CaseStudiesPage = () => {
           </Row>
         </Container>
 
-        <AboutSection />
+        <div className="mb-8">
+          <CasestudiesSection />
+        </div>
+        <div className="mb-8">
+          <AboutSection />
+        </div>
+        <ContactSection />
       </div>
     </>
   );

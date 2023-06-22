@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { Col } from "react-bootstrap";
 import cn from "classnames";
 
+import { Link } from "@app/components";
+
 import * as styles from "./index.module.scss";
 import arrow from "./arrow-narrow-right.svg";
 import cornerArrow from "./corner-down-left.svg";
@@ -14,6 +16,7 @@ export type CaseStudyGridItemProps = {
   size: "square" | "high" | "wide";
   className?: string;
   align: "start" | "center" | "end";
+  slug: string;
 };
 
 export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
@@ -24,9 +27,10 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
   size,
   className,
   align = "start",
+  slug,
 }) => {
   const style: any = {};
-  const _className = cn(className, "mb-9", {
+  const _className = cn(className, "mb-7", {
     [`align-items-${align}`]: !!align,
   });
   let width = 4;
@@ -41,7 +45,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
 
   return (
     <Col md={width} className={_className}>
-      <div className={styles.item}>
+      <Link to={slug} className={styles.item}>
         <div className={styles.image} style={style}>
           {image}
           <div className={styles.overlay} />
@@ -61,7 +65,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
           <strong>{title}</strong> — 
           {subtitle}
         </div>
-      </div>
+      </Link>
     </Col>
   );
 };
