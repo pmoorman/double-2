@@ -9,6 +9,8 @@ import {
   CasestudiesSection,
 } from "@app/page-components/case-studies";
 
+import heroImg from "./hero_bg.svg";
+
 const CaseStudiesPage = () => {
   return (
     <>
