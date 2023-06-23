@@ -47,3 +47,4 @@ export * from "./carousel";
 export * from "./team-section";
 export * from "./contact-section";
 export * from "./preloader";
+export * from "./case-study-grid-item";

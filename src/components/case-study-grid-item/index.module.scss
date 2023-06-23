@@ -1,0 +1,86 @@
+.image {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .overlay {
+      display: block;
+    }
+  }
+
+  .overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    // make a gradient overlay, white to transparent from right to left
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+
+  .arrow {
+    background: var(--bs-secondary);
+    height: 51px;
+    width: 51px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      .arrowStraight {
+        display: none;
+      }
+      .arrowCorner {
+        display: block;
+      }
+      .tags {
+        display: block;
+      }
+    }
+
+    .tags {
+      position: absolute;
+      right: 0px;
+      bottom: 110%;
+      display: none;
+
+      .tag {
+        background: var(--bs-secondary);
+        color: var(--bs-white);
+        padding: 8px 13px;
+        border-radius: 25px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+    }
+
+    .arrowStraight {
+      display: block;
+    }
+
+    .arrowCorner {
+      display: none;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}

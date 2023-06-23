@@ -2,19 +2,18 @@ import { CaseStudy } from "@app/models";
 
 export const getCaseStudyCategories = (caseStudies: CaseStudy[]): string[] => {
   const categories = caseStudies.reduce((acc, curr) => {
-    return [...acc, ...curr.categories];
+    return [...acc, ...(curr.grid_item?.tags || [])];
   }, [] as string[]);
-
   return Array.from(new Set(categories));
 };
 
-export const filterCaseStudiesByCategory = (
+export const filterCaseStudiesByCategories = (
   caseStudies: CaseStudy[],
-  category: string
+  categories: string[]
 ): CaseStudy[] => {
-  if (!category) return caseStudies;
+  if (!categories.length) return caseStudies;
   return caseStudies.filter((caseStudy) =>
-    caseStudy.categories.includes(category)
+    caseStudy.grid_item?.tags?.some((t) => categories.includes(t))
   );
 };
 

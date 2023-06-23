@@ -2,100 +2,64 @@ import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
-import {
-  Link,
-  CaseStudySection,
-  FeaturedCaseStudies,
-  SEO,
-  LogoSlider,
-  AppHead,
-} from "@app/components";
-import { useCaseStudies } from "@app/hooks";
+import { SEO, AppHead, ContactSection } from "@app/components";
 
-import * as styles from "./index.module.scss";
 import {
-  filterCaseStudiesByCategory,
-  getCaseStudyCategories,
-} from "@app/helpers";
+  AboutSection,
+  CasestudiesSection,
+} from "@app/page-components/case-studies";
 
 import heroImg from "./hero_bg.svg";
 
 const CaseStudiesPage = () => {
-  const caseStudies = useCaseStudies();
-  const [category, setCategory] = React.useState("");
-  const filteredCaseStudies = filterCaseStudiesByCategory(
-    caseStudies,
-    category
-  );
-
   return (
     <>
       <div>
         <Container>
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
-              <div className={styles.heroBg}>
-                <img src={heroImg} alt="Case Studies" className="img-fluid" />
-              </div>
-              <Col md="7">
+              <Col md="9">
                 <h1 className="d-headline text-center py-6">
-                  Clients you want to <span>emulate</span>
+                  The game of explosive <br /> <span>user growth</span>
                 </h1>
               </Col>
             </Row>
           </div>
         </Container>
-        <div>
-          <LogoSlider />
+        <Container className="mb-6">
+          <Row className="justify-content-center">
+            <Col md="6">
+              <StaticImage src="./hero_2.png" alt="hero" />
+            </Col>
+            <Col md="6">
+              <StaticImage src="./hero_1.png" alt="hero" />
+            </Col>
+          </Row>
+        </Container>
+        <Container className="mb-6">
+          <Row>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">50+</h2>
+              <h3 className="fw-bold">tech companies</h3>
+            </Col>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">13</h2>
+              <h3 className="fw-bold">active countries</h3>
+            </Col>
+            <Col md="4">
+              <h2 className="fw-bold mb-0">80,000</h2>
+              <h3 className="fw-bold">leads generated</h3>
+            </Col>
+          </Row>
+        </Container>
+
+        <div className="mb-8">
+          <CasestudiesSection />
         </div>
-
-        {/* <Container>
-          <div className="mb-lg-8 mt-6">
-            <div className={styles.blueBg}>
-              <h3>Featured case studies</h3>
-            </div>
-            <div className={styles.cardSection}>
-              <FeaturedCaseStudies />
-            </div>
-          </div>
-        </Container> */}
-
-        <div>
-          <Container>
-            {/* <h2>Explore our case studies</h2> */}
-
-            {/* Filters */}
-            {/* <div className={styles.filters}>
-              <div className={styles.title}>
-                <small>Filter by:</small>
-              </div>
-              <div
-                className={cn({ [styles.active]: category === "" })}
-                onClick={() => setCategory("")}
-              >
-                <small>All</small>
-              </div>
-              {categories.map((c) => (
-                <div
-                  key={c}
-                  className={cn({ [styles.active]: category === c })}
-                  onClick={() => setCategory(c)}
-                >
-                  <small>{c}</small>
-                </div>
-              ))}
-            </div> */}
-          </Container>
+        <div className="mb-8">
+          <AboutSection />
         </div>
-
-        {filteredCaseStudies.map((item) => (
-          <CaseStudySection
-            isIndexPage={true}
-            type={5}
-            item={item}
-            key={item.slug}
-          />
-        ))}
+        <ContactSection />
       </div>
     </>
   );
