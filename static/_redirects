@@ -28,4 +28,6 @@
 /assets/images/* https://shiny-platypus-01aaa1.netlify.app/assets/images/:splat 200
 /assets/fonts/* https://shiny-platypus-01aaa1.netlify.app/assets/fonts/:splat 200
 
+/welcome-to-elite https://elite.double-agency.com/ 301
+
 https://double-academy.com/* https://double-agency.com/:splat 302!
