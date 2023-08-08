@@ -50,8 +50,16 @@ const ContactPage = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          data-netlify-recaptcha="true"
+          netlify-honeypot="bott-field"
           onSubmit={handleSubmit}
         >
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bott-field" />
+            </label>
+          </p>
+
           <input type="hidden" name="form-name" value="contact" />
           <Container>
             <h2>Interested? </h2>
@@ -106,6 +114,13 @@ const ContactPage = () => {
                 />
               </Col>
             </Row>
+
+            <Row>
+              <Col lg="6" md="12" className="mt-5">
+                <div data-netlify-recaptcha="true"></div>
+              </Col>
+            </Row>
+
             {!message && (
               <div className="mt-5">
                 <Button variant="secondary" type="submit">
