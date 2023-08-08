@@ -50,8 +50,15 @@ const ContactPage = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          netlify-honeypot="bott-field"
+          data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bott-field" />
+            </label>
+          </p>
           <input type="hidden" name="form-name" value="contact" />
           <Container>
             <h2>Interested? </h2>
