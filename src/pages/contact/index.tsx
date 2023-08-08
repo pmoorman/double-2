@@ -50,8 +50,8 @@ const ContactPage = () => {
           name="contact"
           method="POST"
           data-netlify="true"
-          data-netlify-recaptcha="true"
           netlify-honeypot="bott-field"
+          data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
           <p className="hidden">
