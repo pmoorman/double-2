@@ -51,7 +51,7 @@ const ServicesPage = () => {
         <Row>
           <Col md={8} className="mb-3 mt-2">
             <Link
-              to="strategy"
+              to="/case-studies"
               className={cn(styles.item, styles.strategyItem)}
             >
               <Button className={styles.button} variant="secondary">
@@ -70,7 +70,7 @@ const ServicesPage = () => {
           </Col>
           <Col md={4} className="mb-3 mt-2">
             <Link
-              to="infrastructure"
+              to="/case-studies"
               className={cn(styles.item, styles.infrastructureItem)}
             >
               <Button className={styles.button} variant="secondary">
@@ -91,7 +91,7 @@ const ServicesPage = () => {
           </Col>
           <Col md={4} className="mb-3 mt-2">
             <Link
-              to="performance"
+              to="/case-studies"
               className={cn(styles.item, styles.performanceItem)}
             >
               <Button className={styles.button} variant="secondary">
@@ -110,7 +110,7 @@ const ServicesPage = () => {
           </Col>
           <Col md={8} className="mb-3 mt-2">
             <Link
-              to="creative"
+              to="/case-studies"
               className={cn(styles.item, styles.creativeItem)}
             >
               <Button className={styles.button} variant="secondary">
