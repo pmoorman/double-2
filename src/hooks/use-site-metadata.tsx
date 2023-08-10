@@ -8,6 +8,7 @@ export interface SiteMetadata {
   keywords: string;
   description: string;
   recaptchaKey: string;
+  contactRecaptchaKey: string;
 
   contact_email: string;
   contact_phone: string;
@@ -23,6 +24,7 @@ export const useSiteMetadata = () => {
           keywords
           description
           recaptchaKey
+          contactRecaptchaKey
         }
       }
     }

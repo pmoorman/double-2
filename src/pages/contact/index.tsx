@@ -9,7 +9,8 @@ import { useSiteMetadata } from "@app/hooks";
 import * as styles from "./index.module.scss";
 
 const ContactPage = () => {
-  const { contact_email, contact_phone, recaptchaKey } = useSiteMetadata();
+  const { contact_email, contact_phone, contactRecaptchaKey } =
+    useSiteMetadata();
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [verified, setVerified] = useState(false);
@@ -122,7 +123,7 @@ const ContactPage = () => {
             <Row>
               <Col lg="6" md="12" className="mt-5">
                 <ReCAPTCHA
-                  sitekey={recaptchaKey}
+                  sitekey={contactRecaptchaKey}
                   onChange={() => setVerified(true)}
                 />
               </Col>
