@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { AppHead, SEO } from "@app/components";
 import { submitNetlifyForm } from "@app/helpers";
@@ -113,7 +114,7 @@ const ContactPage = () => {
 
             <Row>
               <Col lg="6" md="12" className="mt-5">
-                <div data-netlify-recaptcha="true"></div>
+                <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY!} />
               </Col>
             </Row>
 
