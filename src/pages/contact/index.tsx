@@ -60,7 +60,7 @@ const ContactPage = () => {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bott-field"
-          data-netlify-recaptcha="true"
+          // data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="bott-field" />
@@ -120,18 +120,22 @@ const ContactPage = () => {
               </Col>
             </Row>
 
-            <Row>
+            {/* <Row>
               <Col lg="6" md="12" className="mt-5">
                 <ReCAPTCHA
                   sitekey={contactRecaptchaKey}
                   onChange={() => setVerified(true)}
                 />
               </Col>
-            </Row>
+            </Row> */}
 
             {!message && (
               <div className="mt-5">
-                <Button variant="secondary" type="submit" disabled={!verified}>
+                <Button
+                  variant="secondary"
+                  type="submit"
+                  // disabled={!verified}
+                >
                   Submit
                 </Button>
               </div>
