@@ -7,6 +7,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl,
     recaptchaKey: "6LcftHoiAAAAAPZBvS2LJjb3w_BkHJlX5YiQNUhy",
+    contactRecaptchaKey: "6LfdjJUnAAAAAGXOpsTdodegTOglqqFpQRU66iKX",
     title: "Double Agency",
     keywords: "Growth Marketing Agency",
     description:

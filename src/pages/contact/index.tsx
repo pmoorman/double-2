@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { AppHead, SEO } from "@app/components";
 import { submitNetlifyForm } from "@app/helpers";
@@ -8,13 +9,21 @@ import { useSiteMetadata } from "@app/hooks";
 import * as styles from "./index.module.scss";
 
 const ContactPage = () => {
-  const { contact_email, contact_phone } = useSiteMetadata();
+  const { contact_email, contact_phone, contactRecaptchaKey } =
+    useSiteMetadata();
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [verified, setVerified] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const { response, form } = await submitNetlifyForm(e);
+
+    if (response.status === 303) {
+      setError("Recaptcha failed. Please try again.");
+      setMessage("");
+      return;
+    }
 
     if (response.ok) {
       setError("");
@@ -54,11 +63,8 @@ const ContactPage = () => {
           data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
-          <p className="hidden">
-            <label>
-              Don’t fill this out if you’re human: <input name="bott-field" />
-            </label>
-          </p>
+          <input type="hidden" name="bott-field" />
+
           <input type="hidden" name="form-name" value="contact" />
           <Container>
             <h2>Interested? </h2>
@@ -113,9 +119,19 @@ const ContactPage = () => {
                 />
               </Col>
             </Row>
+
+            <Row>
+              <Col lg="6" md="12" className="mt-5">
+                <ReCAPTCHA
+                  sitekey={contactRecaptchaKey}
+                  onChange={() => setVerified(true)}
+                />
+              </Col>
+            </Row>
+
             {!message && (
               <div className="mt-5">
-                <Button variant="secondary" type="submit">
+                <Button variant="secondary" type="submit" disabled={!verified}>
                   Submit
                 </Button>
               </div>

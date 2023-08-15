@@ -50,6 +50,11 @@ members:
     location: Gdynia
     image: ./zbyszek.jpeg
 
+  - name: Cosmin Ursea
+    title: Senior Design Consultant
+    location: ""
+    image: ./cosmin.jpg
+
   # - name: Dennis Amoey
   #   title: The Hair God
   #   location: Amsterdam
