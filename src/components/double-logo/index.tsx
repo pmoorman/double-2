@@ -1,6 +1,5 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import logo from "./double-logo-black.svg";
+import logo from "./navy-double-logo.svg";
 import * as styles from "./index.module.scss";
 
 export const DoubleLogo = () => {
