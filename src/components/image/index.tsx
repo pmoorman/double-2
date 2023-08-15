@@ -14,7 +14,7 @@ export const Image: FC<ImageProps> = ({ double, children, ...rest }) => {
   });
 
   return (
-    <div className={className} {...rest}>
+    <div {...rest} className={className}>
       {children}
     </div>
   );

@@ -260,7 +260,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                   <div className="number">{`0${i + 1}`}</div>
                 </Col>
                 <Col lg="6">
-                  <p>{m.body}</p>
+                  <ReactMarkdown>{m.body}</ReactMarkdown>
                 </Col>
               </Row>
             </Container>
