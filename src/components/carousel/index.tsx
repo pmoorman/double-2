@@ -9,6 +9,8 @@ import cn from "classnames";
 import { isBrowser } from "@app/utils";
 
 import * as styles from "./index.module.scss";
+import leftArrow from "./left-arrow.svg";
+import rightArrow from "./right-arrow.svg";
 
 export type CarouselProps = {
   title?: string;
@@ -79,11 +81,10 @@ export const Carousel: FC<CarouselProps> = ({
                 className={cn(styles.arrowBtn, "d-none d-md-flex")}
                 onClick={handleClickArrow("left")}
               >
-                <StaticImage
-                  imgClassName={styles.arrowImg}
-                  objectFit="contain"
-                  src="./left-arrow.svg"
-                  alt=""
+                <img
+                  src={leftArrow}
+                  className={styles.arrowImg}
+                  alt="left arrow"
                   width={18}
                   height={13.6}
                 />
@@ -93,12 +94,12 @@ export const Carousel: FC<CarouselProps> = ({
                 className={styles.arrowBtn}
                 onClick={handleClickArrow("right")}
               >
-                <StaticImage
-                  objectFit="contain"
-                  src="./right-arrow.svg"
-                  alt=""
-                  width={16}
-                  height={12}
+                <img
+                  src={rightArrow}
+                  className={styles.arrowImg}
+                  alt="right arrow"
+                  width={18}
+                  height={13.6}
                 />
               </div>
             </div>
