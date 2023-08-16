@@ -42,7 +42,7 @@ const HomePage = () => {
           <Row className="justify-content-center">
             <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
               <h1 className="mb-5 d-headline">
-                Imagine your business <span>Doubled</span>
+                Imagine your business <span>doubled</span>
               </h1>
             </Col>
           </Row>
