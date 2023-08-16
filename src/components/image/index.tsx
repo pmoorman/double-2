@@ -5,16 +5,17 @@ import * as styles from "./index.module.scss";
 
 export interface ImageProps extends HTMLAttributes<HTMLElement> {
   double?: boolean;
+  nocut?: boolean;
 }
 
-export const Image: FC<ImageProps> = ({ double, children, ...rest }) => {
+export const Image: FC<ImageProps> = ({ double, nocut, children, ...rest }) => {
   const className = cn(rest.className, {
-    [styles.single]: !double,
-    [styles.double]: double,
+    [styles.single]: !nocut && !double,
+    [styles.double]: !nocut && double,
   });
 
   return (
-    <div className={className} {...rest}>
+    <div {...rest} className={className}>
       {children}
     </div>
   );

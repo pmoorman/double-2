@@ -28,7 +28,9 @@ export interface CaseStudy {
 
   // page
   hero_image: any;
+  hero_image_nocut: boolean;
   body_image: any;
+  body_image_nocut: boolean;
   page_logo_image: any;
   how_we_did_it: string;
   pageSubtitle: string;

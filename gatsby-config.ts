@@ -93,7 +93,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/double-logo.png",
+        icon: "src/images/navy-double-logo.png",
       },
     },
     {
