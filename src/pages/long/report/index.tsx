@@ -54,7 +54,7 @@ const GrowthAudit = () => {
           <ImageRow
             imageOrder="last"
             image={
-              <Image double className="mb-lg-0 mb-3">
+              <Image className="mb-lg-0 mb-3">
                 <StaticImage
                   src="./result.jpeg"
                   alt="Double Team photo"

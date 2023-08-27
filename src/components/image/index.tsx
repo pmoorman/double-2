@@ -3,16 +3,10 @@ import cn from "classnames";
 
 import * as styles from "./index.module.scss";
 
-export interface ImageProps extends HTMLAttributes<HTMLElement> {
-  double?: boolean;
-  nocut?: boolean;
-}
+export interface ImageProps extends HTMLAttributes<HTMLElement> {}
 
-export const Image: FC<ImageProps> = ({ double, nocut, children, ...rest }) => {
-  const className = cn(rest.className, {
-    [styles.single]: !nocut && !double,
-    [styles.double]: !nocut && double,
-  });
+export const Image: FC<ImageProps> = ({ children, ...rest }) => {
+  const className = cn(rest.className, styles.item);
 
   return (
     <div {...rest} className={className}>
