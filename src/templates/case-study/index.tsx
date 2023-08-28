@@ -96,7 +96,11 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 heroImage && (
                   <div className="d-flex align-items-center">
                     <Image>
-                      <GatsbyImage image={heroImage} alt={title} />
+                      <GatsbyImage
+                        image={heroImage}
+                        alt={title}
+                        objectFit="contain"
+                      />
                     </Image>
                   </div>
                 )
