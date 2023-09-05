@@ -20,6 +20,7 @@ export const CaseStudyCarousel = () => {
       <div key={study.title} className={styles.itemOuter}>
         <div className={styles.item}>
           <Link to={link}>
+            <div className={styles.overlay} />
             <GatsbyImage
               objectFit="cover"
               image={study.carousel?.image}

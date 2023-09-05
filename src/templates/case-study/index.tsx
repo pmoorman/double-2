@@ -31,9 +31,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
     title,
     excerpt,
     hero_image,
-    hero_image_nocut,
     body_image,
-    body_image_nocut,
     page_logo_image,
     has_short_page,
     stats,
@@ -57,7 +55,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
               imageOrder="last"
               image={
                 heroImage && (
-                  <Image nocut={hero_image_nocut}>
+                  <Image>
                     <GatsbyImage image={heroImage} alt={title} />
                   </Image>
                 )
@@ -98,7 +96,11 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 heroImage && (
                   <div className="d-flex align-items-center">
                     <Image>
-                      <GatsbyImage image={heroImage} alt={title} />
+                      <GatsbyImage
+                        image={heroImage}
+                        alt={title}
+                        objectFit="contain"
+                      />
                     </Image>
                   </div>
                 )
@@ -190,7 +192,7 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
           </Row>
         )}
         {bodyImage && (
-          <Image nocut={body_image_nocut} className="mt-lg-8  mt-5">
+          <Image className="mt-lg-8  mt-5">
             <GatsbyImage image={bodyImage} alt="Cover Image" />
           </Image>
         )}
@@ -290,13 +292,11 @@ export const pageQuery = graphql`
           pageSubtitle
           has_short_page
           excerpt
-          hero_image_nocut
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 650)
             }
           }
-          body_image_nocut
           body_image {
             childImageSharp {
               gatsbyImageData

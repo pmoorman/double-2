@@ -154,7 +154,7 @@ const BlogPage = () => {
           <ImageRow
             imageOrder="first"
             image={
-              <Image double className="mb-lg-0 mb-3">
+              <Image className="mb-lg-0 mb-3">
                 <StaticImage src="./tiktok.jpeg" alt="Case Studies" />
               </Image>
             }

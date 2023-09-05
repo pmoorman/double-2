@@ -61,7 +61,7 @@ const CareerTemplate: FC<PageProps<CareerTemplateProps>> = (props) => {
         <Container>
           <Row>
             <Col md="5">
-              <Image double>
+              <Image>
                 <StaticImage src="./role.jpeg" alt="Role" />
               </Image>
             </Col>
