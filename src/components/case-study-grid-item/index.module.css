@@ -1,0 +1,68 @@
+.image {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.image:hover .overlay {
+  display: block;
+}
+.image .overlay {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.image .arrow {
+  background: var(--bs-secondary);
+  height: 51px;
+  width: 51px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.image .arrow:hover .arrowStraight {
+  display: none;
+}
+.image .arrow:hover .arrowCorner {
+  display: block;
+}
+.image .arrow:hover .tags {
+  display: block;
+}
+.image .arrow .tags {
+  position: absolute;
+  right: 0px;
+  bottom: 110%;
+  display: none;
+}
+.image .arrow .tags .tag {
+  background: var(--bs-secondary);
+  color: var(--bs-white);
+  padding: 8px 13px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.image .arrow .arrowStraight {
+  display: block;
+}
+.image .arrow .arrowCorner {
+  display: none;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}/*# sourceMappingURL=index.module.css.map */

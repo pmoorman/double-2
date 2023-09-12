@@ -179,17 +179,19 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
         </div>
       )}
 
-      <HeadingRow>
-        <h2>Situation</h2>
-      </HeadingRow>
       <Container>
         {how_we_did_it && (
-          <Row>
-            <Col md="6"></Col>
-            <Col md="6">
-              <ReactMarkdown>{how_we_did_it}</ReactMarkdown>
-            </Col>
-          </Row>
+          <>
+            <HeadingRow>
+              <h2>Situation</h2>
+            </HeadingRow>
+            <Row>
+              <Col md="6"></Col>
+              <Col md="6">
+                <ReactMarkdown>{how_we_did_it}</ReactMarkdown>
+              </Col>
+            </Row>
+          </>
         )}
         {bodyImage && (
           <Image className="mt-lg-8  mt-5">
@@ -208,7 +210,9 @@ const CaseStudyTemplate: FC<PageProps<CaseStudyTemplateProps>> = (props) => {
                 )
               }
             >
-              <h3 className="mb-3">Strategy</h3>
+              <h3 className="mb-3">
+                {results.overview === "yes" ? "Overview" : "Strategy"}
+              </h3>
               <ReactMarkdown>{results.body}</ReactMarkdown>
             </ImageRow>
           </div>

@@ -1,0 +1,8 @@
+.button:hover {
+  border-color: #fff !important;
+  background: #fff !important;
+  color: var(--bs-secondary) !important;
+}
+.button:hover:before {
+  background: #fff !important;
+}/*# sourceMappingURL=index.module.css.map */

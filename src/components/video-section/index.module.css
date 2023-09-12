@@ -1,0 +1,13 @@
+.playerWrapper {
+  height: 1500px;
+  margin-bottom: 100px;
+}
+.playerWrapper video {
+  width: 100%;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 6rem;
+  position: sticky;
+  top: 70px;
+}/*# sourceMappingURL=index.module.css.map */

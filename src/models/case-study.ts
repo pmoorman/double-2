@@ -33,6 +33,7 @@ export interface CaseStudy {
   how_we_did_it: string;
   pageSubtitle: string;
   results: {
+    overview: boolean;
     body: string;
     image: any;
   };

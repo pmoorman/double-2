@@ -184,9 +184,11 @@ export const useCaseStudies = () => {
       process: childMdx.frontmatter.process,
       how_we_did_it: "",
       results: {
+        overview: false,
         body: "",
         image: "",
       },
+    
       grid_item: {
         ...gridItem,
         image: getImage(gridItem?.image),

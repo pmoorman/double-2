@@ -1,0 +1,8 @@
+.sectionChild {
+  width: 700px;
+}
+@media (max-width: 1024px) {
+  .sectionChild {
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.module.css.map */
