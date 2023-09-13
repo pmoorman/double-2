@@ -109,8 +109,6 @@ const HomePage = () => {
           </div>
         </Container>
       </div>
-
-      <ContactSection />
     </>
   );
 };

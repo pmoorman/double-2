@@ -59,7 +59,6 @@ const CaseStudiesPage = () => {
         <div className="mb-8">
           <AboutSection />
         </div>
-        <ContactSection />
       </div>
     </>
   );
