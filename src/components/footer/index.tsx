@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.scss";
 import { useSiteMetadata } from "@app/hooks";
 import logo from "./logo.svg";
+import logo1 from "./logo-1.svg";
 
 export const Footer = () => {
   const { contact_email, contact_phone } = useSiteMetadata();
@@ -14,74 +15,74 @@ export const Footer = () => {
       <footer className={styles.footer}>
         <Container>
           <div className={styles.headerLogo}>
-            <img src={logo} alt="Double logo" />
-            <Link to="https://www.linkedin.com/company/double-agency/">
-              <div className={styles.linkedinIcon}></div>
-            </Link>
+            <h1 className="display-4 mb-4">
+              Think we <br /> should <span>talk</span>?
+            </h1>
+            <p className="mb-4">
+              Feel free to reach out if you are interested in working with us,
+              for us, or just want to say hello.
+            </p>
+
+            <Button
+              as={Link}
+              to="/contact"
+              variant="outline-light"
+              className={styles.roundedButton}
+            >
+              Drop us a line
+            </Button>
           </div>
-          <div className="mt-lg-5 mt-4 d-flex flex-lg-row flex-column justify-content-lg-between">
-            <div lg={6} md={12}>
-              <h4 className="mb-3">Email us</h4>
-              <div className="mb-3">{contact_email}</div>
-              <h4 className="mb-3">Call us</h4>
-              <div className="mb-4">{contact_phone}</div>
-              <Button
-                as={Link}
-                to="/contact"
-                variant="outline-light"
-                className={styles.roundedButton}
-              >
-                Contact us
-              </Button>
-              <div className="my-5 d-flex flex-direction-row">
-                <div className={styles.mapIcon}></div>
-                <div>
-                  Netherlands - Amsterdam
-                  <br />
-                  Prins Hendrikkade 21e, 1012 TL
-                  <br />
-                  8:00-20:00 Mon-Fri
-                </div>
-              </div>
-              <div className="mb-5 d-flex flex-direction-row">
-                <div className={styles.mapIcon}></div>
-                <div>
-                  United States of America
-                  <br />
-                  680 South Cache Street, WY 83002
-                </div>
-              </div>
-            </div>
-            <div className="mb-3 mb-lg-0" lg={6} md={12}>
-              <h5 className="mb-1">Partners</h5>
-              <div className={styles.partnersLogo}>
-                <div>
-                  <StaticImage
-                    src="./quora.png"
-                    objectFit="contain"
-                    alt="Quora Marketing Partner's logo"
-                  />
-                </div>
-                <div>
-                  <StaticImage
-                    src="./netlify.png"
-                    objectFit="contain"
-                    alt="Netlify logo"
-                  />
-                </div>
-                <div>
-                  <StaticImage
-                    src="./google.png"
-                    objectFit="contain"
-                    alt="Google partner logo"
-                  />
-                </div>
-                <div>
-                  <StaticImage
-                    src="./drip.png"
-                    objectFit="contain"
-                    alt="Drip logo"
-                  />
+          <div className={`${styles.rand} d-flex flex-column align-items-center`}>
+  <div className="container">
+    <div className="row gap-3">
+      <div className="col-xl custom-col text-sm-start">
+        <h2 className="h5 fw-bold mb-3">
+          We work with ambitious <br /> businesses navigating <br />
+          uncharted territory.
+        </h2>
+      </div>
+      <div className="address col-xl custom-col text-sm-start">
+        <p>
+          <div className={styles.mapIcon}></div>
+          Prins Hendrikkade 21e, 1012 TL <br /> Amsterdam, Netherlands
+        </p>
+        <p>
+          <div className={styles.mapIcon}></div>
+          South Cache Street, WY 83002 <br /> United States of America
+        </p>
+      </div>
+      <div className="col-xl custom-col text-sm-start">
+        <h5 className="mb-1">Partners:</h5>
+        <div className={styles.partnersLogo}>
+                    <div>
+                      <StaticImage
+                        src="./quora.png"
+                        objectFit="contain"
+                        alt="Quora Marketing Partner's logo"
+                      />
+                    </div>
+                    <div>
+                      <StaticImage
+                        src="./netlify.png"
+                        objectFit="contain"
+                        alt="Netlify logo"
+                      />
+                    </div>
+                    <div>
+                      <StaticImage
+                        src="./google.png"
+                        objectFit="contain"
+                        alt="Google partner logo"
+                      />
+                    </div>
+                    <div>
+                      <StaticImage
+                        src="./drip.png"
+                        objectFit="contain"
+                        alt="Drip logo"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,10 +90,12 @@ export const Footer = () => {
         </Container>
       </footer>
       <div className={styles.footerPolicy}>
-        <Container>
-          <div className="d-flex flex-lg-row flex-md-row flex-column align-items-lg-center justify-content-end">
-            <Link to="/legal/privacy-policy">Privacy Policy</Link>
+        <Container className="d-flex justify-content-between">
+          <div className={styles.policyLogo}>
+            ©
+            <img src={logo1} alt="Double logo" />
           </div>
+          <Link to="/legal/privacy-policy">Privacy Policy</Link>
         </Container>
       </div>
     </>

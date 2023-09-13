@@ -1,18 +1,50 @@
 .footer {
+  position: relative;
   background-color: $secondary;
   color: #fff;
-  padding: 4.6rem 0 0 0;
-
+  margin-top: 260px;
+  @include media-breakpoint-down(xl) {
+    margin-top: 160px;
+  }
   @include media-breakpoint-down(md) {
     padding: 2.3rem 0 1.5rem 0;
+    margin-top: 120px;
   }
 
   .headerLogo {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 2.68rem;
+    position: relative;
+    padding: 3rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    background-color: rgba(var(--bs-primary-rgb)) !important;
+    border-radius: 20px;
+    transform: translateY(-50%);
+
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 1;
+
+      @include media-breakpoint-down(xl) {
+        font-size: 72px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 64px;
+        line-height: 0.95;
+      }
+
+      span {
+        font-family: "EB Garamond", serif;
+        font-style: italic;
+        font-size: 120%;
+      }
+    }
+
+    p {
+      font-weight: 400;
+    }
 
     @include media-breakpoint-down(md) {
       padding-bottom: 1.5rem;
@@ -21,14 +53,26 @@
     img {
       height: 32px;
     }
+  }
 
-    .linkedinIcon {
-      background: url(./linkedin.png) no-repeat center;
-      height: 24px;
-      width: 24px;
-      object-fit: contain;
-      background-size: contain;
+  .rand {
+    transform: translateY(-60%);
+    @include media-breakpoint-down(xl) {
+      transform: translateY(-30%);
     }
+    @include media-breakpoint-down(md) {
+      transform: translateY(-25%);
+    }
+  }
+
+  h2 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600 !important;
+  }
+
+  .address {
+    font-size: 18px;
   }
 
   h4 {
@@ -39,15 +83,16 @@
   }
 
   .mapIcon {
+    display: inline-block;
     background: url(./map.svg) no-repeat center;
     height: 22px;
     width: 17px;
-    margin-right: 1rem;
-    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    transform: translateY(0.3rem);
   }
 
   h5 {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .partnersLogo {
@@ -111,18 +156,33 @@
 }
 
 .footerPolicy {
-  background-color: $secondary;
+  background-color: #faf5ed;
   padding: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .container {
+    background-color: green;
+  }
+
+  .policyLogo {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    img {
+      margin-left: 8px;
+    }
+  }
 
   a {
-    color: #fff;
+    color: #2a2f45;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-left: 3rem;
 
     @include media-breakpoint-down(md) {
       margin-left: 0;
-      margin-bottom: 1rem;
     }
   }
 }
