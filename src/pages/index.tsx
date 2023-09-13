@@ -9,10 +9,10 @@ import {
   AppAccordion,
   ContactSection,
   ClientsGrid,
+  AboutSection,
 } from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
-import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
@@ -89,6 +89,8 @@ const HomePage = () => {
           getImage={(c) => c.grid_item?.homepageimage}
         />
       </div>
+
+      <AboutSection />
 
       <ContactSection />
     </>

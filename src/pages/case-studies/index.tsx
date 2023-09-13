@@ -2,12 +2,9 @@ import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { SEO, AppHead, ContactSection } from "@app/components";
+import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
-import {
-  AboutSection,
-  CasestudiesSection,
-} from "@app/page-components/case-studies";
+import { CasestudiesSection } from "@app/page-components/case-studies";
 
 import heroImg from "./hero_bg.svg";
 
