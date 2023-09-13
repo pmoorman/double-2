@@ -55,7 +55,7 @@
     }
   }
 
-  .rand {
+  .footerMid {
     transform: translateY(-60%);
     @include media-breakpoint-down(xl) {
       transform: translateY(-30%);

@@ -32,28 +32,30 @@ export const Footer = () => {
               Drop us a line
             </Button>
           </div>
-          <div className={`${styles.rand} d-flex flex-column align-items-center`}>
-  <div className="container">
-    <div className="row gap-3">
-      <div className="col-xl custom-col text-sm-start">
-        <h2 className="h5 fw-bold mb-3">
-          We work with ambitious <br /> businesses navigating <br />
-          uncharted territory.
-        </h2>
-      </div>
-      <div className="address col-xl custom-col text-sm-start">
-        <p>
-          <div className={styles.mapIcon}></div>
-          Prins Hendrikkade 21e, 1012 TL <br /> Amsterdam, Netherlands
-        </p>
-        <p>
-          <div className={styles.mapIcon}></div>
-          South Cache Street, WY 83002 <br /> United States of America
-        </p>
-      </div>
-      <div className="col-xl custom-col text-sm-start">
-        <h5 className="mb-1">Partners:</h5>
-        <div className={styles.partnersLogo}>
+          <div
+            className={`${styles.footerMid} d-flex flex-column align-items-center`}
+          >
+            <div className="container">
+              <div className="row gap-3">
+                <div className="col-xl custom-col text-sm-start">
+                  <h2 className="h5 fw-bold mb-3">
+                    We work with ambitious <br /> businesses navigating <br />
+                    uncharted territory.
+                  </h2>
+                </div>
+                <div className="address col-xl custom-col text-sm-start">
+                  <p>
+                    <div className={styles.mapIcon}></div>
+                    Prins Hendrikkade 21e, 1012 TL <br /> Amsterdam, Netherlands
+                  </p>
+                  <p>
+                    <div className={styles.mapIcon}></div>
+                    South Cache Street, WY 83002 <br /> United States of America
+                  </p>
+                </div>
+                <div className="col-xl custom-col text-sm-start">
+                  <h5 className="mb-1">Partners:</h5>
+                  <div className={styles.partnersLogo}>
                     <div>
                       <StaticImage
                         src="./quora.png"
