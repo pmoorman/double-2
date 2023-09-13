@@ -90,46 +90,6 @@ const HomePage = () => {
         />
       </div>
 
-      <div id="features" className="pb-8 pt-lg-6">
-        <Container>
-          <div className={`d-flex flex-column flex-lg-row ` + styles.features}>
-            <div>
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
-                <StaticImage
-                  className="me-3 flex-shrink-0"
-                  src="./index-assets/star.png"
-                  alt="star"
-                  width={84}
-                />
-                <h3 className="mb-0">60k+ Academy subscribers </h3>
-              </div>
-            </div>
-            <div>
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
-                <StaticImage
-                  className="me-3 flex-shrink-0"
-                  src="./index-assets/pyra.png"
-                  alt="pyra"
-                  width={86}
-                />
-                <h3 className="mb-0">Experienced start-up founders</h3>
-              </div>
-            </div>
-            <div>
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
-                <StaticImage
-                  className="me-3 flex-shrink-0"
-                  src="./index-assets/diamond.png"
-                  alt="diamond"
-                  width={88}
-                />
-                <h3 className="mb-0">Worked with 100+ tech companies </h3>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
-
       <ContactSection />
     </>
   );
