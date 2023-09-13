@@ -1,18 +1,6 @@
 import { CreatePagesArgs, CreateSchemaCustomizationArgs } from "gatsby";
 import path from "path";
 
-exports.createSchemaCustomization = ({
-  actions,
-}: CreateSchemaCustomizationArgs) => {
-  const { createTypes } = actions;
-
-  createTypes(`
-    type Frontmatter @dontInfer {
-      embeddedImages: [File] @fileByRelativePath
-    }
-  `);
-};
-
 export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
 

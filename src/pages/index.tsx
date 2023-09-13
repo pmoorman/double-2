@@ -3,12 +3,19 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { SEO, AppHead, AppAccordion, ContactSection } from "@app/components";
+import {
+  SEO,
+  AppHead,
+  AppAccordion,
+  ContactSection,
+  ClientsGrid,
+} from "@app/components";
 import { useCaseStudies } from "@app/hooks";
 import { getHomepageCaseStudies } from "@app/helpers";
 import { CaseStudyCarousel } from "@app/components/case-study-carousel";
 
 import * as styles from "./index-assets/index.module.scss";
+import { clientQuotes } from "@app/data";
 
 const services = [
   {
@@ -67,7 +74,12 @@ const HomePage = () => {
       </div>
 
       <div id="caseStudies">
-        <CaseStudyCarousel />
+        <ClientsGrid
+          caseStudies={caseStudies}
+          quotes={clientQuotes}
+          amount={5}
+          getImage={(c) => c.grid_item?.homepageimage}
+        />
       </div>
 
       <div id="features" className="pb-8 pt-lg-6">

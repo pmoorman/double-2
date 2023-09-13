@@ -23,7 +23,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
   image,
   title,
   subtitle,
-  tags,
+  tags = [],
   size,
   className,
   align = "start",
