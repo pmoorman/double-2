@@ -39,7 +39,8 @@ const services = [
 const HomePage = () => {
   const _caseStudies = useCaseStudies();
   const caseStudies = getHomepageCaseStudies(_caseStudies).sort(
-    (a, b) => (b.homepageweight || 0) - (a.homepageweight || 0)
+    (a, b) =>
+      (b?.grid_item?.homepageweight || 0) - (a?.grid_item?.homepageweight || 0)
   );
 
   return (
@@ -74,6 +75,13 @@ const HomePage = () => {
       </div>
 
       <div id="caseStudies">
+        <Container className="mb-5">
+          <Row>
+            <Col>
+              <h2 className="mb-0">Clients</h2>
+            </Col>
+          </Row>
+        </Container>
         <ClientsGrid
           caseStudies={caseStudies}
           quotes={clientQuotes}

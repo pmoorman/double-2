@@ -43,6 +43,10 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
     width = 8;
   }
 
+  if (size === "square") {
+    style.height = "400px";
+  }
+
   return (
     <Col md={width} className={_className}>
       <Link to={slug} className={styles.item}>
