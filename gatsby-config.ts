@@ -183,6 +183,13 @@ const config: GatsbyConfig = {
       },
       __key: "legal",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/`,
+        name: "static",
+      },
+    },
 
     /********************
      *
