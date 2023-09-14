@@ -1,0 +1,9 @@
+.block {
+  border: 2px solid #faf5ed;
+  padding: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #faf5ed;
+  }
+}

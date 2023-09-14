@@ -16,6 +16,7 @@ import { getHomepageCaseStudies } from "@app/helpers";
 
 import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
+import { ServicesSection } from "@app/page-components/home/services-section";
 
 const services = [
   {
@@ -62,16 +63,7 @@ const HomePage = () => {
       </Container>
 
       <div id="services" className="pb-5 my-md-6">
-        <Container>
-          <Row className="justify-content-between">
-            <Col md={3} className="mb-3 mb-md-0">
-              <h3>We offer a range of marketing services</h3>
-            </Col>
-            <Col md={5}>
-              <AppAccordion items={services} />
-            </Col>
-          </Row>
-        </Container>
+        <ServicesSection />
       </div>
 
       <div id="caseStudies">
