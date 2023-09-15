@@ -12,7 +12,8 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className={styles.footer}>
+      <div className={styles.footerOuter}>
+        <footer className={styles.footer}>
         <Container>
           <div className={styles.headerLogo}>
             <h1 className="display-4 mb-4">
@@ -91,6 +92,8 @@ export const Footer = () => {
           </div>
         </Container>
       </footer>
+        </div>
+      
       <div className={styles.footerPolicy}>
         <Container className="d-flex justify-content-between">
           <div className={styles.policyLogo}>
