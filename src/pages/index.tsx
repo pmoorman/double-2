@@ -85,8 +85,6 @@ const HomePage = () => {
       <div className="mb-9">
         <AboutSection />
       </div>
-
-      <ContactSection />
     </>
   );
 };
