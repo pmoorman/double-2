@@ -1,9 +1,51 @@
 .block {
+  background-color: #fff;
   border: 2px solid #faf5ed;
   padding: 50px;
   border-radius: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background-color: #faf5ed;
+    border-color: #faf5ed !important;
+    color: var(--bs-body);
   }
+  &:before {
+    content: "";
+    background: none;
+    border-color: #faf5ed;
+  }
+}
+
+.content {
+  border-radius: 20px;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.modalBody {
+  background: var(--bs-secondary);
+  color: #fff;
+  padding: 50px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  background: none;
+  &:hover {
+    background: none;
+    border: none;
+  }
+  &:before {
+    background: none;
+    border-color: none;
+  }
+}
+
+.link {
+  color: var(--bs-primary);
+  font-weight: 600;
 }

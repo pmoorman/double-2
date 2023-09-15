@@ -66,8 +66,8 @@ const HomePage = () => {
         <ServicesSection />
       </div>
 
-      <div id="caseStudies">
-        <Container className="mb-5">
+      <div id="caseStudies" className="mb-5">
+        <Container className="mb-5 pb-3">
           <Row>
             <Col>
               <h2 className="mb-0">Clients</h2>
@@ -82,7 +82,9 @@ const HomePage = () => {
         />
       </div>
 
-      <AboutSection />
+      <div className="mb-9">
+        <AboutSection />
+      </div>
 
       <ContactSection />
     </>
