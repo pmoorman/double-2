@@ -122,7 +122,7 @@ const HomeVideo = () => {
     <div className={styles.videoContainer}>
       <ReactPlayer
         className="d-flex"
-        url="https://d6nxaq6ghh9kf.cloudfront.net/DOUBLE_compREEL_v2.mp4"
+        url="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
         width="100%"
         height="100%"
         playing={playing}
