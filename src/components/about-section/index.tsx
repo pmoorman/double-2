@@ -43,7 +43,7 @@ export const AboutSection = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <div className={styles.block}>
+            <div className={styles.block + "  mb-3 mb-md-0"}>
               {selected === 0 && (
                 <StaticImage
                   src="./about-1.png"
@@ -86,7 +86,7 @@ export const AboutSection = () => {
                     className={cn(
                       styles.block,
                       styles.btn,
-                      "px-3 py-5 pe-md-8"
+                      "px-3 py-5 pe-md-8 mb-3 mb-md-0"
                     )}
                     style={{ background, color }}
                     onClick={handleClick(index)}

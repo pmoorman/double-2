@@ -4,32 +4,8 @@ import { CaseStudy } from "@app/models";
 import { getImage } from "gatsby-plugin-image";
 
 export const useCaseStudies = () => {
-  const { pages, sections } = useStaticQuery(graphql`
+  const { pages } = useStaticQuery(graphql`
     {
-      sections: allFile(
-        filter: {
-          sourceInstanceName: { eq: "case-studies" }
-          relativePath: { glob: "**/*/section.mdx" }
-          extension: { eq: "mdx" }
-        }
-      ) {
-        edges {
-          node {
-            relativeDirectory
-            childMdx {
-              body
-              frontmatter {
-                embeddedImages {
-                  childImageSharp {
-                    gatsbyImageData(layout: FULL_WIDTH)
-                  }
-                }
-              }
-            }
-            relativePath
-          }
-        }
-      }
       pages: allFile(
         filter: {
           sourceInstanceName: { eq: "case-studies" }
@@ -52,7 +28,6 @@ export const useCaseStudies = () => {
                   }
                 }
                 weight
-                homepageweight
                 has_single_page
                 categories
                 stats {
@@ -67,32 +42,15 @@ export const useCaseStudies = () => {
                   align
                   tags
                   hover_tags
-                  image {
+                  homepageweight
+                  homepageimage {
                     childImageSharp {
                       gatsbyImageData
                     }
                   }
-                }
-                section {
-                  type
-                  on_homepage
-                  quote {
-                    content
-                    name
-                    title
-                  }
                   image {
-                    publicURL
                     childImageSharp {
                       gatsbyImageData
-                    }
-                  }
-                }
-                carousel {
-                  weight
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(width: 420, quality: 100)
                     }
                   }
                 }
@@ -119,6 +77,12 @@ export const useCaseStudies = () => {
 
   const items: CaseStudy[] = pages.edges.map((edge: any) => {
     const { relativeDirectory, childMdx } = edge.node;
+
+    if (!childMdx?.frontmatter) {
+      console.log("No frontmatter for", relativeDirectory);
+      console.log("childMdx", childMdx);
+    }
+
     const {
       title,
       pageSubtitle,
@@ -126,12 +90,9 @@ export const useCaseStudies = () => {
       excerpt,
       logo,
       weight,
-      homepageweight,
       has_single_page,
       categories,
       stats,
-      section = {},
-      carousel = {},
       featured,
       featured_thumbnail,
       featured_subtitle,
@@ -139,18 +100,10 @@ export const useCaseStudies = () => {
       grid_item,
     } = childMdx.frontmatter;
 
-    const sectionNode = sections.edges.find(
-      (edge: any) => edge.node.relativeDirectory === relativeDirectory
-    );
-    const sectionBody = sectionNode?.node?.childMdx?.body;
-    const embeddedImages =
-      sectionNode?.node.childMdx.frontmatter.embeddedImages;
-
     const gridItem =
       grid_item || grid_item?.sort((a: any, b: any) => a.weight - b.weight);
 
     const item: CaseStudy = {
-      embeddedImages,
       pageSubtitle,
       slug: `/case-studies/${relativeDirectory}`,
       title: title || "",
@@ -158,20 +111,9 @@ export const useCaseStudies = () => {
       excerpt: excerpt || "",
       logo: getImage(logo),
       weight,
-      homepageweight,
       categories: categories || [],
       has_single_page: has_single_page || false,
       stats: stats || [],
-      section: {
-        ...section,
-        body: sectionBody,
-        image: getImage(section?.image),
-        image_url: section?.image?.publicURL,
-      },
-      carousel: {
-        ...carousel,
-        image: carousel?.image ? getImage(carousel.image) : undefined,
-      },
       featured: !!featured,
       featured_subtitle: featured_subtitle || "",
       featured_title: featured_title || "",
@@ -190,6 +132,9 @@ export const useCaseStudies = () => {
       grid_item: {
         ...gridItem,
         image: getImage(gridItem?.image),
+        homepageimage: gridItem?.homepageimage
+          ? getImage(gridItem?.homepageimage)
+          : getImage(gridItem?.image),
       },
     };
 

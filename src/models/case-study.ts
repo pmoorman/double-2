@@ -19,7 +19,6 @@ export interface CaseStudy {
   excerpt: string;
   logo: any;
   weight?: number;
-  homepageweight?: number;
   has_single_page?: boolean;
   has_short_page?: boolean;
   categories: string[];
@@ -42,27 +41,6 @@ export interface CaseStudy {
   };
   milestones?: { title: string; image: any; body: string }[];
 
-  // section (on index page)
-  embeddedImages: any[];
-  section: {
-    type: 1 | 2 | 3 | 4 | 5;
-    image: any;
-    image_url: string;
-    on_homepage?: boolean;
-    body?: any;
-    quote?: {
-      content: string;
-      name: string;
-      title: string;
-    };
-  };
-
-  // carousel on homepage
-  carousel?: {
-    image?: any;
-    weight: number;
-  };
-
   // quote
   quote?: CaseStudyQuote;
 
@@ -79,6 +57,8 @@ export interface CaseStudy {
     image: any;
     size: "square" | "high" | "wide";
     weight: number;
+    homepageweight?: number;
+    homepageimage?: any;
     align: "start" | "center" | "end";
     tags: string[];
     hover_tags: string[];

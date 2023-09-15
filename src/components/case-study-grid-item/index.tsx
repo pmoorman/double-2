@@ -23,7 +23,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
   image,
   title,
   subtitle,
-  tags,
+  tags = [],
   size,
   className,
   align = "start",
@@ -41,6 +41,10 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
 
   if (size === "wide") {
     width = 8;
+  }
+
+  if (size === "square") {
+    style.height = "400px";
   }
 
   return (
