@@ -91,7 +91,7 @@ export const ServicesSection = () => {
                 )}
               >
                 <div>{item.image}</div>
-                <h3 className="mb-0 ms-5">{item.title}</h3>
+                <h3 className="mb-0 ms-5 ps-md-3">{item.title}</h3>
               </div>
             </Col>
           ))}

@@ -5,6 +5,8 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  min-width: 50px;
+
   &:hover {
     background-color: #faf5ed;
     border-color: #faf5ed !important;
@@ -14,6 +16,11 @@
     content: "";
     background: none;
     border-color: #faf5ed;
+  }
+
+  img {
+    flex-shrink: 0;
+    min-width: 50px;
   }
 }
 
