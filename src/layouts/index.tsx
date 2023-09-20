@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useLocation } from "@reach/router";
@@ -20,6 +20,7 @@ import {
   FooterPolicy,
   Preloader,
 } from "@app/components";
+import { LoadingScreen } from "@app/components/loader";
 
 const mdxComponents = {
   DoubleLogo,
@@ -32,6 +33,7 @@ const mdxComponents = {
 };
 
 export const Layout = ({ children, pageContext }: PageProps) => {
+  const [isLoading, setIsLoading] = useState(false);
   const { pathname } = useLocation();
   const hideNav = [
     pathname.startsWith("/academy") &&
@@ -55,9 +57,21 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   ].some((p) => p);
   const noFooter = ["/38-laws-of-growth"].some((p) => pathname.includes(p));
 
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Set isLoading to false after 2.5 seconds
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pathname]); // Update isLoading when pathname changes
+
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
+      {isLoading && <LoadingScreen />}
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>
         <main>{children}</main>
