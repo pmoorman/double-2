@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import "@app/styles/current/style.scss";
+import * as styles from "./index.module.scss";
 
 import {
   Footer,
@@ -34,6 +35,7 @@ const mdxComponents = {
 
 export const Layout = ({ children, pageContext }: PageProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoading1, setIsLoading1] = useState(false);
   const { pathname } = useLocation();
   const hideNav = [
     pathname.startsWith("/academy") &&
@@ -61,23 +63,36 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Set isLoading to false after 2.5 seconds
+    }, 2500);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [pathname]); // Update isLoading when pathname changes
+  }, [pathname]);
+
+  useEffect(() => {
+    setIsLoading1(true);
+    const timer = setTimeout(() => {
+      setIsLoading1(false);
+    }, 1800);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pathname]);
 
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
-      {isLoading && <LoadingScreen />}
       <Header hideNav={hideNav} />
-      <MDXProvider components={mdxComponents}>
-        <main>{children}</main>
-      </MDXProvider>
-      {!hideFooter && <Footer />}
-      {hideFooter && !noFooter && <FooterPolicy />}
+      {isLoading && <LoadingScreen />}
+        <div className={`${styles.animWrap} ${!isLoading1 && styles.loading}`}>
+          <MDXProvider components={mdxComponents}>
+            <main>{children}</main>
+          </MDXProvider>
+          {!hideFooter && <Footer />}
+          {hideFooter && !noFooter && <FooterPolicy />}
+        </div>
       <Preloader />
     </ParallaxProvider>
   );
