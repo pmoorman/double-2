@@ -74,7 +74,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     setIsLoading1(true);
     const timer = setTimeout(() => {
       setIsLoading1(false);
-    }, 1800);
+    }, 1650);
 
     return () => {
       clearTimeout(timer);
