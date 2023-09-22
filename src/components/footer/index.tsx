@@ -28,6 +28,7 @@ export const Footer = () => {
               as={Link}
               to="/contact"
               variant="outline-light"
+              buttonVariant="secondary"
               className={styles.roundedButton}
             >
               Drop us a line

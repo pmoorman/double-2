@@ -1,0 +1,21 @@
+.animWrap {
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  opacity: 1;
+  transform: translateY(-6px);
+  transition: 2.25s cubic-bezier(0.3, 1, 0.35, 1);
+}

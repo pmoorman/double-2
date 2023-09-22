@@ -1,0 +1,67 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeOut 2.5s 1s cubic-bezier(0.3, 1, 0.35, 1) forwards; /* Animation name, duration, timing, and direction */
+  }
+}
+
+.loaderInner {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: slide 2.5s cubic-bezier(0.3, 1, 0.35, 1) forwards; /* Animation name, duration, timing, and direction */
+  background-color: $secondary;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    height: 0%;
+    top: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    height: 100%;
+    top: 0;
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+    top: 100%;
+  }
+}

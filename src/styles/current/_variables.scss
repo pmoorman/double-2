@@ -4,6 +4,11 @@
 // General
 $enable-smooth-scroll: false;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Font
 $font-family-sans-serif: "Manrope";
 $font-family-monospace: "Manrope";

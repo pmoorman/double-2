@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useLocation } from "@reach/router";
@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import "@app/styles/current/style.scss";
+import * as styles from "./index.module.scss";
 
 import {
   Footer,
@@ -20,6 +21,8 @@ import {
   FooterPolicy,
   Preloader,
 } from "@app/components";
+import { LoadingScreen } from "@app/components/loader";
+import { Cookies } from "@app/components/cookies";
 
 const mdxComponents = {
   DoubleLogo,
@@ -32,6 +35,9 @@ const mdxComponents = {
 };
 
 export const Layout = ({ children, pageContext }: PageProps) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading1, setIsLoading1] = useState(false);
+
   const { pathname } = useLocation();
   const hideNav = [
     pathname.startsWith("/academy") &&
@@ -55,15 +61,42 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   ].some((p) => p);
   const noFooter = ["/38-laws-of-growth"].some((p) => pathname.includes(p));
 
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    setIsLoading1(true);
+    const timer = setTimeout(() => {
+      setIsLoading1(false);
+    }, 1650);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pathname]);
+
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
       <Header hideNav={hideNav} />
-      <MDXProvider components={mdxComponents}>
-        <main>{children}</main>
-      </MDXProvider>
-      {!hideFooter && <Footer />}
-      {hideFooter && !noFooter && <FooterPolicy />}
+      {isLoading && <LoadingScreen />}
+      <div className={`${styles.animWrap} ${!isLoading1 && styles.loading}`}>
+        <MDXProvider components={mdxComponents}>
+          <main>{children}</main>
+        </MDXProvider>
+        {!hideFooter && <Footer />}
+        {hideFooter && !noFooter && <FooterPolicy />}
+      </div>
+      <Cookies />
+
       <Preloader />
     </ParallaxProvider>
   );
