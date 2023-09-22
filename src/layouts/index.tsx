@@ -22,6 +22,7 @@ import {
   Preloader,
 } from "@app/components";
 import { LoadingScreen } from "@app/components/loader";
+import { Cookies } from "@app/components/cookies";
 
 const mdxComponents = {
   DoubleLogo,
@@ -36,6 +37,7 @@ const mdxComponents = {
 export const Layout = ({ children, pageContext }: PageProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading1, setIsLoading1] = useState(false);
+
   const { pathname } = useLocation();
   const hideNav = [
     pathname.startsWith("/academy") &&
@@ -86,13 +88,15 @@ export const Layout = ({ children, pageContext }: PageProps) => {
       <SEO {...pageContext} />
       <Header hideNav={hideNav} />
       {isLoading && <LoadingScreen />}
-        <div className={`${styles.animWrap} ${!isLoading1 && styles.loading}`}>
-          <MDXProvider components={mdxComponents}>
-            <main>{children}</main>
-          </MDXProvider>
-          {!hideFooter && <Footer />}
-          {hideFooter && !noFooter && <FooterPolicy />}
-        </div>
+      <div className={`${styles.animWrap} ${!isLoading1 && styles.loading}`}>
+        <MDXProvider components={mdxComponents}>
+          <main>{children}</main>
+        </MDXProvider>
+        {!hideFooter && <Footer />}
+        {hideFooter && !noFooter && <FooterPolicy />}
+      </div>
+      <Cookies />
+
       <Preloader />
     </ParallaxProvider>
   );
