@@ -28,7 +28,7 @@ export const ImageRow: FC<ImageRowProps> = ({
       >
         {image}
       </Col>
-      <Col md={12} lg={6} style={{ display: "flex" }}>
+      <Col md={12} lg={6} style={{ display: "flex", alignItems: "center" }}>
         <div className={styles.sectionChild}>
             {children}
         </div>

@@ -1,5 +1,5 @@
 .heroSection {
-  background-color: $secondary;
+  background-color: #1288FF;
   padding: 60px 0;
   color: white;
   padding-bottom: 240px;
@@ -42,8 +42,11 @@
 
   .featuredArticles {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: calc(50vw + 50%);
     background-color: $secondary;
+    border-radius: 20px;
     padding: 40px;
     display: flex;
     flex-direction: row;
@@ -60,6 +63,8 @@
     & > div > div > a {
       display: flex;
       flex-direction: row;
+      border-radius: 12px;
+
 
       @include media-breakpoint-down(xl) {
         margin-bottom: 1rem;
@@ -106,6 +111,13 @@
   .featuredArticle {
     transition: 0.5s all;
     height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
 
     &:hover {
       transform: scale(1.03);
@@ -202,8 +214,10 @@
 }
 
 .caseStudy {
+  display: flex;
+  align-items: center;
   background-color: $gray;
-  padding: 7rem 0;
+  padding: 5rem 0;
 
   @include media-breakpoint-down(md) {
     padding: 4rem 0;
@@ -211,5 +225,18 @@
 
   & > div > div > div:last-child {
     justify-content: flex-end;
+  }
+
+  img {
+    border-radius: 18px;
+  }
+
+  h2 {
+    margin-left: 2rem;
+  }
+  a {
+    margin-top: 1rem;
+    margin-left: 2rem !important;
+    height: 50px;
   }
 }

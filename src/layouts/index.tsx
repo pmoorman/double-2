@@ -20,6 +20,7 @@ import {
   FooterPolicy,
   Preloader,
 } from "@app/components";
+import CookiesConsent from "@app/components/cookies";
 
 const mdxComponents = {
   DoubleLogo,
@@ -60,7 +61,9 @@ export const Layout = ({ children, pageContext }: PageProps) => {
       <SEO {...pageContext} />
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>
-        <main>{children}</main>
+        <main>
+            {children}
+        </main>
       </MDXProvider>
       {!hideFooter && <Footer />}
       {hideFooter && !noFooter && <FooterPolicy />}

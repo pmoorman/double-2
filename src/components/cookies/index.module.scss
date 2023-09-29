@@ -1,0 +1,43 @@
+.cookiesConsent {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #1288FF;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px 0 0 0;
+    max-width: 400px;
+    z-index: 9999;
+  
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+  
+    p {
+      margin-bottom: 0.5rem;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: center;
+  
+      .consent {
+        margin-right: 0.5rem;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+  
+      .reject {
+        background-color: black;
+        color: white;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  

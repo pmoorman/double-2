@@ -17,6 +17,7 @@ import { getHomepageCaseStudies } from "@app/helpers";
 import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
 import { ServicesSection } from "@app/page-components/home/services-section";
+import CookiesConsent from "@app/components/cookies";
 
 const services = [
   {

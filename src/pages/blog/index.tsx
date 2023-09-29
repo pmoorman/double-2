@@ -46,13 +46,10 @@ const BlogPage = () => {
         <Container>
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }}>
-              <h1 className="mb-5">
-                We’ve cracked open our skills and emptied out our marketing
-                marbles.
+              <h1 className="mt-5 d-headline">
+              Growth systems, <br /> <span>not hacks.</span>
               </h1>
-              <div className="subtitle">
-                There’s a fine line between genius and <s>madness</s> marketing.
-              </div>
+              
             </Col>
           </Row>
         </Container>
@@ -60,7 +57,7 @@ const BlogPage = () => {
 
       <div className={styles.articles}>
         <Container className="position-relative">
-          <h3 className="mb-0">Featured articles</h3>
+          <h3 className="mb-4">Featured articles</h3>
           <div className={styles.featuredArticles}>
             <Row>
               {featuredArticles.map((post) => (
@@ -159,7 +156,7 @@ const BlogPage = () => {
               </Image>
             }
           >
-            <h2 className="mb-lg-3 mb-4">See our growth marketing in action</h2>
+            <h2 className="mb-lg-3 mb-4">See our growth marketing in action.</h2>
             {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
