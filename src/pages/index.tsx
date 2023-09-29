@@ -17,6 +17,7 @@ import { getHomepageCaseStudies } from "@app/helpers";
 import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
 import { ServicesSection } from "@app/page-components/home/services-section";
+import CookiesConsent from "@app/components/cookies";
 
 const services = [
   {
@@ -49,9 +50,9 @@ const HomePage = () => {
       <div className="pt-5 pb-lg-6 pb-5">
         <Container>
           <Row className="justify-content-center">
-            <Col lg={{ span: 6 }} md={{ span: 6 }} className="text-center">
-              <h1 className="mb-5 d-headline">
-                Imagine your business <span>doubled</span>
+            <Col className="text-center">
+              <h1 className="my-5 d-headline">
+                Imagine your business <br /> <span>doubled</span>
               </h1>
             </Col>
           </Row>

@@ -81,6 +81,22 @@
   }
   .roundedButton {
     border-radius: 60px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: $secondary;
+      transition: .25s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   .mapIcon {

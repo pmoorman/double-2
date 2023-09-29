@@ -5,6 +5,10 @@ import cn from "classnames";
 
 import * as styles from "./index.module.scss";
 
+import about1 from "./about-1.svg";
+import about2 from "./about-2.svg";
+import about3 from "./about-3.svg";
+
 const items = [
   {
     title: "Seed",
@@ -44,30 +48,9 @@ export const AboutSection = () => {
         <Row>
           <Col md={6}>
             <div className={styles.block + "  mb-3 mb-md-0"}>
-              {selected === 0 && (
-                <StaticImage
-                  src="./about-1.png"
-                  alt="about 1"
-                  loading="eager"
-                  placeholder="none"
-                />
-              )}
-              {selected === 1 && (
-                <StaticImage
-                  src="./about-2.png"
-                  alt="about 2"
-                  loading="eager"
-                  placeholder="none"
-                />
-              )}
-              {selected === 2 && (
-                <StaticImage
-                  src="./about-3.png"
-                  alt="about 3"
-                  loading="eager"
-                  placeholder="none"
-                />
-              )}
+              {selected === 0 && <img src={about1} alt="about 1" />}
+              {selected === 1 && <img src={about2} alt="about 2" />}
+              {selected === 2 && <img src={about3} alt="about 3" />}
             </div>
           </Col>
           <Col md={6}>
@@ -84,7 +67,7 @@ export const AboutSection = () => {
                 return (
                   <div
                     className={cn(
-                      styles.block,
+                      styles.textBlock,
                       styles.btn,
                       "px-3 py-5 pe-md-8 mb-3 mb-md-0"
                     )}

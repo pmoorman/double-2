@@ -6,8 +6,6 @@ import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
 import { CasestudiesSection } from "@app/page-components/case-studies";
 
-import heroImg from "./hero_bg.svg";
-
 const CaseStudiesPage = () => {
   return (
     <>
@@ -29,7 +27,7 @@ const CaseStudiesPage = () => {
               <StaticImage src="./hero_2.png" alt="hero" />
             </Col>
             <Col md="6">
-              <StaticImage src="./hero_1.png" alt="hero" />
+              <StaticImage src="./hero_1.webp" alt="hero" />
             </Col>
           </Row>
         </Container>
