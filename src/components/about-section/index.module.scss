@@ -7,11 +7,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    transform: scale(1.2);
+    transform-origin: center;
+  }
 }
 
 .textBlock {
   display: flex;
   flex-direction: column;
+  padding-left: 2rem !important;
   background: #faf5ed;
   border-radius: 20px;
   margin-bottom: 1rem !important;
