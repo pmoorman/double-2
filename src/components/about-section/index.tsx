@@ -84,7 +84,7 @@ export const AboutSection = () => {
                 return (
                   <div
                     className={cn(
-                      styles.block,
+                      styles.textBlock,
                       styles.btn,
                       "px-3 py-5 pe-md-8 mb-3 mb-md-0"
                     )}

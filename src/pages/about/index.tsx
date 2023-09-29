@@ -107,8 +107,6 @@ const AboutPage = () => {
         <TeamSection />
       </Container>
 
-      <ContactSection />
-
       {/* Our open roles */}
       {/* <Container className="py-4 pb-lg-6">
         <SectionOpenRoles />
