@@ -33,9 +33,10 @@
 }
 
 .navLink {
-  font-weight: 300;
+  font-weight: 300 !important;
   font-size: 1rem;
   line-height: 24px;
+  letter-spacing: 0 !important;
   color: $secondary !important;
   font-family: $font-family-monospace;
   position: relative;
