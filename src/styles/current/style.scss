@@ -3,3 +3,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 @import "typography";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
