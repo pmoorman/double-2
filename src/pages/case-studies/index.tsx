@@ -12,6 +12,7 @@ const CaseStudiesPage = () => {
       <div>
         <Container>
           
+          
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
               <Col md="9">
