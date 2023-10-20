@@ -86,7 +86,15 @@
 }
 
 .navLinkActive:nth-last-child(1):after {
-  display: none;
+  content: 'Contact us';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .navLinkActive:after {
