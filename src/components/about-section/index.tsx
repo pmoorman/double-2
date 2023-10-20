@@ -34,7 +34,7 @@ export const AboutSection = () => {
   };
 
   return (
-    <>
+    <div className="mt-20">
       <Container className="mb-7">
         <Row>
           <Col>
@@ -47,11 +47,14 @@ export const AboutSection = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <div className={styles.block + "  mb-3 mb-md-0"}>
+            <div className={styles.wrapper}>
+            <div className={styles.block + " mb-3 mb-md-0"}>
               {selected === 0 && <img src={about1} alt="about 1" />}
               {selected === 1 && <img src={about2} alt="about 2" />}
               {selected === 2 && <img src={about3} alt="about 3" />}
             </div>
+            </div>
+            
           </Col>
           <Col md={6}>
             <div className={styles.buttons}>
@@ -83,6 +86,6 @@ export const AboutSection = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };

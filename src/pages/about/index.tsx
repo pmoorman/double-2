@@ -18,21 +18,20 @@ const AboutPage = () => {
     <>
       {/* Hero */}
       <Container>
-        <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
-          <Row className="justify-content-center">
+        <div className="mx-auto py-20">
+          <div className="flex justify-between">
+            
+              <h1 className="d-headline py-6 mb-20">
+                Double the <span>drive</span>
+              </h1>
             <div className={styles.heroBg}>
               <img src={heroImg} alt="About" className="img-fluid" />
             </div>
-            <Col md={5}>
-              <h1 className="d-headline text-center py-6">
-                Double the <span>drive</span>
-              </h1>
-            </Col>
-          </Row>
+          </div>
         </div>
       </Container>
 
-      <Container className="py-4 pb-lg-6">
+      <div className="container py-20 mt-20">
         <Row>
           <Col md={6} className="mb-6 mb-md-0">
             <StaticImage
@@ -65,7 +64,7 @@ const AboutPage = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
 
       {/* Our people */}
       <Container className="py-4 pb-lg-6">

@@ -1,5 +1,23 @@
-.block {
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);  
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wrapper {
   background: #faf5ed;
+  border-radius: 20px;
+  height: 100%;
+}
+.block {
   border-radius: 20px;
   height: 100%;
   margin-bottom: 1rem !important;
@@ -7,9 +25,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: float 3s ease-in-out infinite;
+
+
 
   img {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transform-origin: center;
   }
 }

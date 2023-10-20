@@ -60,7 +60,16 @@ const HomePage = () => {
       </div>
 
       <Container className="pb-5">
-        <HomeVideo />
+        <div className="min-h-[200vh]">
+          <div className="vid position-sticky d-flex align-items-center justify-content-center h-100 top-0 mt-4 rounded-2">
+            <video
+              src="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
+              className="w-100 h-75 object-fit-cover rounded-2"
+              autoPlay
+              loop
+            ></video>
+          </div>
+        </div>
       </Container>
 
       <div id="services" className="pb-5 my-md-6">

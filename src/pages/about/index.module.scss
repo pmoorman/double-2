@@ -1,13 +1,11 @@
 .heroBg {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 20px;
+  width: fit-content;
+  height: fit-content;
   right: 0;
   bottom: 0;
-  display: flex;
-  justify-content: center;
   z-index: -1;
 }
 
