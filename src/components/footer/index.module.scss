@@ -57,6 +57,10 @@
   }
 
   .footerMid {
+    p {
+      font-weight: 200 !important;
+    }
+
     transform: translateY(-60%);
     @include media-breakpoint-down(xl) {
       transform: translateY(-30%);
@@ -74,6 +78,8 @@
 
   .address {
     font-size: 18px;
+
+   
   }
 
   h4 {
