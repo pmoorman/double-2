@@ -1,12 +1,33 @@
 .heroBg {
   position: absolute;
-  top: 0;
-  left: 20px;
+  top: 15%;
+  left: 50%;
   width: fit-content;
   height: fit-content;
-  right: 0;
   bottom: 0;
+  animation: float 3s ease-in-out infinite;
+  
   z-index: -1;
+
+  img {
+    transform: scale(1.2);
+  }
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(-50%);  
+  }
+  50% {
+    transform: translateY(-6px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.floating {
 }
 
 .carouselItem {

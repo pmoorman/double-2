@@ -102,14 +102,14 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="phone-number">Phone Number</Form.Label>
                 <Form.Control
-                  placeholder="Enter your phone number"
+                  placeholder="Your phone number"
                   aria-describedby="phone-number"
                   name="phone_number"
                 />
               </Col>
             </Row>
             <Row>
-              <Col lg="6" md="12" className="mt-5">
+              <Col lg="12" md="12" className="mt-5">
                 <Form.Label htmlFor="Enter your message">Message</Form.Label>
                 <Form.Control
                   required

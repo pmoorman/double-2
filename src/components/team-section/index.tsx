@@ -27,7 +27,7 @@ export const TeamSection = () => {
             onMouseEnter={handleChange(member)}
             role="button"
           >
-            <h4 className="mb-0">{member.name}</h4>
+            <h4 className="fw-bold mb-0">{member.name}</h4>
             <p className="lead">{member.title}</p>
           </div>
         ))}

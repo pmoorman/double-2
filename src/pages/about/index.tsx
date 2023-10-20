@@ -15,14 +15,14 @@ import heroImg from "./oval.svg";
 
 const AboutPage = () => {
   return (
-    <div className="py-20">
+    <div className="py-2">
       {/* Hero */}
       <Container className="py-20">
-        <div className="mx-auto py-20">
-          <div className="flex justify-between">
+        <div className="py-8">
+          <div className="flex justify-between text-center">
             
-              <h1 className="d-headline py-6 mb-20">
-                Double the <span>drive</span>
+              <h1 className="d-headline py-6 mb-0">
+                Double the <br /> <span>drive</span>
               </h1>
             <div className={styles.heroBg}>
               <img src={heroImg} alt="About" className="img-fluid" />
@@ -31,7 +31,7 @@ const AboutPage = () => {
         </div>
       </Container>
 
-      <div className="container py-20 mt-20">
+      <div className="container mb-6 mt-0">
         <Row>
           <Col md={6} className="mb-6 mb-md-0">
             <StaticImage
@@ -67,7 +67,7 @@ const AboutPage = () => {
       </div>
 
       {/* Our people */}
-      <Container className="py-4 pb-lg-6">
+      <Container className="py-4 mt-6 pb-lg-6">
         <Row>
           <Col md={6}>
             <h2 className="mb-4">We combine psychology with data and design</h2>
