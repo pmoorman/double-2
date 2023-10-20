@@ -5,6 +5,11 @@
   border-radius: 35px;
   font-weight: 800 !important;
   cursor: pointer;
+  transition: border-color 0.25s ease-in-out;
+
+  &:hover {
+    border-color: $secondary;
+  }
 }
 
 h2 {
