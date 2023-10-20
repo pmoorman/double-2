@@ -94,7 +94,7 @@ const ContactPage = () => {
                 <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
                   required
-                  placeholder="Your email address"
+                  placeholder="Enter your email address"
                   aria-describedby="email"
                   name="email"
                 />
@@ -102,7 +102,7 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="phone-number">Phone Number</Form.Label>
                 <Form.Control
-                  placeholder="Your phone number"
+                  placeholder="Enter your phone number"
                   aria-describedby="phone-number"
                   name="phone_number"
                 />
