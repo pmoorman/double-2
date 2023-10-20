@@ -56,7 +56,7 @@ export const AboutSection = () => {
             </div>
             
           </Col>
-          <Col md={6}>
+          <Col className="mt-10" md={6}>
             <div className={styles.buttons}>
               {items.map((item, index) => {
                 let background;

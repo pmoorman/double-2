@@ -47,7 +47,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="pt-5 pb-lg-6 pb-5">
+      <div className="pt-5">
         <Container>
           <Row className="justify-content-center">
             <Col className="text-center">
@@ -60,16 +60,7 @@ const HomePage = () => {
       </div>
 
       <Container className="pb-5">
-        <div className="min-h-[200vh]">
-          <div className="vid position-sticky d-flex align-items-center justify-content-center h-100 top-0 mt-4 rounded-2">
-            <video
-              src="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
-              className="w-100 h-75 object-fit-cover rounded-2"
-              autoPlay
-              loop
-            ></video>
-          </div>
-        </div>
+        <HomeVideo />
       </Container>
 
       <div id="services" className="pb-5 my-md-6">
@@ -127,20 +118,24 @@ const HomeVideo = () => {
   };
 
   return (
-    <div className={styles.videoContainer}>
-      <ReactPlayer
-        className="d-flex"
-        url="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
-        width="100%"
-        height="100%"
-        playing={playing}
-        muted
-        loop
-        playsinline
-      />
-      <div className={styles.playButton}>
-        <div role="button" onClick={() => setPlaying((v) => !v)}>
-          {renderButtonIcon()}
+    <div className={styles.videoWrapper}>
+      <div className={styles.videoInner}>
+        <div className={styles.videoContainer}>
+          <ReactPlayer
+            className="d-flex"
+            url="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
+            width="100%"
+            height="100%"
+            playing={playing}
+            muted
+            loop
+            playsinline
+          />
+          <div className={styles.playButton}>
+            <div role="button" onClick={() => setPlaying((v) => !v)}>
+              {renderButtonIcon()}
+            </div>
+          </div>
         </div>
       </div>
     </div>

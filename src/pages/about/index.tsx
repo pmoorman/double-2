@@ -15,9 +15,9 @@ import heroImg from "./oval.svg";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="py-20">
       {/* Hero */}
-      <Container>
+      <Container className="py-20">
         <div className="mx-auto py-20">
           <div className="flex justify-between">
             
@@ -117,7 +117,7 @@ const AboutPage = () => {
           <SectionFeaturedArticles />
         </Container>
       </div> */}
-    </>
+    </div>
   );
 };
 
