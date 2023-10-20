@@ -67,7 +67,7 @@ export const CasestudiesSection = () => {
               key={t}
               onClick={handleCategoryClick(t)}
               className={cn(styles.category, {
-                "bg-primary border-none": selectedCategories.includes(t),
+                "bg-secondary border-none": selectedCategories.includes(t),
                 "text-white": selectedCategories.includes(t),
               })}
             >

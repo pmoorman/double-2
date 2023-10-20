@@ -78,6 +78,7 @@ const HomePage = () => {
           <Row>
             <Col>
               <h2>Clients</h2>
+
             </Col>
           </Row>
         </Container>
