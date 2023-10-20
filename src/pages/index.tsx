@@ -77,7 +77,7 @@ const HomePage = () => {
         <Container className="mb-5 pb-3">
           <Row>
             <Col>
-              <h2 className="mb-0">Clients</h2>
+              <h2>Clients</h2>
             </Col>
           </Row>
         </Container>
