@@ -37,7 +37,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="mt-20">
+    <div className="">
       <Container>
         <div className={styles.heading}>
           <h1>Get in touch</h1>
@@ -67,7 +67,7 @@ const ContactPage = () => {
 
           <input type="hidden" name="form-name" value="contact" />
           <Container>
-            <h2>Interested? </h2>
+            <h2 className="mb-2">Interested? </h2>
             <h3>We’d love to hear from you.</h3>
             <Row>
               <Col lg="6" md="12" className="mt-5">

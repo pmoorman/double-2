@@ -17,7 +17,7 @@ export const TeamSection = () => {
     <Row>
       <Col md={4} className="mb-4 mb-md-0">
         <h2 className="mb-5">The team</h2>
-        <GatsbyImage image={active.image} alt={active.name} />
+        <GatsbyImage className="rounded" image={active.image} alt={active.name} />
       </Col>
       <Col md={6}>
         {team.map((member) => (
@@ -27,7 +27,7 @@ export const TeamSection = () => {
             onMouseEnter={handleChange(member)}
             role="button"
           >
-            <h4 className="fw-bold mb-0">{member.name}</h4>
+            <h4 className="fw-bold mb-0 member">{member.name}</h4>
             <p className="lead">{member.title}</p>
           </div>
         ))}

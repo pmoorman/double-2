@@ -18,7 +18,7 @@ const AboutPage = () => {
     <div className="py-2">
       {/* Hero */}
       <Container className="py-20">
-        <div className="py-8">
+        <div className="pt-6 pb-7">
           <div className="flex justify-between text-center">
             
               <h1 className="d-headline py-6 mb-0">
