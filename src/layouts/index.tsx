@@ -44,6 +44,10 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     pathname.startsWith("/38-laws-to-avoid-startup-disaster"),
     pathname.startsWith("/double-plus-closed"),
   ].some((p) => p);
+  
+  const hideScrollbar = [
+    pathname.startsWith("/contact"),
+  ].some((p) => p);
 
   const hideFooter = [
     pathname.startsWith("/academy") &&
@@ -60,7 +64,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
-      <Scrollbar/>
+      {!hideScrollbar && <Scrollbar />}
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>
         <main>
