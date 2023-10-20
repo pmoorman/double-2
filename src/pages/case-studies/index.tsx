@@ -31,19 +31,19 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="mb-6">
+        <Container className="mb-8">
           <Row>
             <Col md="4">
-              <h2 className="fw-bold mb-0">50+</h2>
-              <h3 className="fw-bold">tech companies</h3>
+              <h2 className="fw-bold mb-2">50+</h2>
+              <h3 className="fw-semibold">Tech companies</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-0">13</h2>
-              <h3 className="fw-bold">active countries</h3>
+              <h2 className="fw-bold mb-2">13</h2>
+              <h3 className="fw-semibold">Active countries</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-0">80,000</h2>
-              <h3 className="fw-bold">leads generated</h3>
+              <h2 className="fw-bold mb-2">80,000</h2>
+              <h3 className="fw-semibold">Leads generated</h3>
             </Col>
           </Row>
         </Container>
