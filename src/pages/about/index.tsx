@@ -15,7 +15,7 @@ import heroImg from "./oval.svg";
 
 const AboutPage = () => {
   return (
-    <div className="py-2">
+    <div className="py-0">
       {/* Hero */}
       <Container className="py-20">
         <div className="pt-6 pb-7">

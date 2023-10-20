@@ -48,6 +48,18 @@
   margin: 0.4rem 1rem 0.4rem 0;
   padding: 0.1rem 0;
 
+  &:nth-last-child(1) {
+      background: $secondary;
+      color: white !important;
+      font-weight: 400 !important;
+      border-radius: 6px;
+      padding: 3px 8px;
+
+      &::before {
+        display: none;
+      }
+  }
+
   &::before {
     content: "";
     transform-origin: 100% 50%;
@@ -70,6 +82,10 @@
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
   }
+}
+
+.navLinkActive:nth-last-child(1):after {
+  display: none;
 }
 
 .navLinkActive:after {
