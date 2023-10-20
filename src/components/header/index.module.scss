@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   transition: top 0.3s ease;
-  z-index: 100;
+  z-index: 150;
 
   @include media-breakpoint-down(lg) {
     padding: 0;
