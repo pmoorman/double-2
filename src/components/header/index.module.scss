@@ -32,6 +32,8 @@
 }
 
 .navbarNav {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   @include media-breakpoint-down(lg) {
     display: none;
@@ -54,7 +56,7 @@
       color: white !important;
       font-weight: 500 !important;
       border-radius: 6px;
-      padding: 3px 8px;
+      padding: 6px 16px;
 
       &::before {
         display: none;
