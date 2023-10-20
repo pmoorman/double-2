@@ -14,7 +14,7 @@ const CaseStudiesPage = () => {
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
               <Col md="9">
-                <h1 className="d-headline text-center py-6">
+                <h1 className="d-headline text-center py-6 fw-semibold">
                   The game of explosive <br /> <span>user growth</span>
                 </h1>
               </Col>
