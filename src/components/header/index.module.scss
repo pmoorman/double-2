@@ -55,8 +55,8 @@
       background: $secondary;
       color: white !important;
       font-weight: 500 !important;
-      border-radius: 6px;
-      padding: 6px 16px;
+      border-radius: 8px;
+      padding: 6px 16px !important;
 
       &::before {
         display: none;
