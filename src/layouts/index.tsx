@@ -21,6 +21,7 @@ import {
   Preloader,
 } from "@app/components";
 import CookiesConsent from "@app/components/cookies";
+import Scrollbar from "@app/components/scrollbar";
 
 const mdxComponents = {
   DoubleLogo,
@@ -59,6 +60,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
+      <Scrollbar/>
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>
         <main>

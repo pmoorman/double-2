@@ -1,0 +1,18 @@
+/* progressBar.module.css */
+
+.progressBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5px; 
+    background: transparent;
+    z-index: 10;
+  }
+  
+  .progressBarInner {
+    height: 5px;
+    background: $primary;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }

@@ -18,6 +18,7 @@ import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
 import { ServicesSection } from "@app/page-components/home/services-section";
 import CookiesConsent from "@app/components/cookies";
+import CtaSection from "@app/components/cta-section";
 
 const services = [
   {
@@ -62,12 +63,17 @@ const HomePage = () => {
       <Container className="pb-5">
         <HomeVideo />
       </Container>
+      
+
+      <Container id="cta" className="pb-5 my-md-6">
+        <CtaSection/>
+      </Container>
 
       <div id="services" className="pb-5 my-md-6">
         <ServicesSection />
       </div>
 
-      <div id="caseStudies" className="mb-5">
+      <div id="caseStudies">
         <Container className="mb-5 pb-3">
           <Row>
             <Col>

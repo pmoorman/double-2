@@ -46,6 +46,10 @@
   &:nth-last-child(1) {
     margin-bottom: 0 !important;
   }
+
+  &:hover {
+    background: #fff5e4;
+  }
 }
 
 .btn {
