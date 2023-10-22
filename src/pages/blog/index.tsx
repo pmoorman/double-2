@@ -57,7 +57,6 @@ const BlogPage = () => {
 
       <div className={styles.articles}>
         <Container className="position-relative">
-          <h3 className="mb-4">Featured articles</h3>
           <div className={styles.featuredArticles}>
             <Row>
               {featuredArticles.map((post) => (
