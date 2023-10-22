@@ -20,7 +20,7 @@ export const Preloader = () => {
     } else {
       setTimeout(() => {
         setShow(false);
-      }, 650);
+      }, 950);
     }
   });
 
