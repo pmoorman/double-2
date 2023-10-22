@@ -1,6 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import { Col } from "react-bootstrap";
 import cn from "classnames";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 import { Link } from "@app/components";
 
@@ -47,10 +51,31 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
     style.height = "400px";
   }
 
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    const el = itemRef.current;
+
+    gsap.from(el, {
+      y: 10,
+      opacity: 0,
+      duration: 1.5,
+      delay: Math.random() * 2, // random delay
+      ease: "power3.out",
+
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+        once: true, // only animate once
+      },
+    });
+  }, []);
+
   return (
     <Col md={width} className={_className}>
       <Link to={slug} className={styles.item}>
-        <div className={styles.image} style={style}>
+        <div className={styles.image} ref={itemRef} style={style}>
           {image}
           <div className={styles.overlay} />
           <div className={styles.arrow}>
