@@ -33,6 +33,7 @@
 .carouselItem {
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
+  margin-right: 2rem;
 
   @include media-breakpoint-down(lg) {
     // max-width: 90%;
