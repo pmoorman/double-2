@@ -58,6 +58,11 @@
       font-weight: 400 !important;
       border-radius: 6px;
       padding: 6px 16px !important;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        background: $primary;
+      }
 
       &::before {
         display: none;
