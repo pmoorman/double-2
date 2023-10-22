@@ -70,7 +70,7 @@ export const Carousel: FC<CarouselProps> = ({
     };
 
   return (
-    <>
+    <div className="umm">
       <Container>
         <div className="d-flex justify-content-between align-items-center mb-5">
           <h2 className="mb-0">{title}</h2>
@@ -114,6 +114,6 @@ export const Carousel: FC<CarouselProps> = ({
           </div>
         </ScrollContainer>
       </div>
-    </>
+    </div>
   );
 };
