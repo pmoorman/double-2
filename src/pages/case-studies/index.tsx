@@ -39,21 +39,21 @@ const CaseStudiesPage = () => {
                 <FaUsers size={40} />
                 50+
               </h2>
-              <h3 className="ffs">Tech companies</h3>
+              <h3 className="ffs">tech companies</h3>
             </Col>
             <Col md="4">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
                 <FaGlobe size={40} />
                 13
               </h2>
-              <h3 className="ffs">Active countries</h3>
+              <h3 className="ffs">active countries</h3>
             </Col>
             <Col md="4">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
                 <FaLightbulb size="40" />
                 80,000
               </h2>
-              <h3 className="ffs">Leads generated</h3>
+              <h3 className="ffs">leads generated</h3>
             </Col>
           </Row>
         </Container>
