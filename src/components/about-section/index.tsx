@@ -63,7 +63,7 @@ export const AboutSection = () => {
                 let color;
 
                 if (selected === index) {
-                  background = "var(--bs-primary)";
+                  background = "#4391F7";
                   color = "#fff";
                 }
 
