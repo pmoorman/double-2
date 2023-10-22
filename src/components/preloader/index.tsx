@@ -20,7 +20,7 @@ export const Preloader = () => {
     } else {
       setTimeout(() => {
         setShow(false);
-      }, 1500);
+      }, 650);
     }
   });
 
@@ -28,21 +28,8 @@ export const Preloader = () => {
 
   return (
     <div className={styles.preloader}>
-      <div className={styles.loading} id="counter">
-        {count}
-      </div>
-
-      <svg width="200" height="200" className={styles.loadingPie}>
-        <circle r="50" cx="100" cy="100" className={styles.loadingCircle} />
-      </svg>
-
-      <div className={styles.preLogo}>
-        <div>
           <img src={whiteLogo} className={styles.logoImage} />
-        </div>
-      </div>
 
-      <div className={styles.halfCircle}></div>
     </div>
   );
 };
