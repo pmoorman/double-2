@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaGlobe, FaLightbulb, FaUsers } from "react-icons/fa";
 
 import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
@@ -33,16 +34,25 @@ const CaseStudiesPage = () => {
         </Container>
         <Container className="mb-8">
           <Row>
-            <Col md="4">
-              <h2 className="fw-bold mb-2">50+</h2>
+            <Col md="4" className="flex items-center gap-8">
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
+                <FaUsers size={40} />
+                50+
+              </h2>
               <h3 className="fw-semibold">Tech companies</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-2">13</h2>
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
+                <FaGlobe size={40} />
+                13
+              </h2>
               <h3 className="fw-semibold">Active countries</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-2">80,000</h2>
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
+                <FaLightbulb size="40" />
+                80,000
+              </h2>
               <h3 className="fw-semibold">Leads generated</h3>
             </Col>
           </Row>
