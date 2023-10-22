@@ -79,7 +79,7 @@ export const ServicesSection = () => {
         <Row>
           <Col>
             <h2>Services</h2>
-            <h4>No matter which stage you’re at, we work with everyone.</h4>
+            <h4>What's stopping your growth?</h4>
 
           </Col>
         </Row>
