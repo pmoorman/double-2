@@ -59,13 +59,13 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
     gsap.from(el, {
       y: 8,
       opacity: 0,
-      duration: 1,
-      delay: Math.random() * 1.2, // random delay
-      ease: "power3.out",
+      duration: 1.3,
+      delay: Math.random() * 1.3, // random delay
+      ease: "power3",
 
       scrollTrigger: {
         trigger: el,
-        start: "top 95%",
+        start: "top 100%",
         toggleActions: "play none none reverse",
         once: true, // only animate once
       },
