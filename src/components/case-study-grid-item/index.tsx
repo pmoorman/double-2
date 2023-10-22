@@ -34,7 +34,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
   slug,
 }) => {
   const style: any = {};
-  const _className = cn(className, "mb-7", {
+  const _className = cn(className, "mb-6", {
     [`align-items-${align}`]: !!align,
   });
   let width = 4;

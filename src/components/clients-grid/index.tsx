@@ -29,7 +29,7 @@ export const ClientsGrid: FC<ClientsGridProps> = ({
   }, [caseStudies, more, amount]);
 
   const renderQuote = (q: any) => (
-    <Col md={4} className="d-flex align-items-end mb-9">
+    <Col md={4} className="d-flex align-items-end mb-6">
       <div>
         <div
           className={cn(styles.quote, "p-4 text-white d-flex align-items-end")}
