@@ -91,7 +91,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
           </div>
         </div>
         <div className={styles.text}>
-          <strong>{title}</strong> — 
+          <span className="fw-bold">{title}</span> — 
           {subtitle}
         </div>
       </Link>
