@@ -77,7 +77,7 @@ export const ClientsGrid: FC<ClientsGridProps> = ({
       </Row>
       {!more && (
         <Row>
-          <Col className="mb-6">
+          <Col className="mb-4">
             <h3 role="button" onClick={() => setMore(true)}>
               See more work →
             </h3>
