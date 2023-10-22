@@ -70,7 +70,7 @@ const AboutPage = () => {
       <Container className="py-4 mt-6 pb-lg-6">
         <Row>
           <Col md={6}>
-            <h2 className="mb-4">We combine psychology with data and design</h2>
+            <h2 className="mb-5">We combine psychology with data and design</h2>
             <p>
               There’s a lot more to growth than just marketing. We understand
               the psychology behind customer acquisition and retention and this
