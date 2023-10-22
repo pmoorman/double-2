@@ -7,6 +7,10 @@
   cursor: pointer;
   transition: border-color 0.25s ease-in-out;
 
+  h4 {
+    font-weight: 600 !important;
+  }
+
   &:hover {
     border-color: $secondary;
   }
