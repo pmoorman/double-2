@@ -108,7 +108,7 @@ export const Carousel: FC<CarouselProps> = ({
       </Container>
       <div className={styles.ourWork}>
         <ScrollContainer ref={container}>
-          <div className={cn("d-flex flex-nowrap", styles.items)}>
+          <div className={cn("d-flex flex-nowrap ml-4", styles.items)}>
             <div className={cn(styles.item, styles.firstItem)} />
             {children}
           </div>

@@ -4,6 +4,7 @@
   position: relative;
   cursor: pointer;
 
+
   &:hover {
     .overlay {
       display: block;
@@ -32,7 +33,7 @@
 
 
   .arrow {
-    background: var(--bs-secondary);
+    background: $primary;
     height: 51px;
     width: 51px;
     border-radius: 100%;
