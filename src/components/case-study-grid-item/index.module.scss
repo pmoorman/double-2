@@ -33,7 +33,7 @@
 
 
   .arrow {
-    background: $primary;
+    background: $secondary;
     height: 51px;
     width: 51px;
     border-radius: 100%;
@@ -75,7 +75,7 @@
       }
 
       .tag {
-        background: $primary;
+        background: $secondary;
         color: var(--bs-white);
         padding: 8px 13px;
         border-radius: 25px;
