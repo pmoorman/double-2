@@ -43,7 +43,7 @@ const AboutPage = () => {
           <Col md={1} />
           <Col md={4}>
             <div className="h-100 d-flex flex-column justify-content-around">
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
+              <div className="d-flex align-items-center gap-4 px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
                   src="./pyra.png"
@@ -52,7 +52,7 @@ const AboutPage = () => {
                 />
                 <h3 className="mb-0">Experienced start-up founders</h3>
               </div>
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
+              <div className="d-flex align-items-center gap-4 px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
                   src="./diamond.png"
