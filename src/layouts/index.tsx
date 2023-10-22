@@ -47,9 +47,6 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   
   const hideScrollbar = [
     pathname.startsWith("/contact"),
-    pathname.startsWith("/case-studies"),
-    pathname.startsWith("/blog"),
-    pathname.startsWith("/about"),
   ].some((p) => p);
 
   const hideFooter = [
