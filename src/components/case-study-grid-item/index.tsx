@@ -60,7 +60,7 @@ export const CaseStudyGridItem: FC<CaseStudyGridItemProps> = ({
       y: 8,
       opacity: 0,
       duration: 1,
-      delay: Math.random() * 2, // random delay
+      delay: Math.random() * 1.2, // random delay
       ease: "power3.out",
 
       scrollTrigger: {
