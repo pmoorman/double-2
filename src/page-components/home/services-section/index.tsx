@@ -79,6 +79,7 @@ export const ServicesSection = () => {
         <Row>
           <Col>
             <h2>Services</h2>
+            <h4>what's stopping your growth?</h4>
           </Col>
         </Row>
       </Container>
@@ -96,7 +97,7 @@ export const ServicesSection = () => {
                 )}
               >
                 <div>{item.image}</div>
-                <h3 className="mb-0 ms-5 ps-md-3">{item.title}</h3>
+                <h3 className="mb-0 ms-5 ps-md-3 fw-semibold">{item.title}</h3>
               </div>
             </Col>
           ))}

@@ -18,6 +18,7 @@ import * as styles from "./index-assets/index.module.scss";
 import { clientQuotes } from "@app/data";
 import { ServicesSection } from "@app/page-components/home/services-section";
 import CookiesConsent from "@app/components/cookies";
+import CtaSection from "@app/components/cta-section";
 
 const services = [
   {
@@ -47,7 +48,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="pt-5 pb-lg-6 pb-5">
+      <div className="pt-5">
         <Container>
           <Row className="justify-content-center">
             <Col className="text-center">
@@ -62,16 +63,22 @@ const HomePage = () => {
       <Container className="pb-5">
         <HomeVideo />
       </Container>
+      
+
+      <Container id="cta" className="pb-5 my-md-6">
+        <CtaSection/>
+      </Container>
 
       <div id="services" className="pb-5 my-md-6">
         <ServicesSection />
       </div>
 
-      <div id="caseStudies" className="mb-5">
+      <div id="caseStudies">
         <Container className="mb-5 pb-3">
           <Row>
             <Col>
-              <h2 className="mb-0">Clients</h2>
+              <h2>Clients</h2>
+
             </Col>
           </Row>
         </Container>
@@ -118,20 +125,24 @@ const HomeVideo = () => {
   };
 
   return (
-    <div className={styles.videoContainer}>
-      <ReactPlayer
-        className="d-flex"
-        url="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
-        width="100%"
-        height="100%"
-        playing={playing}
-        muted
-        loop
-        playsinline
-      />
-      <div className={styles.playButton}>
-        <div role="button" onClick={() => setPlaying((v) => !v)}>
-          {renderButtonIcon()}
+    <div className={styles.videoWrapper}>
+      <div className={styles.videoInner}>
+        <div className={styles.videoContainer}>
+          <ReactPlayer
+            className="d-flex"
+            url="https://d6nxaq6ghh9kf.cloudfront.net/homepage_intro.mp4"
+            width="100%"
+            height="100%"
+            playing={playing}
+            muted
+            loop
+            playsinline
+          />
+          <div className={styles.playButton}>
+            <div role="button" onClick={() => setPlaying((v) => !v)}>
+              {renderButtonIcon()}
+            </div>
+          </div>
         </div>
       </div>
     </div>

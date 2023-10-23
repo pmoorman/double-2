@@ -37,7 +37,7 @@ const ContactPage = () => {
   };
 
   return (
-    <>
+    <div className="">
       <Container>
         <div className={styles.heading}>
           <h1>Get in touch</h1>
@@ -67,14 +67,14 @@ const ContactPage = () => {
 
           <input type="hidden" name="form-name" value="contact" />
           <Container>
-            <h2>Interested? </h2>
-            <h2>We’d love to hear from you.</h2>
+            <h2 className="mb-2 fw-semibold">Interested? </h2>
+            <h3>We’d love to hear from you.</h3>
             <Row>
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="first-name">First name</Form.Label>
                 <Form.Control
                   required
-                  placeholder="Enter your first name"
+                  placeholder="Your first name"
                   aria-describedby="first-name"
                   name="first_name"
                 />
@@ -83,7 +83,7 @@ const ContactPage = () => {
                 <Form.Label htmlFor="last-name">Last name</Form.Label>
                 <Form.Control
                   required
-                  placeholder="Enter your last name"
+                  placeholder="Your last name"
                   aria-describedby="last-name"
                   name="last_name"
                 />
@@ -94,7 +94,7 @@ const ContactPage = () => {
                 <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
                   required
-                  placeholder="Enter your email"
+                  placeholder="Your email address"
                   aria-describedby="email"
                   name="email"
                 />
@@ -102,14 +102,14 @@ const ContactPage = () => {
               <Col lg="6" md="12" className="mt-5">
                 <Form.Label htmlFor="phone-number">Phone Number</Form.Label>
                 <Form.Control
-                  placeholder="Enter your phone number"
+                  placeholder="Your phone number"
                   aria-describedby="phone-number"
                   name="phone_number"
                 />
               </Col>
             </Row>
             <Row>
-              <Col lg="6" md="12" className="mt-5">
+              <Col lg="12" md="12" className="mt-5">
                 <Form.Label htmlFor="Enter your message">Message</Form.Label>
                 <Form.Control
                   required
@@ -155,7 +155,7 @@ const ContactPage = () => {
           </Container>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 

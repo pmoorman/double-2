@@ -21,6 +21,7 @@ import {
   Preloader,
 } from "@app/components";
 import CookiesConsent from "@app/components/cookies";
+import Scrollbar from "@app/components/scrollbar";
 
 const mdxComponents = {
   DoubleLogo,
@@ -43,6 +44,10 @@ export const Layout = ({ children, pageContext }: PageProps) => {
     pathname.startsWith("/38-laws-to-avoid-startup-disaster"),
     pathname.startsWith("/double-plus-closed"),
   ].some((p) => p);
+  
+  const hideScrollbar = [
+    pathname.startsWith("/contact"),
+  ].some((p) => p);
 
   const hideFooter = [
     pathname.startsWith("/academy") &&
@@ -59,6 +64,7 @@ export const Layout = ({ children, pageContext }: PageProps) => {
   return (
     <ParallaxProvider>
       <SEO {...pageContext} />
+      {!hideScrollbar && <Scrollbar />}
       <Header hideNav={hideNav} />
       <MDXProvider components={mdxComponents}>
         <main>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaGlobe, FaLightbulb, FaUsers } from "react-icons/fa";
 
 import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
@@ -14,7 +15,7 @@ const CaseStudiesPage = () => {
           <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
             <Row className="justify-content-center">
               <Col md="9">
-                <h1 className="d-headline text-center py-6">
+                <h1 className="d-headline ugh text-center pb-6 pt-5">
                   The game of explosive <br /> <span>user growth</span>
                 </h1>
               </Col>
@@ -31,19 +32,28 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="mb-6">
+        <Container className="mb-8">
           <Row>
-            <Col md="4">
-              <h2 className="fw-bold mb-0">50+</h2>
-              <h3 className="fw-bold">tech companies</h3>
+            <Col md="4" className="flex items-center gap-8">
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-4">
+                <FaUsers size={36} />
+                50+
+              </h2>
+              <h3 className="ffs">tech companies</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-0">13</h2>
-              <h3 className="fw-bold">active countries</h3>
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-4">
+                <FaGlobe size={36} />
+                13
+              </h2>
+              <h3 className="ffs">active countries</h3>
             </Col>
             <Col md="4">
-              <h2 className="fw-bold mb-0">80,000</h2>
-              <h3 className="fw-bold">leads generated</h3>
+              <h2 className="fw-bold mb-2 d-flex align-items-center gap-4">
+                <FaLightbulb size={36} />
+                80,000
+              </h2>
+              <h3 className="ffs">leads generated</h3>
             </Col>
           </Row>
         </Container>

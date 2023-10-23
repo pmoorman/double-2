@@ -1,6 +1,31 @@
 .category {
-  background: #f4f4f4;
+  border: 2px solid #eeeff2;
   padding: 15px 50px;
   white-space: nowrap;
-  border-radius: 35px;
+  border-radius: 18px;
+  font-weight: 800 !important;
+  cursor: pointer;
+  margin-right: 1.25rem;
+  transition: border-color 0.2s ease-in-out;
+  
+  &:nth-child(0) {
+    margin-left: 2rem !important;
+
+  }
+
+  h4 {
+    font-size: 1.35rem;
+    font-weight: 600 !important;
+  }
+
+
+  &:hover {
+    border-color: $primary;
+  }
 }
+
+h2 {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+

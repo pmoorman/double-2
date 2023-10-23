@@ -55,8 +55,8 @@ export const CasestudiesSection = () => {
       <Container>
         <Row>
           <Col>
-            <h2>Let’s personalise your search</h2>
-            <h4>Select any service you’re looking for</h4>
+            <h2 className="mb-3">Let’s personalise your search</h2>
+            <h4 className="ok">select the service you’re looking for:</h4>
           </Col>
         </Row>
       </Container>
@@ -67,7 +67,7 @@ export const CasestudiesSection = () => {
               key={t}
               onClick={handleCategoryClick(t)}
               className={cn(styles.category, {
-                "bg-primary": selectedCategories.includes(t),
+                "bg-primary border-none": selectedCategories.includes(t),
                 "text-white": selectedCategories.includes(t),
               })}
             >

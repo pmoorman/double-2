@@ -34,12 +34,12 @@ export const AboutSection = () => {
   };
 
   return (
-    <>
-      <Container className="mb-7">
+    <div className="mt-20">
+      <Container className="mb-6">
         <Row>
           <Col>
             <h2>About our clients</h2>
-            <h4>No matter which stage you’re at, we work with everyone.</h4>
+            <h4>no matter which stage you’re at, we work with everyone.</h4>
           </Col>
         </Row>
       </Container>
@@ -47,20 +47,23 @@ export const AboutSection = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <div className={styles.block + "  mb-3 mb-md-0"}>
+            <div className={styles.wrapper}>
+            <div className={styles.block + " mb-3 mb-md-0"}>
               {selected === 0 && <img src={about1} alt="about 1" />}
               {selected === 1 && <img src={about2} alt="about 2" />}
               {selected === 2 && <img src={about3} alt="about 3" />}
             </div>
+            </div>
+            
           </Col>
-          <Col md={6}>
+          <Col className="mt-10" md={6}>
             <div className={styles.buttons}>
               {items.map((item, index) => {
                 let background;
                 let color;
 
                 if (selected === index) {
-                  background = "var(--bs-primary)";
+                  background = "#4391F7";
                   color = "#fff";
                 }
 
@@ -83,6 +86,6 @@ export const AboutSection = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };

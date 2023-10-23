@@ -29,7 +29,7 @@ export const ClientsGrid: FC<ClientsGridProps> = ({
   }, [caseStudies, more, amount]);
 
   const renderQuote = (q: any) => (
-    <Col md={4} className="d-flex align-items-end mb-9">
+    <Col md={4} className="d-flex align-items-end mb-6">
       <div>
         <div
           className={cn(styles.quote, "p-4 text-white d-flex align-items-end")}
@@ -77,7 +77,7 @@ export const ClientsGrid: FC<ClientsGridProps> = ({
       </Row>
       {!more && (
         <Row>
-          <Col>
+          <Col className="mb-4">
             <h3 role="button" onClick={() => setMore(true)}>
               See more work →
             </h3>

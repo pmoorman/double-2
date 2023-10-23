@@ -9,7 +9,8 @@
     font-size: 1.25rem;
   }
   h4 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    font-weight: 400 !important;
   }
   .lead {
     font-size: 1rem;
@@ -19,6 +20,17 @@ p,
 small {
   font-family: $font-family-monospace;
   display: block;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400 !important;
+}
+
+h4 {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 500 !important;
 }
 
 h3 {

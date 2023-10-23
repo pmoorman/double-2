@@ -15,24 +15,23 @@ import heroImg from "./oval.svg";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="py-0">
       {/* Hero */}
-      <Container>
-        <div className="pt-lg-7 pb-lg-5 py-4 position-relative">
-          <Row className="justify-content-center">
+      <Container className="py-20">
+        <div className="pt-5 pb-7">
+          <div className="flex justify-between text-center">
+            
+              <h1 className="d-headline py-6 mb-0">
+                Double the <br /> <span>drive</span>
+              </h1>
             <div className={styles.heroBg}>
               <img src={heroImg} alt="About" className="img-fluid" />
             </div>
-            <Col md={5}>
-              <h1 className="d-headline text-center py-6">
-                Double the <span>drive</span>
-              </h1>
-            </Col>
-          </Row>
+          </div>
         </div>
       </Container>
 
-      <Container className="py-4 pb-lg-6">
+      <div className="container mb-6 mt-0">
         <Row>
           <Col md={6} className="mb-6 mb-md-0">
             <StaticImage
@@ -44,7 +43,7 @@ const AboutPage = () => {
           <Col md={1} />
           <Col md={4}>
             <div className="h-100 d-flex flex-column justify-content-around">
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
+              <div className="d-flex align-items-center gap-4 px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
                   src="./pyra.png"
@@ -53,7 +52,7 @@ const AboutPage = () => {
                 />
                 <h3 className="mb-0">Experienced start-up founders</h3>
               </div>
-              <div className="d-flex align-items-center px-lg-3 mb-4 mb-lg-0">
+              <div className="d-flex align-items-center gap-4 px-lg-3 mb-4 mb-lg-0">
                 <StaticImage
                   className="me-3 flex-shrink-0"
                   src="./diamond.png"
@@ -65,13 +64,13 @@ const AboutPage = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
 
       {/* Our people */}
-      <Container className="py-4 pb-lg-6">
+      <Container className="py-4 mt-6 pb-lg-6">
         <Row>
           <Col md={6}>
-            <h2 className="mb-4">We combine psychology with data and design</h2>
+            <h2 className="mb-5">We combine psychology with data and design</h2>
             <p>
               There’s a lot more to growth than just marketing. We understand
               the psychology behind customer acquisition and retention and this
@@ -118,7 +117,7 @@ const AboutPage = () => {
           <SectionFeaturedArticles />
         </Container>
       </div> */}
-    </>
+    </div>
   );
 };
 

@@ -70,12 +70,12 @@ export const Carousel: FC<CarouselProps> = ({
     };
 
   return (
-    <>
+    <div className="umm">
       <Container>
         <div className="d-flex justify-content-between align-items-center mb-5">
           <h2 className="mb-0">{title}</h2>
           {!hideArrows && (
-            <div className="d-flex gap-5">
+            <div className="d-flex gap-6">
               <div
                 role="button"
                 className={cn(styles.arrowBtn, "d-none d-md-flex")}
@@ -108,12 +108,12 @@ export const Carousel: FC<CarouselProps> = ({
       </Container>
       <div className={styles.ourWork}>
         <ScrollContainer ref={container}>
-          <div className={cn("d-flex flex-nowrap gap-3", styles.items)}>
+          <div className={cn("d-flex flex-nowrap ml-4", styles.items)}>
             <div className={cn(styles.item, styles.firstItem)} />
             {children}
           </div>
         </ScrollContainer>
       </div>
-    </>
+    </div>
   );
 };

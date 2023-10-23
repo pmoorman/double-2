@@ -1,5 +1,24 @@
-.block {
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);  
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wrapper {
   background: #faf5ed;
+  border-radius: 20px;
+  height: 100%;
+
+}
+.block {
   border-radius: 20px;
   height: 100%;
   margin-bottom: 1rem !important;
@@ -7,12 +26,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: float 3s ease-in-out infinite;
+
+
 
   img {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transform-origin: center;
   }
 }
+
 
 .textBlock {
   display: flex;
@@ -22,8 +45,16 @@
   border-radius: 20px;
   margin-bottom: 1rem !important;
 
+  h4 {
+    font-weight: 400 !important;
+  }
+
   &:nth-last-child(1) {
     margin-bottom: 0 !important;
+  }
+
+  &:hover {
+    background: #fff5e4;
   }
 }
 

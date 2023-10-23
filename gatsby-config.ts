@@ -19,6 +19,15 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`),
+          require(`autoprefixer`),
+        ]
+      }
+    },
+    {
       resolve: "gatsby-plugin-sass",
       options: {
         additionalData: `
@@ -32,7 +41,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["Manrope:400,600,700", "EB+Garamond:ital,wght@1,600"],
+        fonts: ["Manrope:400,600,700", "EB+Garamond:ital,wght@1,600", `Plus Jakarta Sans:300,400,500,600,700`],
         display: "swap",
       },
     },

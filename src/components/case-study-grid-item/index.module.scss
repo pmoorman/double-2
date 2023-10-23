@@ -4,6 +4,7 @@
   position: relative;
   cursor: pointer;
 
+
   &:hover {
     .overlay {
       display: block;
@@ -18,6 +19,10 @@
     right: 0;
     top: 0;
 
+    &:hover  {
+   
+    }
+
     // make a gradient overlay, white to transparent from right to left
     background: linear-gradient(
       to right,
@@ -26,8 +31,9 @@
     );
   }
 
+
   .arrow {
-    background: var(--bs-secondary);
+    background: $secondary;
     height: 51px;
     width: 51px;
     border-radius: 100%;
@@ -39,26 +45,37 @@
     justify-content: center;
     cursor: pointer;
 
-    &:hover {
-      .arrowStraight {
-        display: none;
-      }
-      .arrowCorner {
-        display: block;
-      }
-      .tags {
-        display: block;
-      }
+   &:hover {
+     .arrowStraight {
+      display: none;
     }
+     .arrowCorner {
+      display: block;
+    }
+     .tags {
+      display: block;
+    }
+   }
 
     .tags {
       position: absolute;
       right: 0px;
       bottom: 110%;
       display: none;
+      animation: rise 0.35s ease-out;
+
+      @keyframes rise {
+        from {
+          transform: translateY(4px);
+        }
+
+        to {
+          transform: translateY(0px);
+        }
+      }
 
       .tag {
-        background: var(--bs-secondary);
+        background: $secondary;
         color: var(--bs-white);
         padding: 8px 13px;
         border-radius: 25px;
@@ -83,4 +100,6 @@
   display: flex;
   align-items: center;
   height: 50px;
+  font-size: 16px;
+  padding-top: 2rem;
 }

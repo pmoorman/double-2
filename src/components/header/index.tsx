@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 
@@ -20,11 +20,38 @@ export interface HeaderProps {
 
 export const Header: FC<HeaderProps> = ({ hideNav }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hideHeader, setHideHeader] = useState(false);
 
   const isMdDevice = useMediaQuery({ query: "(min-width: 992px)" });
 
+
+    useEffect(() => {
+        let lastScrollY = 0;
+    
+        const handleScroll = () => {
+          const currentScrollY = window.pageYOffset;
+          
+          if (currentScrollY > 50 && currentScrollY > lastScrollY) {
+            // scroll down
+            setHideHeader(true);
+          } else {  
+            // scroll up
+            setHideHeader(false);
+          }
+    
+          lastScrollY = currentScrollY;
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+           window.removeEventListener('scroll', handleScroll);
+        };
+    
+      }, []);
+
   return (
-    <Navbar expand="lg" className={styles.navbar}>
+    <Navbar expand="lg"  className={`${styles.navbar} ${hideHeader ? styles.hide : ''}`}>
       <div className="container">
         {!isMdDevice && !hideNav && <MobileMenu />}
 

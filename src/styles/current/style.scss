@@ -1,5 +1,66 @@
+@tailwind base;
+@tailwind components;  
+@tailwind utilities;
+
 @import "variables";
 @import "elements";
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap');
 
 @import "typography";
+
+body {
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.1px;
+}
+
+
+
+button {
+ font-weight: 600 !important;
+ letter-spacing: 0.2px !important;
+}
+
+
+#caseStudies {
+  margin-bottom: 64px !important;
+}
+
+.member {
+  font-size: 1.5rem !important;
+}
+
+input {
+  padding-left: 0 !important;
+}
+
+input::placeholder {
+  font-weight: 400 !important;
+  opacity: 0.87 !important;
+}
+
+.contactButton {
+  background: $secondary;
+  color: white;
+  font-weight: 500 !important;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.ffs {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.ugh {
+  line-height: 1.15;
+}
+
+.umm {
+  padding-left: 24px !important;
+}
+
+.ok {
+  padding-top: 8px !important;
+}

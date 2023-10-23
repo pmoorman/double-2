@@ -1,13 +1,14 @@
 .navbar {
   z-index: 9;
   height: 89px;
-  // box-shadow: 0px 4px 15px 0px #0000001a;
   justify-content: center;
   display: flex;
   align-items: center;
   background-color: $white;
   position: sticky;
   top: 0;
+  transition: top 0.3s ease;
+  z-index: 150;
 
   @include media-breakpoint-down(lg) {
     padding: 0;
@@ -16,6 +17,7 @@
 
   .navbarLogo {
     padding: 0;
+    cursor: pointer;
 
     @include media-breakpoint-down(md) {
       img {
@@ -25,7 +27,14 @@
   }
 }
 
+.hide {
+  top: -89px; // slide out of view
+  z-index: 100;
+}
+
 .navbarNav {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   @include media-breakpoint-down(lg) {
     display: none;
@@ -33,14 +42,32 @@
 }
 
 .navLink {
-  font-weight: 300;
+  font-weight: 400 !important;
   font-size: 1rem;
   line-height: 24px;
+  letter-spacing: 0 !important;
   color: $secondary !important;
   font-family: $font-family-monospace;
   position: relative;
   margin: 0.4rem 1rem 0.4rem 0;
   padding: 0.1rem 0;
+
+  &:nth-last-child(1) {
+      background: $secondary;
+      color: white !important;
+      font-weight: 500 !important;
+      border-radius: 48px;
+      padding: 6px 16px !important;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        background: $primary;
+      }
+
+      &::before {
+        display: none;
+      }
+  }
 
   &::before {
     content: "";
@@ -64,6 +91,18 @@
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
   }
+}
+
+.navLinkActive:nth-last-child(1):after {
+  content: 'Contact us';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .navLinkActive:after {
