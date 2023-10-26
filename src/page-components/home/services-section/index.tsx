@@ -79,7 +79,6 @@ export const ServicesSection = () => {
         <Row>
           <Col>
             <h2>Services</h2>
-            <h4>what's stopping your growth?</h4>
           </Col>
         </Row>
       </Container>
