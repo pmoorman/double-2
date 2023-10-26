@@ -183,5 +183,11 @@ img {
     font-size: 125%;
     font-weight: 700 !important;
     line-height: 0;
+
+
+    @media (max-width: 480px) {
+      font-size: 120%;
+
+    }
   }
 }
