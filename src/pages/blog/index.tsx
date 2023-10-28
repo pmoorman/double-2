@@ -18,6 +18,8 @@ import { useBlogPosts } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
 
+import heroImg from "./oval.svg";
+
 const formId = "195040068";
 
 const settings: Settings = {
@@ -49,9 +51,12 @@ const BlogPage = () => {
         <Container>
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }}>
-              <h1 className="mt-5 d-headline">
-                Growth systems, <br /> <span>not hacks</span>
+              <h1 className="mt-6 d-headline">
+                Growth systems, <br /> <span>not hacks.</span>
               </h1>
+              <div className={styles.heroBg}>
+              <img src={heroImg} alt="About" className="img-fluid" />
+            </div>
             </Col>
           </Row>
         </Container>
