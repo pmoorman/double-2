@@ -26,15 +26,12 @@ export const BlogPostGridItem: FC<BlogPostGridItemProps> = ({ post }) => {
           alt={post.title}
           objectFit="cover"
         />
-        <small className="mb-2">
-          {date}{" "}
-          <span>
-            | {post.author} | {categories}
-          </span>
-        </small>
+        <div className={styles.txt}>
         <h4 className="mb-3">{post.title}</h4>
         <p className="mb-4">{post.excerpt}</p>
         <button className={styles.roundedButton}>Read more</button>
+        </div>
+    
       </Link>
     </Col>
   );
