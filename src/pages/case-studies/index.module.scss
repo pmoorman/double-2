@@ -1,3 +1,33 @@
+.heroBg {
+  position: absolute;
+  top: -12.5%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
+  bottom: 0;
+  animation: float 3s ease-in-out infinite;
+  transform: translateX(-50%);
+  
+  z-index: -1;
+
+  img {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(-50%);  
+  }
+  50% {
+    transform: translateY(-6px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+
 .blueBg {
   background-color: $primary;
   padding-top: 2rem;

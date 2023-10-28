@@ -7,6 +7,10 @@ import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
 import { CasestudiesSection } from "@app/page-components/case-studies";
 
+import heroImg from "./oval.svg";
+
+import * as styles from "./index.module.scss";
+
 const CaseStudiesPage = () => {
   return (
     <>
@@ -18,11 +22,14 @@ const CaseStudiesPage = () => {
                 <h1 className="d-headline ugh text-center pb-6 pt-5">
                   The game of explosive <br /> <span>user growth</span>
                 </h1>
+                <div className={styles.heroBg}>
+              <img src={heroImg} alt="About" className="img-fluid" />
+            </div>
               </Col>
             </Row>
           </div>
         </Container>
-        <Container className="mb-6">
+        <Container className="mb-6 mt-5">
           <Row className="justify-content-center">
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
