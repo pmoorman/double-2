@@ -12,10 +12,13 @@ import {
   Image,
   SEO,
   AppHead,
+  OgilvyInlineForm,
 } from "@app/components";
 import { useBlogPosts } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
+
+const formId = "195040068";
 
 const settings: Settings = {
   arrows: false,
@@ -47,9 +50,8 @@ const BlogPage = () => {
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }}>
               <h1 className="mt-5 d-headline">
-              Growth systems, <br /> <span>not hacks.</span>
+                Growth systems <br /> <span>not hacks</span>
               </h1>
-              
             </Col>
           </Row>
         </Container>
@@ -57,28 +59,35 @@ const BlogPage = () => {
 
       <div className={styles.articles}>
         <Container className="position-relative">
-          <div className={styles.featuredArticles}>
-            <Row>
-              {featuredArticles.map((post) => (
-                <Col lg="12" xl="4">
-                  <Link to={post.slug} className={styles.featuredArticle}>
-                    <GatsbyImage
-                      image={post.thumbnail}
-                      alt="featured"
-                      objectPosition={post.thumbnail_position}
-                      style={{ height: "100%" }}
-                    />
-                    <div>
-                      <small>
-                        {format(new Date(post.date), "dd MMM yyyy")} |{" "}
-                        {post.author}
-                      </small>
-                      <h4>{post.title}</h4>
-                    </div>
-                  </Link>
-                </Col>
-              ))}
-            </Row>
+          <div className={styles.academy}>
+            <div className={styles.img}>
+              <StaticImage
+                src="./new_iphone_mockup_desktop.png"
+                alt="Phone image"
+                objectFit="contain"
+                width={476}
+              />
+            </div>
+            <div className={styles.info}>
+              <h2>
+                The 38 laws of <br /> growth <br /> marketing
+              </h2>
+              <div style={{ fontSize: "20px", fontWeight: 400 }} className="mb-4 mt-2">
+                As a growth agency, Double has executed campaigns for some of
+                the fastest growing tech companies in the world.
+              </div>
+              <div style={{opacity:0.65}}>Leave your details and get access to the free PDF.</div>
+              <OgilvyInlineForm
+                formId={formId}
+                buttonProps={{
+                  variant: "primary",
+                }}
+                recaptchaProps={{
+                  theme: "light",
+                  className: "mt-3",
+                }}
+              />
+            </div>
           </div>
         </Container>
       </div>
@@ -155,7 +164,9 @@ const BlogPage = () => {
               </Image>
             }
           >
-            <h2 className="mb-lg-3 mb-4">See our growth marketing in action.</h2>
+            <h2 className="mb-lg-3 mb-4">
+              See our growth marketing in action.
+            </h2>
             {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

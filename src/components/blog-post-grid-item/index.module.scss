@@ -1,8 +1,8 @@
 .card {
   transition: 0.5s all;
 
-  &:hover {
-    transform: scale(1.03);
+  h4 {
+    font-weight: 600 !important;
   }
 
   a {
@@ -27,4 +27,11 @@
     overflow: hidden;
   }
  
+}
+
+.roundedButton {
+  background: $secondary;
+  color: #fff;
+  padding: 12px;
+  border-radius: 32px;
 }

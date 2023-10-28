@@ -34,6 +34,7 @@ export const BlogPostGridItem: FC<BlogPostGridItemProps> = ({ post }) => {
         </small>
         <h4 className="mb-3">{post.title}</h4>
         <p className="mb-4">{post.excerpt}</p>
+        <button className={styles.roundedButton}>Read more</button>
       </Link>
     </Col>
   );

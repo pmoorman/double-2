@@ -47,6 +47,7 @@
 
     p {
       font-weight: 400;
+      font-size: 16px !important;
     }
 
     @include media-breakpoint-down(md) {
@@ -216,4 +217,9 @@
       margin-left: 0;
     }
   }
+}
+
+
+.address p {
+  font-size: 16px !important;
 }

@@ -30,7 +30,7 @@ const AcademyPage = () => {
               />
             </Col>
             <Col md="6" xs="8">
-              <h1 className="mb-3">
+              <h1 className="mb-4">
                 The 38 laws of
                 <br />
                 growth marketing

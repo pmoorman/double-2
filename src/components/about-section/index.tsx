@@ -77,7 +77,7 @@ export const AboutSection = () => {
                     style={{ background, color }}
                     onClick={handleClick(index)}
                   >
-                    <h3 className="mb-3">{item.title}</h3>
+                    <h3 className="mb-3 fw-bold">{item.title}</h3>
                     <h4 className="pe-md-5">{item.description}</h4>
                   </div>
                 );

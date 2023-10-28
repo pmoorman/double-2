@@ -49,7 +49,7 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
             <Form.Control
               required
               type="email"
-              placeholder="Work email"
+              placeholder="Your work email"
               aria-describedby="email"
               name="fields[email]"
             />
