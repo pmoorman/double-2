@@ -50,7 +50,7 @@ const BlogPage = () => {
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }}>
               <h1 className="mt-5 d-headline">
-                Growth systems <br /> <span>not hacks</span>
+                Growth systems, <br /> <span>not hacks</span>
               </h1>
             </Col>
           </Row>
