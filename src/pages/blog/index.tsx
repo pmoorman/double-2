@@ -154,7 +154,7 @@ const BlogPage = () => {
         </Row>
       </Container>
 
-      <div className={styles.caseStudy}>
+      {/* <div className={styles.caseStudy}>
         <Container>
           <ImageRow
             imageOrder="first"
@@ -171,7 +171,7 @@ const BlogPage = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim.Lorem ipsum dolor sit.
-            </p> */}
+            </p>
             <Button
               as={Link}
               to="/case-studies"
@@ -182,7 +182,8 @@ const BlogPage = () => {
             </Button>
           </ImageRow>
         </Container>
-      </div>
+      </div> */}
+
     </>
   );
 };
