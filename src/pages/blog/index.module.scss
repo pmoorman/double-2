@@ -91,6 +91,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(50vw + 50%);
+    max-width: 1440px;
     background-color: #faf5ed;
     display: flex;
     justify-content: center;
