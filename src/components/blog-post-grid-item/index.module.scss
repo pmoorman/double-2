@@ -29,7 +29,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 1.5rem;
+      padding: 3rem;
     }
 
     h4 {
@@ -45,8 +45,9 @@
       border-radius: 18px;
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 87%;
       height: 100%;
       object-fit: cover;
       z-index: -1;
