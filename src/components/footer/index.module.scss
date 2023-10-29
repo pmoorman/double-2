@@ -30,7 +30,7 @@
     transform: translateY(-50%);
 
     @include media-breakpoint-down(md) {
-      padding: 3rem 2rem;
+      padding: 3rem 1rem;
     }
 
     h1 {
@@ -42,7 +42,7 @@
         font-size: 72px;
       }
       @include media-breakpoint-down(md) {
-        font-size: 56px !important;
+        font-size: 60px !important;
         line-height: 0.95;
       }
 
