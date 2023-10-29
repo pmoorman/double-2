@@ -94,4 +94,8 @@
   padding: 8px 20px;
   border-radius: 32px;
   font-weight: 600 !important;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
