@@ -12,6 +12,11 @@
 
   img {
     transform: scale(1.2);
+
+  @include media-breakpoint-down(lg) {
+    transform: scale(1);
+
+  }
   }
 }
 
