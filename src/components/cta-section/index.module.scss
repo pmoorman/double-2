@@ -77,17 +77,17 @@
   color: white;
   height: 100%;
 
+  @include media-breakpoint-down(md) {
+    min-height: 400px;
+  }
+
   img {
     position: absolute;
     bottom: 40px;
     right: 32px;
 
     @include media-breakpoint-down(md) {
-      position: relative;
-      bottom: unset;
-      right: unset;
-      display: block;
-      margin-left: auto;
+      position: absolute;
     }
   }
 
@@ -97,5 +97,10 @@
     font-weight: 600;
     line-height: 1.225;
     letter-spacing: 0.3px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      font-size: 2rem !important;
+    }
   }
 }
