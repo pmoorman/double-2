@@ -1,6 +1,10 @@
 .footerOuter {
   padding-top: 200px;
   margin-top: 2rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
 }
 
 .footer {
@@ -36,6 +40,7 @@
       @include media-breakpoint-down(md) {
         font-size: 56px !important;
         line-height: 0.95;
+        padding: 2rem;
       }
 
       span {
