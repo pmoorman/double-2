@@ -2,6 +2,9 @@
   h1 {
     font-size: 3rem !important;
   }
+  h3 {
+    font-size: 1.65rem !important;
+  }
 }
 @include media-breakpoint-down(md) {
   h1 {
