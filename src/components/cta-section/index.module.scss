@@ -8,7 +8,7 @@
   justify-content: center;
   gap: 24px;
 
-  @media (max-width: 600px) {
+  @include media-breakpoint-down(md) {
     flex-direction: column;
   }
 }
@@ -26,16 +26,18 @@
   text-align: center;
   padding: 20px;
   height: 100%;
-
   flex: 2;
   background: $secondary;
   color: white;
+
+ 
 
   h2 {
     z-index: 1;
     font-size: 4rem;
     line-height: 0.95 !important;
     font-weight: 600;
+
     span {
       font-family: "EB Garamond";
       font-style: italic;
@@ -76,6 +78,14 @@
     position: absolute;
     bottom: 40px;
     right: 32px;
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      bottom: unset;
+      right: unset;
+      display: block;
+      margin-left: auto;
+    }
   }
 
   h3 {
