@@ -34,7 +34,7 @@ const CaseStudiesPage = () => {
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
             </Col>
-            <Col md="6">
+            <Col md="6" className="work-image-1" >
               <StaticImage src="./hero_1.webp" alt="hero" />
             </Col>
           </Row>

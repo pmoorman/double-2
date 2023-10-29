@@ -66,3 +66,9 @@ input::placeholder {
 .address p {
   font-size: 16px;
 }
+
+.work-image-1 {
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
+}
