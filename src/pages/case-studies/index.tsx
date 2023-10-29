@@ -29,7 +29,7 @@ const CaseStudiesPage = () => {
             </Row>
           </div>
         </Container>
-        <Container className="mb-6 mt-5">
+        <Container className="mb-6 mt-5 mb-sm-0">
           <Row className="justify-content-center">
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
