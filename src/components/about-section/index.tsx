@@ -38,7 +38,7 @@ export const AboutSection = () => {
       <Container className="mb-6">
         <Row>
           <Col>
-            <h2>About our clients</h2>
+            <h2 className="about-txt">About our clients</h2>
             <h4>no matter which stage you’re at, we work with everyone.</h4>
           </Col>
         </Row>

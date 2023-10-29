@@ -16,7 +16,7 @@ export const Footer = () => {
         <footer className={styles.footer}>
           <Container>
             <div className={styles.headerLogo}>
-              <h1 className="display-4 mb-4">
+              <h1 className="display-4 mb-4 mb-sm-3">
                 Think we <br /> should <span>talk</span>?
               </h1>
               <p className="mb-4">

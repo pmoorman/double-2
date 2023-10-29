@@ -29,7 +29,7 @@ const CaseStudiesPage = () => {
             </Row>
           </div>
         </Container>
-        <Container className="mb-6 mt-5 mb-sm-0">
+        <Container className="mb-6 mt-5">
           <Row className="justify-content-center">
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
@@ -39,25 +39,25 @@ const CaseStudiesPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="mb-8">
+        <Container className="mb-7">
           <Row>
             <Col md="4" className="flex items-center gap-8">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaUsers size={40} />
+                <FaUsers size={44} />
                 50+
               </h2>
               <h3 className="ffs">tech companies</h3>
             </Col>
             <Col md="4">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaGlobe size={40} />
+                <FaGlobe size={44} />
                 13
               </h2>
               <h3 className="ffs">active countries</h3>
             </Col>
             <Col md="4">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaLightbulb size={40} />
+                <FaLightbulb size={44} />
                 80,000
               </h2>
               <h3 className="ffs">leads generated</h3>

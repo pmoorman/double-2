@@ -67,6 +67,12 @@ input::placeholder {
   font-size: 16px;
 }
 
+.about-txt {
+  @include media-breakpoint-down(md) {
+    font-size: 2.5rem;
+  }
+}
+
 .work-image-1 {
   @include media-breakpoint-down(md) {
     margin-top: 2rem;
