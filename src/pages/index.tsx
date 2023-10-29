@@ -65,7 +65,7 @@ const HomePage = () => {
       </Container>
       
 
-      <Container id="cta" className="pb-5 my-md-6">
+      <Container id="cta" className="pb-5 my-md-8">
         <CtaSection/>
       </Container>
 
