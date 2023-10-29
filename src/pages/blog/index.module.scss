@@ -32,8 +32,10 @@
     bottom: 0;
     animation: float 3s ease-in-out infinite;
     transform: translateX(-50%);
-    
     z-index: 0;
+
+    @include media-breakpoint-down(md) {
+    }
   
     img {
       transform: scale(1);
@@ -59,6 +61,8 @@
 .articles {
   color: white;
   margin-top: -120px;
+  margin-left: 40px;
+  margin-right: 40px;
 
   & + div {
     @include media-breakpoint-down(xl) {
@@ -75,7 +79,7 @@
 
   @include media-breakpoint-down(md) {
     background-color: $secondary;
-    margin-top: 0;
+    margin: unset;
   }
 
   h3 {
@@ -96,17 +100,28 @@
     padding: 64px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 
     @include media-breakpoint-down(xl) {
       position: relative;
     }
     @include media-breakpoint-down(md) {
       width: 100%;
-      padding: 0.5rem;
       margin-top: 0;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 40px;
+      padding: 64px 32px;
+      border-radius: 0;
     }
+   
 
     .img {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        right: -70%;
+        max-height: 240px !important;
+      }
     }
 
     @keyframes float {
@@ -123,12 +138,20 @@
 
     .info {
       width: 50%;
+
+      @include media-breakpoint-down(md) {
+        width: 65%;
+      }
     }
 
     .info h2 {
       font-size: 4.25rem;
       margin-bottom: 1.5rem;
       line-height: 1.15;
+
+      @include media-breakpoint-down(md) {
+        font-size: 3.25rem;
+      }
     }
   }
 

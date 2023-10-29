@@ -63,7 +63,7 @@ const BlogPage = () => {
       </div>
 
       <div className={styles.articles}>
-        <Container className="position-relative">
+        <div className="position-relative">
           <div className={styles.academy}>
             <div className={styles.img}>
               <StaticImage
@@ -94,7 +94,7 @@ const BlogPage = () => {
               />
             </div>
           </div>
-        </Container>
+        </div>
       </div>
 
       {/* <div className={styles.collectionSection}>
