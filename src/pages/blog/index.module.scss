@@ -35,6 +35,9 @@
     z-index: 0;
 
     @include media-breakpoint-down(md) {
+      top: 15%;
+      left: 30%;
+      max-width: 240px;
     }
   
     img {
