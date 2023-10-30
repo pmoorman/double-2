@@ -62,8 +62,11 @@
   img {
     position: absolute;
     z-index: 0;
-
     animation: float 3s ease-in-out infinite;
+
+    @include media-breakpoint-down(md) {
+      max-width: 320px !important;
+    }
   }
 }
 
