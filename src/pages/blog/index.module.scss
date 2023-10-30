@@ -35,9 +35,9 @@
     z-index: 0;
 
     @include media-breakpoint-down(md) {
-      top: 15%;
+      top: 20%;
       left: 30%;
-      max-width: 240px;
+      max-width: 280px;
     }
   
     img {
@@ -74,6 +74,9 @@
     @include media-breakpoint-down(lg) {
       padding-top: 80px;
     }
+    @include media-breakpoint-down(md) {
+      padding-top: 40px;
+    }
   }
 
   @include media-breakpoint-down(xl) {
@@ -83,6 +86,7 @@
   @include media-breakpoint-down(md) {
     background-color: $secondary;
     margin: unset;
+    padding-top: 0px !important;
   }
 
   h3 {
@@ -110,6 +114,7 @@
       position: relative;
     }
     @include media-breakpoint-down(md) {
+      display: none;
       width: 100%;
       margin-top: 0;
       flex-direction: row-reverse;
@@ -123,8 +128,8 @@
     .img {
       @include media-breakpoint-down(md) {
         position: absolute;
-        right: -70%;
-        max-height: 240px !important;
+        right: -80%;
+        max-height: 200px !important;
       }
     }
 
