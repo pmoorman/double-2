@@ -55,7 +55,7 @@ export const CasestudiesSection = () => {
       <Container>
         <Row>
           <Col>
-            <h2 className="mb-3 personalise">Let’s personalise your search:</h2>
+            <h2 className="mb-3 personalise">Let’s personalise your search</h2>
             <h4 className="ok">select the service you’re looking for</h4>
           </Col>
         </Row>

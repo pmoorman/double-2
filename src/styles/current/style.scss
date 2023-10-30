@@ -116,8 +116,14 @@ input::placeholder {
 
     h2 {
       font-size: 2.5rem !important;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
       justify-content: center;
     }
+  }
+}
+
+.contact-sub {
+  @include media-breakpoint-down(md) {
+    font-weight: 500 !important;
   }
 }
