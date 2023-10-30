@@ -15,8 +15,7 @@
     transform: scale(1.2);
 
   @include media-breakpoint-down(sm) {
-    transform: scale(1);
-
+    top: 30%;
   }
   }
 }
