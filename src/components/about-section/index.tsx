@@ -35,11 +35,11 @@ export const AboutSection = () => {
 
   return (
     <div className="mt-20">
-      <Container className="mb-6">
+      <Container className="mb-6 graphic-txt">
         <Row>
           <Col>
-            <h2>About our clients</h2>
-            <h4>no matter which stage you’re at, we work with everyone.</h4>
+            <h2 className="about-txt">About our clients</h2>
+            <h4 className="about-txt-small">no matter which stage you’re at, we work with everyone.</h4>
           </Col>
         </Row>
       </Container>
@@ -77,7 +77,7 @@ export const AboutSection = () => {
                     style={{ background, color }}
                     onClick={handleClick(index)}
                   >
-                    <h3 className="mb-3">{item.title}</h3>
+                    <h3 className="mb-3 fw-bold">{item.title}</h3>
                     <h4 className="pe-md-5">{item.description}</h4>
                   </div>
                 );

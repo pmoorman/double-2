@@ -6,10 +6,12 @@
   align-items: center;
   height: 508px;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
 
-  @media (max-width: 600px) {
+  @include media-breakpoint-down(md) {
     flex-direction: column;
+    height: unset;
+    margin-bottom: 2rem;
   }
 }
 
@@ -26,27 +28,45 @@
   text-align: center;
   padding: 20px;
   height: 100%;
-
   flex: 2;
   background: $secondary;
   color: white;
+
+  @include media-breakpoint-down(md) {
+    min-height: 400px;
+  }
 
   h2 {
     z-index: 1;
     font-size: 4rem;
     line-height: 0.95 !important;
+    font-weight: 600;
+
     span {
       font-family: "EB Garamond";
       font-style: italic;
       font-size: 120%;
+      font-weight: 500;
+
+      @include media-breakpoint-down(md) {
+        line-height: 0.8 !important;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 3.15rem;
+      line-height: 1.05 !important;
     }
   }
 
   img {
     position: absolute;
     z-index: 0;
-
     animation: float 3s ease-in-out infinite;
+
+    @include media-breakpoint-down(md) {
+      max-width: 320px !important;
+    }
   }
 }
 
@@ -70,17 +90,31 @@
   color: white;
   height: 100%;
 
+  @include media-breakpoint-down(md) {
+    min-height: 460px;
+  }
+
   img {
     position: absolute;
     bottom: 40px;
     right: 32px;
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+    }
   }
 
   h3 {
     font-size: 2.25rem;
     width: 65%;
     font-weight: 600;
-    line-height: 1.225
-    ;
+    line-height: 1.225;
+    letter-spacing: 0.3px;
+
+    @include media-breakpoint-down(md) {
+      width: 72%;
+      font-size: 2.05rem !important;
+    letter-spacing: 0.1px;
+    }
   }
 }

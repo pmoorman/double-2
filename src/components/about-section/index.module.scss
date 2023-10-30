@@ -46,7 +46,11 @@
   margin-bottom: 1rem !important;
 
   h4 {
-    font-weight: 400 !important;
+    font-weight: 600 !important;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.25rem;
+    }
   }
 
   &:nth-last-child(1) {
@@ -67,4 +71,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+@include media-breakpoint-down(md) {
+  margin-top: 2rem;
+}
 }

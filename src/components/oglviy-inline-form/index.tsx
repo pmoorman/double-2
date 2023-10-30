@@ -32,24 +32,13 @@ export const OgilvyInlineForm: FC<OgilvyFormProps> = ({
 
   return (
     <Form name="form" method="POST" action={action}>
-      {/* <Row>
-        <Col md="12" className="mt-5">
-          <Form.Label htmlFor="name">Name</Form.Label>
-          <Form.Control
-            required
-            placeholder="Enter your name"
-            aria-describedby="name"
-            name="fields[name]"
-          />
-        </Col>
-      </Row> */}
       <Row>
         <Col md="12" className="mt-2">
           <InputGroup className={styles.inputGroup}>
             <Form.Control
               required
               type="email"
-              placeholder="Work email"
+              placeholder="Your work email"
               aria-describedby="email"
               name="fields[email]"
             />

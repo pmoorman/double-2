@@ -78,7 +78,7 @@ export const ClientsGrid: FC<ClientsGridProps> = ({
       {!more && (
         <Row>
           <Col className="mb-4">
-            <h3 role="button" onClick={() => setMore(true)}>
+            <h3 style={{fontSize: '28px'}} role="button" onClick={() => setMore(true)}>
               See more work →
             </h3>
           </Col>

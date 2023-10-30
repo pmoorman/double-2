@@ -52,23 +52,6 @@
   margin: 0.4rem 1rem 0.4rem 0;
   padding: 0.1rem 0;
 
-  &:nth-last-child(1) {
-      background: $secondary;
-      color: white !important;
-      font-weight: 500 !important;
-      border-radius: 48px;
-      padding: 6px 16px !important;
-      transition: .2s ease-in-out;
-
-      &:hover {
-        background: $primary;
-      }
-
-      &::before {
-        display: none;
-      }
-  }
-
   &::before {
     content: "";
     transform-origin: 100% 50%;
@@ -93,18 +76,6 @@
   }
 }
 
-.navLinkActive:nth-last-child(1):after {
-  content: 'Contact us';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 48px;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 .navLinkActive:after {
   position: absolute;
   width: calc(100% - 20px);
@@ -115,4 +86,16 @@
   left: 11px;
   pointer-events: none;
   content: "";
+}
+
+.roundedButton {
+  background: $secondary;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 32px;
+  font-weight: 600 !important;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }

@@ -5,14 +5,22 @@
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 8px; 
+    height: 7px; 
     background: transparent;
     z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      height: 5px;
+    }
   }
   
   .progressBarInner {
-    height: 8px;
+    height: 7px;
     background: $primary;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+    @include media-breakpoint-down(md) {
+      height: 5px;
+    }
   }

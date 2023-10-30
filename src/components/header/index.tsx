@@ -11,7 +11,6 @@ const LINKS = [
   { label: "About", to: "/about" },
   // { label: "Careers", to: "/careers" },
   { label: "Blog", to: "/blog" },
-  { label: "Contact us", to: "/contact" },
 ];
 
 export interface HeaderProps {
@@ -24,34 +23,35 @@ export const Header: FC<HeaderProps> = ({ hideNav }) => {
 
   const isMdDevice = useMediaQuery({ query: "(min-width: 992px)" });
 
+  useEffect(() => {
+    let lastScrollY = 0;
 
-    useEffect(() => {
-        let lastScrollY = 0;
-    
-        const handleScroll = () => {
-          const currentScrollY = window.pageYOffset;
-          
-          if (currentScrollY > 50 && currentScrollY > lastScrollY) {
-            // scroll down
-            setHideHeader(true);
-          } else {  
-            // scroll up
-            setHideHeader(false);
-          }
-    
-          lastScrollY = currentScrollY;
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        return () => {
-           window.removeEventListener('scroll', handleScroll);
-        };
-    
-      }, []);
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+
+      if (currentScrollY > 50 && currentScrollY > lastScrollY) {
+        // scroll down
+        setHideHeader(true);
+      } else {
+        // scroll up
+        setHideHeader(false);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <Navbar expand="lg"  className={`${styles.navbar} ${hideHeader ? styles.hide : ''}`}>
+    <Navbar
+      expand="lg"
+      className={`${styles.navbar} ${hideHeader ? styles.hide : ""}`}
+    >
       <div className="container">
         {!isMdDevice && !hideNav && <MobileMenu />}
 
@@ -70,10 +70,20 @@ export const Header: FC<HeaderProps> = ({ hideNav }) => {
                   as={Link}
                   to={link.to}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
                 </Nav.Link>
               ))}
             </Nav>
+            <button className={styles.roundedButton}>
+              <Nav.Link
+                key="/contact"
+                onClick={() => setIsOpen(false)}
+                as={Link}
+                to="/contact"
+              >
+                <span>Contact us</span>
+              </Nav.Link>
+            </button>
           </>
         ) : (
           <Navbar.Brand as={Link} to="/" className={styles.navbarLogo}>

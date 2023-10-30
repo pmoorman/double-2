@@ -6,18 +6,23 @@
   height: fit-content;
   bottom: 0;
   animation: float 3s ease-in-out infinite;
-  
+  transform: translateX(-50%);
+
   z-index: -1;
 
   img {
     transform: scale(1.2);
+
+    @include media-breakpoint-down(md) {
+      top: 30%;
+      max-width: 280px !important;
+    }
   }
 }
 
-
 @keyframes float {
   0% {
-    transform: translateY(0) translateX(-50%);  
+    transform: translateY(0) translateX(-50%);
   }
   50% {
     transform: translateY(-6px) translateX(-50%);

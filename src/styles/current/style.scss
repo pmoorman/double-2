@@ -1,27 +1,22 @@
 @tailwind base;
-@tailwind components;  
+@tailwind components;
 @tailwind utilities;
 
 @import "variables";
 @import "elements";
 @import "~bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap");
 
 @import "typography";
 
 body {
-  --webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.1px;
 }
 
-
-
 button {
- font-weight: 600 !important;
- letter-spacing: 0.2px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
 }
-
 
 #caseStudies {
   margin-bottom: 64px !important;
@@ -48,8 +43,20 @@ input::placeholder {
   padding: 3px 8px;
 }
 
+.vid-contain {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.graphic-txt {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 4rem !important;
+  }
+}
+
 .ffs {
-  font-weight: 500;
+  font-weight: 500 !important;
   font-size: 30px;
 }
 
@@ -61,6 +68,65 @@ input::placeholder {
   padding-left: 24px !important;
 }
 
+.clients-img {
+  @include media-breakpoint-down(md) {
+    margin-top: 0 !important;
+  }
+}
+
+.personalise {
+  @include media-breakpoint-down(md) {
+    font-size: 2rem !important;
+    line-height: 1.35 !important;
+  }
+}
+
 .ok {
   padding-top: 8px !important;
+  @include media-breakpoint-down(md) {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+}
+
+.address p {
+  font-size: 16px;
+}
+
+.about-txt {
+  @include media-breakpoint-down(md) {
+    font-size: 32px !important;
+  }
+}
+.about-txt-small {
+  @include media-breakpoint-down(md) {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+}
+
+.work-image-1 {
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
+}
+
+.work-stats {
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem !important;
+      font-weight: 700 !important;
+      justify-content: center;
+    }
+  }
+}
+
+.contact-sub {
+  @include media-breakpoint-down(md) {
+    font-weight: 500 !important;
+  }
 }

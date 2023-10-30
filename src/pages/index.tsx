@@ -60,12 +60,12 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <Container className="pb-5">
+      <Container className="pb-5 vid-contain">
         <HomeVideo />
       </Container>
       
 
-      <Container id="cta" className="pb-5 my-md-6">
+      <Container id="cta" className="pb-5 my-4 my-md-4">
         <CtaSection/>
       </Container>
 

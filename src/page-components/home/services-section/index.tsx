@@ -5,11 +5,10 @@ import React, { useState } from "react";
 import { Col, Container, Modal, Row } from "react-bootstrap";
 
 import * as styles from "./index.module.scss";
-import item1 from './item-1.svg'
-import item2 from './item-2.svg'
-import item3 from './item-3.svg'
-import item4 from './item-4.svg'
-
+import item1 from "./item-1.svg";
+import item2 from "./item-2.svg";
+import item3 from "./item-3.svg";
+import item4 from "./item-4.svg";
 
 const items = [
   {
@@ -28,17 +27,18 @@ const items = [
   },
   {
     title: "Retention",
-    body: "When doubling your effort doesn’t double your results; you’ve got a scaling issue. The remedy is a system-based marketing approach. We use automation techniques, so you can do more without growing pains. ",
+    body: "If acquisition creates growth, then retention makes it future-proof. The answers for this lie within your customers. We study your business model and audience to find the leaks.",
     image: <img height={52} src={item3} alt="Retention" />,
-    buttonText: "Case study: Tik tok →",
-    buttonLink: "/case-studies/tiktok/",
+    buttonText: "Case study: Insidetracker →",
+    buttonLink: "/case-studies/inside-tracker/",
   },
   {
     title: "Scaling",
-    body: "If acquisition creates growth, then retention makes it future-proof. The answers for this lie within your customers. We study your business model and audience to find the leaks.",
+    body: "When doubling your effort doesn’t double your results; you’ve got a scaling issue. The remedy is a system-based marketing approach. We use automation techniques, so you can do more without growing pains.",
     image: <img height={52} src={item4} alt="Scaling" />,
-    buttonText: "Case study: Insidetracker →",
-    buttonLink: "/case-studies/inside-tracker/",
+
+    buttonText: "Case study: Tik tok →",
+    buttonLink: "/case-studies/tiktok/",
   },
 ];
 
@@ -79,7 +79,7 @@ export const ServicesSection = () => {
         <Row>
           <Col>
             <h2>Services</h2>
-            <h4>what's stopping your growth?</h4>
+            <h4 className="about-txt-small">what's stopping your growth?</h4>
           </Col>
         </Row>
       </Container>
@@ -97,7 +97,7 @@ export const ServicesSection = () => {
                 )}
               >
                 <div>{item.image}</div>
-                <h3 className="mb-0 ms-5 ps-md-3 fw-semibold">{item.title}</h3>
+                <h3 className="mb-0 ms-5 ps-md-3 fw-bold">{item.title}</h3>
               </div>
             </Col>
           ))}

@@ -7,6 +7,10 @@ import { SEO, AppHead, ContactSection, AboutSection } from "@app/components";
 
 import { CasestudiesSection } from "@app/page-components/case-studies";
 
+import heroImg from "./oval.svg";
+
+import * as styles from "./index.module.scss";
+
 const CaseStudiesPage = () => {
   return (
     <>
@@ -18,39 +22,42 @@ const CaseStudiesPage = () => {
                 <h1 className="d-headline ugh text-center pb-6 pt-5">
                   The game of explosive <br /> <span>user growth</span>
                 </h1>
+                <div className={styles.heroBg}>
+              <img src={heroImg} alt="About" className="img-fluid" />
+            </div>
               </Col>
             </Row>
           </div>
         </Container>
-        <Container className="mb-6">
+        <Container className="mb-6 mt-5 clients-img">
           <Row className="justify-content-center">
             <Col md="6">
               <StaticImage src="./hero_2.png" alt="hero" />
             </Col>
-            <Col md="6">
+            <Col md="6" className="work-image-1" >
               <StaticImage src="./hero_1.webp" alt="hero" />
             </Col>
           </Row>
         </Container>
-        <Container className="mb-8">
+        <Container className="mb-7">
           <Row>
-            <Col md="4" className="flex items-center gap-8">
+            <Col md="4" className="flex items-center gap-8 work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaUsers size={36} />
+                <FaUsers size={44} />
                 50+
               </h2>
               <h3 className="ffs">tech companies</h3>
             </Col>
-            <Col md="4">
+            <Col md="4" className="work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaGlobe size={36} />
+                <FaGlobe size={44} />
                 13
               </h2>
               <h3 className="ffs">active countries</h3>
             </Col>
-            <Col md="4">
+            <Col md="4" className="work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
-                <FaLightbulb size={36} />
+                <FaLightbulb size={44} />
                 80,000
               </h2>
               <h3 className="ffs">leads generated</h3>

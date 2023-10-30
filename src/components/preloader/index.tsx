@@ -28,8 +28,10 @@ export const Preloader = () => {
 
   return (
     <div className={styles.preloader}>
-          <img src={whiteLogo} className={styles.logoImage} />
-
+      <div className={styles.loader}>
+        <img src={whiteLogo} className={styles.logoImage} />
+      </div>
+      <div className={styles.bg}></div>
     </div>
   );
 };

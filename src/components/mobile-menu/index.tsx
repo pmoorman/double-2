@@ -5,12 +5,10 @@ import * as styles from "./index.module.scss";
 
 const ID = "main-nav";
 const LINKS = [
-  { label: "Case studies", to: "/case-studies" },
-  { label: "Services", to: "/services" },
   { label: "About", to: "/about" },
-  // { label: "Careers", to: "/careers" },
+  { label: "Clients", to: "/case-studies" },
   { label: "Blog", to: "/blog" },
-  { label: "Contact us", to: "/contact" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export const MobileMenu = () => {
@@ -24,7 +22,7 @@ export const MobileMenu = () => {
     <Menu
       isOpen={isOpen}
       onStateChange={(state) => handleStateChange(state)}
-      width={260}
+      width={'65%'}
       bodyClassName={"bodyScroll"}
       menuClassName={styles.mobileBar}
       overlayClassName={styles.mobileBarOverlay}

@@ -180,8 +180,14 @@ img {
   span {
     font-family: "EB Garamond", serif;
     font-style: italic;
-    font-size: 120%;
-    font-weight: 600;
+    font-size: 125%;
+    font-weight: 500 !important;
     line-height: 0;
+
+
+    @media (max-width: 480px) {
+      font-size: 120%;
+
+    }
   }
 }

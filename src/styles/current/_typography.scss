@@ -1,9 +1,18 @@
+@include media-breakpoint-down(sm) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h3 {
+    font-size: 1.65rem !important;
+    font-weight: 700 !important;
+  }
+}
 @include media-breakpoint-down(md) {
   h1 {
     font-size: 2.875rem;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
   }
   h3 {
     font-size: 1.25rem;
@@ -35,6 +44,7 @@ h4 {
 
 h3 {
   margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .text-grey {

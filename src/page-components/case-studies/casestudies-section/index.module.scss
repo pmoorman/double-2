@@ -1,5 +1,5 @@
 .category {
-  border: 2px solid #eeeff2;
+  border: 1px solid #eeeff2;
   padding: 15px 50px;
   white-space: nowrap;
   border-radius: 48px;
@@ -16,6 +16,10 @@
   h4 {
     font-size: 1.35rem;
     font-weight: 600 !important;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+    }
   }
 
 

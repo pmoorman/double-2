@@ -1,29 +1,86 @@
 .heroSection {
+  position: relative;
   background-color: $primary;
-  padding: 60px 0;
-  color: white;
+  padding: 52px 0;
   padding-bottom: 240px;
   text-align: center;
+  color: #fff;
   position: relative;
 
   @include media-breakpoint-down(md) {
     height: auto;
     padding-bottom: 4rem;
+    padding-top: 32px;
+  }
+
+  h1 {
+    position: relative;
+    display: block;
+    font-weight: 600;
+    z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 3rem !important;
+    }
+
+    span {
+      font-weight: 500 !important;
+    }
+  }
+
+  .heroBg {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: fit-content;
+    height: fit-content;
+    bottom: 0;
+    animation: float 3s ease-in-out infinite;
+    transform: translateX(-50%);
+    z-index: 0;
+
+    @include media-breakpoint-down(md) {
+      top: 5%;
+      left: 15%;
+      max-width: 280px;
+    }
+  
+    img {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+  }
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(-50%);  
+  }
+  50% {
+    transform: translateY(-6px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
   }
 }
 
 .articles {
   color: white;
-  margin-top: -150px;
+  margin-top: -120px;
+  margin-left: 40px;
+  margin-right: 40px;
 
   & + div {
-    padding-top: 300px;
-
     @include media-breakpoint-down(xl) {
       padding-top: 2px;
     }
     @include media-breakpoint-down(lg) {
       padding-top: 80px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 40px;
     }
   }
 
@@ -33,77 +90,81 @@
 
   @include media-breakpoint-down(md) {
     background-color: $secondary;
-    margin-top: 0;
+    margin: unset;
+    padding-top: 0px !important;
   }
 
   h3 {
     position: relative;
   }
 
-  .featuredArticles {
-    position: absolute;
+  .academy {
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: calc(50vw + 50%);
-    background-color: $secondary;
-    border-radius: 20px;
-    padding: 40px;
+    max-width: 1440px;
+    background-color: #faf5ed;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    color: $secondary;
+    border-radius: 18px;
+    padding: 64px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 
     @include media-breakpoint-down(xl) {
       position: relative;
     }
     @include media-breakpoint-down(md) {
+      display: none;
       width: 100%;
-      padding: 0.5rem;
       margin-top: 0;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 40px;
+      padding: 64px 32px;
+      border-radius: 0;
+    }
+   
+
+    .img {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        right: -80%;
+        max-height: 200px !important;
+      }
     }
 
-    & > div > div > a {
-      display: flex;
-      flex-direction: row;
-      border-radius: 12px;
-
-
-      @include media-breakpoint-down(xl) {
-        margin-bottom: 1rem;
+    @keyframes float {
+      0% {
+        transform: translateY(0);
       }
+      50% {
+        transform: translateY(-6px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-      & > div {
-        background-color: white;
-        color: $secondary;
+    .info {
+      width: 50%;
 
-        &:first-child,
-        &:first-child > div {
-          min-height: 176px;
-          width: 140px;
+      @include media-breakpoint-down(md) {
+        width: 65%;
+      }
+    }
 
-          @include media-breakpoint-down(sm) {
-            height: 143px;
-            width: 112px;
-          }
-        }
+    .info h2 {
+      font-size: 4.25rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
 
-        &:last-child {
-          padding: 24px;
-          width: 70%;
-
-          @include media-breakpoint-down(xl) {
-            width: 100%;
-          }
-          @include media-breakpoint-down(sm) {
-            padding: 1rem;
-
-            h4 {
-              font-size: 1rem;
-            }
-          }
-          small {
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-          }
-        }
+      @include media-breakpoint-down(md) {
+        font-size: 3.25rem;
       }
     }
   }
@@ -127,8 +188,8 @@
 
 .collectionSection {
   background-color: $gray;
-  padding-bottom: 600px;
-  padding-top: 300px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 
   @include media-breakpoint-down(xl) {
     padding-top: 2px;
@@ -137,7 +198,6 @@
     padding-top: 80px;
   }
   @include media-breakpoint-down(md) {
-    padding-bottom: 5rem;
   }
   .sliderSection {
     position: absolute;

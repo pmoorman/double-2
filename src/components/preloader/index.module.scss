@@ -1,19 +1,36 @@
 .preloader {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: #1f2937;
-  animation: slide 3.5s cubic-bezier(0.3, 1, 0.35, 1) forwards; /* Animation name, duration, timing, and direction */
   z-index: 1000 !important;
 
-  img {
-    width: 160px;
+  .loader {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  background-color: #1f2937;
+    z-index: 50;
+    animation: slide 3.5s cubic-bezier(0.3, 1, 0.35, 1) forwards; /* Animation name, duration, timing, and direction */
+
+    img {
+      width: 160px;
+    }
+  }
+
+  .bg {
+    width: 100%; 
+    height: 100%;
+    background-color: #fff;
+    animation: fade .5s 2.5s cubic-bezier(0.3, 1, 0.35, 1) forwards; /* Animation name, duration, timing, and direction */
+
   }
 }
 
@@ -38,136 +55,14 @@
     opacity: 0;
     height: 0%;
     top: 100%; /* Fixed to the right side */
-  }}
-
-@keyframes preloaderLeaving {
-  0% {
-    opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
-}
-.preLogo {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-  opacity: 0;
-  animation: show-hide-show 1.5s linear;
-  animation-delay: 1.7s;
-  background-color: var(--secondary);
-}
-.preLogo .logoImage {
-  z-index: 5;
-  opacity: 1;
-}
-.halfCircle {
-  width: max(100vh, 100vw);
-  height: max(100vh, 100vw);
-  border-radius: 100%;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform-origin: center;
-  transform: translate(-50%, -50%) scale(2);
-  animation: zoom 1.5s ease;
-  z-index: 3;
-  animation-delay: 2.5s;
-  background-color: var(--secondary);
-}
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top-color: #fff;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  animation: spin 1s ease-in-out;
-  z-index: 4;
-}
-.loading {
-  font-size: 3rem;
-  font-weight: bold;
-  position: absolute;
-  z-index: 10;
-  opacity: 0;
-  animation: show-hide-spinner 2.1s ease-out;
-  color: var(--primary);
-}
-.loadingPie {
-  transform: rotate(-90deg);
-  background: transparent;
-  border-radius: 50%;
-  z-index: 5;
-  animation: show-hide-spinner 6s;
-}
-.loadingCircle {
-  opacity: 0;
-  fill: rgba(255, 255, 255, 0);
-  stroke: rgb(255, 255, 255);
-  stroke-width: 100;
-  stroke-dasharray: 0 314; /* PI * 174 ~= 314 */
-  animation: fillup 2s linear, show-hide-spinner 6s;
-  z-index: 6;
 }
 
-@keyframes fillup {
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
   to {
-    stroke-dasharray: 314 314;
-  }
-}
-@keyframes zoom {
-  0% {
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, 0) scale(1);
-    background-color: #fff;
-  }
-  100% {
-    width: max(100vh, 100vw);
-    height: max(100vh, 100vw);
-    transform: translate(-50%, -50%) scale(2);
-    background-color: #fff;
-  }
-}
-@keyframes show-hide-show {
-  0% {
     opacity: 0;
-    visibility: hidden;
-  }
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-@keyframes show-hide-spinner {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
   }
 }

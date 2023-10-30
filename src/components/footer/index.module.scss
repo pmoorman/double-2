@@ -1,6 +1,10 @@
 .footerOuter {
   padding-top: 200px;
   margin-top: 2rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
 }
 
 .footer {
@@ -25,6 +29,10 @@
     border-radius: 20px;
     transform: translateY(-50%);
 
+    @include media-breakpoint-down(md) {
+      padding: 3rem 1.5rem;
+    }
+
     h1 {
       font-size: 80px;
       font-weight: bold;
@@ -34,23 +42,29 @@
         font-size: 72px;
       }
       @include media-breakpoint-down(md) {
-        font-size: 64px;
+        font-size: 60px !important;
         line-height: 0.95;
       }
 
       span {
         font-family: "EB Garamond", serif;
         font-style: italic;
+        font-weight: 500;
         font-size: 120%;
       }
     }
 
     p {
       font-weight: 400;
+      font-size: 16px !important;
+      
+      @include media-breakpoint-down(md) {
+      }
     }
 
     @include media-breakpoint-down(md) {
       padding-bottom: 1.5rem;
+      font-size: 15px !important;
     }
 
     img {
@@ -60,7 +74,7 @@
 
   .footerMid {
     p {
-      font-weight: 200 !important;
+      font-weight: 400 !important;
     }
 
     transform: translateY(-60%);
@@ -216,4 +230,9 @@
       margin-left: 0;
     }
   }
+}
+
+
+.address p {
+  font-size: 16px !important;
 }
