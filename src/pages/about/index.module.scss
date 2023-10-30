@@ -4,7 +4,6 @@
   left: 50%;
   width: fit-content;
   height: fit-content;
-  max-width: 200px;
   bottom: 0;
   animation: float 3s ease-in-out infinite;
   transform: translateX(-50%);
@@ -16,6 +15,8 @@
 
   @include media-breakpoint-down(sm) {
     top: 30%;
+  max-width: 200px;
+
   }
   }
 }
