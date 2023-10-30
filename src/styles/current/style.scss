@@ -43,6 +43,12 @@ input::placeholder {
   padding: 3px 8px;
 }
 
+.vid-contain {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 3rem !important;
+  }
+}
+
 .ffs {
   font-weight: 500;
   font-size: 30px;

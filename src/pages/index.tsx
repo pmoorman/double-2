@@ -60,7 +60,7 @@ const HomePage = () => {
         </Container>
       </div>
 
-      <Container className="pb-5">
+      <Container className="pb-5 vid-contain">
         <HomeVideo />
       </Container>
       
