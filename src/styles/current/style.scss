@@ -57,8 +57,16 @@ input::placeholder {
   padding-left: 24px !important;
 }
 
+.personalise {
+  @include media-breakpoint-down(md) {
+    font-size: 2rem !important;
+  }
+}
+
 .ok {
   padding-top: 8px !important;
+  @include media-breakpoint-down(md) {
+  }
 }
 
 .address p {
