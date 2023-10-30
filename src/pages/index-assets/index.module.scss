@@ -155,9 +155,8 @@ h2 {
   min-height: 200vh;
   margin-top: 2rem;
 
-  @media (max-width: 480px) {
+  @include media-breakpoint-down(md) {
     min-height: unset;
-    height: 50vh;
   }
 }
 
@@ -175,13 +174,8 @@ h2 {
     height: 72vh;
     top: 25%;
   }
-  @media (max-width: 978px) {
-    height: 50vh;
-    top: 25%;
-  }
-  @media (max-width: 480px) {
-    height: 35vh;
-    top: 0%;
+  @include media-breakpoint-down(md) {
+    height: unset;
   }
 }
 
