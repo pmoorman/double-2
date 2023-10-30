@@ -39,7 +39,7 @@ export const AboutSection = () => {
         <Row>
           <Col>
             <h2 className="about-txt">About our clients</h2>
-            <h4>no matter which stage you’re at, we work with everyone.</h4>
+            <h4 className="about-txt-small">no matter which stage you’re at, we work with everyone.</h4>
           </Col>
         </Row>
       </Container>
