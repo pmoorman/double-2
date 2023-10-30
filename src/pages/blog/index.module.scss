@@ -19,6 +19,10 @@
     font-weight: 600;
     z-index: 10;
 
+    @include media-breakpoint-down(md) {
+      margin-top: 3rem !important;
+    }
+
     span {
       font-weight: 500 !important;
     }
@@ -36,13 +40,13 @@
     z-index: 0;
 
     @include media-breakpoint-down(md) {
-      top: 10%;
+      top: 5%;
       left: 15%;
       max-width: 280px;
     }
   
     img {
-      transform: scale(1.2);
+      transform: scale(1.1);
       opacity: 0.5;
     }
   }
