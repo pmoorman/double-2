@@ -41,21 +41,21 @@ const CaseStudiesPage = () => {
         </Container>
         <Container className="mb-7">
           <Row>
-            <Col md="4" className="flex items-center gap-8">
+            <Col md="4" className="flex items-center gap-8 work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
                 <FaUsers size={44} />
                 50+
               </h2>
               <h3 className="ffs">tech companies</h3>
             </Col>
-            <Col md="4">
+            <Col md="4" className="work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
                 <FaGlobe size={44} />
                 13
               </h2>
               <h3 className="ffs">active countries</h3>
             </Col>
-            <Col md="4">
+            <Col md="4" className="work-stats">
               <h2 className="fw-bold mb-2 d-flex align-items-center gap-3">
                 <FaLightbulb size={44} />
                 80,000
