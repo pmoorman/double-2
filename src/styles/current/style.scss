@@ -49,6 +49,12 @@ input::placeholder {
   }
 }
 
+.graphic-txt {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 4rem !important;
+  }
+}
+
 .ffs {
   font-weight: 500;
   font-size: 30px;

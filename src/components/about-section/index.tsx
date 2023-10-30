@@ -35,7 +35,7 @@ export const AboutSection = () => {
 
   return (
     <div className="mt-20">
-      <Container className="mb-6">
+      <Container className="mb-6 graphic-txt">
         <Row>
           <Col>
             <h2 className="about-txt">About our clients</h2>
