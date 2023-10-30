@@ -40,7 +40,7 @@ export const BlogPostGridItem: FC<BlogPostGridItemProps> = ({ post }) => {
   }, []);
 
   return (
-    <Col ref={itemRef} md="6" lg="4" sm="12" className={cn(`my-lg-4 my-2`, styles.card)}>
+    <Col ref={itemRef} md="6" lg="4" sm="12" className={cn(`my-lg-4 my-4`, styles.card)}>
       <Link to={post.slug}>
         <GatsbyImage
           className={cn("mb-3", styles.image)}
