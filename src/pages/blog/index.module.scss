@@ -10,6 +10,7 @@
   @include media-breakpoint-down(md) {
     height: auto;
     padding-bottom: 4rem;
+    padding-top: 32px;
   }
 
   h1 {
@@ -35,7 +36,7 @@
     z-index: 0;
 
     @include media-breakpoint-down(md) {
-      top: 20%;
+      top: 10%;
       left: 15%;
       max-width: 280px;
     }
